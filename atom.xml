@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2020-09-14T10:12:08.361Z</updated>
+  <updated>2020-09-15T13:32:40.061Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.6 - 37.解数独</title>
+    <link href="http://yewlasting.github.io/posts/78fc.html"/>
+    <id>http://yewlasting.github.io/posts/78fc.html</id>
+    <published>2020-09-15T13:26:09.000Z</published>
+    <updated>2020-09-15T13:32:40.061Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;37-解数独&quot;&gt;&lt;a href=&quot;#37-解数独&quot; class=&quot;headerlink&quot; title=&quot;37. 解数独&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/sudoku-solver/&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.5 - 94.二叉树的中序遍历</title>
     <link href="http://yewlasting.github.io/posts/8ad7.html"/>
     <id>http://yewlasting.github.io/posts/8ad7.html</id>
     <published>2020-09-14T10:07:59.000Z</published>
-    <updated>2020-09-14T10:12:08.361Z</updated>
+    <updated>2020-09-14T10:21:55.395Z</updated>
     
     <summary type="html">
     
