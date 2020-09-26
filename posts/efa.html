@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.3 - 637. 二叉树的层平均值, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.11 - 113.路径总和 II, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于图像处理、机器学习、深度学习，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.3 - 637. 二叉树的层平均值 | unlasting</title>
+    <title>力扣每日1题no.11 - 113.路径总和 II | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.3 - 637. 二叉树的层平均值</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.11 - 113.路径总和 II</h1>
                 </div>
             </div>
         </div>
@@ -393,21 +393,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-12
+                    2020-09-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-16
+                    2020-09-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    288
+                    335
                 </div>
                 
 
@@ -429,55 +429,62 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="637-二叉树的层平均值"><a href="#637-二叉树的层平均值" class="headerlink" title="637. 二叉树的层平均值"></a><a href="https://leetcode-cn.com/problems/average-of-levels-in-binary-tree/" target="_blank" rel="noopener">637. 二叉树的层平均值</a></h1><p><strong>难度</strong>：简单</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>给定一个非空二叉树, 返回一个由每层节点平均值组成的数组。</p>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a>示例 1:</h3><p>输入：<br>    3<br>   / <br>  9  20<br>      /  <br>    15   7<br><strong>输出：</strong>[3, 14.5, 11]<br><strong>解释：</strong><br>第 0 层的平均值是 3 ,  第1层是 14.5 , 第2层是 11 。因此返回 [3, 14.5, 11] 。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/average-of-levels-in-binary-tree" target="_blank" rel="noopener">https://leetcode-cn.com/problems/average-of-levels-in-binary-tree</a></p>
-<p><strong>提示：</strong></p>
-<ul>
-<li>节点值的范围在32位有符号整数范围内。</li>
-</ul>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a><strong>题解</strong></h2><p><strong>语言</strong>：</p>
-<p>python3</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 2020.09.12</span>
-<span class="token comment" spellcheck="true"># created by lzr</span>
+                <h1 id="113-路径总和-II"><a href="#113-路径总和-II" class="headerlink" title="113. 路径总和 II"></a><a href="https://leetcode-cn.com/problems/path-sum-ii/" target="_blank" rel="noopener">113. 路径总和 II</a></h1><p><strong>难度：</strong>中等</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。</p>
+<p>说明: 叶子节点是指没有子节点的节点。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h3><p>给定如下二叉树，以及目标和 sum = 22，</p>
+<pre><code>          5
+         / \
+        4   8
+       /   / \
+      11  13  4
+     /  \    / \
+    7    2  5   1</code></pre><p>返回:</p>
+<pre><code>[
+   [5,4,11,2],
+   [5,8,4,5]
+]</code></pre><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/path-sum-ii" target="_blank" rel="noopener">https://leetcode-cn.com/problems/path-sum-ii</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>python3</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 2020.09.26</span>
+
 <span class="token comment" spellcheck="true"># Definition for a binary tree node.</span>
-<span class="token triple-quoted-string string">'''
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
-node11=TreeNode(9)
-node12=TreeNode(20)
-root=TreeNode(3)
-root.left=node11
-root.right=node12
-'''</span>
+<span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> x
+        self<span class="token punctuation">.</span>left <span class="token operator">=</span> None
+        self<span class="token punctuation">.</span>right <span class="token operator">=</span> None
+
+<span class="token comment" spellcheck="true">#递归</span>
+<span class="token comment" spellcheck="true"># class Solution:</span>
+<span class="token comment" spellcheck="true">#     def pathSum(self, root, sum) -> list:</span>
+<span class="token comment" spellcheck="true">#         res=[]</span>
+<span class="token comment" spellcheck="true">#         self.dfs(root,res,sum,[])</span>
+<span class="token comment" spellcheck="true">#         return res</span>
+<span class="token comment" spellcheck="true">#     def dfs(self,node,res,sum,path):</span>
+<span class="token comment" spellcheck="true">#         if not node:</span>
+<span class="token comment" spellcheck="true">#             return</span>
+<span class="token comment" spellcheck="true">#         if not node.left and not node.right:</span>
+<span class="token comment" spellcheck="true">#             if sum==node.val:</span>
+<span class="token comment" spellcheck="true">#                 res.append(path+[node.val])</span>
+<span class="token comment" spellcheck="true">#         self.dfs(node.left,res,sum-node.val,path+[node.val])</span>
+<span class="token comment" spellcheck="true">#         self.dfs(node.right, res, sum - node.val, path + [node.val])</span>
+
+<span class="token comment" spellcheck="true">#非递归</span>
 <span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">averageOfLevels</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> list<span class="token punctuation">:</span>
-        <span class="token comment" spellcheck="true"># if not root: return []</span>
-        queue <span class="token operator">=</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        <span class="token keyword">while</span> queue<span class="token punctuation">:</span>
-            temp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-            length<span class="token operator">=</span>len<span class="token punctuation">(</span>queue<span class="token punctuation">)</span>
-            <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span>length<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                node <span class="token operator">=</span> queue<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
-                <span class="token keyword">if</span> node<span class="token punctuation">:</span>
-                    temp<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
-                    queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
-                    queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
-            l <span class="token operator">=</span> len<span class="token punctuation">(</span>temp<span class="token punctuation">)</span>
-            <span class="token keyword">if</span> l <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
-                aver <span class="token operator">=</span> sum<span class="token punctuation">(</span>temp<span class="token punctuation">)</span> <span class="token operator">/</span> l
-                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>aver<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> res
-<span class="token triple-quoted-string string">'''
-#test
-test=Solution()
-print(test.averageOfLevels(root))
-'''</span></code></pre>
+    <span class="token keyword">def</span> <span class="token function">pathSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">,</span> sum<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> list<span class="token punctuation">:</span>
+        res<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token comment" spellcheck="true"># path=[]</span>
+        nodes<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>sum<span class="token punctuation">)</span><span class="token punctuation">]</span>
+        <span class="token keyword">while</span> nodes<span class="token punctuation">:</span>
+            node<span class="token punctuation">,</span>path<span class="token punctuation">,</span>sum<span class="token operator">=</span>nodes<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token operator">not</span> node<span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            <span class="token keyword">if</span> <span class="token operator">not</span> node<span class="token punctuation">.</span>left <span class="token operator">and</span> <span class="token operator">not</span> node<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> sum <span class="token operator">==</span> node<span class="token punctuation">.</span>val<span class="token punctuation">:</span>
+                    res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>path <span class="token operator">+</span> <span class="token punctuation">[</span>node<span class="token punctuation">.</span>val<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            nodes<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">,</span>path<span class="token operator">+</span><span class="token punctuation">[</span>node<span class="token punctuation">.</span>val<span class="token punctuation">]</span><span class="token punctuation">,</span>sum<span class="token operator">-</span>node<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            nodes<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">,</span> path <span class="token operator">+</span> <span class="token punctuation">[</span>node<span class="token punctuation">.</span>val<span class="token punctuation">]</span><span class="token punctuation">,</span> sum <span class="token operator">-</span> node<span class="token punctuation">.</span>val<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> res</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -521,7 +528,7 @@ print(test.averageOfLevels(root))
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/31b6.html">http://YewLasting.github.io/posts/31b6.html</a>
+                    <a href="http://YewLasting.github.io/posts/efa.html">http://YewLasting.github.io/posts/efa.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -728,32 +735,34 @@ print(test.averageOfLevels(root))
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/fb18.html">
+                <a href="/posts/efa.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="力扣每日1题no.4 - 79.单词搜索">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="力扣每日1题no.11 - 113.路径总和 II">
                         
-                        <span class="card-title">力扣每日1题no.4 - 79.单词搜索</span>
+                        <span class="card-title">力扣每日1题no.11 - 113.路径总和 II</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            79. 单词搜索难度：中等
-题干给定一个二维网格和一个单词，找出该单词是否存在于网格中。
-单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。
-示例:
+                            113. 路径总和 II难度：中等
+题干给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
+说明: 叶子节点是指没有子节点的节点。
+示例:给定如下二叉树，以及目标和 sum = 22，
+          
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -766,6 +775,7 @@ print(test.averageOfLevels(root))
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -784,27 +794,31 @@ print(test.averageOfLevels(root))
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/f33e.html">
+                <a href="/posts/d870.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣每日1题no.2 - 216.组合总和 III">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="力扣每日1题no.10 - 404.左叶子之和">
                         
-                        <span class="card-title">力扣每日1题no.2 - 216.组合总和 III</span>
+                        <span class="card-title">力扣每日1题no.10 - 404.左叶子之和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            216. 组合总和 III难度：中等
-题干找出所有相加之和为 n 的 k 个数的组合。组合中只允许含有 1 - 9 的正整数，并且每种组合中不存在重复的数字。
-说明：所有数字都是正整数。解集不能包含重复的组合。 
-示例 1:输入: k = 
+                            404. 左叶子之和难度：简单
+题干计算给定二叉树的所有左叶子之和。
+示例：    3
+   / \
+  9  20
+    /  \
+   15   7在这个二叉树中，有两个左叶子，分别是 9 和 15，所以返回 24
+注意：是左叶子之和
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-19
                             </span>
                         <span class="publish-author">
                             
