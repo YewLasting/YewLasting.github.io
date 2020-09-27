@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.6 - 37.解数独, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.12 - 235.二叉搜索树的最近公共祖先, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于图像处理、机器学习、深度学习，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.6 - 37.解数独 | unlasting</title>
+    <title>力扣每日1题no.12 - 235.二叉搜索树的最近公共祖先 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.6 - 37.解数独</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.12 - 235.二叉搜索树的最近公共祖先</h1>
                 </div>
             </div>
         </div>
@@ -393,28 +393,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-15
+                    2020-09-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-16
+                    2020-09-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    500
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -429,110 +429,38 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="37-解数独"><a href="#37-解数独" class="headerlink" title="37. 解数独"></a><a href="https://leetcode-cn.com/problems/sudoku-solver/" target="_blank" rel="noopener">37. 解数独</a></h1><p><strong>难度：</strong>困难</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>编写一个程序，通过已填充的空格来解决数独问题。</p>
-<p>一个数独的解法需遵循如下规则：</p>
-<p>数字 1-9 在每一行只能出现一次。<br>数字 1-9 在每一列只能出现一次。<br>数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。<br>空白格用 ‘.’ 表示。</p>
-<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h3><p><img src="https://gitee.com/yewlasting/blogimage/raw/master/img/20200916170330.png" alt="image-20200915212905113"></p>
-<p>一个数独。</p>
-<p><img src="https://gitee.com/yewlasting/blogimage/raw/master/img/20200916170340.png" alt="image-20200915212925226"></p>
-<p>答案被标成红色。</p>
-<h3 id="Note"><a href="#Note" class="headerlink" title="Note:"></a><strong>Note:</strong></h3><ul>
-<li>给定的数独序列只包含数字 <code>1-9</code> 和字符 <code>'.'</code> 。</li>
-<li>你可以假设给定的数独只有唯一解。</li>
-<li>给定数独永远是 <code>9x9</code> 形式的。</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/sudoku-solver" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sudoku-solver</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言"><a href="#语言" class="headerlink" title="语言:"></a>语言:</h3><p>python3</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        self<span class="token punctuation">.</span>rows <span class="token operator">=</span> None
-        self<span class="token punctuation">.</span>cols <span class="token operator">=</span> None
-        <span class="token comment" spellcheck="true"># 表示3x3的小宫格</span>
-        self<span class="token punctuation">.</span>spaces <span class="token operator">=</span> None
-        <span class="token comment" spellcheck="true"># 标志是否完成</span>
-        self<span class="token punctuation">.</span>flag <span class="token operator">=</span> None
+                <h1 id="235-二叉搜索树的最近公共祖先"><a href="#235-二叉搜索树的最近公共祖先" class="headerlink" title="235. 二叉搜索树的最近公共祖先"></a><a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank" rel="noopener">235. 二叉搜索树的最近公共祖先</a></h1><p><strong>难度：</strong>简单</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。</p>
+<p>百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”</p>
+<p>例如，给定如下二叉搜索树:  root = [6,2,8,0,4,7,9,null,null,3,5]</p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a>示例 1:</h3><p>输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8<br>输出: 6<br>解释: 节点 2 和节点 8 的最近公共祖先是 6。</p>
+<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a>示例 2:</h3><p>输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4<br>输出: 2<br>解释: 节点 2 和节点 4 的最近公共祖先是 2, 因为根据定义最近公共祖先节点可以为节点本身。</p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明:"></a>说明:</h3><p>所有节点的值都是唯一的。<br>p、q 为不同节点且均存在于给定的二叉搜索树中。<br>通过次数99,064提交次数150,577</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree" target="_blank" rel="noopener">https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>python3</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 2020.09.27</span>
 
-    <span class="token keyword">def</span> <span class="token function">solveSudoku</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> board<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> None<span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        Do not return anything, modify board in-place instead.
-        """</span>
-        self<span class="token punctuation">.</span>rows <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#第i子列表代表第i行中数字1-9的使用情况  </span>
-        <span class="token comment" spellcheck="true">#为防止超限，此处设置的是10格，不是9格</span>
-        self<span class="token punctuation">.</span>cols <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#第j子列表代表第j列中数字1-9的使用情况  </span>
-        <span class="token comment" spellcheck="true">#为防止超限，此处设置的是10格，不是9格</span>
-        self<span class="token punctuation">.</span>spaces <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#第k个子列表代表第k个小9*9矩阵中的数字使用情况  </span>
-        <span class="token comment" spellcheck="true">#为防止超限，此处设置的是10格，不是9格</span>
-        self<span class="token punctuation">.</span>flag <span class="token operator">=</span> <span class="token boolean">False</span><span class="token comment" spellcheck="true">#默认数独未被填充完毕</span>
+<span class="token comment" spellcheck="true"># Definition for a binary tree node.</span>
+<span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> x
+        self<span class="token punctuation">.</span>left <span class="token operator">=</span> None
+        self<span class="token punctuation">.</span>right <span class="token operator">=</span> None
 
-        <span class="token comment" spellcheck="true"># 预处理已经在数独中的元素</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span> board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'.'</span><span class="token punctuation">:</span><span class="token comment" spellcheck="true">#如果此处有数字</span>
-                    num <span class="token operator">=</span> int<span class="token punctuation">(</span>board<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                    self<span class="token punctuation">.</span>rows<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token comment" spellcheck="true">#标志第i行中数字num已经出现</span>
-                    self<span class="token punctuation">.</span>cols<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token comment" spellcheck="true">#标志第j列中数字num已经出现</span>
-                    self<span class="token punctuation">.</span>spaces<span class="token punctuation">[</span>self<span class="token punctuation">.</span>validate<span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token comment" spellcheck="true">#k=self.validate(i, j) 代表第k个小9*9矩阵中的数字使用情况</span>
-        self<span class="token punctuation">.</span>dfs<span class="token punctuation">(</span>board<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#执行深度优先遍历</span>
-
-    <span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> board<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment" spellcheck="true">#深度优先遍历</span>
-        <span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token number">9</span><span class="token punctuation">:</span><span class="token comment" spellcheck="true">#代表0-8行的数独都填过了这个数独已完成</span>
-            self<span class="token punctuation">.</span>flag <span class="token operator">=</span> <span class="token boolean">True</span>
-            <span class="token keyword">return</span>
-
-        <span class="token keyword">if</span> board<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'.'</span><span class="token punctuation">:</span><span class="token comment" spellcheck="true">#如果不为空</span>
-            <span class="token keyword">if</span> y <span class="token operator">==</span> <span class="token number">8</span><span class="token punctuation">:</span>
-                self<span class="token punctuation">.</span>dfs<span class="token punctuation">(</span>board<span class="token punctuation">,</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#先判断当前位置，当该行到了尽头则开始换下一行</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">lowestCommonAncestor</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">,</span> p<span class="token punctuation">,</span> q<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token string">'TreeNode'</span><span class="token punctuation">:</span>
+        <span class="token keyword">def</span> <span class="token function">helper</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> p<span class="token punctuation">,</span> q<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment" spellcheck="true"># p 和 q 节点值均小于 root 节点值的情况，往左子树找</span>
+            <span class="token keyword">if</span> p<span class="token punctuation">.</span>val <span class="token operator">&lt;</span> root<span class="token punctuation">.</span>val <span class="token operator">and</span> q<span class="token punctuation">.</span>val <span class="token operator">&lt;</span> root<span class="token punctuation">.</span>val<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> helper<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span> p<span class="token punctuation">,</span> q<span class="token punctuation">)</span>
+            <span class="token comment" spellcheck="true"># p 和 q 节点值均大于于 root 节点值的情况，往右子树找</span>
+            <span class="token keyword">elif</span> p<span class="token punctuation">.</span>val <span class="token operator">></span> root<span class="token punctuation">.</span>val <span class="token operator">and</span> q<span class="token punctuation">.</span>val <span class="token operator">></span> root<span class="token punctuation">.</span>val<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> helper<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span> p<span class="token punctuation">,</span> q<span class="token punctuation">)</span>
+            <span class="token comment" spellcheck="true"># 其他情况，返回 root</span>
             <span class="token keyword">else</span><span class="token punctuation">:</span>
-                self<span class="token punctuation">.</span>dfs<span class="token punctuation">(</span>board<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#按行遍历</span>
-        <span class="token keyword">else</span><span class="token punctuation">:</span><span class="token comment" spellcheck="true">#如果此处没有数字，为空</span>
-            <span class="token keyword">for</span> num <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment" spellcheck="true">#循环，筛选没有出现过的数字开始填数字</span>
-                <span class="token keyword">if</span> self<span class="token punctuation">.</span>rows<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
-                    <span class="token keyword">continue</span><span class="token comment" spellcheck="true">#如果出现过，则跳到下一个数字</span>
-                <span class="token keyword">if</span> self<span class="token punctuation">.</span>cols<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
-                    <span class="token keyword">continue</span><span class="token comment" spellcheck="true">#如果出现过，则跳到下一个数字</span>
-                <span class="token keyword">if</span> self<span class="token punctuation">.</span>spaces<span class="token punctuation">[</span>self<span class="token punctuation">.</span>validate<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
-                    <span class="token keyword">continue</span><span class="token comment" spellcheck="true">#如果出现过，则跳到下一个数字</span>
-                board<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> str<span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#填数字</span>
-                <span class="token comment" spellcheck="true">#填过数字后更新标记情况</span>
-                self<span class="token punctuation">.</span>rows<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
-                self<span class="token punctuation">.</span>cols<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
-                self<span class="token punctuation">.</span>spaces<span class="token punctuation">[</span>self<span class="token punctuation">.</span>validate<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
-                <span class="token comment" spellcheck="true">#和不为空的情况一样，填过数字后开始按行遍历</span>
-                <span class="token keyword">if</span> y <span class="token operator">==</span> <span class="token number">8</span><span class="token punctuation">:</span>
-                    self<span class="token punctuation">.</span>dfs<span class="token punctuation">(</span>board<span class="token punctuation">,</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#先判断当前位置，当该行到了尽头则开始换下一行</span>
-                <span class="token keyword">else</span><span class="token punctuation">:</span>
-                    self<span class="token punctuation">.</span>dfs<span class="token punctuation">(</span>board<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#按行遍历</span>
-                <span class="token keyword">if</span> self<span class="token punctuation">.</span>flag<span class="token punctuation">:</span><span class="token comment" spellcheck="true">#此处填写该数字后继续深度优先遍历可以完成这个数独，则直接返回</span>
-                    <span class="token keyword">return</span>
-                <span class="token comment" spellcheck="true">#如果这个位置填写该数字不能完成该数独，则重新将此处置为0，进行下一次循环，尝试下一个没有用过的数字</span>
-                board<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'.'</span>
-                self<span class="token punctuation">.</span>rows<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
-                self<span class="token punctuation">.</span>cols<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
-                self<span class="token punctuation">.</span>spaces<span class="token punctuation">[</span>self<span class="token punctuation">.</span>validate<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+                <span class="token keyword">return</span> root
 
-    <span class="token keyword">def</span> <span class="token function">validate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment" spellcheck="true">#该函数用于确定(x,y)属于第几个小9*9矩阵</span>
-        <span class="token keyword">if</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> x <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> y <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token number">0</span>
-            <span class="token keyword">elif</span> <span class="token number">3</span> <span class="token operator">&lt;=</span> y <span class="token operator">&lt;</span> <span class="token number">6</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token number">1</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token number">2</span>
-        <span class="token keyword">elif</span> <span class="token number">3</span> <span class="token operator">&lt;=</span> x <span class="token operator">&lt;</span> <span class="token number">6</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> y <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token number">3</span>
-            <span class="token keyword">elif</span> <span class="token number">3</span> <span class="token operator">&lt;=</span> y <span class="token operator">&lt;</span> <span class="token number">6</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token number">4</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token number">5</span>
-        <span class="token keyword">else</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> y <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token number">6</span>
-            <span class="token keyword">elif</span> <span class="token number">3</span> <span class="token operator">&lt;=</span> y <span class="token operator">&lt;</span> <span class="token number">6</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token number">7</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token number">8</span></code></pre>
+        <span class="token keyword">return</span> helper<span class="token punctuation">(</span>root<span class="token punctuation">,</span> p<span class="token punctuation">,</span> q<span class="token punctuation">)</span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -576,7 +504,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/78fc.html">http://YewLasting.github.io/posts/78fc.html</a>
+                    <a href="http://YewLasting.github.io/posts/5a60.html">http://YewLasting.github.io/posts/5a60.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -783,40 +711,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/1ef1.html">
+                <a href="/posts/5a60.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="力扣每日1题no.7 - 226.翻转二叉树">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="力扣每日1题no.12 - 235.二叉搜索树的最近公共祖先">
                         
-                        <span class="card-title">力扣每日1题no.7 - 226.翻转二叉树</span>
+                        <span class="card-title">力扣每日1题no.12 - 235.二叉搜索树的最近公共祖先</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            226. 翻转二叉树难度：简单
-题干翻转一棵二叉树。
-示例：输入：
-     4
-   /   \
-  2     7
- / \   / \
-1   3 6   9输出：
-     4
-   /   \
-  7     2
- / \   /
+                            235. 二叉搜索树的最近公共祖先难度：简单
+题干给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。
+百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -829,6 +749,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -847,32 +768,28 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/8ad7.html">
+                <a href="/posts/efa.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="力扣每日1题no.5 - 94.二叉树的中序遍历">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="力扣每日1题no.11 - 113.路径总和 II">
                         
-                        <span class="card-title">力扣每日1题no.5 - 94.二叉树的中序遍历</span>
+                        <span class="card-title">力扣每日1题no.11 - 113.路径总和 II</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            94. 二叉树的中序遍历难度：中等
-题干给定一个二叉树，返回它的中序 遍历。
-示例:输入: [1,null,2,3]
-   1
-     \
-       2
-     /
-   3输出: [1,3,2]
-进阶:递归算法很简单，你可以通过迭
+                            113. 路径总和 II难度：中等
+题干给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
+说明: 叶子节点是指没有子节点的节点。
+示例:给定如下二叉树，以及目标和 sum = 22，
+          
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-26
                             </span>
                         <span class="publish-author">
                             
