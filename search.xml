@@ -4,7 +4,32 @@
   
     
     <entry>
-      <title>力扣每日1题no.14-145.二叉树的后序遍历</title>
+      <title>力扣每日1题no.17 - 771.宝石与石头</title>
+      <link href="/posts/5f2e.html"/>
+      <url>/posts/5f2e.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="771-宝石与石头"><a href="#771-宝石与石头" class="headerlink" title="771. 宝石与石头"></a><a href="https://leetcode-cn.com/problems/jewels-and-stones/" target="_blank" rel="noopener">771. 宝石与石头</a></h1><p><strong>难度：</strong>简单</p><h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定字符串<code>J</code> 代表石头中宝石的类型，和字符串 <code>S</code>代表你拥有的石头。 <code>S</code> 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。</p><p><code>J</code> 中的字母不重复，<code>J</code> 和 <code>S</code>中的所有字符都是字母。字母区分大小写，因此<code>"a"</code>和<code>"A"</code>是不同类型的石头。</p><h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>输入: J = "aA", S = "aAAbbbb"输出: 3</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>输入: J = "z", S = "ZZ"输出: 0</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意:"></a><strong>注意:</strong></h3><ul><li><code>S</code> 和 <code>J</code> 最多含有50个字母。</li><li><code>J</code> 中的字符不重复。</li></ul><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/jewels-and-stones/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/jewels-and-stones/</a></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>python3</p><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 2020.10.02</span><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">numJewelsInStones</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> J<span class="token punctuation">:</span> str<span class="token punctuation">,</span> S<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>        cnt<span class="token operator">=</span><span class="token number">0</span>        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>J<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>            <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                <span class="token keyword">if</span><span class="token punctuation">(</span>S<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>J<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                    cnt<span class="token operator">=</span>cnt<span class="token operator">+</span><span class="token number">1</span>        <span class="token keyword">return</span> cnt</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 力扣每日1题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣每日1题no.14 - 145.二叉树的后序遍历</title>
       <link href="/posts/ef2a.html"/>
       <url>/posts/ef2a.html</url>
       
