@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2020-10-09T13:25:56.743Z</updated>
+  <updated>2020-10-12T05:17:30.337Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.27 - 530. 二叉搜索树的最小绝对差</title>
+    <link href="http://yewlasting.github.io/posts/8afd.html"/>
+    <id>http://yewlasting.github.io/posts/8afd.html</id>
+    <published>2020-10-12T05:15:36.000Z</published>
+    <updated>2020-10-12T05:17:30.337Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;530-二叉搜索树的最小绝对差&quot;&gt;&lt;a href=&quot;#530-二叉搜索树的最小绝对差&quot; class=&quot;headerlink&quot; title=&quot;530. 二叉搜索树的最小绝对差&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.24 - 141.环形链表</title>
     <link href="http://yewlasting.github.io/posts/8ef0.html"/>
     <id>http://yewlasting.github.io/posts/8ef0.html</id>
     <published>2020-10-09T13:22:22.000Z</published>
-    <updated>2020-10-09T13:25:56.743Z</updated>
+    <updated>2020-10-09T13:34:38.295Z</updated>
     
     <summary type="html">
     
