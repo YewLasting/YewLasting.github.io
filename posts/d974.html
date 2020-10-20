@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.4 - 79.单词搜索, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.35 - 143.删除链表的倒数第N个节点, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于图像处理、机器学习、深度学习，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.4 - 79.单词搜索 | unlasting</title>
+    <title>力扣每日1题no.35 - 143.删除链表的倒数第N个节点 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.4 - 79.单词搜索</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.35 - 143.删除链表的倒数第N个节点</h1>
                 </div>
             </div>
         </div>
@@ -393,21 +393,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-13
+                    2020-10-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-16
+                    2020-10-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    535
+                    458
                 </div>
                 
 
@@ -429,72 +429,99 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="79-单词搜索"><a href="#79-单词搜索" class="headerlink" title="79. 单词搜索"></a><a href="https://leetcode-cn.com/problems/word-search/" target="_blank" rel="noopener">79. 单词搜索</a></h1><p><strong>难度：</strong>中等</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个二维网格和一个单词，找出该单词是否存在于网格中。</p>
-<p>单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h3><p>board =<br>[<br>  [‘A’,’B’,’C’,’E’],<br>  [‘S’,’F’,’C’,’S’],<br>  [‘A’,’D’,’E’,’E’]<br>]</p>
-<p>给定 word = “ABCCED”, 返回 true<br>给定 word = “SEE”, 返回 true<br>给定 word = “ABCB”, 返回 false</p>
-<h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h3><p>board 和 word 中只包含大写和小写英文字母。<br>1 &lt;= board.length &lt;= 200<br>1 &lt;= board[i].length &lt;= 200<br>1 &lt;= word.length &lt;= 10^3</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/word-search" target="_blank" rel="noopener">https://leetcode-cn.com/problems/word-search</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>python3</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 2020.09.13</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">exist</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> board<span class="token punctuation">,</span> word<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
-        row <span class="token operator">=</span> len<span class="token punctuation">(</span>board<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#得到网格行数</span>
-        col <span class="token operator">=</span> len<span class="token punctuation">(</span>board<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#得到网格列数</span>
-        visited <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token boolean">False</span><span class="token punctuation">]</span> <span class="token operator">*</span> col <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#生成row行,col列的false矩阵</span>
-        <span class="token comment" spellcheck="true">#       上  右 下  左</span>
-        rows <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
-        cols <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+                <h1 id="143-重排链表"><a href="#143-重排链表" class="headerlink" title="143. 重排链表"></a><a href="https://leetcode-cn.com/problems/reorder-list/" target="_blank" rel="noopener">143. 重排链表</a></h1><p><strong>难度：</strong>中等</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个单链表 <em>L</em>：<em>L</em>0→<em>L</em>1→…→<em>L**n</em>-1→<em>L</em>n ，<br>将其重新排列后变为： <em>L</em>0→<em>L<strong>n<em>→</em>L<em>1→</em>L</strong>n</em>-1→<em>L</em>2→<em>L**n</em>-2→…</p>
+<p>你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>给定链表 1-&gt;2-&gt;3-&gt;4, 重新排列为 1-&gt;4-&gt;2-&gt;3.</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>给定链表 1-&gt;2-&gt;3-&gt;4-&gt;5, 重新排列为 1-&gt;5-&gt;2-&gt;4-&gt;3.</code></pre><p>来源：力扣（LeetCode） </p>
+<p>链接：<a href="https://leetcode-cn.com/problems/reorder-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reorder-list/</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
+<pre class=" language-c++"><code class="language-c++">//2020.10.20
+#include <iostream>
+#include <string>
+using namespace std;
+//Definition for singly-linked list.
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+class Solution {
+public:
+    void reorderList(ListNode* head) {
+        if (head == nullptr) {
+            return;
+        }
+        //获得中点
+        ListNode* mid = middleNode(head);
+        //分割成两条链表，第二条链表的起始位置是中点的下一节点，即slow(mid)->next
+        ListNode* l1 = head;
+        ListNode* l2 = mid->next;
+        mid->next = nullptr;
+        //对链表转置
+        l2 = reverseList(l2);
+        //融合两条链表
+        mergeList(l1, l2);
+    }
 
-        <span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> idx<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token triple-quoted-string string">"""
-            搜索单词
-            Args（参数）:
-                x: 行索引
-                y: 列索引
-                idx: 单词对应的字母索引
-            """</span>
-            <span class="token keyword">if</span> board<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">!=</span> word<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token boolean">False</span><span class="token comment" spellcheck="true">#如果该字母不符合要求，直接返回false</span>
+    ListNode* middleNode(ListNode* head) {
+        ListNode* slow = head;
+        ListNode* fast = head;
+        while (fast->next != nullptr && fast->next->next != nullptr) {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return slow;
+    }
 
-            <span class="token keyword">if</span> idx <span class="token operator">==</span> len<span class="token punctuation">(</span>word<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token boolean">True</span> <span class="token comment" spellcheck="true">#如果单词最后一个字母也找到了，则直接返回true</span>
+    ListNode* reverseList(ListNode* head) {
+        ListNode* prev = nullptr;
+        ListNode* curr = head;
+        while (curr != nullptr) {
+            ListNode* nextTemp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
+        return prev;
+    }
 
-            <span class="token comment" spellcheck="true"># 先标记</span>
-            visited<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">True</span>
+    void mergeList(ListNode* l1, ListNode* l2) {
+        ListNode* l1_tmp;
+        ListNode* l2_tmp;
+        while (l1 != nullptr && l2 != nullptr) {
+            l1_tmp = l1->next;
+            l2_tmp = l2->next;
 
-            <span class="token comment" spellcheck="true"># 找到符合的字母时开始向四个方向扩散搜索</span>
-            <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment" spellcheck="true">#依次是上下右左的顺序</span>
-                nx <span class="token operator">=</span> x <span class="token operator">+</span> rows<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-                ny <span class="token operator">=</span> y <span class="token operator">+</span> cols<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-                <span class="token keyword">if</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> nx <span class="token operator">&lt;</span> row <span class="token operator">and</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> ny <span class="token operator">&lt;</span> col <span class="token operator">and</span> <span class="token operator">not</span> visited<span class="token punctuation">[</span>nx<span class="token punctuation">]</span><span class="token punctuation">[</span>ny<span class="token punctuation">]</span> <span class="token operator">and</span> dfs<span class="token punctuation">(</span>nx<span class="token punctuation">,</span> ny<span class="token punctuation">,</span> idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                    <span class="token keyword">return</span> <span class="token boolean">True</span>
-            <span class="token comment" spellcheck="true"># 扩散未搜索对应的字母，释放标记</span>
-            <span class="token comment" spellcheck="true"># 继续往其他方位搜索</span>
-            visited<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span>
-            <span class="token keyword">return</span> <span class="token boolean">False</span>
+            l1->next = l2;
+            l1 = l1_tmp;
 
-        <span class="token keyword">for</span> x <span class="token keyword">in</span> range<span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">for</span> y <span class="token keyword">in</span> range<span class="token punctuation">(</span>col<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span> dfs<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                    <span class="token keyword">return</span> <span class="token boolean">True</span>
+            l2->next = l1;
+            l2 = l2_tmp;
+        }
+    }
+};
+//进行测试，输出测试结果
+int main()
+{
+    ListNode* node5 = new ListNode(5, nullptr);
+    ListNode* node4 = new ListNode(4, node5);
+    ListNode* node3 = new ListNode(3, node4);
+    ListNode* node2 = new ListNode(2, node3);
+    ListNode* node1 = new ListNode(1, node2);
+    Solution test;
+    ListNode* head=node1;
+    test.reorderList(head);
+    while (head)
+    {
+        cout << head->val << " ";
+        head = head->next;
+    }
 
-        <span class="token keyword">return</span> <span class="token boolean">False</span>
-
-<span class="token triple-quoted-string string">'''
-#test
-board =[
-  ['A','B','C','E'],
-  ['S','F','C','S'],
-  ['A','D','E','E']
-]
-word= "ABCCED"
-# word= "SEE"
-# word="ABCB"
-test=Solution()
-print(test.exist(board,word))
-'''</span></code></pre>
+    getchar();//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
+    return 0;
+}</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -538,7 +565,7 @@ print(test.exist(board,word))
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/fb18.html">http://YewLasting.github.io/posts/fb18.html</a>
+                    <a href="http://YewLasting.github.io/posts/d974.html">http://YewLasting.github.io/posts/d974.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -745,37 +772,33 @@ print(test.exist(board,word))
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/8ad7.html">
+                <a href="/posts/d974.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="力扣每日1题no.5 - 94.二叉树的中序遍历">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="力扣每日1题no.35 - 143.删除链表的倒数第N个节点">
                         
-                        <span class="card-title">力扣每日1题no.5 - 94.二叉树的中序遍历</span>
+                        <span class="card-title">力扣每日1题no.35 - 143.删除链表的倒数第N个节点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            94. 二叉树的中序遍历难度：中等
-题干给定一个二叉树，返回它的中序 遍历。
-示例:输入: [1,null,2,3]
-   1
-     \
-       2
-     /
-   3输出: [1,3,2]
-进阶:递归算法很简单，你可以通过迭
+                            143. 重排链表难度：中等
+题干给定一个单链表 L：L0→L1→…→L**n-1→Ln ，将其重新排列后变为： L0→Ln→L1→Ln-1→L2→L**n-2→…
+你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+示例 1:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -788,6 +811,7 @@ print(test.exist(board,word))
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -806,26 +830,27 @@ print(test.exist(board,word))
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/31b6.html">
+                <a href="/posts/8084.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣每日1题no.3 - 637. 二叉树的层平均值">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="力扣每日1题no.34 - 844.比较含退格的字符串">
                         
-                        <span class="card-title">力扣每日1题no.3 - 637. 二叉树的层平均值</span>
+                        <span class="card-title">力扣每日1题no.34 - 844.比较含退格的字符串</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            637. 二叉树的层平均值难度：简单
-题干给定一个非空二叉树, 返回一个由每层节点平均值组成的数组。
-示例 1:输入：    3   /   9  20      /      15   7输出：[3, 14.5, 11]解释：第 0 层的
+                            844. 比较含退格的字符串难度：简单
+题干给定 S 和 T 两个字符串，当它们分别被输入到空白的文本编辑器后，判断二者是否相等，并返回结果。 # 代表退格字符。
+注意：如果对空文本输入退格字符，文本继续为空。
+示例 1：输入：S = "a
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-19
                             </span>
                         <span class="publish-author">
                             
