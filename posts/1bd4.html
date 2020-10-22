@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.10 - 404.左叶子之和, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.37 - 200.岛屿数量, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于图像处理、机器学习、深度学习，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.10 - 404.左叶子之和 | unlasting</title>
+    <title>力扣每日1题no.37 - 200.岛屿数量 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.10 - 404.左叶子之和</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.37 - 200.岛屿数量</h1>
                 </div>
             </div>
         </div>
@@ -393,28 +393,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-19
+                    2020-10-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-09-19
+                    2020-10-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    253
+                    608
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -429,53 +429,145 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="404-左叶子之和"><a href="#404-左叶子之和" class="headerlink" title="404. 左叶子之和"></a><a href="https://leetcode-cn.com/problems/sum-of-left-leaves/" target="_blank" rel="noopener">404. 左叶子之和</a></h1><p><strong>难度：</strong>简单</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>计算给定二叉树的所有左叶子之和。</p>
-<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a><strong>示例：</strong></h3><pre><code>    3
-   / \
-  9  20
-    /  \
-   15   7</code></pre><p>在这个二叉树中，有两个左叶子，分别是 9 和 15，所以返回 24</p>
-<p>注意：是左叶子之和，不是左子树之和。</p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>python3</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 2020.09.19</span>
-<span class="token comment" spellcheck="true"># created by lzr</span>
-<span class="token comment" spellcheck="true"># Definition for a binary tree node.</span>
-<span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        self<span class="token punctuation">.</span>val <span class="token operator">=</span> x
-        self<span class="token punctuation">.</span>left <span class="token operator">=</span> None
-        self<span class="token punctuation">.</span>right <span class="token operator">=</span> None
+                <h1 id="200-岛屿数量"><a href="#200-岛屿数量" class="headerlink" title="200. 岛屿数量"></a><a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">200. 岛屿数量</a></h1><p><strong>难度</strong>：中等</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给你一个由 <code>'1'</code>（陆地）和 <code>'0'</code>（水）组成的的二维网格，请你计算网格中岛屿的数量。</p>
+<p>岛屿总是被水包围，并且每座岛屿只能由水平方向和/或竖直方向上相邻的陆地连接形成。</p>
+<p>此外，你可以假设该网格的四条边均被水包围。</p>
+<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：grid = [
+  ["1","1","1","1","0"],
+  ["1","1","0","1","0"],
+  ["1","1","0","0","0"],
+  ["0","0","0","0","0"]
+]
+输出：1</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：grid = [
+  ["1","1","0","0","0"],
+  ["1","1","0","0","0"],
+  ["0","0","1","0","0"],
+  ["0","0","0","1","1"]
+]
+输出：3</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
+<li><code>m == grid.length</code></li>
+<li><code>n == grid[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 300</code></li>
+<li><code>grid[i][j]</code> 的值为 <code>'0'</code> 或 <code>'1'</code></li>
+</ul>
+<p>来源：力扣（LeetCode） </p>
+<p>链接：<a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/number-of-islands/</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
+<pre class=" language-c++"><code class="language-c++">//2020.10.22
+//created by lzr
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+class Solution
+{
+private:
+    void dfs(vector<vector<char>> &grid, int r, int c, int nr, int nc)
+    {
+        grid[r][c] = '0';
+        if (r - 1 >= 0 && grid[r - 1][c] == 1)
+            dfs(grid, r - 1, c, nr, nc); //下
+        if (r + 1 >= 0 && grid[r + 1][c] == 1)
+            dfs(grid, r + 1, c, nr, nc); //上
+        if (c - 1 >= 0 && grid[r][c - 1] == 1)
+            dfs(grid, r, c - 1, nr, nc); //左
+        if (c + 1 >= 0 && grid[r][c + 1] == 1)
+            dfs(grid, r, c + 1, nr, nc); //右
+    }
 
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">sumOfLeftLeaves</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> TreeNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        stack <span class="token operator">=</span> <span class="token punctuation">[</span>root<span class="token punctuation">]</span>
-        res<span class="token operator">=</span><span class="token number">0</span>
-        <span class="token keyword">while</span> stack<span class="token punctuation">:</span>
-            i <span class="token operator">=</span> stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
-            <span class="token keyword">if</span> isinstance<span class="token punctuation">(</span>i<span class="token punctuation">,</span>TreeNode<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                stack<span class="token punctuation">.</span>extend<span class="token punctuation">(</span><span class="token punctuation">[</span>i<span class="token punctuation">.</span>right<span class="token punctuation">,</span>i<span class="token punctuation">.</span>val<span class="token punctuation">,</span>i<span class="token punctuation">.</span>left<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#调整这里可以实现不同遍历</span>
-                a<span class="token operator">=</span>i<span class="token punctuation">.</span>left
-                <span class="token keyword">if</span> a <span class="token keyword">is</span> None <span class="token operator">or</span> a<span class="token punctuation">.</span>left <span class="token operator">or</span> a<span class="token punctuation">.</span>right<span class="token punctuation">:</span>
-                   <span class="token keyword">continue</span>
-                <span class="token keyword">else</span><span class="token punctuation">:</span>
-                   res<span class="token operator">=</span>res<span class="token operator">+</span>a<span class="token punctuation">.</span>val
-        <span class="token keyword">return</span> res
+public:
+    int numIslands(vector<vector<char>> &grid)
+    {
+        string method = "DFS";
+        if (method == "DFS")
+        {
+            //method1:DFS
+            int nr = grid.size();
+            if (!nr)
+                return 0;
+            int nc = grid[0].size();
 
-<span class="token triple-quoted-string string">'''
-#test
-node11=TreeNode(9)
-node12=TreeNode(20)
-node31=TreeNode(15)
-node32=TreeNode(7)
-root=TreeNode(3)
-root.left=node11
-root.right=node12
-node12.left=node31
-node12.right=node32
-test=Solution()
-print(test.sumOfLeftLeaves(root))
-'''</span></code></pre>
+            int num_islands = 0;
+            for (int i = 0; i < nr; ++i)
+            {
+                for (int j = 0; j < nc; ++j)
+                {
+                    if (grid[i][j] == '1')
+                    {
+                        ++num_islands;
+                        dfs(grid, i, j, nr, nc);
+                    }
+                }
+            }
+            return num_islands;
+        }
+        else if (method == "BFS")
+        {
+            //method2:BFS
+            int nr = grid.size();
+            if (!nr)
+                return 0;
+            int nc = grid[0].size();
+
+            int num_islands = 0;
+            pair<int, int> rc;
+            for (int r = 0; r < nr; ++r)
+            {
+                for (int c = 0; c < nc; ++c)
+                {
+                    if (grid[r][c] == '1')
+                    {
+                        ++num_islands;
+                        grid[r][c] = '0';
+                        queue<pair<int, int>> neighbors;
+                        neighbors.push({r, c});
+                        while (!neighbors.empty())
+                        {
+                            rc = neighbors.front();
+                            neighbors.pop();
+                            int row = rc.first, col = rc.second;
+                            if (row - 1 >= 0 && grid[row - 1][col] == '1')
+                            {
+                                neighbors.push({row - 1, col});
+                                grid[row - 1][col] = '0';
+                            }
+                            if (row + 1 < nr && grid[row + 1][col] == '1')
+                            {
+                                neighbors.push({row + 1, col});
+                                grid[row + 1][col] = '0';
+                            }
+                            if (col - 1 >= 0 && grid[row][col - 1] == '1')
+                            {
+                                neighbors.push({row, col - 1});
+                                grid[row][col - 1] = '0';
+                            }
+                            if (col + 1 < nc && grid[row][col + 1] == '1')
+                            {
+                                neighbors.push({row, col + 1});
+                                grid[row][col + 1] = '0';
+                            }
+                        }
+                    }
+                }
+            }
+            return num_islands;
+        }
+    }
+};
+//进行测试，输出测试结果
+int main()
+{
+    Solution test;
+    string name = "1111", typed = "aaleex";
+    vector<char> grid1({'1', '1', '0', '1', '0'}), grid2({'1', '1', '0', '0', '0'}), grid3({'0', '0', '0', '0', '0'});
+    vector<vector<char>> grid = {grid1, grid2, grid3};
+    bool res = test.numIslands(grid);
+    cout << res << endl;
+
+    getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
+    return 0;
+}</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -519,7 +611,7 @@ print(test.sumOfLeftLeaves(root))
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/d870.html">http://YewLasting.github.io/posts/d870.html</a>
+                    <a href="http://YewLasting.github.io/posts/1bd4.html">http://YewLasting.github.io/posts/1bd4.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -726,33 +818,33 @@ print(test.sumOfLeftLeaves(root))
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/efa.html">
+                <a href="/posts/1bd4.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="力扣每日1题no.11 - 113.路径总和 II">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣每日1题no.37 - 200.岛屿数量">
                         
-                        <span class="card-title">力扣每日1题no.11 - 113.路径总和 II</span>
+                        <span class="card-title">力扣每日1题no.37 - 200.岛屿数量</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            113. 路径总和 II难度：中等
-题干给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
-说明: 叶子节点是指没有子节点的节点。
-示例:给定如下二叉树，以及目标和 sum = 22，
-          
+                            200. 岛屿数量难度：中等
+题干给你一个由 '1'（陆地）和 '0'（水）组成的的二维网格，请你计算网格中岛屿的数量。
+岛屿总是被水包围，并且每座岛屿只能由水平方向和/或竖直方向上相邻的陆地连接形成。
+此外，你可以假设该网格的四条边均被水
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -765,6 +857,7 @@ print(test.sumOfLeftLeaves(root))
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -783,35 +876,26 @@ print(test.sumOfLeftLeaves(root))
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/1ef1.html">
+                <a href="/posts/3733.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="力扣每日1题no.7 - 226.翻转二叉树">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="力扣每日1题no.36 - 925.长按键入">
                         
-                        <span class="card-title">力扣每日1题no.7 - 226.翻转二叉树</span>
+                        <span class="card-title">力扣每日1题no.36 - 925.长按键入</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            226. 翻转二叉树难度：简单
-题干翻转一棵二叉树。
-示例：输入：
-     4
-   /   \
-  2     7
- / \   / \
-1   3 6   9输出：
-     4
-   /   \
-  7     2
- / \   /
+                            925. 长按键入难度：简单
+题干你的朋友正在使用键盘输入他的名字 name。偶尔，在键入字符 c 时，按键可能会被长按，而字符可能被输入 1 次或多次。
+你将会检查键盘输入的字符 typed。如果它对应的可能是你的朋友的名字（其中一些字符
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
                             </span>
                         <span class="publish-author">
                             
