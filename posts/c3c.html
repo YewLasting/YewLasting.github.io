@@ -407,7 +407,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    345
+                    349
                 </div>
                 
 
@@ -453,10 +453,8 @@ struct ListNode
 class Solution
 {
 public:
-    bool isPalindrome(ListNode *head)
-    {
-        if (head == nullptr)
-        {
+    bool isPalindrome(ListNode *head)    {
+        if (head == nullptr)        {
             return true;
         }
         //获得中点
@@ -469,10 +467,8 @@ public:
         l2 = reverseList(l2);
         //判断是否回文
         bool result = true;
-        while (result && l2 != nullptr)
-        {
-            if (l1->val != l2->val)
-            {
+        while (result && l2 != nullptr)        {
+            if (l1->val != l2->val)           {
                 result = false;
             }
             l1 = l1->next;
@@ -483,24 +479,20 @@ public:
         return result;
     }
 
-    ListNode *middleNode(ListNode *head)
-    {
+    ListNode *middleNode(ListNode *head)    {
         ListNode *slow = head;
         ListNode *fast = head;
-        while (fast->next != nullptr && fast->next->next != nullptr)
-        {
+        while (fast->next != nullptr && fast->next->next != nullptr)       {
             slow = slow->next;
             fast = fast->next->next;
         }
         return slow;
     }
 
-    ListNode *reverseList(ListNode *head)
-    {
+    ListNode *reverseList(ListNode *head)    {
         ListNode *prev = nullptr;
         ListNode *curr = head;
-        while (curr != nullptr)
-        {
+        while (curr != nullptr)        {
             ListNode *nextTemp = curr->next;
             curr->next = prev;
             prev = curr;
@@ -508,22 +500,7 @@ public:
         }
         return prev;
     }
-};
-//进行测试，输出测试结果
-int main()
-{
-    ListNode *node5 = new ListNode(1, nullptr);
-    ListNode *node4 = new ListNode(2, node5);
-    ListNode *node3 = new ListNode(3, node4);
-    ListNode *node2 = new ListNode(2, node3);
-    ListNode *node1 = new ListNode(1, node2);
-    Solution test;
-    ListNode *head = node1;
-    cout<<test.isPalindrome(head)<<endl;
-
-    getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
-    return 0;
-}</code></pre>
+};</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
