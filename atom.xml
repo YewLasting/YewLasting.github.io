@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2020-10-24T13:50:07.959Z</updated>
+  <updated>2020-10-25T04:07:30.062Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.40 - 845.数组中的最长山脉</title>
+    <link href="http://yewlasting.github.io/posts/414e.html"/>
+    <id>http://yewlasting.github.io/posts/414e.html</id>
+    <published>2020-10-25T03:13:21.000Z</published>
+    <updated>2020-10-25T04:07:30.062Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;845-数组中的最长山脉&quot;&gt;&lt;a href=&quot;#845-数组中的最长山脉&quot; class=&quot;headerlink&quot; title=&quot;845. 数组中的最长山脉&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.39 - 1024.视频拼接</title>
     <link href="http://yewlasting.github.io/posts/875e.html"/>
     <id>http://yewlasting.github.io/posts/875e.html</id>
     <published>2020-10-24T11:52:19.000Z</published>
-    <updated>2020-10-24T13:50:07.959Z</updated>
+    <updated>2020-10-24T13:50:41.640Z</updated>
     
     <summary type="html">
     
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;404-左叶子之和&quot;&gt;&lt;a href=&quot;#404-左叶子之和&quot; class=&quot;headerlink&quot; title=&quot;404. 左叶子之和&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.7 - 226.翻转二叉树</title>
-    <link href="http://yewlasting.github.io/posts/1ef1.html"/>
-    <id>http://yewlasting.github.io/posts/1ef1.html</id>
-    <published>2020-09-16T13:03:16.000Z</published>
-    <updated>2020-09-17T05:23:45.705Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;226-翻转二叉树&quot;&gt;&lt;a href=&quot;#226-翻转二叉树&quot; class=&quot;headerlink&quot; title=&quot;226. 翻转二叉树&quot;&gt;&lt;/a&gt;&lt;a
         
       
     

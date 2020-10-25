@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.17 - 771.宝石与石头, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.40 - 845.数组中的最长山脉, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于图像处理、机器学习、深度学习，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.17 - 771.宝石与石头 | unlasting</title>
+    <title>力扣每日1题no.40 - 845.数组中的最长山脉 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.17 - 771.宝石与石头</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.40 - 845.数组中的最长山脉</h1>
                 </div>
             </div>
         </div>
@@ -393,28 +393,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-02
+                    2020-10-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-02
+                    2020-10-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    273
+                    459
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -429,26 +429,78 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="771-宝石与石头"><a href="#771-宝石与石头" class="headerlink" title="771. 宝石与石头"></a><a href="https://leetcode-cn.com/problems/jewels-and-stones/" target="_blank" rel="noopener">771. 宝石与石头</a></h1><p><strong>难度：</strong>简单</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定字符串<code>J</code> 代表石头中宝石的类型，和字符串 <code>S</code>代表你拥有的石头。 <code>S</code> 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。</p>
-<p><code>J</code> 中的字母不重复，<code>J</code> 和 <code>S</code>中的所有字符都是字母。字母区分大小写，因此<code>"a"</code>和<code>"A"</code>是不同类型的石头。</p>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>输入: J = "aA", S = "aAAbbbb"
-输出: 3</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>输入: J = "z", S = "ZZ"
-输出: 0</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意:"></a><strong>注意:</strong></h3><ul>
-<li><code>S</code> 和 <code>J</code> 最多含有50个字母。</li>
-<li><code>J</code> 中的字符不重复。</li>
+                <h1 id="845-数组中的最长山脉"><a href="#845-数组中的最长山脉" class="headerlink" title="845. 数组中的最长山脉"></a><a href="https://leetcode-cn.com/problems/longest-mountain-in-array/" target="_blank" rel="noopener">845. 数组中的最长山脉</a></h1><p><strong>难度：</strong>中等</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>我们把数组 A 中符合下列属性的任意连续子数组 B 称为 “<em>山脉”</em>：</p>
+<ul>
+<li><code>B.length &gt;= 3</code></li>
+<li>存在 <code>0 &lt; i &lt; B.length - 1</code> 使得 <code>B[0] &lt; B[1] &lt; ... B[i-1] &lt; B[i] &gt; B[i+1] &gt; ... &gt; B[B.length - 1]</code></li>
 </ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/jewels-and-stones/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/jewels-and-stones/</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>python3</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 2020.10.02</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">numJewelsInStones</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> J<span class="token punctuation">:</span> str<span class="token punctuation">,</span> S<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        cnt<span class="token operator">=</span><span class="token number">0</span>
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>J<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>S<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span><span class="token punctuation">(</span>S<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>J<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                    cnt<span class="token operator">=</span>cnt<span class="token operator">+</span><span class="token number">1</span>
-        <span class="token keyword">return</span> cnt</code></pre>
+<p>（注意：B 可以是 A 的任意子数组，包括整个数组 A。）</p>
+<p>给出一个整数数组 <code>A</code>，返回最长 <em>“山脉”</em> 的长度。</p>
+<p>如果不含有 “<em>山脉”</em> 则返回 <code>0</code>。</p>
+<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：[2,1,4,7,3,2,5]
+输出：5
+解释：最长的 “山脉” 是 [1,4,7,3,2]，长度为 5。</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：[2,2,2]
+输出：0
+解释：不含 “山脉”。</code></pre><p> <strong>提示：</strong></p>
+<ol>
+<li><code>0 &lt;= A.length &lt;= 10000</code></li>
+<li><code>0 &lt;= A[i] &lt;= 10000</code></li>
+</ol>
+<p>来源：力扣（LeetCode） </p>
+<p>链接：<a href="https://leetcode-cn.com/problems/longest-mountain-in-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-mountain-in-array/</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
+<pre class=" language-c++"><code class="language-c++">//2020.10.25
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+class Solution 
+{
+public:
+    int longestMountain(vector<int>& A) 
+    {
+        int n = A.size();
+        int ans = 0;    
+        int left = 0;
+        while (left + 2 < n) //山脉的长度至少为 33
+        {
+            int right = left + 1;
+            if (A[left] < A[left + 1]) //当A[left]是一个左山脚时
+            {
+                while (right  < n - 1 && A[right] < A[right + 1]) //让right向山顶移动
+                {
+                    ++right;
+                }
+                if (right < n - 1 && A[right] > A[right + 1]) //当山顶右侧存在右山脚时
+                {
+                    while (right < n - 1 && A[right] > A[right + 1])//让right向右山脚移动
+                     {
+                        ++right;
+                    }
+                    ans = max(ans, right - left + 1);//到达右山脚后开始计算山脉长度并与之前做对比
+                }
+                else //right=n-1或者A[right] = A[right + 1]时无法形成山脉   
+                {
+                    ++right;
+                }
+            }
+            left = right;
+        }
+        return ans;
+    }
+};
+//进行测试，输出测试结果
+int main()
+{
+    Solution test;
+    vector<int> A = {2,1,4,7,3,2,5};
+    int ret = test.longestMountain(A);
+    cout << ret << endl;
+
+    getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
+    return 0;
+}</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -492,7 +544,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/5f2e.html">http://YewLasting.github.io/posts/5f2e.html</a>
+                    <a href="http://YewLasting.github.io/posts/414e.html">http://YewLasting.github.io/posts/414e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -699,32 +751,34 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/815f.html">
+                <a href="/posts/414e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="力扣每日1题no.18 - 1.两数之和">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣每日1题no.40 - 845.数组中的最长山脉">
                         
-                        <span class="card-title">力扣每日1题no.18 - 1.两数之和</span>
+                        <span class="card-title">力扣每日1题no.40 - 845.数组中的最长山脉</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. 两数之和难度：简单
-题干给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
-你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
-示例:给定
+                            845. 数组中的最长山脉难度：中等
+题干我们把数组 A 中符合下列属性的任意连续子数组 B 称为 “山脉”：
+
+B.length &gt;= 3
+存在 0 &lt; i &lt; B.length - 1 使得 B[0] &lt; B[1
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -737,6 +791,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -755,34 +810,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/ef2a.html">
+                <a href="/posts/875e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="力扣每日1题no.14 - 145.二叉树的后序遍历">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="力扣每日1题no.39 - 1024.视频拼接">
                         
-                        <span class="card-title">力扣每日1题no.14 - 145.二叉树的后序遍历</span>
+                        <span class="card-title">力扣每日1题no.39 - 1024.视频拼接</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            145. 二叉树的后序遍历难度：中等
-题干给定一个二叉树，返回它的 后序 遍历。
-示例:输入: [1,null,2,3] 
-
-   1
-    \
-     2
-    /
-   3 
-
-输出: [3,2,1]进阶:递归算法很简单，你可以通
+                            1024. 视频拼接难度：中等
+题干你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。
+视频片段 clips[i] 都用区间进行表示：开始于 clips[i][0] 并于 cli
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-24
                             </span>
                         <span class="publish-author">
                             
