@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2020-10-25T04:07:30.062Z</updated>
+  <updated>2020-10-26T08:08:22.060Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.41 - 1365.有多少小于当前数字的数字</title>
+    <link href="http://yewlasting.github.io/posts/4309.html"/>
+    <id>http://yewlasting.github.io/posts/4309.html</id>
+    <published>2020-10-26T07:29:19.000Z</published>
+    <updated>2020-10-26T08:08:22.060Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1365-有多少小于当前数字的数字&quot;&gt;&lt;a href=&quot;#1365-有多少小于当前数字的数字&quot; class=&quot;headerlink&quot; title=&quot;1365. 有多少小于当前数字的数字&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.40 - 845.数组中的最长山脉</title>
     <link href="http://yewlasting.github.io/posts/414e.html"/>
     <id>http://yewlasting.github.io/posts/414e.html</id>
     <published>2020-10-25T03:13:21.000Z</published>
-    <updated>2020-10-25T04:07:30.062Z</updated>
+    <updated>2020-10-25T04:08:17.482Z</updated>
     
     <summary type="html">
     
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;113-路径总和-II&quot;&gt;&lt;a href=&quot;#113-路径总和-II&quot; class=&quot;headerlink&quot; title=&quot;113. 路径总和 II&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.10 - 404.左叶子之和</title>
-    <link href="http://yewlasting.github.io/posts/d870.html"/>
-    <id>http://yewlasting.github.io/posts/d870.html</id>
-    <published>2020-09-19T15:15:36.000Z</published>
-    <updated>2020-09-19T15:20:14.387Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;404-左叶子之和&quot;&gt;&lt;a href=&quot;#404-左叶子之和&quot; class=&quot;headerlink&quot; title=&quot;404. 左叶子之和&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
