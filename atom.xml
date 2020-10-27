@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2020-10-26T08:08:22.060Z</updated>
+  <updated>2020-10-27T15:32:54.343Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.42 - 144.二叉树的前序遍历</title>
+    <link href="http://yewlasting.github.io/posts/2091.html"/>
+    <id>http://yewlasting.github.io/posts/2091.html</id>
+    <published>2020-10-27T07:16:47.000Z</published>
+    <updated>2020-10-27T15:32:54.343Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;144-二叉树的前序遍历&quot;&gt;&lt;a href=&quot;#144-二叉树的前序遍历&quot; class=&quot;headerlink&quot; title=&quot;144. 二叉树的前序遍历&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.41 - 1365.有多少小于当前数字的数字</title>
     <link href="http://yewlasting.github.io/posts/4309.html"/>
     <id>http://yewlasting.github.io/posts/4309.html</id>
     <published>2020-10-26T07:29:19.000Z</published>
-    <updated>2020-10-26T08:08:22.060Z</updated>
+    <updated>2020-10-26T08:09:32.158Z</updated>
     
     <summary type="html">
     
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;235-二叉搜索树的最近公共祖先&quot;&gt;&lt;a href=&quot;#235-二叉搜索树的最近公共祖先&quot; class=&quot;headerlink&quot; title=&quot;235. 二叉搜索树的最近公共祖先&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.11 - 113.路径总和 II</title>
-    <link href="http://yewlasting.github.io/posts/efa.html"/>
-    <id>http://yewlasting.github.io/posts/efa.html</id>
-    <published>2020-09-26T12:12:07.000Z</published>
-    <updated>2020-09-26T12:16:30.257Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;113-路径总和-II&quot;&gt;&lt;a href=&quot;#113-路径总和-II&quot; class=&quot;headerlink&quot; title=&quot;113. 路径总和 II&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
