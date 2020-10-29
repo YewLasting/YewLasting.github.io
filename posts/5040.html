@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.37 - 200.岛屿数量, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.44 - 129.求根到叶子节点数字之和, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于图像处理、机器学习、深度学习，分享生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.37 - 200.岛屿数量 | unlasting</title>
+    <title>力扣每日1题no.44 - 129.求根到叶子节点数字之和 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,12 +246,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.37 - 200.岛屿数量</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.44 - 129.求根到叶子节点数字之和</h1>
                 </div>
             </div>
         </div>
@@ -393,28 +393,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-22
+                    2020-10-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-22
+                    2020-10-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    608
+                    474
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -429,141 +429,75 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="200-岛屿数量"><a href="#200-岛屿数量" class="headerlink" title="200. 岛屿数量"></a><a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">200. 岛屿数量</a></h1><p><strong>难度</strong>：中等</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给你一个由 <code>'1'</code>（陆地）和 <code>'0'</code>（水）组成的的二维网格，请你计算网格中岛屿的数量。</p>
-<p>岛屿总是被水包围，并且每座岛屿只能由水平方向和/或竖直方向上相邻的陆地连接形成。</p>
-<p>此外，你可以假设该网格的四条边均被水包围。</p>
-<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：grid = [
-  ["1","1","1","1","0"],
-  ["1","1","0","1","0"],
-  ["1","1","0","0","0"],
-  ["0","0","0","0","0"]
-]
-输出：1</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：grid = [
-  ["1","1","0","0","0"],
-  ["1","1","0","0","0"],
-  ["0","0","1","0","0"],
-  ["0","0","0","1","1"]
-]
-输出：3</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
-<li><code>m == grid.length</code></li>
-<li><code>n == grid[i].length</code></li>
-<li><code>1 &lt;= m, n &lt;= 300</code></li>
-<li><code>grid[i][j]</code> 的值为 <code>'0'</code> 或 <code>'1'</code></li>
-</ul>
-<p>来源：力扣（LeetCode） </p>
-<p>链接：<a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/number-of-islands/</a></p>
+                <h1 id="129-求根到叶子节点数字之和"><a href="#129-求根到叶子节点数字之和" class="headerlink" title="129. 求根到叶子节点数字之和"></a><a href="https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/" target="_blank" rel="noopener">129. 求根到叶子节点数字之和</a></h1><p><strong>难度：</strong>中等</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个二叉树，它的每个结点都存放一个 <code>0-9</code> 的数字，每条从根到叶子节点的路径都代表一个数字。</p>
+<p>例如，从根到叶子节点路径 <code>1-&gt;2-&gt;3</code> 代表数字 <code>123</code>。</p>
+<p>计算从根到叶子节点生成的所有数字之和。</p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明:"></a><strong>说明:</strong></h3><p>叶子节点是指没有子节点的节点。</p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>输入: [1,2,3]
+    1
+   / \
+  2   3
+输出: 25
+解释:
+从根到叶子节点路径 1-&gt;2 代表数字 12.
+从根到叶子节点路径 1-&gt;3 代表数字 13.
+因此，数字总和 = 12 + 13 = 25.</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>输入: [4,9,0,5,1]
+    4
+   / \
+  9   0
+ / \
+5   1
+输出: 1026
+解释:
+从根到叶子节点路径 4-&gt;9-&gt;5 代表数字 495.
+从根到叶子节点路径 4-&gt;9-&gt;1 代表数字 491.
+从根到叶子节点路径 4-&gt;0 代表数字 40.
+因此，数字总和 = 495 + 491 + 40 = 1026.</code></pre><p>来源：力扣（LeetCode） </p>
+<p>链接：<a href="https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class=" language-c++"><code class="language-c++">//2020.10.22
-//created by lzr
+<pre class=" language-c++"><code class="language-c++">//2020.10.29
 #include <iostream>
 #include <vector>
-#include <queue>
+#include <algorithm>
 using namespace std;
-class Solution
+//Definition for a binary tree node.
+struct TreeNode
 {
-private:
-    void dfs(vector<vector<char>> &grid, int r, int c, int nr, int nc)
-    {
-        grid[r][c] = '0';
-        if (r - 1 >= 0 && grid[r - 1][c] == 1)
-            dfs(grid, r - 1, c, nr, nc); //下
-        if (r + 1 >= 0 && grid[r + 1][c] == 1)
-            dfs(grid, r + 1, c, nr, nc); //上
-        if (c - 1 >= 0 && grid[r][c - 1] == 1)
-            dfs(grid, r, c - 1, nr, nc); //左
-        if (c + 1 >= 0 && grid[r][c + 1] == 1)
-            dfs(grid, r, c + 1, nr, nc); //右
-    }
-
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+class Solution {
 public:
-    int numIslands(vector<vector<char>> &grid)
-    {
-        string method = "DFS";
-        if (method == "DFS")
-        {
-            //method1:DFS
-            int nr = grid.size();
-            if (!nr)
-                return 0;
-            int nc = grid[0].size();
-
-            int num_islands = 0;
-            for (int i = 0; i < nr; ++i)
-            {
-                for (int j = 0; j < nc; ++j)
-                {
-                    if (grid[i][j] == '1')
-                    {
-                        ++num_islands;
-                        dfs(grid, i, j, nr, nc);
-                    }
-                }
-            }
-            return num_islands;
+    int dfs(TreeNode* root, int prevSum) {
+        if (root == nullptr) {
+            return 0;
         }
-        else if (method == "BFS")
-        {
-            //method2:BFS
-            int nr = grid.size();
-            if (!nr)
-                return 0;
-            int nc = grid[0].size();
-
-            int num_islands = 0;
-            pair<int, int> rc;
-            for (int r = 0; r < nr; ++r)
-            {
-                for (int c = 0; c < nc; ++c)
-                {
-                    if (grid[r][c] == '1')
-                    {
-                        ++num_islands;
-                        grid[r][c] = '0';
-                        queue<pair<int, int>> neighbors;
-                        neighbors.push({r, c});
-                        while (!neighbors.empty())
-                        {
-                            rc = neighbors.front();
-                            neighbors.pop();
-                            int row = rc.first, col = rc.second;
-                            if (row - 1 >= 0 && grid[row - 1][col] == '1')
-                            {
-                                neighbors.push({row - 1, col});
-                                grid[row - 1][col] = '0';
-                            }
-                            if (row + 1 < nr && grid[row + 1][col] == '1')
-                            {
-                                neighbors.push({row + 1, col});
-                                grid[row + 1][col] = '0';
-                            }
-                            if (col - 1 >= 0 && grid[row][col - 1] == '1')
-                            {
-                                neighbors.push({row, col - 1});
-                                grid[row][col - 1] = '0';
-                            }
-                            if (col + 1 < nc && grid[row][col + 1] == '1')
-                            {
-                                neighbors.push({row, col + 1});
-                                grid[row][col + 1] = '0';
-                            }
-                        }
-                    }
-                }
-            }
-            return num_islands;
+        int sum = prevSum * 10 + root->val;
+        if (root->left == nullptr && root->right == nullptr) {
+            return sum;
+        } else {
+            return dfs(root->left, sum) + dfs(root->right, sum);
         }
+    }
+    int sumNumbers(TreeNode* root) {
+        return dfs(root, 0);
     }
 };
 //进行测试，输出测试结果
 int main()
 {
+    TreeNode *node22=new TreeNode(3);
+    TreeNode *node21=new TreeNode(2);
+    TreeNode *node1=new TreeNode(1,node21,node22);
     Solution test;
-    string name = "1111", typed = "aaleex";
-    vector<char> grid1({'1', '1', '0', '1', '0'}), grid2({'1', '1', '0', '0', '0'}), grid3({'0', '0', '0', '0', '0'});
-    vector<vector<char>> grid = {grid1, grid2, grid3};
-    bool res = test.numIslands(grid);
-    cout << res << endl;
+    int ret;
+    ret = test.sumNumbers(node1);
+    cout << ret << endl;
 
     getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
     return 0;
@@ -611,7 +545,7 @@ int main()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/1bd4.html">http://YewLasting.github.io/posts/1bd4.html</a>
+                    <a href="http://YewLasting.github.io/posts/5040.html">http://YewLasting.github.io/posts/5040.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -818,33 +752,33 @@ int main()
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/c3c.html">
+                <a href="/posts/5040.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="力扣每日1题no.38 - 234.回文链表">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="力扣每日1题no.44 - 129.求根到叶子节点数字之和">
                         
-                        <span class="card-title">力扣每日1题no.38 - 234.回文链表</span>
+                        <span class="card-title">力扣每日1题no.44 - 129.求根到叶子节点数字之和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            234. 回文链表难度：简单
-题干请判断一个链表是否为回文链表。
-示例 1:输入: 1-&gt;2
-输出: false示例 2:输入: 1-&gt;2-&gt;2-&gt;1
-输出: true进阶：你能否用 O(n) 时间复杂度和 O(1)
+                            129. 求根到叶子节点数字之和难度：中等
+题干给定一个二叉树，它的每个结点都存放一个 0-9 的数字，每条从根到叶子节点的路径都代表一个数字。
+例如，从根到叶子节点路径 1-&gt;2-&gt;3 代表数字 123。
+计算从根到叶子节点生
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -857,6 +791,7 @@ int main()
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -875,26 +810,27 @@ int main()
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/3733.html">
+                <a href="/posts/779.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="力扣每日1题no.36 - 925.长按键入">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="力扣每日1题no.43 - 1207.独一无二的出现次数">
                         
-                        <span class="card-title">力扣每日1题no.36 - 925.长按键入</span>
+                        <span class="card-title">力扣每日1题no.43 - 1207.独一无二的出现次数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            925. 长按键入难度：简单
-题干你的朋友正在使用键盘输入他的名字 name。偶尔，在键入字符 c 时，按键可能会被长按，而字符可能被输入 1 次或多次。
-你将会检查键盘输入的字符 typed。如果它对应的可能是你的朋友的名字（其中一些字符
+                            1207. 独一无二的出现次数难度：简单
+题干给你一个整数数组 arr，请你帮忙统计数组中每个数的出现次数。
+如果每个数的出现次数都是独一无二的，就返回 true；否则返回 false。
+示例 1：输入：arr = [1,2,2,1,1,3
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-28
                             </span>
                         <span class="publish-author">
                             
