@@ -400,7 +400,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-22
+                    2020-10-30
                 </div>
                 
 
@@ -466,20 +466,20 @@ private:
     void dfs(vector<vector<char>> &grid, int r, int c, int nr, int nc)
     {
         grid[r][c] = '0';
-        if (r - 1 >= 0 && grid[r - 1][c] == 1)
-            dfs(grid, r - 1, c, nr, nc); //下
-        if (r + 1 >= 0 && grid[r + 1][c] == 1)
-            dfs(grid, r + 1, c, nr, nc); //上
-        if (c - 1 >= 0 && grid[r][c - 1] == 1)
+        if (r - 1 >= 0 && grid[r - 1][c] == '1')
+            dfs(grid, r - 1, c, nr, nc); //上
+        if (r + 1 < nr && grid[r + 1][c] == '1')
+            dfs(grid, r + 1, c, nr, nc); //下
+        if (c - 1 >= 0 && grid[r][c - 1] == '1')
             dfs(grid, r, c - 1, nr, nc); //左
-        if (c + 1 >= 0 && grid[r][c + 1] == 1)
+        if (c + 1 < nc && grid[r][c + 1] == '1')
             dfs(grid, r, c + 1, nr, nc); //右
     }
-
 public:
     int numIslands(vector<vector<char>> &grid)
     {
-        string method = "DFS";
+        int num_islands = 0;
+        string method = "BFS";
         if (method == "DFS")
         {
             //method1:DFS
@@ -488,7 +488,7 @@ public:
                 return 0;
             int nc = grid[0].size();
 
-            int num_islands = 0;
+            //int num_islands = 0;
             for (int i = 0; i < nr; ++i)
             {
                 for (int j = 0; j < nc; ++j)
@@ -500,7 +500,7 @@ public:
                     }
                 }
             }
-            return num_islands;
+            //return num_islands;
         }
         else if (method == "BFS")
         {
@@ -510,7 +510,7 @@ public:
                 return 0;
             int nc = grid[0].size();
 
-            int num_islands = 0;
+            //int num_islands = 0;
             pair<int, int> rc;
             for (int r = 0; r < nr; ++r)
             {
@@ -550,19 +550,19 @@ public:
                         }
                     }
                 }
-            }
-            return num_islands;
+            }           
+            //return num_islands;
         }
+    return num_islands;
     }
 };
 //进行测试，输出测试结果
 int main()
 {
     Solution test;
-    string name = "1111", typed = "aaleex";
     vector<char> grid1({'1', '1', '0', '1', '0'}), grid2({'1', '1', '0', '0', '0'}), grid3({'0', '0', '0', '0', '0'});
     vector<vector<char>> grid = {grid1, grid2, grid3};
-    bool res = test.numIslands(grid);
+    int res = test.numIslands(grid);
     cout << res << endl;
 
     getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
@@ -1152,7 +1152,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.5k</span>&nbsp;字
+                class="white-color">12.9k</span>&nbsp;字
             
             
             
