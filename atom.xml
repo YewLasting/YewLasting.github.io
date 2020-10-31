@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2020-10-30T08:19:24.419Z</updated>
+  <updated>2020-10-31T15:09:42.834Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.46 - 381.O(1) 时间插入、删除和获取随机元素 - 允许重复</title>
+    <link href="http://yewlasting.github.io/posts/27a3.html"/>
+    <id>http://yewlasting.github.io/posts/27a3.html</id>
+    <published>2020-10-31T07:39:14.000Z</published>
+    <updated>2020-10-31T15:09:42.834Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;381-O-1-时间插入、删除和获取随机元素-允许重复&quot;&gt;&lt;a href=&quot;#381-O-1-时间插入、删除和获取随机元素-允许重复&quot; class=&quot;headerlink&quot; title=&quot;381. O(1) 时间插入、删除和获取随机元素 -
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.45 - 463.岛屿的周长</title>
     <link href="http://yewlasting.github.io/posts/d659.html"/>
     <id>http://yewlasting.github.io/posts/d659.html</id>
     <published>2020-10-30T08:15:44.000Z</published>
-    <updated>2020-10-30T08:19:24.419Z</updated>
+    <updated>2020-10-30T08:19:57.791Z</updated>
     
     <summary type="html">
     
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;2-两数相加&quot;&gt;&lt;a href=&quot;#2-两数相加&quot; class=&quot;headerlink&quot; title=&quot;2. 两数相加&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/add-two-numbers/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.18 - 1.两数之和</title>
-    <link href="http://yewlasting.github.io/posts/815f.html"/>
-    <id>http://yewlasting.github.io/posts/815f.html</id>
-    <published>2020-10-03T05:44:25.000Z</published>
-    <updated>2020-10-03T05:47:25.168Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1-两数之和&quot;&gt;&lt;a href=&quot;#1-两数之和&quot; class=&quot;headerlink&quot; title=&quot;1. 两数之和&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/two-sum/&quot;
         
       
     

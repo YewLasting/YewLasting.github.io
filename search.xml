@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>力扣每日1题no.46 - 381.O(1) 时间插入、删除和获取随机元素 - 允许重复</title>
+      <link href="/posts/27a3.html"/>
+      <url>/posts/27a3.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="381-O-1-时间插入、删除和获取随机元素-允许重复"><a href="#381-O-1-时间插入、删除和获取随机元素-允许重复" class="headerlink" title="381. O(1) 时间插入、删除和获取随机元素 - 允许重复"></a><a href="https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/" target="_blank" rel="noopener">381. O(1) 时间插入、删除和获取随机元素 - 允许重复</a></h1><p><strong>难度：</strong>困难</p><h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>设计一个支持在<em>平均</em> 时间复杂度 <strong>O(1)</strong> 下<strong>，</strong> 执行以下操作的数据结构。</p><p><strong>注意: 允许出现重复元素。</strong></p><ol><li><code>insert(val)</code>：向集合中插入元素 val。</li><li><code>remove(val)</code>：当 val 存在时，从集合中移除一个 val。</li><li><code>getRandom</code>：从现有集合中随机获取一个元素。每个元素被返回的概率应该与其在集合中的数量呈线性相关。</li></ol><h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a><strong>示例:</strong></h3><pre><code>// 初始化一个空的集合。RandomizedCollection collection = new RandomizedCollection();// 向集合中插入 1 。返回 true 表示集合不包含 1 。collection.insert(1);// 向集合中插入另一个 1 。返回 false 表示集合包含 1 。集合现在包含 [1,1] 。collection.insert(1);// 向集合中插入 2 ，返回 true 。集合现在包含 [1,1,2] 。collection.insert(2);// getRandom 应当有 2/3 的概率返回 1 ，1/3 的概率返回 2 。collection.getRandom();// 从集合中删除 1 ，返回 true 。集合现在包含 [1,2] 。collection.remove(1);// getRandom 应有相同概率返回 1 和 2 。collection.getRandom();</code></pre><p>来源：力扣（LeetCode） </p><p>链接：<a href="https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/insert-delete-getrandom-o1-duplicates-allowed/</a></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p><pre class=" language-c++"><code class="language-c++">//2020.10.31#include <iostream>#include <vector>#include <unordered_map>#include <unordered_set>using namespace std;class RandomizedCollection{public:    unordered_map<int, unordered_set<int>> idx;    vector<int> nums;    /** Initialize your data structure here. */    RandomizedCollection()    {    }    /** Inserts a value to the collection. Returns true if the collection did not already contain the specified element. */    bool insert(int val)    {        nums.push_back(val);        idx[val].insert(nums.size() - 1);        return idx[val].size() == 1;    }    /** Removes a value from the collection. Returns true if the collection contained the specified element. */    bool remove(int val)    {        if (idx.find(val) == idx.end())        {            return false;        }        int i = *(idx[val].begin());        nums[i] = nums.back();        idx[val].erase(i);        idx[nums[i]].erase(nums.size() - 1);        if (i < nums.size() - 1)        {            idx[nums[i]].insert(i);        }        if (idx[val].size() == 0)        {            idx.erase(val);        }        nums.pop_back();        return true;    }    /** Get a random element from the collection. */    int getRandom()    {        return nums[rand() % nums.size()];    }};//进行测试，输出测试结果int main(){    RandomizedCollection *obj = new RandomizedCollection();    int val = 0;    bool param_1 = obj->insert(1);    cout << param_1 << endl;    bool param_2 = obj->insert(1);    cout << param_2 << endl;    bool param_3 = obj->insert(2);    cout << param_3 << endl;    int param_4 = obj->getRandom();    cout << param_4 << endl;    bool param_5 = obj->remove(1);    cout << param_5 << endl;    int param_6 = obj->getRandom();    cout << param_6 << endl;    getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上    return 0;}</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 力扣每日1题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣每日1题no.45 - 463.岛屿的周长</title>
       <link href="/posts/d659.html"/>
       <url>/posts/d659.html</url>
