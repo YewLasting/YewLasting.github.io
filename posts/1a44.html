@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.33 - 19.删除链表的倒数第N个节点, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.52 - 1356.根据数字二进制下1的数目排序, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.33 - 19.删除链表的倒数第N个节点 | unlasting</title>
+    <title>力扣每日1题no.52 - 1356.根据数字二进制下1的数目排序 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.33 - 19.删除链表的倒数第N个节点</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.52 - 1356.根据数字二进制下1的数目排序</h1>
                 </div>
             </div>
         </div>
@@ -394,28 +394,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-18
+                    2020-11-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-19
+                    2020-11-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    313
+                    689
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -430,67 +430,87 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="19-删除链表的倒数第N个节点"><a href="#19-删除链表的倒数第N个节点" class="headerlink" title="19. 删除链表的倒数第N个节点"></a><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/" target="_blank" rel="noopener">19. 删除链表的倒数第N个节点</a></h1><p><strong>难度：</strong>中等</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个链表，删除链表的倒数第 <em>n</em> 个节点，并且返回链表的头结点。</p>
-<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a><strong>示例：</strong></h3><pre><code>给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2.
-
-当删除了倒数第二个节点后，链表变为 1-&gt;2-&gt;3-&gt;5.</code></pre><h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a><strong>说明：</strong></h3><p>给定的 <em>n</em> 保证是有效的。</p>
-<h3 id="进阶："><a href="#进阶：" class="headerlink" title="进阶："></a><strong>进阶：</strong></h3><p>你能尝试使用一趟扫描实现吗？</p>
+                <h1 id="1356-根据数字二进制下-1-的数目排序"><a href="#1356-根据数字二进制下-1-的数目排序" class="headerlink" title="1356. 根据数字二进制下 1 的数目排序"></a><a href="https://leetcode-cn.com/problems/sort-integers-by-the-number-of-1-bits/" target="_blank" rel="noopener">1356. 根据数字二进制下 1 的数目排序</a></h1><p><strong>难度：</strong>简单</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给你一个整数数组 <code>arr</code> 。请你将数组中的元素按照其二进制表示中数字 <strong>1</strong> 的数目升序排序。</p>
+<p>如果存在多个数字二进制中 <strong>1</strong> 的数目相同，则必须将它们按照数值大小升序排列。</p>
+<p>请你返回排序后的数组。</p>
+<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：arr = [0,1,2,3,4,5,6,7,8]
+输出：[0,1,2,4,8,3,5,6,7]
+解释：[0] 是唯一一个有 0 个 1 的数。
+[1,2,4,8] 都有 1 个 1 。
+[3,5,6] 有 2 个 1 。
+[7] 有 3 个 1 。
+按照 1 的个数排序得到的结果数组为 [0,1,2,4,8,3,5,6,7]</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：arr = [1024,512,256,128,64,32,16,8,4,2,1]
+输出：[1,2,4,8,16,32,64,128,256,512,1024]
+解释：数组中所有整数二进制下都只有 1 个 1 ，所以你需要按照数值大小将它们排序。</code></pre><h3 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a><strong>示例 3：</strong></h3><pre><code>输入：arr = [10000,10000]
+输出：[10000,10000]</code></pre><h3 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a><strong>示例 4：</strong></h3><pre><code>输入：arr = [2,3,5,7,11,13,17,19]
+输出：[2,3,5,17,7,11,13,19]</code></pre><h3 id="示例-5："><a href="#示例-5：" class="headerlink" title="示例 5："></a><strong>示例 5：</strong></h3><pre><code>输入：arr = [10,100,1000,10000]
+输出：[10,100,10000,1000]</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
+<li><code>1 &lt;= arr.length &lt;= 500</code></li>
+<li><code>0 &lt;= arr[i] &lt;= 10^4</code></li>
+</ul>
 <p>来源：力扣（LeetCode） </p>
-<p>链接：<a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/sort-integers-by-the-number-of-1-bits/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sort-integers-by-the-number-of-1-bits/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c++"><code class="language-c++">//2020.10.18
-#include <iostream>
-#include <string>
-using namespace std;
-//Definition for singly-linked list.
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-class Solution {
-public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
-        ListNode* dummy = new ListNode(0, head);
-        ListNode* first = head;
-        ListNode* second = dummy;
-        for (int i = 0; i<n; ++i)
-        {
-            first = first->next;
-        }
-        while (first)
-        {
-            second = second->next;
-            first = first->next;
-        }
-        second->next = second->next->next;
-        ListNode* res = dummy->next;
-        delete dummy;
-        return res;
-    }
-};
-//进行测试，输出测试结果
-int main()
-{
-    ListNode* node5 = new ListNode(5, nullptr);
-    ListNode* node4 = new ListNode(4, node5);
-    ListNode* node3 = new ListNode(3, node4);
-    ListNode* node2 = new ListNode(2, node3);
-    ListNode* node1 = new ListNode(1, node2);
-    Solution test;
-    ListNode* res;
-    res = test.removeNthFromEnd(node1, 2);
-    while (res)
-    {
-        cout << res->val << " ";
-        res = res->next;
-    }
-    getchar();
-    return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.11.6</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
+using namespace std<span class="token punctuation">;</span>
+class Solution
+<span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+    <span class="token keyword">int</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//得到x转化为二进制后1的个数</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            res <span class="token operator">+</span><span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//从二进制的低位到高位进行统计</span>
+            x <span class="token operator">/</span><span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//向左（高位）移动</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">sortByBits</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token operator">&amp;</span>arr<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">bit</span><span class="token punctuation">(</span><span class="token number">10001</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//用于存储转换后的二进制数字，索引为十进制的数字x,向量中索引x对应的元素为二进制x中1的个数</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> x <span class="token punctuation">:</span> arr<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            bit<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">get</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将x转换为二进制数并存储到bit中</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> arr<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>bit<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">&lt;</span> bit<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>bit<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">></span> bit<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> x <span class="token operator">&lt;</span> y<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//如果1的数量相等，则按照十进制下的值升序排列</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Solution test<span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> ans <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">sortByBits</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token punctuation">:</span> ans<span class="token punctuation">)</span>
+        cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -534,7 +554,7 @@ int main()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/32e3.html">http://YewLasting.github.io/posts/32e3.html</a>
+                    <a href="http://YewLasting.github.io/posts/1a44.html">http://YewLasting.github.io/posts/1a44.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -741,32 +761,33 @@ int main()
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/8084.html">
+                <a href="/posts/1a44.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="力扣每日1题no.34 - 844.比较含退格的字符串">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="力扣每日1题no.52 - 1356.根据数字二进制下1的数目排序">
                         
-                        <span class="card-title">力扣每日1题no.34 - 844.比较含退格的字符串</span>
+                        <span class="card-title">力扣每日1题no.52 - 1356.根据数字二进制下1的数目排序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            844. 比较含退格的字符串难度：简单
-题干给定 S 和 T 两个字符串，当它们分别被输入到空白的文本编辑器后，判断二者是否相等，并返回结果。 # 代表退格字符。
-注意：如果对空文本输入退格字符，文本继续为空。
-示例 1：输入：S = "a
+                            1356. 根据数字二进制下 1 的数目排序难度：简单
+题干给你一个整数数组 arr 。请你将数组中的元素按照其二进制表示中数字 1 的数目升序排序。
+如果存在多个数字二进制中 1 的数目相同，则必须将它们按照数值大小升序排列。
+请你返回排
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -779,6 +800,7 @@ int main()
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -797,27 +819,28 @@ int main()
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/a7d1.html">
+                <a href="/posts/8e68.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="力扣每日1题no.31 - 977.有序数组的平方">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="力扣每日1题no.51 - 127.单词接龙">
                         
-                        <span class="card-title">力扣每日1题no.31 - 977.有序数组的平方</span>
+                        <span class="card-title">力扣每日1题no.51 - 127.单词接龙</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            977. 有序数组的平方难度：简单
-题干给定一个按非递减顺序排序的整数数组 A，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。
-示例 1：输入：[-4,-1,0,3,10]
-输出：[0,1,9,16,100]示例 2：输入：[-7
+                            127. 单词接龙难度：中等
+题干给定两个单词（beginWord 和 endWord*）和一个字典，找到从 *beginWord 到 endWord 的最短转换序列的长度。转换需遵循如下规则：
+
+每次转换只能改变一个字母。
+转换过程中的中
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-05
                             </span>
                         <span class="publish-author">
                             
