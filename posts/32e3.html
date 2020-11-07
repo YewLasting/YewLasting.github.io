@@ -401,14 +401,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-19
+                    2020-11-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    313
+                    356
                 </div>
                 
 
@@ -439,58 +439,58 @@
 <p>来源：力扣（LeetCode） </p>
 <p>链接：<a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c++"><code class="language-c++">//2020.10.18
-#include <iostream>
-#include <string>
-using namespace std;
-//Definition for singly-linked list.
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-class Solution {
-public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
-        ListNode* dummy = new ListNode(0, head);
-        ListNode* first = head;
-        ListNode* second = dummy;
-        for (int i = 0; i<n; ++i)
-        {
-            first = first->next;
-        }
-        while (first)
-        {
-            second = second->next;
-            first = first->next;
-        }
-        second->next = second->next->next;
-        ListNode* res = dummy->next;
-        delete dummy;
-        return res;
-    }
-};
-//进行测试，输出测试结果
-int main()
-{
-    ListNode* node5 = new ListNode(5, nullptr);
-    ListNode* node4 = new ListNode(4, node5);
-    ListNode* node3 = new ListNode(3, node4);
-    ListNode* node2 = new ListNode(2, node3);
-    ListNode* node1 = new ListNode(1, node2);
-    Solution test;
-    ListNode* res;
-    res = test.removeNthFromEnd(node1, 2);
-    while (res)
-    {
-        cout << res->val << " ";
-        res = res->next;
-    }
-    getchar();
-    return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.10.18</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//Definition for singly-linked list.</span>
+<span class="token keyword">struct</span> ListNode <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> val<span class="token punctuation">;</span>
+    ListNode <span class="token operator">*</span>next<span class="token punctuation">;</span>
+    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> ListNode <span class="token operator">*</span>next<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+class Solution <span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">removeNthFromEnd</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ListNode<span class="token operator">*</span> dummy <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ListNode<span class="token operator">*</span> first <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        ListNode<span class="token operator">*</span> second <span class="token operator">=</span> dummy<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            first <span class="token operator">=</span> first<span class="token operator">-></span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>first<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            second <span class="token operator">=</span> second<span class="token operator">-></span>next<span class="token punctuation">;</span>
+            first <span class="token operator">=</span> first<span class="token operator">-></span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        second<span class="token operator">-></span>next <span class="token operator">=</span> second<span class="token operator">-></span>next<span class="token operator">-></span>next<span class="token punctuation">;</span>
+        ListNode<span class="token operator">*</span> res <span class="token operator">=</span> dummy<span class="token operator">-></span>next<span class="token punctuation">;</span>
+        delete dummy<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ListNode<span class="token operator">*</span> node5 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> nullptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> node4 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> node5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> node3 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> node4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> node2 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> node3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> node1 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> node2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Solution test<span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> res<span class="token punctuation">;</span>
+    res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">removeNthFromEnd</span><span class="token punctuation">(</span>node1<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> res<span class="token operator">-></span>val <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+        res <span class="token operator">=</span> res<span class="token operator">-></span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1075,7 +1075,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.7k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             

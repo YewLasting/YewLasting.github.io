@@ -401,14 +401,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-21
+                    2020-11-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    456
+                    497
                 </div>
                 
 
@@ -437,93 +437,93 @@
 <h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>给定链表 1-&gt;2-&gt;3-&gt;4, 重新排列为 1-&gt;4-&gt;2-&gt;3.</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>给定链表 1-&gt;2-&gt;3-&gt;4-&gt;5, 重新排列为 1-&gt;5-&gt;2-&gt;4-&gt;3.</code></pre><p>来源：力扣（LeetCode） </p>
 <p>链接：<a href="https://leetcode-cn.com/problems/reorder-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reorder-list/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c++"><code class="language-c++">//2020.10.20
-#include <iostream>
-#include <string>
-using namespace std;
-//Definition for singly-linked list.
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-class Solution {
-public:
-    void reorderList(ListNode* head) {
-        if (head == nullptr) {
-            return;
-        }
-        //获得中点
-        ListNode* mid = middleNode(head);
-        //分割成两条链表，第二条链表的起始位置是中点的下一节点，即slow(mid)->next
-        ListNode* l1 = head;
-        ListNode* l2 = mid->next;
-        mid->next = nullptr;
-        //对链表转置
-        l2 = reverseList(l2);
-        //融合两条链表
-        mergeList(l1, l2);
-    }
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.10.20</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//Definition for singly-linked list.</span>
+<span class="token keyword">struct</span> ListNode <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> val<span class="token punctuation">;</span>
+    ListNode <span class="token operator">*</span>next<span class="token punctuation">;</span>
+    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> ListNode <span class="token operator">*</span>next<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+class Solution <span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+    <span class="token keyword">void</span> <span class="token function">reorderList</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//获得中点</span>
+        ListNode<span class="token operator">*</span> mid <span class="token operator">=</span> <span class="token function">middleNode</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//分割成两条链表，第二条链表的起始位置是中点的下一节点，即slow(mid)->next</span>
+        ListNode<span class="token operator">*</span> l1 <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        ListNode<span class="token operator">*</span> l2 <span class="token operator">=</span> mid<span class="token operator">-></span>next<span class="token punctuation">;</span>
+        mid<span class="token operator">-></span>next <span class="token operator">=</span> nullptr<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//对链表转置</span>
+        l2 <span class="token operator">=</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>l2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//融合两条链表</span>
+        <span class="token function">mergeList</span><span class="token punctuation">(</span>l1<span class="token punctuation">,</span> l2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    ListNode* middleNode(ListNode* head) {
-        ListNode* slow = head;
-        ListNode* fast = head;
-        while (fast->next != nullptr && fast->next->next != nullptr) {
-            slow = slow->next;
-            fast = fast->next->next;
-        }
-        return slow;
-    }
+    ListNode<span class="token operator">*</span> <span class="token function">middleNode</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ListNode<span class="token operator">*</span> slow <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        ListNode<span class="token operator">*</span> fast <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>fast<span class="token operator">-></span>next <span class="token operator">!=</span> nullptr <span class="token operator">&amp;&amp;</span> fast<span class="token operator">-></span>next<span class="token operator">-></span>next <span class="token operator">!=</span> nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            slow <span class="token operator">=</span> slow<span class="token operator">-></span>next<span class="token punctuation">;</span>
+            fast <span class="token operator">=</span> fast<span class="token operator">-></span>next<span class="token operator">-></span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    ListNode* reverseList(ListNode* head) {
-        ListNode* prev = nullptr;
-        ListNode* curr = head;
-        while (curr != nullptr) {
-            ListNode* nextTemp = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = nextTemp;
-        }
-        return prev;
-    }
+    ListNode<span class="token operator">*</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ListNode<span class="token operator">*</span> prev <span class="token operator">=</span> nullptr<span class="token punctuation">;</span>
+        ListNode<span class="token operator">*</span> curr <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>curr <span class="token operator">!=</span> nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            ListNode<span class="token operator">*</span> nextTemp <span class="token operator">=</span> curr<span class="token operator">-></span>next<span class="token punctuation">;</span>
+            curr<span class="token operator">-></span>next <span class="token operator">=</span> prev<span class="token punctuation">;</span>
+            prev <span class="token operator">=</span> curr<span class="token punctuation">;</span>
+            curr <span class="token operator">=</span> nextTemp<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> prev<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    void mergeList(ListNode* l1, ListNode* l2) {
-        ListNode* l1_tmp;
-        ListNode* l2_tmp;
-        while (l1 != nullptr && l2 != nullptr) {
-            l1_tmp = l1->next;
-            l2_tmp = l2->next;
+    <span class="token keyword">void</span> <span class="token function">mergeList</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> l1<span class="token punctuation">,</span> ListNode<span class="token operator">*</span> l2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ListNode<span class="token operator">*</span> l1_tmp<span class="token punctuation">;</span>
+        ListNode<span class="token operator">*</span> l2_tmp<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>l1 <span class="token operator">!=</span> nullptr <span class="token operator">&amp;&amp;</span> l2 <span class="token operator">!=</span> nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            l1_tmp <span class="token operator">=</span> l1<span class="token operator">-></span>next<span class="token punctuation">;</span>
+            l2_tmp <span class="token operator">=</span> l2<span class="token operator">-></span>next<span class="token punctuation">;</span>
 
-            l1->next = l2;
-            l1 = l1_tmp;
+            l1<span class="token operator">-></span>next <span class="token operator">=</span> l2<span class="token punctuation">;</span>
+            l1 <span class="token operator">=</span> l1_tmp<span class="token punctuation">;</span>
 
-            l2->next = l1;
-            l2 = l2_tmp;
-        }
-    }
-};
-//进行测试，输出测试结果
-int main()
-{
-    ListNode* node5 = new ListNode(5, nullptr);
-    ListNode* node4 = new ListNode(4, node5);
-    ListNode* node3 = new ListNode(3, node4);
-    ListNode* node2 = new ListNode(2, node3);
-    ListNode* node1 = new ListNode(1, node2);
-    Solution test;
-    ListNode* head=node1;
-    test.reorderList(head);
-    while (head)
-    {
-        cout << head->val << " ";
-        head = head->next;
-    }
+            l2<span class="token operator">-></span>next <span class="token operator">=</span> l1<span class="token punctuation">;</span>
+            l2 <span class="token operator">=</span> l2_tmp<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ListNode<span class="token operator">*</span> node5 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> nullptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> node4 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> node5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> node3 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> node4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> node2 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> node3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> node1 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> node2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Solution test<span class="token punctuation">;</span>
+    ListNode<span class="token operator">*</span> head<span class="token operator">=</span>node1<span class="token punctuation">;</span>
+    test<span class="token punctuation">.</span><span class="token function">reorderList</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>head<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> head<span class="token operator">-></span>val <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+        head <span class="token operator">=</span> head<span class="token operator">-></span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    getchar();//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
-    return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1107,7 +1107,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.7k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             

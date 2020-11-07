@@ -401,14 +401,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-20
+                    2020-11-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    582
+                    621
                 </div>
                 
 
@@ -452,89 +452,89 @@
 <p>来源：力扣（LeetCode） </p>
 <p>链接：<a href="https://leetcode-cn.com/problems/backspace-string-compare/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/backspace-string-compare/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c++"><code class="language-c++">//2020.10.19
-#include <iostream>
-#include <string>
-using namespace std;
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.10.19</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+using namespace std<span class="token punctuation">;</span>
 class Solution
-{
-public:
-    bool backspaceCompare(string S, string T)
-    {
-        int i = S.length() - 1, j = T.length() - 1;//逆序遍历
-        int skipS = 0, skipT = 0;
+<span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+    bool <span class="token function">backspaceCompare</span><span class="token punctuation">(</span>string S<span class="token punctuation">,</span> string T<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> S<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> j <span class="token operator">=</span> T<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//逆序遍历</span>
+        <span class="token keyword">int</span> skipS <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> skipT <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-        while (i >= 0 || j >= 0)
-        {
-            //首先处理#字符
-            while (i >= 0)
-            {
-                if (S[i] == '#')
-                {
-                    skipS++, i--;//如果是#，则跳过，做好删除下一个字符的准备
-                }
-                else if (skipS > 0)//如果倒数第一个是退格，则删除倒数第二个
-                {
-                    skipS--, i--;
-                }
-                else//没有出现退格字符，则跳过
-                {
-                    break;
-                }
-            }
-            //和i一开始的操作类似
-            while (j >= 0)
-            {
-                if (T[j] == '#')
-                {
-                    skipT++, j--;
-                }
-                else if (skipT > 0)
-                {
-                    skipT--, j--;
-                }
-                else
-                {
-                    break;
-                }
-            }
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">||</span> j <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//首先处理#字符</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>S<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'#'</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    skipS<span class="token operator">++</span><span class="token punctuation">,</span> i<span class="token operator">--</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//如果是#，则跳过，做好删除下一个字符的准备</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>skipS <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//如果倒数第一个是退格，则删除倒数第二个</span>
+                <span class="token punctuation">{</span>
+                    skipS<span class="token operator">--</span><span class="token punctuation">,</span> i<span class="token operator">--</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span><span class="token comment" spellcheck="true">//没有出现退格字符，则跳过</span>
+                <span class="token punctuation">{</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">//和i一开始的操作类似</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>T<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'#'</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    skipT<span class="token operator">++</span><span class="token punctuation">,</span> j<span class="token operator">--</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>skipT <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    skipT<span class="token operator">--</span><span class="token punctuation">,</span> j<span class="token operator">--</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span>
+                <span class="token punctuation">{</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
 
-            //然后正常开始进行对比
+            <span class="token comment" spellcheck="true">//然后正常开始进行对比</span>
 
-            //如果S，T都没有遍历完毕
-            if (i >= 0 && j >= 0)
-            {
-                if (S[i] != T[j])//从后往前遍历如果有某个字符不等，则S，T一定不相等
-                {
-                    return false;
-                }
-            }
-            //如果有一个遍历到头了，则S，T也一定不相等
-            else
-            {
-                if (i >= 0 || j >= 0)
-                {
-                    return false;
-                }
-            }
-            //如果两个情况都不存在，则继续对比下一组
-            i--, j--;
-        }
-        return true;
-    }
-};
-//进行测试，输出测试结果
-int main()
-{
-    Solution test;
-    string S,T;
-    S = "abb#c";
-    T = "ad#c";
-    bool res = test.backspaceCompare(S,T);
-    cout << res << endl;
-    getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
-    return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+            <span class="token comment" spellcheck="true">//如果S，T都没有遍历完毕</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> j <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>S<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> T<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//从后往前遍历如果有某个字符不等，则S，T一定不相等</span>
+                <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">//如果有一个遍历到头了，则S，T也一定不相等</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">||</span> j <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">//如果两个情况都不存在，则继续对比下一组</span>
+            i<span class="token operator">--</span><span class="token punctuation">,</span> j<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Solution test<span class="token punctuation">;</span>
+    string S<span class="token punctuation">,</span>T<span class="token punctuation">;</span>
+    S <span class="token operator">=</span> <span class="token string">"abb#c"</span><span class="token punctuation">;</span>
+    T <span class="token operator">=</span> <span class="token string">"ad#c"</span><span class="token punctuation">;</span>
+    bool res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">backspaceCompare</span><span class="token punctuation">(</span>S<span class="token punctuation">,</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1121,7 +1121,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.7k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             

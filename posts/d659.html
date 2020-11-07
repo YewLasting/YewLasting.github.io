@@ -401,21 +401,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-30
+                    2020-11-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    424
+                    477
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -444,50 +444,50 @@
 <p>来源：力扣（LeetCode） </p>
 <p>链接：<a href="https://leetcode-cn.com/problems/island-perimeter/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/island-perimeter/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c++"><code class="language-c++">//2020.10.30
-#include <iostream>
-#include <vector>
-#include <queue>
-using namespace std;
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.10.30</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+using namespace std<span class="token punctuation">;</span>
 class Solution 
-{
-     int dx[4] = {0, 1, 0, -1};
-     int dy[4] = {1, 0, -1, 0};
-public:
-    int islandPerimeter(vector<vector<int>> &grid) {
-        int n = grid.size(), m = grid[0].size();
-        if(!n) return 0;
-        int ans = 0;
-        for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < m; ++j) {
-                if (grid[i][j]) 
-                {
-                    int cnt = 0;
-                    for (int k = 0; k < 4; ++k) {
-                        int tx = i + dx[k];
-                        int ty = j + dy[k];
-                        if (tx < 0 || tx >= n || ty < 0 || ty >= m || !grid[tx][ty]) {
-                            cnt += 1;
-                        }
-                    }
-                    ans += cnt;
-                }
-            }
-        }
-        return ans;
-    }
-};
-//进行测试，输出测试结果
-int main()
-{
-    Solution test;
-    vector<vector<int>> grid = {{0,1,0,0},{1,1,1,0},{0,1,0,0},{1,1,0,0}};
-    int res = test.islandPerimeter(grid);
-    cout << res << endl;
+<span class="token punctuation">{</span>
+     <span class="token keyword">int</span> dx<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+     <span class="token keyword">int</span> dy<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+public<span class="token punctuation">:</span>
+    <span class="token keyword">int</span> <span class="token function">islandPerimeter</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token operator">&amp;</span>grid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> grid<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> m <span class="token operator">=</span> grid<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>n<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> <span class="token operator">++</span>j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>grid<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> 
+                <span class="token punctuation">{</span>
+                    <span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token operator">++</span>k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">int</span> tx <span class="token operator">=</span> i <span class="token operator">+</span> dx<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                        <span class="token keyword">int</span> ty <span class="token operator">=</span> j <span class="token operator">+</span> dy<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>tx <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> tx <span class="token operator">>=</span> n <span class="token operator">||</span> ty <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> ty <span class="token operator">>=</span> m <span class="token operator">||</span> <span class="token operator">!</span>grid<span class="token punctuation">[</span>tx<span class="token punctuation">]</span><span class="token punctuation">[</span>ty<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            cnt <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                    ans <span class="token operator">+</span><span class="token operator">=</span> cnt<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Solution test<span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> grid <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">islandPerimeter</span><span class="token punctuation">(</span>grid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
 
-    getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
-    return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1074,7 +1074,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.7k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             

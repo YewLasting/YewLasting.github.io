@@ -401,21 +401,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-22
+                    2020-11-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    434
+                    500
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -448,43 +448,43 @@
 <p>来源：力扣（LeetCode） </p>
 <p>链接：<a href="https://leetcode-cn.com/problems/long-pressed-name/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/long-pressed-name/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c++"><code class="language-c++">//2020.10.21
-#include <iostream>
-#include <string>
-using namespace std;
-class Solution {
-public:
-    bool isLongPressedName(string name, string typed) {
-        int i=0,j=0;
-        while(j<typed.length())
-        {
-            if(i<name.length()&&name[i]==typed[j])
-            {
-                ++i;
-                ++j;
-            }
-            else if(j>0&&typed[j]==typed[j-1])//j>0是为了防止typed[j-1]报错
-            {
-                ++j;
-            }
-            else//如果某个字符不匹配，则直接返回false
-            return false;
-        }
-        //遍历完typed所有的字符后，如果name中的字符也一一核对完毕，
-        //则此时i就等于name的长度，代表name遍历到末尾了，则返回true,否则返回false
-        return i==name.length();
-    }
-};
-//进行测试，输出测试结果
-int main()
-{
-    Solution test;
-    string name = "alex",typed = "aaleex";
-    bool res = test.isLongPressedName(name,typed);
-    cout << res << endl;
-    getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
-    return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.10.21</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+using namespace std<span class="token punctuation">;</span>
+class Solution <span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+    bool <span class="token function">isLongPressedName</span><span class="token punctuation">(</span>string name<span class="token punctuation">,</span> string typed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>j<span class="token operator">&lt;</span>typed<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span>name<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span>name<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>typed<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token operator">++</span>i<span class="token punctuation">;</span>
+                <span class="token operator">++</span>j<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>j<span class="token operator">></span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>typed<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span>typed<span class="token punctuation">[</span>j<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//j>0是为了防止typed[j-1]报错</span>
+            <span class="token punctuation">{</span>
+                <span class="token operator">++</span>j<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span><span class="token comment" spellcheck="true">//如果某个字符不匹配，则直接返回false</span>
+            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//遍历完typed所有的字符后，如果name中的字符也一一核对完毕，</span>
+        <span class="token comment" spellcheck="true">//则此时i就等于name的长度，代表name遍历到末尾了，则返回true,否则返回false</span>
+        <span class="token keyword">return</span> i<span class="token operator">==</span>name<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Solution test<span class="token punctuation">;</span>
+    string name <span class="token operator">=</span> <span class="token string">"alex"</span><span class="token punctuation">,</span>typed <span class="token operator">=</span> <span class="token string">"aaleex"</span><span class="token punctuation">;</span>
+    bool res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">isLongPressedName</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>typed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1070,7 +1070,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.7k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             

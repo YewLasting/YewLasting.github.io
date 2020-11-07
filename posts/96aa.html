@@ -401,21 +401,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-01
+                    2020-11-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    470
+                    709
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -459,67 +459,67 @@ wordDict = ["cats", "dog", "sand", "and", "cat"]
 []</code></pre><p>来源：力扣（LeetCode） </p>
 <p>链接：<a href="https://leetcode-cn.com/problems/word-break-ii/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/word-break-ii/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c++"><code class="language-c++">//2020.11.1
-#include <iostream>
-#include <vector>
-#include <string>
-#include <unordered_map>
-#include <unordered_set>
-using namespace std;
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.11.1</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
+using namespace std<span class="token punctuation">;</span>
 class Solution
-{
-private:
-    unordered_map<int, vector<string>> ans;//用来存放答案，即所有可以组成的句子
-    unordered_set<string> wordSet;//建立哈希表用来存放所有的单词
+<span class="token punctuation">{</span>
+private<span class="token punctuation">:</span>
+    unordered_map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span>string<span class="token operator">>></span> ans<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//用来存放答案，即所有可以组成的句子</span>
+    unordered_set<span class="token operator">&lt;</span>string<span class="token operator">></span> wordSet<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//建立哈希表用来存放所有的单词</span>
 
-public:
-    vector<string> wordBreak(string s, vector<string> &wordDict)
-    {
-        wordSet = unordered_set<string>(wordDict.begin(), wordDict.end());//将单词放入其中，初始化哈希表
-        backtrack(s, 0);//从字符串中的第一个字母开始回溯
-        return ans[3];//？
-    }
-    void backtrack(const string &s, int index)
-    {
-        //具体做法是，使用哈希表存储字符串 s 的每个下标和从该下标开始的部分可以组成的句子列表，
-        //在回溯过程中如果遇到已经访问过的下标，则可以直接从哈希表得到结果，而不需要重复计算。
-        //如果到某个下标发现无法匹配，则哈希表中该下标对应的是空列表，因此可以对不能拆分的情况进行剪枝优化。
-        if (!ans.count(index))
-        {
-            if (index == s.size())//字符串s中的所有字符都遍历完毕
-            {
-                ans[index] = {""};
-                return;
-            }
-            ans[index] = {};
-            for (int i = index + 1; i <= s.size(); ++i)
-            {
-                string word = s.substr(index, i - index);
-                if (wordSet.count(word))//wordSet.count(word) 返回单词列表wordSet中单词word出现的次数
-                {//如果这个字符串组成的单词在单词列表wordSet中
-                    backtrack(s, i);//开始回溯下一个字符，查找下一个单词
-                    for (const string &succ : ans[i])
-                    {
-                        ans[index].push_back(succ.empty() ? word : word + " " + succ);
-                    }
-                }
-            }
-        }
-    }
-};
-//进行测试，输出测试结果
-int main()
-{
-    Solution test;
-    string s = "catsanddog";
-    vector<string> wordDict = {"cat", "cats", "and", "sand", "dog"};
-    vector<string> res = test.wordBreak(s, wordDict);
-    for (string i : res)
-        cout << i << endl;
+public<span class="token punctuation">:</span>
+    vector<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token function">wordBreak</span><span class="token punctuation">(</span>string s<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token operator">&amp;</span>wordDict<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        wordSet <span class="token operator">=</span> unordered_set<span class="token operator">&lt;</span>string<span class="token operator">></span><span class="token punctuation">(</span>wordDict<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> wordDict<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将单词放入其中，初始化哈希表</span>
+        <span class="token function">backtrack</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//从字符串中的第一个字母开始回溯</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//？</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">void</span> <span class="token function">backtrack</span><span class="token punctuation">(</span><span class="token keyword">const</span> string <span class="token operator">&amp;</span>s<span class="token punctuation">,</span> <span class="token keyword">int</span> index<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//具体做法是，使用哈希表存储字符串 s 的每个下标和从该下标开始的部分可以组成的句子列表，</span>
+        <span class="token comment" spellcheck="true">//在回溯过程中如果遇到已经访问过的下标，则可以直接从哈希表得到结果，而不需要重复计算。</span>
+        <span class="token comment" spellcheck="true">//如果到某个下标发现无法匹配，则哈希表中该下标对应的是空列表，因此可以对不能拆分的情况进行剪枝优化。</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>ans<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">==</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//字符串s中的所有字符都遍历完毕</span>
+            <span class="token punctuation">{</span>
+                ans<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">""</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            ans<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> s<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                string word <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> i <span class="token operator">-</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>wordSet<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//wordSet.count(word) 返回单词列表wordSet中单词word出现的次数</span>
+                <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//如果这个字符串组成的单词在单词列表wordSet中</span>
+                    <span class="token function">backtrack</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//开始回溯下一个字符，查找下一个单词</span>
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> string <span class="token operator">&amp;</span>succ <span class="token punctuation">:</span> ans<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">{</span>
+                        ans<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>succ<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">?</span> word <span class="token punctuation">:</span> word <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> succ<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Solution test<span class="token punctuation">;</span>
+    string s <span class="token operator">=</span> <span class="token string">"catsanddog"</span><span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span>string<span class="token operator">></span> wordDict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"cats"</span><span class="token punctuation">,</span> <span class="token string">"and"</span><span class="token punctuation">,</span> <span class="token string">"sand"</span><span class="token punctuation">,</span> <span class="token string">"dog"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span>string<span class="token operator">></span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">wordBreak</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> wordDict<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>string i <span class="token punctuation">:</span> res<span class="token punctuation">)</span>
+        cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
 
-    getchar(); //获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上
-    return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1106,7 +1106,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.7k</span>&nbsp;字
+                class="white-color">18.5k</span>&nbsp;字
             
             
             
