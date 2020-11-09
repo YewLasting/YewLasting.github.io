@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.31 - 977.有序数组的平方, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.55 - 973.最接近原点的K个点, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.31 - 977.有序数组的平方 | unlasting</title>
+    <title>力扣每日1题no.55 - 973.最接近原点的K个点 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.31 - 977.有序数组的平方</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.55 - 973.最接近原点的K个点</h1>
                 </div>
             </div>
         </div>
@@ -394,28 +394,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-16
+                    2020-11-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-16
+                    2020-11-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    334
+                    639
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -430,40 +430,83 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977. 有序数组的平方"></a><a href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/" target="_blank" rel="noopener">977. 有序数组的平方</a></h1><p><strong>难度：</strong>简单</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个按非递减顺序排序的整数数组 <code>A</code>，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。</p>
-<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：[-4,-1,0,3,10]
-输出：[0,1,9,16,100]</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：[-7,-3,2,3,11]
-输出：[4,9,9,49,121]</code></pre><p> <strong>提示：</strong></p>
-<ol>
-<li><code>1 &lt;= A.length &lt;= 10000</code></li>
-<li><code>-10000 &lt;= A[i] &lt;= 10000</code></li>
-<li><code>A</code> 已按非递减顺序排序。</li>
+                <h1 id="973-最接近原点的-K-个点"><a href="#973-最接近原点的-K-个点" class="headerlink" title="973. 最接近原点的 K 个点"></a><a href="https://leetcode-cn.com/problems/k-closest-points-to-origin/" target="_blank" rel="noopener">973. 最接近原点的 K 个点</a></h1><p><strong>难度：</strong>中等</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>我们有一个由平面上的点组成的列表 <code>points</code>。需要从中找出 <code>K</code> 个距离原点 <code>(0, 0)</code> 最近的点。</p>
+<p>（这里，平面上两点之间的距离是欧几里德距离。）</p>
+<p>你可以按任何顺序返回答案。除了点坐标的顺序之外，答案确保是唯一的。</p>
+<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：points = [[1,3],[-2,2]], K = 1
+输出：[[-2,2]]
+解释： 
+(1, 3) 和原点之间的距离为 sqrt(10)，
+(-2, 2) 和原点之间的距离为 sqrt(8)，
+由于 sqrt(8) &lt; sqrt(10)，(-2, 2) 离原点更近。
+我们只需要距离原点最近的 K = 1 个点，所以答案就是 [[-2,2]]。</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：points = [[3,3],[5,-1],[-2,4]], K = 2
+输出：[[3,3],[-2,4]]
+（答案 [[-2,4],[3,3]] 也会被接受。）</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ol>
+<li><code>1 &lt;= K &lt;= points.length &lt;= 10000</code></li>
+<li><code>-10000 &lt; points[i][0] &lt; 10000</code></li>
+<li><code>-10000 &lt; points[i][1] &lt; 10000</code></li>
 </ol>
 <p>来源：力扣（LeetCode） </p>
-<p>链接：<a href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/squares-of-a-sorted-array/</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>python3</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 2020.10.16</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">sortedSquares</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> A<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">:</span>
-        n <span class="token operator">=</span> len<span class="token punctuation">(</span>A<span class="token punctuation">)</span>
-        ans <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> n <span class="token comment" spellcheck="true">#初始化答案数组</span>
+<p>链接：<a href="https://leetcode-cn.com/problems/k-closest-points-to-origin/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/k-closest-points-to-origin/</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.11.9</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
+using namespace std<span class="token punctuation">;</span>
+class Solution
+<span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">kClosest</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token operator">&amp;</span>points<span class="token punctuation">,</span> <span class="token keyword">int</span> K<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        priority_queue<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">>></span> q<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//建立优先队列</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> K<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//将前k个点加入优先队列</span>
+        <span class="token punctuation">{</span>
+            q<span class="token punctuation">.</span><span class="token function">emplace</span><span class="token punctuation">(</span>points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> points<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> K<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//从第k+1个点开始遍历，依次和队头元素（队头优先级最大，默认pair.first值越大优先级越高）对比</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> dist <span class="token operator">=</span> points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>dist <span class="token operator">&lt;</span> q<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>first<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                q<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                q<span class="token punctuation">.</span><span class="token function">emplace</span><span class="token punctuation">(</span>dist<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//新元素进入优先队列后队列内部会自动按优先级进行重新排序，使得队头元素优先级最大</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> ans<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//将前k小得元素放到ans中</span>
+        <span class="token punctuation">{</span>
+            ans<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>points<span class="token punctuation">[</span>q<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>second<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            q<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Solution test<span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> points <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> K <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
 
-        i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> pos <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token comment" spellcheck="true">#i,j分别为头指针和尾指针。pos为答案数组的索引</span>
-        <span class="token keyword">while</span> i <span class="token operator">&lt;=</span> j<span class="token punctuation">:</span>
-            <span class="token keyword">if</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">*</span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
-                ans<span class="token punctuation">[</span>pos<span class="token punctuation">]</span> <span class="token operator">=</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-                i <span class="token operator">+=</span> <span class="token number">1</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span><span class="token comment" spellcheck="true">#当i,j的位置重合后的情况也包含在这里</span>
-                ans<span class="token punctuation">[</span>pos<span class="token punctuation">]</span> <span class="token operator">=</span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">*</span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-                j <span class="token operator">-=</span> <span class="token number">1</span>
-            pos <span class="token operator">-=</span> <span class="token number">1</span><span class="token comment" spellcheck="true">#答案数组添加新成员后从后往前逆序更新索引</span>
-        <span class="token keyword">return</span> ans
-<span class="token comment" spellcheck="true">#test</span>
-A<span class="token operator">=</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">]</span>
-test<span class="token operator">=</span>Solution<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>test<span class="token punctuation">.</span>sortedSquares<span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> ans <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">kClosest</span><span class="token punctuation">(</span>points<span class="token punctuation">,</span> K<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> i <span class="token punctuation">:</span> ans<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token punctuation">:</span> i<span class="token punctuation">)</span>
+            cout <span class="token operator">&lt;&lt;</span> j <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -507,7 +550,7 @@ test<span class="token operator">=</span>Solution<span class="token punctuation"
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/a7d1.html">http://YewLasting.github.io/posts/a7d1.html</a>
+                    <a href="http://YewLasting.github.io/posts/81e5.html">http://YewLasting.github.io/posts/81e5.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -714,33 +757,33 @@ test<span class="token operator">=</span>Solution<span class="token punctuation"
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/32e3.html">
+                <a href="/posts/81e5.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="力扣每日1题no.33 - 19.删除链表的倒数第N个节点">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="力扣每日1题no.55 - 973.最接近原点的K个点">
                         
-                        <span class="card-title">力扣每日1题no.33 - 19.删除链表的倒数第N个节点</span>
+                        <span class="card-title">力扣每日1题no.55 - 973.最接近原点的K个点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            19. 删除链表的倒数第N个节点难度：中等
-题干给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
-示例：给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2.
-
-当删除了倒数第二个节点后，链
+                            973. 最接近原点的 K 个点难度：中等
+题干我们有一个由平面上的点组成的列表 points。需要从中找出 K 个距离原点 (0, 0) 最近的点。
+（这里，平面上两点之间的距离是欧几里德距离。）
+你可以按任何顺序返回答案。除了点坐标的顺
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -753,6 +796,7 @@ test<span class="token operator">=</span>Solution<span class="token punctuation"
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -771,38 +815,27 @@ test<span class="token operator">=</span>Solution<span class="token punctuation"
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/8afd.html">
+                <a href="/posts/466a.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="力扣每日1题no.27 - 530.二叉搜索树的最小绝对差">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="力扣每日1题no.54 - 122.买卖股票的最佳时机II">
                         
-                        <span class="card-title">力扣每日1题no.27 - 530.二叉搜索树的最小绝对差</span>
+                        <span class="card-title">力扣每日1题no.54 - 122.买卖股票的最佳时机II</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            530. 二叉搜索树的最小绝对差难度：简单
-题干给你一棵所有节点为非负值的二叉搜索树，请你计算树中任意两节点的差的绝对值的最小值。
-示例：输入：
-
-   1
-    \
-     3
-    /
-   2
-
-输出：
-1
-
-解释：
-最小绝对差
+                            122. 买卖股票的最佳时机 II难度：简单
+题干给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
+注意：你不能同时参与多笔交易（你
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-08
                             </span>
                         <span class="publish-author">
                             
