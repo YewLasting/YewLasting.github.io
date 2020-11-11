@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2020-11-10T06:16:05.556Z</updated>
+  <updated>2020-11-11T15:24:42.263Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.57 - 514.自由之路</title>
+    <link href="http://yewlasting.github.io/posts/318b.html"/>
+    <id>http://yewlasting.github.io/posts/318b.html</id>
+    <published>2020-11-11T12:26:04.000Z</published>
+    <updated>2020-11-11T15:24:42.263Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;514-自由之路&quot;&gt;&lt;a href=&quot;#514-自由之路&quot; class=&quot;headerlink&quot; title=&quot;514. 自由之路&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/freedom-trail/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.56 - 31.下一个排列“</title>
     <link href="http://yewlasting.github.io/posts/2042.html"/>
     <id>http://yewlasting.github.io/posts/2042.html</id>
     <published>2020-11-10T06:13:34.000Z</published>
-    <updated>2020-11-10T06:16:05.556Z</updated>
+    <updated>2020-11-10T06:16:56.089Z</updated>
     
     <summary type="html">
     
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;234-回文链表&quot;&gt;&lt;a href=&quot;#234-回文链表&quot; class=&quot;headerlink&quot; title=&quot;234. 回文链表&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.37 - 200.岛屿数量</title>
-    <link href="http://yewlasting.github.io/posts/1bd4.html"/>
-    <id>http://yewlasting.github.io/posts/1bd4.html</id>
-    <published>2020-10-22T05:32:57.000Z</published>
-    <updated>2020-11-07T08:06:24.018Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;200-岛屿数量&quot;&gt;&lt;a href=&quot;#200-岛屿数量&quot; class=&quot;headerlink&quot; title=&quot;200. 岛屿数量&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
