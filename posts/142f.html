@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.39 - 1024.视频拼接, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.61 - 402.移掉K位数字, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.39 - 1024.视频拼接 | unlasting</title>
+    <title>力扣每日1题no.61 - 402.移掉K位数字 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.39 - 1024.视频拼接</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.61 - 402.移掉K位数字</h1>
                 </div>
             </div>
         </div>
@@ -394,28 +394,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-24
+                    2020-11-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-07
+                    2020-11-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    671
+                    562
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -430,73 +430,83 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1024-视频拼接"><a href="#1024-视频拼接" class="headerlink" title="1024. 视频拼接"></a><a href="https://leetcode-cn.com/problems/video-stitching/" target="_blank" rel="noopener">1024. 视频拼接</a></h1><p><strong>难度：</strong>中等</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>你将会获得一系列视频片段，这些片段来自于一项持续时长为 <code>T</code> 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。</p>
-<p>视频片段 <code>clips[i]</code> 都用区间进行表示：开始于 <code>clips[i][0]</code> 并于 <code>clips[i][1]</code> 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 <code>[0, 7]</code> 可以剪切成 <code>[0, 1] + [1, 3] + [3, 7]</code> 三部分。</p>
-<p>我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（<code>[0, T]</code>）。返回所需片段的最小数目，如果无法完成该任务，则返回 <code>-1</code> 。</p>
-<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：clips = [[0,2],[4,6],[8,10],[1,9],[1,5],[5,9]], T = 10
-输出：3
-解释：
-我们选中 [0,2], [8,10], [1,9] 这三个片段。
-然后，按下面的方案重制比赛片段：
-将 [1,9] 再剪辑为 [1,2] + [2,8] + [8,9] 。
-现在我们手上有 [0,2] + [2,8] + [8,10]，而这些涵盖了整场比赛 [0, 10]。</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：clips = [[0,1],[1,2]], T = 5
-输出：-1
-解释：
-我们无法只用 [0,1] 和 [1,2] 覆盖 [0,5] 的整个过程。</code></pre><h3 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a><strong>示例 3：</strong></h3><pre><code>输入：clips = [[0,1],[6,8],[0,2],[5,6],[0,4],[0,3],[6,7],[1,3],[4,7],[1,4],[2,5],[2,6],[3,4],[4,5],[5,7],[6,9]], T = 9
-输出：3
-解释： 
-我们选取片段 [0,4], [4,7] 和 [6,9] 。</code></pre><h3 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a><strong>示例 4：</strong></h3><pre><code>输入：clips = [[0,4],[2,8]], T = 5
-输出：2
-解释：
-注意，你可能录制超过比赛结束时间的视频。</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
-<li><code>1 &lt;= clips.length &lt;= 100</code></li>
-<li><code>0 &lt;= clips[i][0] &lt;= clips[i][1] &lt;= 100</code></li>
-<li><code>0 &lt;= T &lt;= 100</code></li>
+                <h1 id="402-移掉K位数字"><a href="#402-移掉K位数字" class="headerlink" title="402. 移掉K位数字"></a><a href="https://leetcode-cn.com/problems/remove-k-digits/" target="_blank" rel="noopener">402. 移掉K位数字</a></h1><p><strong>难度：</strong>中等</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个以字符串表示的非负整数 <em>num*，移除这个数中的 *k</em> 位数字，使得剩下的数字最小。</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意:"></a><strong>注意:</strong></h3><ul>
+<li><em>num</em> 的长度小于 10002 且 ≥ <em>k。</em></li>
+<li><em>num</em> 不会包含任何前导零。</li>
 </ul>
-<p>来源：力扣（LeetCode） </p>
-<p>链接：<a href="https://leetcode-cn.com/problems/video-stitching/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/video-stitching/</a></p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1 :"></a><strong>示例 1 :</strong></h3><pre><code>输入: num = "1432219", k = 3
+输出: "1219"
+解释: 移除掉三个数字 4, 3, 和 2 形成一个新的最小的数字 1219。</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2 :"></a><strong>示例 2 :</strong></h3><pre><code>输入: num = "10200", k = 1
+输出: "200"
+解释: 移掉首位的 1 剩下的数字为 200. 注意输出不能有任何前导零。</code></pre><h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例 3 :"></a>示例 <strong>3 :</strong></h3><pre><code>输入: num = "10", k = 2
+输出: "0"
+解释: 从原数字移除所有的数字，剩余为空就是0。</code></pre><p>来源：力扣（LeetCode） </p>
+<p>链接：<a href="https://leetcode-cn.com/problems/remove-k-digits/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-k-digits/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.10.24</span>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">// 2020.11.15</span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
 using namespace std<span class="token punctuation">;</span>
-class Solution <span class="token punctuation">{</span>
+class Solution
+<span class="token punctuation">{</span>
 public<span class="token punctuation">:</span>
-    <span class="token keyword">int</span> <span class="token function">videoStitching</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">&amp;</span> clips<span class="token punctuation">,</span> <span class="token keyword">int</span> T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">maxn</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> last <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> ret <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> pre <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> it <span class="token punctuation">:</span> clips<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>it<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                maxn<span class="token punctuation">[</span>it<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>maxn<span class="token punctuation">[</span>it<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> it<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string <span class="token function">removeKdigits</span><span class="token punctuation">(</span>string num<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token operator">></span> stk<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>digit <span class="token punctuation">:</span> num<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//循环终止条件：栈为空或者新的栈顶元素不大于当前数字或者已经删够了K个数字</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>stk<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> stk<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> digit <span class="token operator">&amp;&amp;</span> k<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                stk<span class="token punctuation">.</span><span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                k <span class="token operator">-</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
+            stk<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>digit<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> T<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            last <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>last<span class="token punctuation">,</span> maxn<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> last<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> pre<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                ret<span class="token operator">++</span><span class="token punctuation">;</span>
-                pre <span class="token operator">=</span> last<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//如果经过前面的处理后删除的数字个数m还不够K个，此时从序列尾部删除剩余的k-m个</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> k <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token operator">--</span>k<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            stk<span class="token punctuation">.</span><span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> ret<span class="token punctuation">;</span>
-     <span class="token punctuation">}</span>
+
+        string ans <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+        bool isLeadingZero <span class="token operator">=</span> true<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//用于判断当前digit == '0'时，这个零是前导零如012，还是数字中间的0，如102</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>digit <span class="token punctuation">:</span> stk<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>isLeadingZero <span class="token operator">&amp;&amp;</span> digit <span class="token operator">==</span> <span class="token string">'0'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            isLeadingZero <span class="token operator">=</span> false<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//当遇到第一个不为0的digit时，此后的零都是数字中间的0</span>
+            ans <span class="token operator">+</span><span class="token operator">=</span> digit<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ans <span class="token operator">==</span> <span class="token string">""</span> <span class="token operator">?</span> <span class="token string">"0"</span> <span class="token punctuation">:</span> ans<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//如果数字被删完了则输出0，否则输出删除后的结果</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     Solution test<span class="token punctuation">;</span>
-    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> clips <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> T<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> ret <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">videoStitching</span><span class="token punctuation">(</span>clips<span class="token punctuation">,</span>T<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> ret <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-
+    string num <span class="token operator">=</span> <span class="token string">"1432219"</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    string ans <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">removeKdigits</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> i <span class="token punctuation">:</span> ans<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> i <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -540,7 +550,7 @@ public<span class="token punctuation">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/875e.html">http://YewLasting.github.io/posts/875e.html</a>
+                    <a href="http://YewLasting.github.io/posts/142f.html">http://YewLasting.github.io/posts/142f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -747,33 +757,36 @@ public<span class="token punctuation">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/414e.html">
+                <a href="/posts/142f.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣每日1题no.40 - 845.数组中的最长山脉">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="力扣每日1题no.61 - 402.移掉K位数字">
                         
-                        <span class="card-title">力扣每日1题no.40 - 845.数组中的最长山脉</span>
+                        <span class="card-title">力扣每日1题no.61 - 402.移掉K位数字</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            845. 数组中的最长山脉难度：中等
-题干我们把数组 A 中符合下列属性的任意连续子数组 B 称为 “山脉”：
+                            402. 移掉K位数字难度：中等
+题干给定一个以字符串表示的非负整数 num*，移除这个数中的 *k 位数字，使得剩下的数字最小。
+注意:
+num 的长度小于 10002 且 ≥ k。
+num 不会包含任何前导零。
 
-B.length &gt;= 3
-存在 0 &lt; i &lt; B.length - 1 使得 B[0] &lt; B[1
+示例 1 :输入: n
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -786,6 +799,7 @@ B.length &gt;= 3
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -804,28 +818,30 @@ B.length &gt;= 3
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/c3c.html">
+                <a href="/posts/6ff9.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="力扣每日1题no.38 - 234.回文链表">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="力扣每日1题no.60 - 1122.数组的相对排序">
                         
-                        <span class="card-title">力扣每日1题no.38 - 234.回文链表</span>
+                        <span class="card-title">力扣每日1题no.60 - 1122.数组的相对排序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            234. 回文链表难度：简单
-题干请判断一个链表是否为回文链表。
-示例 1:输入: 1-&gt;2
-输出: false示例 2:输入: 1-&gt;2-&gt;2-&gt;1
-输出: true进阶：你能否用 O(n) 时间复杂度和 O(1)
+                            1122. 数组的相对排序难度：简单
+题干给你两个数组，arr1 和 arr2，
+
+arr2 中的元素各不相同
+arr2 中的每个元素都出现在 arr1 中
+
+对 arr1 中的元素进行排序，使 arr1 中项的相对顺序和 arr2 中的相
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-14
                             </span>
                         <span class="publish-author">
                             

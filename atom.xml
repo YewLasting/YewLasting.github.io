@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2020-11-14T07:52:15.238Z</updated>
+  <updated>2020-11-15T05:50:12.471Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.61 - 402.移掉K位数字</title>
+    <link href="http://yewlasting.github.io/posts/142f.html"/>
+    <id>http://yewlasting.github.io/posts/142f.html</id>
+    <published>2020-11-15T05:48:45.000Z</published>
+    <updated>2020-11-15T05:50:12.471Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;402-移掉K位数字&quot;&gt;&lt;a href=&quot;#402-移掉K位数字&quot; class=&quot;headerlink&quot; title=&quot;402. 移掉K位数字&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.60 - 1122.数组的相对排序</title>
     <link href="http://yewlasting.github.io/posts/6ff9.html"/>
     <id>http://yewlasting.github.io/posts/6ff9.html</id>
     <published>2020-11-14T07:50:12.000Z</published>
-    <updated>2020-11-14T07:52:15.238Z</updated>
+    <updated>2020-11-14T07:52:47.405Z</updated>
     
     <summary type="html">
     
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;144-二叉树的前序遍历&quot;&gt;&lt;a href=&quot;#144-二叉树的前序遍历&quot; class=&quot;headerlink&quot; title=&quot;144. 二叉树的前序遍历&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.41 - 1365.有多少小于当前数字的数字</title>
-    <link href="http://yewlasting.github.io/posts/4309.html"/>
-    <id>http://yewlasting.github.io/posts/4309.html</id>
-    <published>2020-10-26T07:29:19.000Z</published>
-    <updated>2020-11-07T08:05:40.297Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1365-有多少小于当前数字的数字&quot;&gt;&lt;a href=&quot;#1365-有多少小于当前数字的数字&quot; class=&quot;headerlink&quot; title=&quot;1365. 有多少小于当前数字的数字&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
