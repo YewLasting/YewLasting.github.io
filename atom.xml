@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-02T12:42:53.063Z</updated>
+  <updated>2021-02-02T12:53:59.843Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>VS2019配置openCV-4.5.1</title>
+    <title>VS2019配置OpenCV-4.5.1</title>
     <link href="http://yewlasting.github.io/posts/c8a2.html"/>
     <id>http://yewlasting.github.io/posts/c8a2.html</id>
     <published>2021-02-02T11:10:08.000Z</published>
-    <updated>2021-02-02T12:42:53.063Z</updated>
+    <updated>2021-02-02T12:53:59.843Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h1 id=&quot;VS2019配置openCV-4-5-1&quot;&gt;&lt;a href=&quot;#VS2019配置openCV-4-5-1&quot; class=&quot;headerlink&quot; title=&quot;VS2019配置openCV - 4.5.1&quot;&gt;&lt;/a&gt;VS2019配置openCV -
+          &lt;h1 id=&quot;VS2019配置OpenCV-4-5-1&quot;&gt;&lt;a href=&quot;#VS2019配置OpenCV-4-5-1&quot; class=&quot;headerlink&quot; title=&quot;VS2019配置OpenCV - 4.5.1&quot;&gt;&lt;/a&gt;VS2019配置OpenCV -
         
       
     
@@ -39,7 +39,7 @@
       <category term="软件安装" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
     
     
-      <category term="openCV" scheme="http://YewLasting.github.io/tags/openCV/"/>
+      <category term="OpenCV" scheme="http://YewLasting.github.io/tags/OpenCV/"/>
     
   </entry>
   
