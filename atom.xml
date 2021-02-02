@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-02T09:45:59.657Z</updated>
+  <updated>2021-02-02T12:42:53.063Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS2019配置openCV-4.5.1</title>
+    <link href="http://yewlasting.github.io/posts/c8a2.html"/>
+    <id>http://yewlasting.github.io/posts/c8a2.html</id>
+    <published>2021-02-02T11:10:08.000Z</published>
+    <updated>2021-02-02T12:42:53.063Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;VS2019配置openCV-4-5-1&quot;&gt;&lt;a href=&quot;#VS2019配置openCV-4-5-1&quot; class=&quot;headerlink&quot; title=&quot;VS2019配置openCV - 4.5.1&quot;&gt;&lt;/a&gt;VS2019配置openCV -
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件安装" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="openCV" scheme="http://YewLasting.github.io/tags/openCV/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣每日1题no.69 - 888.公平的糖果棒交换</title>
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;127-单词接龙&quot;&gt;&lt;a href=&quot;#127-单词接龙&quot; class=&quot;headerlink&quot; title=&quot;127. 单词接龙&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/word-ladder/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.50 - 57.插入区间</title>
-    <link href="http://yewlasting.github.io/posts/3a15.html"/>
-    <id>http://yewlasting.github.io/posts/3a15.html</id>
-    <published>2020-11-04T04:38:52.000Z</published>
-    <updated>2020-11-05T13:45:20.214Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;57-插入区间&quot;&gt;&lt;a href=&quot;#57-插入区间&quot; class=&quot;headerlink&quot; title=&quot;57. 插入区间&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/insert-interval/&quot;
         
       
     
