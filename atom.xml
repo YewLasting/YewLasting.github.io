@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-02T13:16:01.209Z</updated>
+  <updated>2021-02-04T14:33:24.968Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,92 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.72 - 643.子数组最大平均数 I</title>
+    <link href="http://yewlasting.github.io/posts/c3b0.html"/>
+    <id>http://yewlasting.github.io/posts/c3b0.html</id>
+    <published>2021-02-04T14:31:42.000Z</published>
+    <updated>2021-02-04T14:33:24.968Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;643-子数组最大平均数-I&quot;&gt;&lt;a href=&quot;#643-子数组最大平均数-I&quot; class=&quot;headerlink&quot; title=&quot;643. 子数组最大平均数 I&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.71 - 480.滑动窗口中位数</title>
+    <link href="http://yewlasting.github.io/posts/d30a.html"/>
+    <id>http://yewlasting.github.io/posts/d30a.html</id>
+    <published>2021-02-03T15:38:37.000Z</published>
+    <updated>2021-02-04T15:47:15.889Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;480-滑动窗口中位数&quot;&gt;&lt;a href=&quot;#480-滑动窗口中位数&quot; class=&quot;headerlink&quot; title=&quot;480. 滑动窗口中位数&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.70 - 424.替换后的最长重复字符</title>
+    <link href="http://yewlasting.github.io/posts/30de.html"/>
+    <id>http://yewlasting.github.io/posts/30de.html</id>
+    <published>2021-02-02T15:31:11.000Z</published>
+    <updated>2021-02-04T15:47:27.002Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;424-替换后的最长重复字符&quot;&gt;&lt;a href=&quot;#424-替换后的最长重复字符&quot; class=&quot;headerlink&quot; title=&quot;424. 替换后的最长重复字符&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VS2019配置OpenCV-4.5.1</title>
     <link href="http://yewlasting.github.io/posts/c8a2.html"/>
     <id>http://yewlasting.github.io/posts/c8a2.html</id>
     <published>2021-02-02T11:10:08.000Z</published>
-    <updated>2021-02-02T13:16:01.209Z</updated>
+    <updated>2021-02-03T08:33:11.240Z</updated>
     
     <summary type="html">
     
@@ -462,87 +543,6 @@
         
         
           &lt;h1 id=&quot;122-买卖股票的最佳时机-II&quot;&gt;&lt;a href=&quot;#122-买卖股票的最佳时机-II&quot; class=&quot;headerlink&quot; title=&quot;122. 买卖股票的最佳时机 II&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.53 - 327.区间和的个数</title>
-    <link href="http://yewlasting.github.io/posts/83bc.html"/>
-    <id>http://yewlasting.github.io/posts/83bc.html</id>
-    <published>2020-11-07T07:22:13.000Z</published>
-    <updated>2020-11-07T08:13:46.104Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;327-区间和的个数&quot;&gt;&lt;a href=&quot;#327-区间和的个数&quot; class=&quot;headerlink&quot; title=&quot;327. 区间和的个数&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.52 - 1356.根据数字二进制下1的数目排序</title>
-    <link href="http://yewlasting.github.io/posts/1a44.html"/>
-    <id>http://yewlasting.github.io/posts/1a44.html</id>
-    <published>2020-11-06T09:21:09.000Z</published>
-    <updated>2020-11-06T09:25:03.365Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1356-根据数字二进制下-1-的数目排序&quot;&gt;&lt;a href=&quot;#1356-根据数字二进制下-1-的数目排序&quot; class=&quot;headerlink&quot; title=&quot;1356. 根据数字二进制下 1 的数目排序&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.51 - 127.单词接龙</title>
-    <link href="http://yewlasting.github.io/posts/8e68.html"/>
-    <id>http://yewlasting.github.io/posts/8e68.html</id>
-    <published>2020-11-05T13:44:23.000Z</published>
-    <updated>2020-11-05T13:47:19.445Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;127-单词接龙&quot;&gt;&lt;a href=&quot;#127-单词接龙&quot; class=&quot;headerlink&quot; title=&quot;127. 单词接龙&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/word-ladder/&quot;
         
       
     

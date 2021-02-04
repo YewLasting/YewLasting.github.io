@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.38 - 234.回文链表, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.72 - 643.子数组最大平均数 I, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.38 - 234.回文链表 | unlasting</title>
+    <title>力扣每日1题no.72 - 643.子数组最大平均数 I | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.38 - 234.回文链表</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.72 - 643.子数组最大平均数 I</h1>
                 </div>
             </div>
         </div>
@@ -394,21 +394,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-23
+                    2021-02-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-07
+                    2021-02-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    357
+                    388
                 </div>
                 
 
@@ -430,78 +430,58 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="234-回文链表"><a href="#234-回文链表" class="headerlink" title="234. 回文链表"></a><a href="https://leetcode-cn.com/problems/palindrome-linked-list/" target="_blank" rel="noopener">234. 回文链表</a></h1><p><strong>难度：</strong>简单</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>请判断一个链表是否为回文链表。</p>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>输入: 1-&gt;2
-输出: false</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>输入: 1-&gt;2-&gt;2-&gt;1
-输出: true</code></pre><h3 id="进阶："><a href="#进阶：" class="headerlink" title="进阶："></a><strong>进阶：</strong></h3><p>你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？</p>
+                <h1 id="643-子数组最大平均数-I"><a href="#643-子数组最大平均数-I" class="headerlink" title="643. 子数组最大平均数 I"></a><a href="https://leetcode-cn.com/problems/maximum-average-subarray-i/" target="_blank" rel="noopener">643. 子数组最大平均数 I</a></h1><p><strong>难度：</strong>简单</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定 <code>n</code> 个整数，找出平均数最大且长度为 <code>k</code> 的连续子数组，并输出该最大平均数。 </p>
+<h3 id="示例："><a href="#示例：" class="headerlink" title="示例："></a><strong>示例：</strong></h3><pre><code>输入：[1,12,-5,-6,50,3], k = 4
+输出：12.75
+解释：最大平均数 (12-5-6+50)/4 = 51/4 = 12.75</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
+<li>1 &lt;= <code>k</code> &lt;= <code>n</code> &lt;= 30,000。</li>
+<li>所给数据范围 [-10,000，10,000]。</li>
+</ul>
 <p>来源：力扣（LeetCode） </p>
-<p>链接：<a href="https://leetcode-cn.com/problems/palindrome-linked-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/palindrome-linked-list/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/maximum-average-subarray-i/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximum-average-subarray-i/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2020.10.23</span>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">// 2021.2.4</span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span> </span><span class="token comment" spellcheck="true">//求和函数</span>
 using namespace std<span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//Definition for singly-linked list.</span>
-<span class="token keyword">struct</span> ListNode
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> val<span class="token punctuation">;</span>
-    ListNode <span class="token operator">*</span>next<span class="token punctuation">;</span>
-    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> ListNode <span class="token operator">*</span>next<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-class Solution
-<span class="token punctuation">{</span>
+class Solution <span class="token punctuation">{</span>
 public<span class="token punctuation">:</span>
-    bool <span class="token function">isPalindrome</span><span class="token punctuation">(</span>ListNode <span class="token operator">*</span>head<span class="token punctuation">)</span>    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> nullptr<span class="token punctuation">)</span>        <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+    <span class="token keyword">double</span> <span class="token function">findMaxAverage</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> k<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> 
+        <span class="token punctuation">{</span>
+            sum <span class="token operator">+</span><span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token comment" spellcheck="true">//获得中点</span>
-        ListNode <span class="token operator">*</span>mid <span class="token operator">=</span> <span class="token function">middleNode</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//分割成两条链表，第二条链表的起始位置是中点的下一节点，即slow(mid)->next</span>
-        ListNode <span class="token operator">*</span>l1 <span class="token operator">=</span> head<span class="token punctuation">;</span>
-        ListNode <span class="token operator">*</span>l2 <span class="token operator">=</span> mid<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        mid<span class="token operator">-></span>next <span class="token operator">=</span> nullptr<span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//对链表转置</span>
-        l2 <span class="token operator">=</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>l2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//判断是否回文</span>
-        bool result <span class="token operator">=</span> true<span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>result <span class="token operator">&amp;&amp;</span> l2 <span class="token operator">!=</span> nullptr<span class="token punctuation">)</span>        <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>l1<span class="token operator">-></span>val <span class="token operator">!=</span> l2<span class="token operator">-></span>val<span class="token punctuation">)</span>           <span class="token punctuation">{</span>
-                result <span class="token operator">=</span> false<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            l1 <span class="token operator">=</span> l1<span class="token operator">-></span>next<span class="token punctuation">;</span>
-            l2 <span class="token operator">=</span> l2<span class="token operator">-></span>next<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> maxSum <span class="token operator">=</span> sum<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> k<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//从k开始，共有n-k+1组符合要求的子数组</span>
+        <span class="token punctuation">{</span>
+            sum <span class="token operator">=</span> sum <span class="token operator">-</span> nums<span class="token punctuation">[</span>i <span class="token operator">-</span> k<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//对于第一组切换到第二组的情况,sum_new=sum_last-nums[0]+nums[k]，之后依此类推</span>
+            maxSum <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>maxSum<span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token comment" spellcheck="true">// 还原链表并返回结果</span>
-        mid<span class="token operator">-></span>next <span class="token operator">=</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>l2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> static_cast<span class="token operator">&lt;</span><span class="token keyword">double</span><span class="token operator">></span><span class="token punctuation">(</span>maxSum<span class="token punctuation">)</span> <span class="token operator">/</span> k<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-
-    ListNode <span class="token operator">*</span><span class="token function">middleNode</span><span class="token punctuation">(</span>ListNode <span class="token operator">*</span>head<span class="token punctuation">)</span>    <span class="token punctuation">{</span>
-        ListNode <span class="token operator">*</span>slow <span class="token operator">=</span> head<span class="token punctuation">;</span>
-        ListNode <span class="token operator">*</span>fast <span class="token operator">=</span> head<span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>fast<span class="token operator">-></span>next <span class="token operator">!=</span> nullptr <span class="token operator">&amp;&amp;</span> fast<span class="token operator">-></span>next<span class="token operator">-></span>next <span class="token operator">!=</span> nullptr<span class="token punctuation">)</span>       <span class="token punctuation">{</span>
-            slow <span class="token operator">=</span> slow<span class="token operator">-></span>next<span class="token punctuation">;</span>
-            fast <span class="token operator">=</span> fast<span class="token operator">-></span>next<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    ListNode <span class="token operator">*</span><span class="token function">reverseList</span><span class="token punctuation">(</span>ListNode <span class="token operator">*</span>head<span class="token punctuation">)</span>    <span class="token punctuation">{</span>
-        ListNode <span class="token operator">*</span>prev <span class="token operator">=</span> nullptr<span class="token punctuation">;</span>
-        ListNode <span class="token operator">*</span>curr <span class="token operator">=</span> head<span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>curr <span class="token operator">!=</span> nullptr<span class="token punctuation">)</span>        <span class="token punctuation">{</span>
-            ListNode <span class="token operator">*</span>nextTemp <span class="token operator">=</span> curr<span class="token operator">-></span>next<span class="token punctuation">;</span>
-            curr<span class="token operator">-></span>next <span class="token operator">=</span> prev<span class="token punctuation">;</span>
-            prev <span class="token operator">=</span> curr<span class="token punctuation">;</span>
-            curr <span class="token operator">=</span> nextTemp<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> prev<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Solution test<span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> A <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> k<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">findMaxAverage</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//输出结果</span>
+    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -545,7 +525,7 @@ public<span class="token punctuation">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/c3c.html">http://YewLasting.github.io/posts/c3c.html</a>
+                    <a href="http://YewLasting.github.io/posts/c3b0.html">http://YewLasting.github.io/posts/c3b0.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -752,31 +732,34 @@ public<span class="token punctuation">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/875e.html">
+                <a href="/posts/c3b0.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="力扣每日1题no.39 - 1024.视频拼接">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣每日1题no.72 - 643.子数组最大平均数 I">
                         
-                        <span class="card-title">力扣每日1题no.39 - 1024.视频拼接</span>
+                        <span class="card-title">力扣每日1题no.72 - 643.子数组最大平均数 I</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1024. 视频拼接难度：中等
-题干你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。
-视频片段 clips[i] 都用区间进行表示：开始于 clips[i][0] 并于 cli
+                            643. 子数组最大平均数 I难度：简单
+题干给定 n 个整数，找出平均数最大且长度为 k 的连续子数组，并输出该最大平均数。 
+示例：输入：[1,12,-5,-6,50,3], k = 4
+输出：12.75
+解释：最大平均数 (12-5-
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -789,6 +772,7 @@ public<span class="token punctuation">:</span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -807,27 +791,29 @@ public<span class="token punctuation">:</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/1bd4.html">
+                <a href="/posts/d30a.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣每日1题no.37 - 200.岛屿数量">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="力扣每日1题no.71 - 480.滑动窗口中位数">
                         
-                        <span class="card-title">力扣每日1题no.37 - 200.岛屿数量</span>
+                        <span class="card-title">力扣每日1题no.71 - 480.滑动窗口中位数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            200. 岛屿数量难度：中等
-题干给你一个由 '1'（陆地）和 '0'（水）组成的的二维网格，请你计算网格中岛屿的数量。
-岛屿总是被水包围，并且每座岛屿只能由水平方向和/或竖直方向上相邻的陆地连接形成。
-此外，你可以假设该网格的四条边均被水
+                            480. 滑动窗口中位数难度：困难
+题干中位数是有序序列最中间的那个数。如果序列的长度是偶数，则没有最中间的数；此时中位数是最中间的两个数的平均数。
+例如：
+
+[2,3,4]，中位数是 3
+[2,3]，中位数是 (2 + 3) / 2 = 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-03
                             </span>
                         <span class="publish-author">
                             
