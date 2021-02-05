@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-05T13:39:42.435Z</updated>
+  <updated>2021-02-05T15:01:27.504Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Win10安装Anaconda教程</title>
+    <link href="http://yewlasting.github.io/posts/3797.html"/>
+    <id>http://yewlasting.github.io/posts/3797.html</id>
+    <published>2021-02-05T14:59:57.000Z</published>
+    <updated>2021-02-05T15:01:27.504Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Win10安装Anaconda教程&quot;&gt;&lt;a href=&quot;#Win10安装Anaconda教程&quot; class=&quot;headerlink&quot; title=&quot;Win10安装Anaconda教程&quot;&gt;&lt;/a&gt;Win10安装Anaconda教程&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件安装" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="Anaconda" scheme="http://YewLasting.github.io/tags/Anaconda/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.73 - 1208.尽可能使字符串相等</title>
     <link href="http://yewlasting.github.io/posts/9c42.html"/>
     <id>http://yewlasting.github.io/posts/9c42.html</id>
     <published>2021-02-05T03:24:00.000Z</published>
-    <updated>2021-02-05T13:39:42.435Z</updated>
+    <updated>2021-02-05T14:21:43.565Z</updated>
     
     <summary type="html">
     
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;31-下一个排列&quot;&gt;&lt;a href=&quot;#31-下一个排列&quot; class=&quot;headerlink&quot; title=&quot;31. 下一个排列&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/next-permutation/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.55 - 973.最接近原点的K个点</title>
-    <link href="http://yewlasting.github.io/posts/81e5.html"/>
-    <id>http://yewlasting.github.io/posts/81e5.html</id>
-    <published>2020-11-09T11:25:49.000Z</published>
-    <updated>2020-11-09T11:28:25.753Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;973-最接近原点的-K-个点&quot;&gt;&lt;a href=&quot;#973-最接近原点的-K-个点&quot; class=&quot;headerlink&quot; title=&quot;973. 最接近原点的 K 个点&quot;&gt;&lt;/a&gt;&lt;a
         
       
     

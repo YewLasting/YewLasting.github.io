@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Win10安装Anaconda教程</title>
+      <link href="/posts/3797.html"/>
+      <url>/posts/3797.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Win10安装Anaconda教程"><a href="#Win10安装Anaconda教程" class="headerlink" title="Win10安装Anaconda教程"></a>Win10安装Anaconda教程</h1><h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p><strong>系统环境：</strong>Win10 专业版</p><p><strong>Anaconda版本：</strong>Anaconda3-2020.11-64位</p><h2 id="一、下载并安装Anaconda"><a href="#一、下载并安装Anaconda" class="headerlink" title="一、下载并安装Anaconda"></a>一、下载并安装Anaconda</h2><ol><li>打开下载<a href="https://www.anaconda.com/products/individual" target="_blank" rel="noopener">链接</a>，点击Download，然后点击64-Bit Graphical Installer (457 MB)即可开始下载。</li></ol><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225755.png" alt="image1"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225803.png" alt="image2"></p><ol start="2"><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225811.png" alt="image3"></p></li><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225814.png" alt="image4"></p></li><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225817.png" alt="image5"></p></li><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225823.png" alt="image6"></p></li><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225827.png" alt="image7"></p></li><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225830.png" alt="image8"></p></li><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225834.png" alt="image9"></p></li><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225839.png" alt="image10"></p></li><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225843.png" alt="image11"></p></li><li><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225848.png" alt="image12"></p></li><li><p>接下来配置Anaconda的环境变量。我的电脑-&gt;右键单击-&gt;属性-&gt;高级系统设置</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225852.png" alt="image13"></p></li><li><p>要添加的环境变量一共有三条，分别是：</p><p>D:\software\Anaconda3<br>D:\software\Anaconda3\Scripts<br>D:\software\Anaconda3\Library\bin</p><p>此处要根据你的安装路径进行修改，我之前选择的安装路径为D:\software\Anaconda3</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225855.png" alt="image14"></p><p>​                </p></li></ol><h2 id="二、测试是否安装成功"><a href="#二、测试是否安装成功" class="headerlink" title="二、测试是否安装成功"></a>二、测试是否安装成功</h2><ol><li><p>接下来检查环境变量是否设置成功。首先在“搜索栏”处输入cmd，打开命令行。如果Win10系统的界面里搜索栏被隐藏的话可以通过以下方式重新打开：</p><p>右键单击“对Cortana说话”-&gt;搜索-&gt;显示搜索图标。</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225859.png" alt="image15"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225902.png" alt="image16"></p></li><li><p>在命令行界面输入：<code>conda –version</code></p><p>然后按回车键运行。</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225905.png" alt="image17"></p></li><li><p>接下来查看Anaconda携带的python版本，打开Anaconda Prompt (Anaconda)</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225908.png" alt="image18"></p></li><li><p>在弹出界面输入:<code>python</code></p><p>然后按回车键运行，可以看到安装的python是3.8.5版本。</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225911.png" alt="image19"></p></li></ol><h2 id="三、常用指令"><a href="#三、常用指令" class="headerlink" title="三、常用指令"></a>三、常用指令</h2><ol><li><p>首先查看当前镜像源信息：</p><pre><code>conda info</code></pre><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225914.png" alt="image20"></p></li><li><p>为了提高包的下载速度，现在加上清华源</p><pre><code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/conda config --set show_channel_urls yes</code></pre><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225916.png" alt="image21"></p></li><li><p>查看已经安装有的包： </p><pre><code> conda list</code></pre><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210205225919.png" alt="image22"></p><p>这些包在本地的存储位置为：D:\software\Anaconda3\Lib\site-packages</p></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件安装 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Anaconda </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣每日1题no.73 - 1208.尽可能使字符串相等</title>
       <link href="/posts/9c42.html"/>
       <url>/posts/9c42.html</url>
