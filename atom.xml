@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-07T08:38:54.599Z</updated>
+  <updated>2021-02-08T16:01:58.507Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.76 - 978.最长湍流子数组</title>
+    <link href="http://yewlasting.github.io/posts/f806.html"/>
+    <id>http://yewlasting.github.io/posts/f806.html</id>
+    <published>2021-02-08T10:17:57.000Z</published>
+    <updated>2021-02-08T16:01:58.507Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;978-最长湍流子数组&quot;&gt;&lt;a href=&quot;#978-最长湍流子数组&quot; class=&quot;headerlink&quot; title=&quot;978. 最长湍流子数组&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.75 - 665.非递减数列</title>
     <link href="http://yewlasting.github.io/posts/882f.html"/>
     <id>http://yewlasting.github.io/posts/882f.html</id>
     <published>2021-02-07T08:14:04.000Z</published>
-    <updated>2021-02-07T08:38:54.599Z</updated>
+    <updated>2021-02-07T08:39:36.769Z</updated>
     
     <summary type="html">
     
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;328-奇偶链表&quot;&gt;&lt;a href=&quot;#328-奇偶链表&quot; class=&quot;headerlink&quot; title=&quot;328. 奇偶链表&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.58 - 922.按奇偶排序数组II</title>
-    <link href="http://yewlasting.github.io/posts/5d68.html"/>
-    <id>http://yewlasting.github.io/posts/5d68.html</id>
-    <published>2020-11-12T04:49:39.000Z</published>
-    <updated>2020-11-12T10:34:28.021Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;922-按奇偶排序数组-II&quot;&gt;&lt;a href=&quot;#922-按奇偶排序数组-II&quot; class=&quot;headerlink&quot; title=&quot;922. 按奇偶排序数组 II&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
