@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-09T10:26:21.121Z</updated>
+  <updated>2021-02-09T13:26:47.975Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jupyter Notebook使用教程</title>
+    <link href="http://yewlasting.github.io/posts/77b8.html"/>
+    <id>http://yewlasting.github.io/posts/77b8.html</id>
+    <published>2021-02-09T13:24:36.000Z</published>
+    <updated>2021-02-09T13:26:47.975Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Jupyter-Notebook使用教程&quot;&gt;&lt;a href=&quot;#Jupyter-Notebook使用教程&quot; class=&quot;headerlink&quot; title=&quot;Jupyter Notebook使用教程&quot;&gt;&lt;/a&gt;Jupyter
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件使用" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="Jupyter Notebook" scheme="http://YewLasting.github.io/tags/Jupyter-Notebook/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣每日1题no.77 - 992.K个不同整数的子数组</title>
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;402-移掉K位数字&quot;&gt;&lt;a href=&quot;#402-移掉K位数字&quot; class=&quot;headerlink&quot; title=&quot;402. 移掉K位数字&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.60 - 1122.数组的相对排序</title>
-    <link href="http://yewlasting.github.io/posts/6ff9.html"/>
-    <id>http://yewlasting.github.io/posts/6ff9.html</id>
-    <published>2020-11-14T07:50:12.000Z</published>
-    <updated>2020-11-14T07:52:47.405Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1122-数组的相对排序&quot;&gt;&lt;a href=&quot;#1122-数组的相对排序&quot; class=&quot;headerlink&quot; title=&quot;1122. 数组的相对排序&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
