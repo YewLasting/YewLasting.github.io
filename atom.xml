@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-08T16:01:58.507Z</updated>
+  <updated>2021-02-09T10:25:39.225Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.77 - 992.K个不同整数的子数组</title>
+    <link href="http://yewlasting.github.io/posts/e54f.html"/>
+    <id>http://yewlasting.github.io/posts/e54f.html</id>
+    <published>2021-02-09T09:27:07.000Z</published>
+    <updated>2021-02-09T10:25:39.225Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;992-K-个不同整数的子数组&quot;&gt;&lt;a href=&quot;#992-K-个不同整数的子数组&quot; class=&quot;headerlink&quot; title=&quot;992. K 个不同整数的子数组&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.76 - 978.最长湍流子数组</title>
     <link href="http://yewlasting.github.io/posts/f806.html"/>
     <id>http://yewlasting.github.io/posts/f806.html</id>
     <published>2021-02-08T10:17:57.000Z</published>
-    <updated>2021-02-08T16:01:58.507Z</updated>
+    <updated>2021-02-09T09:22:49.781Z</updated>
     
     <summary type="html">
     
@@ -516,33 +543,6 @@
         
         
           &lt;h1 id=&quot;1122-数组的相对排序&quot;&gt;&lt;a href=&quot;#1122-数组的相对排序&quot; class=&quot;headerlink&quot; title=&quot;1122. 数组的相对排序&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.59 - 328.奇偶链表</title>
-    <link href="http://yewlasting.github.io/posts/ac05.html"/>
-    <id>http://yewlasting.github.io/posts/ac05.html</id>
-    <published>2020-11-13T08:38:28.000Z</published>
-    <updated>2020-11-13T08:40:51.183Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;328-奇偶链表&quot;&gt;&lt;a href=&quot;#328-奇偶链表&quot; class=&quot;headerlink&quot; title=&quot;328. 奇偶链表&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
