@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-16T09:58:51.554Z</updated>
+  <updated>2021-02-16T10:06:47.592Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Win10安装pytorch教程（GPU版本）</title>
+    <title>Win10安装PyTorch教程（GPU版本）</title>
     <link href="http://yewlasting.github.io/posts/fdcf.html"/>
     <id>http://yewlasting.github.io/posts/fdcf.html</id>
     <published>2021-02-16T09:44:51.000Z</published>
-    <updated>2021-02-16T09:58:51.554Z</updated>
+    <updated>2021-02-16T10:06:47.592Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h1 id=&quot;Win10安装pytorch教程（GPU版本）&quot;&gt;&lt;a href=&quot;#Win10安装pytorch教程（GPU版本）&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;Win10安装PyTorch教程（GPU版本）&quot;&gt;&lt;a href=&quot;#Win10安装PyTorch教程（GPU版本）&quot; class=&quot;headerlink&quot;
         
       
     
@@ -41,7 +41,7 @@
     
       <category term="Jupyter Notebook" scheme="http://YewLasting.github.io/tags/Jupyter-Notebook/"/>
     
-      <category term="Pytorch" scheme="http://YewLasting.github.io/tags/Pytorch/"/>
+      <category term="PyTorch" scheme="http://YewLasting.github.io/tags/PyTorch/"/>
     
   </entry>
   

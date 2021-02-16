@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Win10安装pytorch教程（GPU版本）, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="Win10安装PyTorch教程（GPU版本）, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Win10安装pytorch教程（GPU版本） | unlasting</title>
+    <title>Win10安装PyTorch教程（GPU版本） | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Win10安装pytorch教程（GPU版本）</h1>
+                    <h1 class="description center-align post-title">Win10安装PyTorch教程（GPU版本）</h1>
                 </div>
             </div>
         </div>
@@ -373,8 +373,8 @@
                                 <span class="chip bg-color">Jupyter Notebook</span>
                             </a>
                         
-                            <a href="/tags/Pytorch/">
-                                <span class="chip bg-color">Pytorch</span>
+                            <a href="/tags/PyTorch/">
+                                <span class="chip bg-color">PyTorch</span>
                             </a>
                         
                     </div>
@@ -434,7 +434,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Win10安装pytorch教程（GPU版本）"><a href="#Win10安装pytorch教程（GPU版本）" class="headerlink" title="Win10安装pytorch教程（GPU版本）"></a>Win10安装pytorch教程（GPU版本）</h1><h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p><strong>系统环境：</strong>Win10 专业版</p>
+                <h1 id="Win10安装PyTorch教程（GPU版本）"><a href="#Win10安装PyTorch教程（GPU版本）" class="headerlink" title="Win10安装PyTorch教程（GPU版本）"></a>Win10安装PyTorch教程（GPU版本）</h1><h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p><strong>系统环境：</strong>Win10 专业版</p>
 <p><strong>显卡型号：</strong>Nvidia GeForce GTX 1650 ( 4 GB / Nvidia )</p>
 <p><strong>CUDA版本：</strong>11.1</p>
 <p><strong>cuDNN版本：</strong>v8.1.0</p>
@@ -485,7 +485,7 @@
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173453.png" alt="image28"></p>
 <p>这里我的bin文件夹的路径为<code>D:\software\cuDNN\cuda\bin</code></p>
 <p>接下来将该路径添加到系统的环境变量，方法见<a href="https://yewlasting.gitee.io/posts/3797.html" target="_blank" rel="noopener">Anaconda安装教程</a>。</p>
-<h2 id="四-安装pytorch"><a href="#四-安装pytorch" class="headerlink" title="四.安装pytorch"></a>四.安装pytorch</h2><p>首先打开Anaconda Prompt,新建一个pytorch的虚拟环境</p>
+<h2 id="四-安装PyTorch"><a href="#四-安装PyTorch" class="headerlink" title="四.安装PyTorch"></a>四.安装PyTorch</h2><p>首先打开Anaconda Prompt,新建一个PyTorch的虚拟环境</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173456.png" alt="image29"></p>
 <pre><code>conda create -n pytorch_gpu pip python=3.8</code></pre><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173501.png" alt="image30"></p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173503.png" alt="image31"></p>
@@ -493,9 +493,9 @@
 <p>安装完毕后，提示如果想要激活刚刚创建的虚拟环境，使用命令<code>conda activate pytorch_gpu</code>，如果不使用创建的虚拟环境，想要切换回默认的环境的话，使用命令 <code>conda deactivate</code>。</p>
 <p>接下来我们激活刚刚创建的虚拟环境：</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173507.png" alt="image33"></p>
-<p>接下来我们去Pytorch<a href="https://pytorch.org/" target="_blank" rel="noopener">官网</a>查看下载命令</p>
+<p>接下来我们去PyTorch<a href="https://pytorch.org/" target="_blank" rel="noopener">官网</a>查看下载命令</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173509.png" alt="image34"></p>
-<p>首先根据你的环境选择首选项，然后复制粘贴下面的命令，这里我选择的是Pytorch1.7.1版本，Windows环境，因为已经安装有Anaconda，所以Packages选择的是Conda,编程语言是python,CUDA版本是11.0</p>
+<p>首先根据你的环境选择首选项，然后复制粘贴下面的命令，这里我选择的是PyTorch1.7.1版本，Windows环境，因为已经安装有Anaconda，所以Packages选择的是Conda,编程语言是python,CUDA版本是11.0</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173512.png" alt="image35"></p>
 <pre><code>conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch</code></pre><p>安装的时候需要科学上网。</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173514.png" alt="image36"></p>
@@ -511,14 +511,14 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/noarch
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/win-64
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/noarch
-conda config --set show_channel_urls yes</code></pre><p>由于Pytorch官网给出的安装命令中后面的<code>-c pytorch</code>参数指定默认下载路径为conda自带的pytorch仓库，为了用上我们安装Anaconda时切换的清华镜像源加快下载速度，在此我们将<code>-c pytorch</code>删除。</p>
+conda config --set show_channel_urls yes</code></pre><p>由于PyTorch官网给出的安装命令中后面的<code>-c pytorch</code>参数指定默认下载路径为conda自带的PyTorch仓库，为了用上我们安装Anaconda时切换的清华镜像源加快下载速度，在此我们将<code>-c pytorch</code>删除。</p>
 <pre><code>conda install pytorch torchvision torchaudio cudatoolkit=11.0 </code></pre><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173519.png" alt="image38"></p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173521.png" alt="image39"></p>
 <p>安装完成后提示mkl-2020.2安装包没有下载完成，导致无法安装，因此接下来使用conda单独再下载安装一下这个包</p>
 <pre><code>conda install --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/ mkl=2020.2</code></pre><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173525.png" alt="image40"></p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173526.png" alt="image41"></p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173529.png" alt="image42"></p>
-<p>接下来测试一下pytorch是否安装成功，GPU加速是否可用。</p>
+<p>接下来测试一下PyTorch是否安装成功，GPU加速是否可用。</p>
 <p>首先输入<code>python</code>，进入python解释器：</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173531.png" alt="image43"></p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> torch
@@ -555,7 +555,7 @@ conda config --set show_channel_urls yes</code></pre><p>由于Pytorch官网给�
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173611.png" alt="image60"></p>
 <p>可以看到启动时的初始目录还是默认目录，可以参照之前的<a href="https://yewlasting.gitee.io/posts/77b8.html" target="_blank" rel="noopener">Jupyter Notebook使用教程</a>，将目录改到自己的代码目录。</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210216173614.png" alt="image61"></p>
-<p><img src="C:%5CUsers%5Cadmin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210216171922504.png" alt="image62">在新弹出的笔记本界面输入代码</p>
+<p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210216180521.png" alt="image62">在新弹出的笔记本界面输入代码</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> torch
 <span class="token keyword">import</span> torchvision
 <span class="token keyword">print</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>__version__<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#查看pytorch版本</span>
@@ -654,8 +654,8 @@ torch<span class="token punctuation">.</span>cuda<span class="token punctuation"
                                     <span class="chip bg-color">Jupyter Notebook</span>
                                 </a>
                             
-                                <a href="/tags/Pytorch/">
-                                    <span class="chip bg-color">Pytorch</span>
+                                <a href="/tags/PyTorch/">
+                                    <span class="chip bg-color">PyTorch</span>
                                 </a>
                             
                         </div>
@@ -832,15 +832,15 @@ torch<span class="token punctuation">.</span>cuda<span class="token punctuation"
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Win10安装pytorch教程（GPU版本）">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Win10安装PyTorch教程（GPU版本）">
                         
-                        <span class="card-title">Win10安装pytorch教程（GPU版本）</span>
+                        <span class="card-title">Win10安装PyTorch教程（GPU版本）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Win10安装pytorch教程（GPU版本）安装环境系统环境：Win10 专业版
+                            Win10安装PyTorch教程（GPU版本）安装环境系统环境：Win10 专业版
 显卡型号：Nvidia GeForce GTX 1650 ( 4 GB / Nvidia )
 CUDA版本：11.1
 cuDNN版本：v8.1.0
@@ -871,8 +871,8 @@ pyto
                         <span class="chip bg-color">Jupyter Notebook</span>
                     </a>
                     
-                    <a href="/tags/Pytorch/">
-                        <span class="chip bg-color">Pytorch</span>
+                    <a href="/tags/PyTorch/">
+                        <span class="chip bg-color">PyTorch</span>
                     </a>
                     
                 </div>
