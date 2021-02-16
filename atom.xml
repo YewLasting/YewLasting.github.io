@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-15T14:34:42.146Z</updated>
+  <updated>2021-02-16T09:58:51.554Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Win10安装pytorch教程（GPU版本）</title>
+    <link href="http://yewlasting.github.io/posts/fdcf.html"/>
+    <id>http://yewlasting.github.io/posts/fdcf.html</id>
+    <published>2021-02-16T09:44:51.000Z</published>
+    <updated>2021-02-16T09:58:51.554Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Win10安装pytorch教程（GPU版本）&quot;&gt;&lt;a href=&quot;#Win10安装pytorch教程（GPU版本）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件安装" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="Jupyter Notebook" scheme="http://YewLasting.github.io/tags/Jupyter-Notebook/"/>
+    
+      <category term="Pytorch" scheme="http://YewLasting.github.io/tags/Pytorch/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.83 - 485.最大连续1的个数</title>
     <link href="http://yewlasting.github.io/posts/6e10.html"/>
     <id>http://yewlasting.github.io/posts/6e10.html</id>
     <published>2021-02-15T14:08:58.000Z</published>
-    <updated>2021-02-15T14:34:42.146Z</updated>
+    <updated>2021-02-15T14:36:26.598Z</updated>
     
     <summary type="html">
     
@@ -516,33 +545,6 @@
         
         
           &lt;h1 id=&quot;242-有效的字母异位词&quot;&gt;&lt;a href=&quot;#242-有效的字母异位词&quot; class=&quot;headerlink&quot; title=&quot;242. 有效的字母异位词&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.67 - 148.排序链表</title>
-    <link href="http://yewlasting.github.io/posts/1228.html"/>
-    <id>http://yewlasting.github.io/posts/1228.html</id>
-    <published>2020-11-21T07:53:33.000Z</published>
-    <updated>2020-11-21T07:57:23.066Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;148-排序链表&quot;&gt;&lt;a href=&quot;#148-排序链表&quot; class=&quot;headerlink&quot; title=&quot;148. 排序链表&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/sort-list/&quot;
         
       
     
