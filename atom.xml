@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-02-17T13:38:47.409Z</updated>
+  <updated>2021-02-20T07:49:17.132Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -15,6 +15,120 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++ STL概述</title>
+    <link href="http://yewlasting.github.io/posts/c6b6.html"/>
+    <id>http://yewlasting.github.io/posts/c6b6.html</id>
+    <published>2021-02-20T06:51:20.000Z</published>
+    <updated>2021-02-20T07:49:17.132Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;C-STL概述&quot;&gt;&lt;a href=&quot;#C-STL概述&quot; class=&quot;headerlink&quot; title=&quot;C++ STL概述&quot;&gt;&lt;/a&gt;C++ STL概述&lt;/h1&gt;&lt;h2 id=&quot;STL基础&quot;&gt;&lt;a href=&quot;#STL基础&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://YewLasting.github.io/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://YewLasting.github.io/tags/C/"/>
+    
+      <category term="STL" scheme="http://YewLasting.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ vector用法</title>
+    <link href="http://yewlasting.github.io/posts/f10a.html"/>
+    <id>http://yewlasting.github.io/posts/f10a.html</id>
+    <published>2021-02-20T03:34:43.000Z</published>
+    <updated>2021-02-20T08:15:06.675Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;C-vector用法&quot;&gt;&lt;a href=&quot;#C-vector用法&quot; class=&quot;headerlink&quot; title=&quot;C++ vector用法&quot;&gt;&lt;/a&gt;C++ vector用法&lt;/h1&gt;&lt;h2 id=&quot;〇、STL基础&quot;&gt;&lt;a href=&quot;#〇、STL基础&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://YewLasting.github.io/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://YewLasting.github.io/tags/C/"/>
+    
+      <category term="STL" scheme="http://YewLasting.github.io/tags/STL/"/>
+    
+      <category term="vector" scheme="http://YewLasting.github.io/tags/vector/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.87 - 1004.最大连续1的个数 III </title>
+    <link href="http://yewlasting.github.io/posts/1f20.html"/>
+    <id>http://yewlasting.github.io/posts/1f20.html</id>
+    <published>2021-02-19T14:48:43.000Z</published>
+    <updated>2021-02-19T14:48:43.859Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.86 - 995. K连续位的最小翻转次数</title>
+    <link href="http://yewlasting.github.io/posts/2eb3.html"/>
+    <id>http://yewlasting.github.io/posts/2eb3.html</id>
+    <published>2021-02-18T15:49:51.000Z</published>
+    <updated>2021-02-18T15:49:51.189Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>力扣每日1题no.85 - 566.重塑矩阵</title>
@@ -447,116 +561,6 @@
     
     
       <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.72 - 643.子数组最大平均数 I</title>
-    <link href="http://yewlasting.github.io/posts/c3b0.html"/>
-    <id>http://yewlasting.github.io/posts/c3b0.html</id>
-    <published>2021-02-04T14:31:42.000Z</published>
-    <updated>2021-02-04T15:48:20.489Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;643-子数组最大平均数-I&quot;&gt;&lt;a href=&quot;#643-子数组最大平均数-I&quot; class=&quot;headerlink&quot; title=&quot;643. 子数组最大平均数 I&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.71 - 480.滑动窗口中位数</title>
-    <link href="http://yewlasting.github.io/posts/d30a.html"/>
-    <id>http://yewlasting.github.io/posts/d30a.html</id>
-    <published>2021-02-03T15:38:37.000Z</published>
-    <updated>2021-02-06T10:41:37.178Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;480-滑动窗口中位数&quot;&gt;&lt;a href=&quot;#480-滑动窗口中位数&quot; class=&quot;headerlink&quot; title=&quot;480. 滑动窗口中位数&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.70 - 424.替换后的最长重复字符</title>
-    <link href="http://yewlasting.github.io/posts/30de.html"/>
-    <id>http://yewlasting.github.io/posts/30de.html</id>
-    <published>2021-02-02T15:31:11.000Z</published>
-    <updated>2021-02-04T15:48:20.481Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;424-替换后的最长重复字符&quot;&gt;&lt;a href=&quot;#424-替换后的最长重复字符&quot; class=&quot;headerlink&quot; title=&quot;424. 替换后的最长重复字符&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VS2019配置OpenCV-4.5.1</title>
-    <link href="http://yewlasting.github.io/posts/c8a2.html"/>
-    <id>http://yewlasting.github.io/posts/c8a2.html</id>
-    <published>2021-02-02T11:10:08.000Z</published>
-    <updated>2021-02-17T13:44:28.389Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;VS2019配置OpenCV-4-5-1&quot;&gt;&lt;a href=&quot;#VS2019配置OpenCV-4-5-1&quot; class=&quot;headerlink&quot; title=&quot;VS2019配置OpenCV - 4.5.1&quot;&gt;&lt;/a&gt;VS2019配置OpenCV -
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件安装" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    
-    
-      <category term="OpenCV" scheme="http://YewLasting.github.io/tags/OpenCV/"/>
-    
-      <category term="Visual Studio 2019" scheme="http://YewLasting.github.io/tags/Visual-Studio-2019/"/>
     
   </entry>
   
