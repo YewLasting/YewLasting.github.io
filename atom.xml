@@ -183,7 +183,7 @@
     <link href="http://yewlasting.github.io/posts/b53e.html"/>
     <id>http://yewlasting.github.io/posts/b53e.html</id>
     <published>2021-02-28T14:03:50.436Z</published>
-    <updated>2021-03-06T06:26:57.563Z</updated>
+    <updated>2021-03-06T06:43:30.041Z</updated>
     
     <summary type="html">
     
@@ -198,8 +198,14 @@
     </summary>
     
     
-      <category term="GDAL" scheme="http://YewLasting.github.io/categories/GDAL/"/>
+      <category term="C++" scheme="http://YewLasting.github.io/categories/C/"/>
     
+    
+      <category term="C++" scheme="http://YewLasting.github.io/tags/C/"/>
+    
+      <category term="GDAL" scheme="http://YewLasting.github.io/tags/GDAL/"/>
+    
+      <category term="Visual Studio 2019" scheme="http://YewLasting.github.io/tags/Visual-Studio-2019/"/>
     
   </entry>
   
