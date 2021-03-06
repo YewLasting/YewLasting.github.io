@@ -409,7 +409,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-20
+                    2021-02-28
                 </div>
                 
 
@@ -565,6 +565,9 @@ bool <span class="token function">downsort</span><span class="token punctuation"
     <span class="token keyword">return</span> a <span class="token operator">></span> b<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token function">sort</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> data<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> downsort<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//降序</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//is_sorted函数检测两个迭代器指定范围是否是已经按照升序排列</span>
+<span class="token function">is_sorted</span><span class="token punctuation">(</span>A<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> A<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//如果A中元素升序，则返回true</span>
+<span class="token function">is_sorted</span><span class="token punctuation">(</span>A<span class="token punctuation">.</span><span class="token function">rbegin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> A<span class="token punctuation">.</span><span class="token function">rend</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//如果A中元素降序，则返回true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h4 id="2-reverse倒置"><a href="#2-reverse倒置" class="headerlink" title="(2)reverse倒置"></a>(2)reverse倒置</h4><pre class="line-numbers language-c"><code class="language-c"><span class="token function">reverse</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>a<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//对a中的从a.begin()（包括它）到a.end()（不包括它）的元素倒置，但不排列，</span>
                             <span class="token comment" spellcheck="true">//如a中元素为1,3,2,4,倒置后为4,2,3,1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h4 id="3-copy复制"><a href="#3-copy复制" class="headerlink" title="(3)copy复制"></a>(3)copy复制</h4><pre class="line-numbers language-c"><code class="language-c"><span class="token function">copy</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>a<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>b<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//把a中的从a.begin()（包括它）到a.end()（不包括它）的元素复制到b中，</span>
@@ -915,10 +918,10 @@ bool <span class="token function">downsort</span><span class="token punctuation"
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            1004. 最大连续1的个数 III难度：中等
+题干给定一个由若干 0 和 1 组成的数组 A，我们最多可以将 K 个值从 0 变成 1 。
+返回仅包含 1 的最长（连续）子数组的长度。
+示例 1：输入：A = [1,1,1,0,0,0,1
                         
                     </div>
                     <div class="publish-info">
@@ -927,11 +930,23 @@ bool <span class="token function">downsort</span><span class="token punctuation"
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            unlasting
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
+                        <span class="chip bg-color">力扣每日1题</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1169,7 +1184,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">44.4k</span>&nbsp;字
+                class="white-color">54.2k</span>&nbsp;字
             
             
             

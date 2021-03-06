@@ -1,0 +1,1774 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="GDAL处理遥感影像, image processing,Machine learning,Deep learning等">
+    <meta name="description" content="专注于基于深度学习的遥感影像处理">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>GDAL处理遥感影像 | unlasting</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="unlasting" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">unlasting</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">unlasting</div>
+        <div class="logo-desc">
+            
+            专注于基于深度学习的遥感影像处理
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">GDAL处理遥感影像</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/GDAL/" class="post-category">
+                                GDAL
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-02-28
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-03-06
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    326
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="GDAL处理遥感影像"><a href="#GDAL处理遥感影像" class="headerlink" title="GDAL处理遥感影像"></a>GDAL处理遥感影像</h1><h2 id="一、VS2019编译配置GDAL"><a href="#一、VS2019编译配置GDAL" class="headerlink" title="一、VS2019编译配置GDAL"></a>一、VS2019编译配置GDAL</h2><p><a href="https://blog.csdn.net/qq_32153213/article/details/81363588" target="_blank" rel="noopener">Visual Studio 2019编译配置GDAL教程</a></p>
+<h2 id="二、在新建项目中配置GDAL"><a href="#二、在新建项目中配置GDAL" class="headerlink" title="二、在新建项目中配置GDAL"></a>二、在新建项目中配置GDAL</h2><ol>
+<li><p>新建立空白的<code>C++</code>项目后首先将项目设置为<code>x64</code></p>
+</li>
+<li><p>然后在项目名称处单击右键-&gt;属性</p>
+</li>
+<li><p>在以下位置添加对应内容(<strong>填入的路径要根据自己第一步安装GDAL时的路径进行修改</strong>)</p>
+<ul>
+<li>一、VC++目录：<ul>
+<li>（1）包含目录：<code>E:\GDAL\GDALHome231\include;</code></li>
+<li>（2）库目录：<code>E:\GDAL\GDALHome231\lib;</code></li>
+</ul>
+</li>
+<li>二、链接器（需要通过点击小三角添加）：<ul>
+<li>（1）常规-&gt;附加库目录：<code>E:\GDAL\GDALHome231\lib;</code></li>
+<li>（2）输入-&gt;附加依赖项：<code>gdal_i.lib;</code></li>
+</ul>
+</li>
+<li>三、项目名称-&gt;x64文件夹-&gt;Debug文件夹:<ul>
+<li>将<code>gdal203.dll</code>复制粘贴到此处</li>
+<li><code>gdal203.dll</code>的位置：<code>E:\GDAL\GDALHome231\bin</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="三、处理遥感影像常用操作"><a href="#三、处理遥感影像常用操作" class="headerlink" title="三、处理遥感影像常用操作"></a>三、处理遥感影像常用操作</h2><pre class="line-numbers language-c"><code class="language-c">    <span class="token function">GDALAllRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//注册GDAL</span>
+    <span class="token function">CPLSetConfigOption</span><span class="token punctuation">(</span><span class="token string">"SHAPE_ENCODING"</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//避免乱码</span>
+    <span class="token function">CPLSetConfigOption</span><span class="token punctuation">(</span><span class="token string">"GDAL_FILENAME_IS_UTF8"</span><span class="token punctuation">,</span> <span class="token string">"NO"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//支持中文路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="1-读取遥感影像信息"><a href="#1-读取遥感影像信息" class="headerlink" title="1.读取遥感影像信息"></a>1.读取遥感影像信息</h3><pre class="line-numbers language-C"><code class="language-C">#include <gdal_priv.h>
+#include <iostream> 
+#include <string> 
+using namespace std;
+
+int main()
+{
+
+    //避免乱码
+    CPLSetConfigOption("SHAPE_ENCODING", "UTF-8");
+    //支持中文路径
+    CPLSetConfigOption("GDAL_FILENAME_IS_UTF8", "NO");
+
+    //注册文件格式
+    GDALAllRegister();
+
+    //输入影像路径
+    string imgfile_ReadDir = "D:\\test.tiff";
+
+    //使用只读方式打开图像
+    GDALDataset *poDataset = (GDALDataset*)GDALOpen(imgfile_ReadDir.c_str(), GA_ReadOnly);
+    if (poDataset == NULL)
+    {
+        cout << "影像"<< imgfile_ReadDir <<"打开失败！" << endl;
+        return 0;
+    }
+
+    //输出图像的格式信息
+    printf("影像的格式信息Driver：%s/%s\n", 
+        poDataset->GetDriver()->GetDescription(), 
+        poDataset->GetDriver()->GetMetadataItem(GDAL_DMD_LONGNAME));
+
+
+    //输出影像像元数据类型
+    GDALDataType datatype = poDataset->GetRasterBand(1)->GetRasterDataType();//影像像元的数据类型，数字
+    cout << "影像" << imgfile_ReadDir << "的像元数据类型为："<<GDALGetDataTypeName(datatype)<<endl;//根据影像像元的数据类型的编号显示对于的数据类型名称(显示的时候把前缀GDT_去掉了)
+
+    //输出图像的大小和波段个数
+    int width = poDataset->GetRasterXSize();    //输入影像宽
+    int height = poDataset->GetRasterYSize();    //输入影像高
+    int channels = poDataset->GetRasterCount();    //输入影像通道数
+    cout << "影像" << imgfile_ReadDir << "的宽，高，波段数为：("<<width<<"*"<<height<<"*"<<channels<<")。" << endl;
+
+    //输出图像的投影信息
+    if (poDataset->GetProjectionRef() != NULL)
+    {
+        cout << "影像" << imgfile_ReadDir << "的投影信息Projection is  "<<poDataset->GetProjectionRef() << endl;
+    }
+    else
+    {
+        cout << "影像" << imgfile_ReadDir << "不存在投影信息！" << endl;
+    }
+
+    //输出图像的坐标和分辨率信息
+    double GeoTransform[6];//0和3是左上角顶点的xy坐标。1和5是像元的宽高
+    if (poDataset->GetGeoTransform(GeoTransform) == CE_None)
+    {
+        //影像坐标系左上角顶点为坐标原点，X轴向右为正方向，Y轴向下为正方向。
+        double ZeroX = GeoTransform[0];//影像左上角顶点的列坐标（经度）
+        double ZeroY = GeoTransform[3];//影像左上角顶点的行坐标（纬度）
+        double PixelX = GeoTransform[1];//影像分辨率（像元宽）
+        double PixelY = GeoTransform[5];//影像分辨率（像元高）备注：PixelY是矢量，因Y轴向下为正方向，所以为负数
+        //如果影像是指北的, GeoTransform[2] 和 GeoTransform[4] 这两个参数的值为0。
+
+        //像素行列坐标 求 地理坐标    col:列数    row:行数
+        int col = width-1, row = height-1;//右下角顶点的在原始影像中的像元行列坐标
+        double GeoX = ZeroX + col * PixelX + row * GeoTransform[2];//影像右下角顶点的地理列坐标（经度）
+        double GeoY = ZeroY + col * GeoTransform[4] + row * PixelY;//影像右下角顶点的地理行坐标（纬度）
+
+        //由地理坐标 求 行列坐标。相当于已知GeoX，GeoY求row col  解二元一次方程组
+        double temp = PixelX * PixelY - GeoTransform[2] * GeoTransform[4];
+        col = int(((GeoX - ZeroX) * PixelY - (GeoY - ZeroY) * GeoTransform[2]) / temp); //列数
+        row = int(((GeoY - ZeroY) * PixelX - (GeoX - ZeroX) * GeoTransform[4]) / temp); //行数
+
+        cout << "影像" << imgfile_ReadDir << "左上角顶点的地理坐标X,Y为：(" << ZeroX << "," << ZeroY << ")" << endl;
+        cout << "影像" << imgfile_ReadDir << "右下角顶点的地理坐标X,Y为：(" << GeoX << "," << GeoY << ")" << endl;
+        cout << "影像" << imgfile_ReadDir << "的像元分辨率（像元宽，像元高）为：(" << PixelX << "," << PixelY << ")" << endl;
+    }
+    else
+    {
+        cout << "影像" << imgfile_ReadDir << "不存在坐标和分辨率信息！" << endl;
+    }
+
+    //读取一个波段
+    int BandIndex = 1;//波段索引从1开始
+    GDALRasterBand *poBand = poDataset->GetRasterBand(BandIndex);
+
+    //获取该波段的最大值最小值，如果获取失败则进行统计
+    int bandGotMin, bandGotMax;
+    double adfMinMax[2];
+    adfMinMax[0] = poBand->GetMinimum(&bandGotMin);//波段像素最小值
+    adfMinMax[1] = poBand->GetMaximum(&bandGotMax);//波段像素最大值
+    if (!(bandGotMin && bandGotMax))
+    {
+        cout << "无法获取影像" << imgfile_ReadDir << "第" << BandIndex << "个波段像元的最大值最小值，需要重新统计！"<< endl;
+        GDALComputeRasterMinMax((GDALRasterBandH)poBand, TRUE, adfMinMax);
+    }
+    cout << "影像" << imgfile_ReadDir << "第" << BandIndex << "个波段像素的最小值Min=" << adfMinMax[0] << "，最大值Max=" << adfMinMax[1] << endl;
+
+
+    //获取该波段的均值、标准差
+    double pdfMin;//该波段最小值
+    double pdfMax;//该波段最大值
+    double pdfMean;//该波段均值
+    double pdfStdDev;//该波段标准差
+    CPLErr err_Statistics = poBand->ComputeStatistics(FALSE, &pdfMin, &pdfMax, &pdfMean, &pdfStdDev, NULL, NULL);//第一个参数代表是否粗略统计，最后两个参数代表进度条信息
+    //调用该函数后会自动生成影像名.aux.xml文件，用于记录统计好的信息
+    if (err_Statistics == CE_Failure)
+    {
+        cout << "影像" << imgfile_ReadDir << "第" << BandIndex << "个波段的均值、标准差统计失败！" << endl;
+    }
+    else
+    {
+        cout << "影像" << imgfile_ReadDir << "第" << BandIndex << "个波段像素的均值Mean=" << pdfMean << "，标准差StdDev=" << pdfStdDev << endl;
+    }
+
+
+    //计算该波段的直方图
+    //函数参数
+    double dfMin = -0.5;//统计直方图的范围 ，假如是8bit影像，统计全部范围0-255则为(-0.5，255.5)(因为是开区间，所以范围要向外扩展)，
+    double dfMax = 255.5;//也可以统计128-255,此时值设置为(127.5，255.5)
+    int nBuckets = 256; //直方图统计份数，如果要把8bit影像的灰度范围0-255中的每个灰度为一份，则设置为256。
+                         //假如0-1合并统计，2-3合并统计，则设置为128.
+    GUIntBig* panHistogram = new GUIntBig[(size_t)nBuckets];//用于存储直方图的数组的大小，大小和nBuckets保持一致。size_t是8位
+    memset(panHistogram, 0, sizeof(GUIntBig) * nBuckets);//将数组清零
+    int bIncludeOutOfRange = TRUE;//是否统计区间外的值，有前两个参数可知有时统计的不是全部灰度范围
+                           //设置为TRUE则范围外的灰度被分别统计到第一组和最后一组，设置为FALSE则忽略不统计
+    int bApproxOK = FALSE;//是否进行粗略统计(粗略统计时精度降低速度加快)
+    GDALProgressFunc pfnProgress = NULL;//表示进度条的回调函数
+    void* pProgressData = NULL;//进度条数据
+    //进行统计直方图
+    CPLErr err_Histogram = poBand->GetHistogram(dfMin, dfMax, nBuckets, panHistogram, bIncludeOutOfRange, bApproxOK, pfnProgress, pProgressData);
+    //调用该函数后会自动生成影像名.aux.xml文件，用于记录统计好的信息
+    if (err_Histogram == CE_Failure)
+    {
+        cout << "影像" << imgfile_ReadDir << "第" << BandIndex << "个波段的直方图统计失败！" << endl;
+    }
+
+
+    //读取图像当前波段BandIndex的第一行数据
+    int nXsize = poBand->GetXSize();
+    float* pafScanline = new float[(size_t)nXsize];
+    memset(pafScanline, 0, sizeof(float) * nXsize);//将数组清零
+    poBand->RasterIO(GF_Read, 0, 0, nXsize, 1, pafScanline, nXsize, 1, GDT_Float32, 0, 0);
+    delete[]pafScanline;//释放指针开辟的空间
+
+
+    //关闭文件
+    GDALClose((GDALDatasetH)poDataset);    
+
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>常见的像元数据类型及编号：</strong></p>
+<pre class="line-numbers language-C"><code class="language-C">    //    /*! Unknown or unspecified type */          GDT_Unknown = 0,
+    //    /*! Eight bit unsigned integer */           GDT_Byte = 1,
+    //    /*! Sixteen bit unsigned integer */         GDT_UInt16 = 2,
+    //    /*! Sixteen bit signed integer */           GDT_Int16 = 3,
+    //    /*! Thirty two bit unsigned integer */      GDT_UInt32 = 4,
+    //    /*! Thirty two bit signed integer */        GDT_Int32 = 5,
+    //    /* TODO?(#6879): GDT_UInt64 */
+    //    /* TODO?(#6879): GDT_Int64 */
+    //    /*! Thirty two bit floating point */        GDT_Float32 = 6,
+    //    /*! Sixty four bit floating point */        GDT_Float64 = 7,
+    //    /*! Complex Int16 */                        GDT_CInt16 = 8,
+    //    /*! Complex Int32 */                        GDT_CInt32 = 9,
+    //    /* TODO?(#6879): GDT_CInt64 */
+    //    /*! Complex Float32 */                      GDT_CFloat32 = 10,
+    //    /*! Complex Float64 */                      GDT_CFloat64 = 11,
+    //    GDT_TypeCount = 12          /* maximum type # + 1 */<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">数据类型(开辟空间时)</th>
+<th align="center">RasterIO和create函数中的像元数据类型参数</th>
+<th align="center">像元数据类型编号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">GByte</td>
+<td align="center">GDT_Byte</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">GUint16</td>
+<td align="center">GDT_UInt16</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">GDT_Float32</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<p><strong>代码示例：</strong></p>
+<pre class="line-numbers language-c"><code class="language-c">GByte<span class="token operator">*</span> image_ptr <span class="token operator">=</span> new GByte<span class="token punctuation">[</span><span class="token punctuation">(</span>size_t<span class="token punctuation">)</span>width <span class="token operator">*</span> height <span class="token operator">*</span> channel<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//开辟空间</span>
+<span class="token function">memset</span><span class="token punctuation">(</span>image_ptr<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>GByte<span class="token punctuation">)</span> <span class="token operator">*</span> width <span class="token operator">*</span> height <span class="token operator">*</span> channel<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将数组清零</span>
+imageDataset<span class="token operator">-></span><span class="token function">RasterIO</span><span class="token punctuation">(</span>GF_Read<span class="token punctuation">,</span> zero_x<span class="token punctuation">,</span> zero_y<span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> 
+                       image_ptr<span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> GDT_Byte<span class="token punctuation">,</span> channels<span class="token punctuation">,</span> nullptr<span class="token punctuation">,</span> 
+                       <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-创建影像"><a href="#2-创建影像" class="headerlink" title="2.创建影像"></a>2.创建影像</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">CreateRasterFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//为了支持中文路径,请添加下面这句代码</span>
+    <span class="token function">CPLSetConfigOption</span><span class="token punctuation">(</span><span class="token string">"GDAL_FILENAME_IS_UTF8"</span><span class="token punctuation">,</span> <span class="token string">"NO"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string pszRasterFile <span class="token operator">=</span> <span class="token string">"D:\\CreateTest.tif"</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//注册栅格驱动</span>
+    <span class="token function">GDALAllRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//下面获取指定格式的驱动,用于创建图像</span>
+    string pszFormat <span class="token operator">=</span> <span class="token string">"GTiff"</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//GTiff创建为tif图像,HFA创建的为Erdas的img格式,ENVI创建为ENVI的hdr文件</span>
+    GDALDriver<span class="token operator">*</span>poDriver<span class="token operator">=</span><span class="token function">GetGDALDriverManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">GetDriverByName</span><span class="token punctuation">(</span>pszFormat<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>poDriver <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"创建"</span><span class="token operator">&lt;&lt;</span>pszRasterFile<span class="token operator">&lt;&lt;</span><span class="token string">"文件时,获取格式"</span> <span class="token operator">&lt;&lt;</span> pszFormat <span class="token operator">&lt;&lt;</span> <span class="token string">"的驱动失败！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//下面这几句是获取该驱动的一些元数据信息,里面有该格式是否支持创建等信息</span>
+    <span class="token keyword">char</span> <span class="token operator">*</span><span class="token operator">*</span>papszMetadata<span class="token operator">=</span>poDriver<span class="token operator">-></span><span class="token function">GetMetadata</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">CSLFetchBoolean</span><span class="token punctuation">(</span>papszMetadata<span class="token punctuation">,</span> GDAL_DCAP_CREATE<span class="token punctuation">,</span> FALSE<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"格式"</span> <span class="token operator">&lt;&lt;</span> pszFormat <span class="token operator">&lt;&lt;</span> <span class="token string">"支持Create()方法。"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">CSLFetchBoolean</span><span class="token punctuation">(</span>papszMetadata<span class="token punctuation">,</span> GDAL_DCAP_CREATECOPY<span class="token punctuation">,</span> FALSE<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"格式"</span> <span class="token operator">&lt;&lt;</span> pszFormat <span class="token operator">&lt;&lt;</span> <span class="token string">"支持CreateCopy()方法。"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//创建输出文件,大小为*512,三个波段,8bit的数据</span>
+    GDALDataset<span class="token operator">*</span> poDS <span class="token operator">=</span> poDriver<span class="token operator">-></span><span class="token function">Create</span><span class="token punctuation">(</span>pszRasterFile<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">512</span><span class="token punctuation">,</span> <span class="token number">512</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> GDT_Byte<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>poDS <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"创建图像"</span> <span class="token operator">&lt;&lt;</span> pszRasterFile <span class="token operator">&lt;&lt;</span> <span class="token string">"失败！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">////设置投影</span>
+    <span class="token comment" spellcheck="true">//string pszWKT;//投影信息</span>
+    <span class="token comment" spellcheck="true">//poDS->SetProjection(pszWKT.c_str());//设置该图像的投影</span>
+
+    <span class="token comment" spellcheck="true">//设置地理变换参数</span>
+    <span class="token comment" spellcheck="true">//设置六参数,第一个和第四个是图像左上角的坐标,第二个和第六个为横向和纵向分辨率,余下两个为旋转角度</span>
+    <span class="token keyword">double</span> dGeotransform<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">512</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">;</span> 
+    poDS<span class="token operator">-></span><span class="token function">SetGeoTransform</span><span class="token punctuation">(</span>dGeotransform<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment" spellcheck="true">//关闭图像,此时图像里面全是0值,打开的话应该是黑色的</span>
+    <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span>poDS<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"图像"</span> <span class="token operator">&lt;&lt;</span> pszRasterFile <span class="token operator">&lt;&lt;</span> <span class="token string">"创建成功！已将其数据集关闭！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>函数调用示例：</strong></p>
+<pre class="line-numbers language-c"><code class="language-c">    <span class="token function">CreateRasterFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//创建影像</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-更新影像"><a href="#3-更新影像" class="headerlink" title="3.更新影像"></a>3.更新影像</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">UpdateRasterFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//为了支持中文路径,请添加下面这句代码</span>
+    <span class="token function">CPLSetConfigOption</span><span class="token punctuation">(</span><span class="token string">"GDAL_FILENAME_IS_UTF8"</span><span class="token punctuation">,</span> <span class="token string">"NO"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    string pszRasterFile <span class="token operator">=</span> <span class="token string">"D:\\CreateTest.tif"</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//注册栅格驱动</span>
+    <span class="token function">GDALAllRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//打开要更新的数据,注意第二个参数使用GA_Update </span>
+    GDALDataset<span class="token operator">*</span> poDS <span class="token operator">=</span> <span class="token punctuation">(</span>GDALDataset<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">GDALOpen</span><span class="token punctuation">(</span>pszRasterFile<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> GA_Update<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>poDS <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"影像"</span> <span class="token operator">&lt;&lt;</span> pszRasterFile <span class="token operator">&lt;&lt;</span> <span class="token string">"打开失败！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//获取图像大小</span>
+    <span class="token keyword">int</span> iwidth <span class="token operator">=</span> poDS<span class="token operator">-></span><span class="token function">GetRasterXSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> iHeight <span class="token operator">=</span> poDS<span class="token operator">-></span><span class="token function">GetRasterYSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//声明一行图像大小的空间</span>
+    <span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token operator">*</span> pBuf <span class="token operator">=</span> new <span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token punctuation">[</span>iwidth<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>pBuf<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token punctuation">)</span> <span class="token operator">*</span> iwidth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//获取第一波段</span>
+    GDALRasterBand<span class="token operator">*</span> pBand1 <span class="token operator">=</span> poDS<span class="token operator">-></span><span class="token function">GetRasterBand</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//循环图像高,更新图像里面的像素值</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> iHeight<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//初始化当前行的像元值,像元值按照取余,图像应该是黑白条纹</span>
+        <span class="token keyword">int</span> iValue <span class="token operator">=</span> i <span class="token operator">%</span> <span class="token number">255</span><span class="token punctuation">;</span>
+        <span class="token function">memset</span><span class="token punctuation">(</span>pBuf<span class="token punctuation">,</span> iValue<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token punctuation">)</span> <span class="token operator">*</span> iwidth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//将像元值写入图像</span>
+        pBand1<span class="token operator">-></span><span class="token function">RasterIO</span><span class="token punctuation">(</span>GF_Write<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> iwidth<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> pBuf<span class="token punctuation">,</span> iwidth<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> GDT_Byte<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//获取第二波段</span>
+    GDALRasterBand<span class="token operator">*</span> pBand2 <span class="token operator">=</span> poDS<span class="token operator">-></span><span class="token function">GetRasterBand</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//将第二波段的值全部设置为128</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>pBuf<span class="token punctuation">,</span> <span class="token number">128</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token punctuation">)</span> <span class="token operator">*</span> iwidth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//循环图像高,更新图像里面的像素值</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> iHeight<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//将像元值写入图像</span>
+        pBand2<span class="token operator">-></span><span class="token function">RasterIO</span><span class="token punctuation">(</span>GF_Write<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> iwidth<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> pBuf<span class="token punctuation">,</span> iwidth<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> GDT_Byte<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//获取第三波段</span>
+    GDALRasterBand<span class="token operator">*</span> pBand3 <span class="token operator">=</span> poDS<span class="token operator">-></span><span class="token function">GetRasterBand</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//将第二波段的值全部设置为255</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>pBuf<span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">char</span><span class="token punctuation">)</span> <span class="token operator">*</span> iwidth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//循环图像高,更新图像里面的像素值</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> iHeight<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//将像元值写入图像</span>
+        pBand3<span class="token operator">-></span><span class="token function">RasterIO</span><span class="token punctuation">(</span>GF_Write<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> iwidth<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> pBuf<span class="token punctuation">,</span> iwidth<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> GDT_Byte<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    delete<span class="token punctuation">[</span><span class="token punctuation">]</span>pBuf<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//只有关闭数据集的时候,数据像元值等信息才会更新</span>
+    <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span>poDS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"影像"</span> <span class="token operator">&lt;&lt;</span> pszRasterFile <span class="token operator">&lt;&lt;</span> <span class="token string">"像元数据更新完成！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>函数调用示例：</strong></p>
+<pre class="line-numbers language-c"><code class="language-c">    <span class="token function">UpdateRasterFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//更新影像</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="4-删除影像"><a href="#4-删除影像" class="headerlink" title="4.删除影像"></a>4.删除影像</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/**
+    * @brief 删除栅格图像
+    * @param pszFile    图像路径
+    * @return 是否删除成功，成功为0
+*/</span>
+<span class="token keyword">int</span> <span class="token function">RasterDelete</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> pszFile<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//函数声明</span>
+
+<span class="token keyword">int</span> <span class="token function">RasterDelete</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> pszFile<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">GDALAllRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//打开图像</span>
+    GDALDataset<span class="token operator">*</span> pDS <span class="token operator">=</span> <span class="token punctuation">(</span>GDALDataset<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">GDALOpen</span><span class="token punctuation">(</span>pszFile<span class="token punctuation">,</span> GA_ReadOnly<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pDS <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token function">remove</span><span class="token punctuation">(</span>pszFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    GDALDriver<span class="token operator">*</span> pDriver <span class="token operator">=</span> pDS<span class="token operator">-></span><span class="token function">GetDriver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pDriver <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span>pDS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token function">remove</span><span class="token punctuation">(</span>pszFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span>pDS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pDriver<span class="token operator">-></span><span class="token function">Delete</span><span class="token punctuation">(</span>pszFile<span class="token punctuation">)</span> <span class="token operator">==</span> CE_None<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        <span class="token keyword">return</span> <span class="token function">remove</span><span class="token punctuation">(</span>pszFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>函数调用示例：</strong></p>
+<pre class="line-numbers language-c"><code class="language-c">    string file <span class="token operator">=</span> <span class="token string">"D:\\CreateTest.tiff"</span><span class="token punctuation">;</span>    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">RasterDelete</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"影像"</span> <span class="token operator">&lt;&lt;</span> file <span class="token operator">&lt;&lt;</span> <span class="token string">"删除成功！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"影像"</span> <span class="token operator">&lt;&lt;</span> file <span class="token operator">&lt;&lt;</span> <span class="token string">"删除失败！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-移动影像"><a href="#5-移动影像" class="headerlink" title="5.移动影像"></a>5.移动影像</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/**
+    * @brief 重命名/移动 栅格图像
+    * @param pszOldFile            原始图像路径
+    * @param pszNewFile            新图像路径
+    * @return 是否删除成功，成功为0
+*/</span>
+<span class="token keyword">int</span> <span class="token function">RasterRename</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> pszOldFile<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> pszNewFile<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//函数声明</span>
+
+
+<span class="token keyword">int</span> <span class="token function">RasterRename</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> pszOldFile<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> pszNewFile<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//如果要移动到某个文件夹中，这个文件夹必须存在</span>
+    <span class="token function">GDALAllRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//打开图像</span>
+    GDALDataset<span class="token operator">*</span> pDS <span class="token operator">=</span> <span class="token punctuation">(</span>GDALDataset<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">GDALOpen</span><span class="token punctuation">(</span>pszOldFile<span class="token punctuation">,</span> GA_ReadOnly<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pDS <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token function">rename</span><span class="token punctuation">(</span>pszOldFile<span class="token punctuation">,</span> pszNewFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    GDALDriver<span class="token operator">*</span> pDriver <span class="token operator">=</span> pDS<span class="token operator">-></span><span class="token function">GetDriver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pDriver <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span>pDS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token function">remove</span><span class="token punctuation">(</span>pszOldFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span>pDS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pDriver<span class="token operator">-></span><span class="token function">Rename</span><span class="token punctuation">(</span>pszNewFile<span class="token punctuation">,</span> pszOldFile<span class="token punctuation">)</span> <span class="token operator">==</span> CE_None<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        <span class="token keyword">return</span> <span class="token function">rename</span><span class="token punctuation">(</span>pszOldFile<span class="token punctuation">,</span> pszNewFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>函数调用示例：</strong></p>
+<pre class="line-numbers language-c"><code class="language-c">    string OldFile <span class="token operator">=</span> <span class="token string">"D:\\CreateTest.tiff"</span><span class="token punctuation">;</span>
+    string NewFile <span class="token operator">=</span> <span class="token string">"E:\\CreateTest.tiff"</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">RasterRename</span><span class="token punctuation">(</span>OldFile<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> NewFile<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"影像从位置"</span> <span class="token operator">&lt;&lt;</span> OldFile <span class="token operator">&lt;&lt;</span> <span class="token string">"到位置"</span> <span class="token operator">&lt;&lt;</span> NewFile <span class="token operator">&lt;&lt;</span> <span class="token string">"移动成功！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"影像从位置"</span> <span class="token operator">&lt;&lt;</span> OldFile <span class="token operator">&lt;&lt;</span> <span class="token string">"到位置"</span> <span class="token operator">&lt;&lt;</span> NewFile <span class="token operator">&lt;&lt;</span> <span class="token string">"移动失败！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="6-分块读写遥感影像"><a href="#6-分块读写遥感影像" class="headerlink" title="6.分块读写遥感影像"></a>6.分块读写遥感影像</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//分块读写影像</span>
+<span class="token keyword">void</span> <span class="token function">BlockImageProcessing</span><span class="token punctuation">(</span>CPLString InputImgPath<span class="token punctuation">,</span> CPLString OutputImgPath<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> BlockWidth <span class="token operator">=</span> <span class="token number">512</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//分块的列宽</span>
+    <span class="token keyword">int</span> BlockHeight <span class="token operator">=</span> <span class="token number">512</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//分块的行高</span>
+    GDALDataset<span class="token operator">*</span> poDataset_Input<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//GDAL数据集-输入 </span>
+    GDALDataset<span class="token operator">*</span> poDataset_Output<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//GDAL数据集-输出</span>
+
+    <span class="token function">GDALAllRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    poDataset_Input <span class="token operator">=</span> <span class="token punctuation">(</span>GDALDataset<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">GDALOpen</span><span class="token punctuation">(</span>InputImgPath<span class="token punctuation">,</span> GA_ReadOnly<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>poDataset_Input <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"文件打开失败！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> BandCount <span class="token operator">=</span> poDataset_Input<span class="token operator">-></span><span class="token function">GetRasterCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输入影像波段数</span>
+    <span class="token keyword">int</span> nImgSizeX <span class="token operator">=</span> poDataset_Input<span class="token operator">-></span><span class="token function">GetRasterXSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输入影像宽</span>
+    <span class="token keyword">int</span> nImgSizeY <span class="token operator">=</span> poDataset_Input<span class="token operator">-></span><span class="token function">GetRasterYSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输入影像高</span>
+    GDALDataType datatype <span class="token operator">=</span> poDataset_Input<span class="token operator">-></span><span class="token function">GetRasterBand</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">GetRasterDataType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输入影像像元数据类型</span>
+
+    <span class="token comment" spellcheck="true">//创建新文件-输出影像</span>
+    CPLString format <span class="token operator">=</span> <span class="token string">"GTIFF"</span><span class="token punctuation">;</span>
+    GDALDriver<span class="token operator">*</span> poDriver <span class="token operator">=</span> <span class="token function">GetGDALDriverManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">GetDriverByName</span><span class="token punctuation">(</span>format<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    poDataset_Output <span class="token operator">=</span> poDriver<span class="token operator">-></span><span class="token function">Create</span><span class="token punctuation">(</span>OutputImgPath<span class="token punctuation">,</span> nImgSizeX<span class="token punctuation">,</span> nImgSizeY<span class="token punctuation">,</span> BandCount<span class="token punctuation">,</span> datatype<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>poDataset_Output <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"创建输出影像失败！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">double</span> adfGeoTransform<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    poDataset_Input<span class="token operator">-></span><span class="token function">GetGeoTransform</span><span class="token punctuation">(</span>adfGeoTransform<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//获取输入影像的仿射参数</span>
+    poDataset_Output<span class="token operator">-></span><span class="token function">SetGeoTransform</span><span class="token punctuation">(</span>adfGeoTransform<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置输出影像的仿射参数</span>
+    poDataset_Output<span class="token operator">-></span><span class="token function">SetProjection</span><span class="token punctuation">(</span>poDataset_Input<span class="token operator">-></span><span class="token function">GetProjectionRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置投影</span>
+
+    <span class="token comment" spellcheck="true">//分块处理.将影像分成很多BlockWidth*BlockHeight大小的块，通过循环对每一块进行处理 </span>
+    <span class="token keyword">int</span> nxNum <span class="token operator">=</span> <span class="token punctuation">(</span>nImgSizeX <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> BlockWidth <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//计算列方向上分块块数 </span>
+    <span class="token keyword">int</span> nyNum <span class="token operator">=</span> <span class="token punctuation">(</span>nImgSizeY <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> BlockHeight <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//计算行方向上分块块数 </span>
+    <span class="token keyword">int</span> pafsizex<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//当前块宽度 </span>
+    <span class="token keyword">int</span> pafsizey<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//当前块高度 </span>
+    <span class="token keyword">float</span><span class="token operator">*</span> lp<span class="token punctuation">;</span>
+    <span class="token keyword">float</span><span class="token operator">*</span> ppafScan_Output <span class="token operator">=</span> new <span class="token keyword">float</span><span class="token punctuation">[</span><span class="token punctuation">(</span>size_t<span class="token punctuation">)</span>BlockWidth <span class="token operator">*</span> BlockHeight <span class="token operator">*</span> BandCount<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//开辟内存</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>ppafScan_Output<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span> <span class="token operator">*</span> BlockWidth <span class="token operator">*</span> BlockHeight <span class="token operator">*</span> BandCount<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//清零</span>
+    <span class="token keyword">float</span><span class="token operator">*</span> ppafScan_Input <span class="token operator">=</span> new <span class="token keyword">float</span><span class="token punctuation">[</span><span class="token punctuation">(</span>size_t<span class="token punctuation">)</span>BlockWidth <span class="token operator">*</span> BlockHeight <span class="token operator">*</span> BandCount<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//开辟内存</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>ppafScan_Input<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span> <span class="token operator">*</span> BlockWidth <span class="token operator">*</span> BlockHeight <span class="token operator">*</span> BandCount<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//清零</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> nYI <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> nYI <span class="token operator">&lt;</span> nyNum<span class="token punctuation">;</span> nYI<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> nXI <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> nXI <span class="token operator">&lt;</span> nxNum<span class="token punctuation">;</span> nXI<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//依次处理每个分块</span>
+            pafsizex <span class="token operator">=</span> BlockWidth<span class="token punctuation">;</span>
+            pafsizey <span class="token operator">=</span> BlockHeight<span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//行列末尾余数的小块的处理 </span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nXI <span class="token operator">==</span> nxNum <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>pafsizex <span class="token operator">=</span> <span class="token punctuation">(</span>nImgSizeX <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> BlockWidth <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nYI <span class="token operator">==</span> nyNum <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>pafsizey <span class="token operator">=</span> <span class="token punctuation">(</span>nImgSizeY <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> BlockHeight <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+            GDALDataset<span class="token operator">*</span> poDataset_Output_block<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//GDAL数据集-输出</span>
+            GDALDriver<span class="token operator">*</span> poDriver_block <span class="token operator">=</span> <span class="token function">GetGDALDriverManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">GetDriverByName</span><span class="token punctuation">(</span>format<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            string OutputImgPath_block <span class="token operator">=</span> OutputImgPath<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> OutputImgPath<span class="token punctuation">.</span><span class="token function">rfind</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token operator">+</span> <span class="token string">"_block"</span> <span class="token operator">+</span> <span class="token function">to_string</span><span class="token punctuation">(</span>nYI <span class="token operator">*</span> nxNum <span class="token operator">+</span> nXI <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> OutputImgPath<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>OutputImgPath<span class="token punctuation">.</span><span class="token function">rfind</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            poDataset_Output_block <span class="token operator">=</span> poDriver_block<span class="token operator">-></span><span class="token function">Create</span><span class="token punctuation">(</span>OutputImgPath_block<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pafsizex<span class="token punctuation">,</span> pafsizey<span class="token punctuation">,</span> BandCount<span class="token punctuation">,</span> datatype<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>poDataset_Output_block <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                cout <span class="token operator">&lt;&lt;</span> <span class="token string">"创建输出影像分块"</span> <span class="token operator">&lt;&lt;</span> nYI <span class="token operator">*</span> nxNum <span class="token operator">+</span> nXI <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"失败！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+                <span class="token keyword">return</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">double</span> ZeroX <span class="token operator">=</span> adfGeoTransform<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//影像左上角顶点的列坐标（经度）</span>
+            <span class="token keyword">double</span> ZeroY <span class="token operator">=</span> adfGeoTransform<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//影像左上角顶点的行坐标（纬度）</span>
+            <span class="token keyword">double</span> PixelX <span class="token operator">=</span> adfGeoTransform<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//影像分辨率（像元宽）</span>
+            <span class="token keyword">double</span> PixelY <span class="token operator">=</span> adfGeoTransform<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//影像分辨率（像元高）备注：PixelY是矢量，因Y轴向下为正方向，所以为负数</span>
+            <span class="token comment" spellcheck="true">//像素行列坐标 求 地理坐标    col:列数    row:行数</span>
+            <span class="token keyword">int</span> row <span class="token operator">=</span> nYI <span class="token operator">*</span> BlockHeight<span class="token punctuation">;</span>
+            <span class="token keyword">int</span> col <span class="token operator">=</span> nXI <span class="token operator">*</span> BlockWidth<span class="token punctuation">;</span>
+            <span class="token keyword">double</span> GeoX <span class="token operator">=</span> ZeroX <span class="token operator">+</span> col <span class="token operator">*</span> PixelX <span class="token operator">+</span> row <span class="token operator">*</span> adfGeoTransform<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//地理列坐标（经度）</span>
+            <span class="token keyword">double</span> GeoY <span class="token operator">=</span> ZeroY <span class="token operator">+</span> col <span class="token operator">*</span> adfGeoTransform<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">+</span> row <span class="token operator">*</span> PixelY<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//地理行坐标（纬度）</span>
+
+            <span class="token keyword">double</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>GeoX<span class="token punctuation">,</span>PixelX<span class="token punctuation">,</span>adfGeoTransform<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> GeoY <span class="token punctuation">,</span>adfGeoTransform<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>PixelY<span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//0和3是左上角顶点的xy坐标。1和5是像元的宽高</span>
+            <span class="token comment" spellcheck="true">//输出当前分块信息</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"当前分块"</span> <span class="token operator">&lt;&lt;</span> nYI <span class="token operator">*</span> nxNum <span class="token operator">+</span> nXI <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"坐标范围："</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"左上角origin=(%.6f,%.6f)\n"</span><span class="token punctuation">,</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"右下角end=(%.6f,%.6f)\n"</span><span class="token punctuation">,</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>pafsizex<span class="token number">-1</span><span class="token punctuation">)</span> <span class="token operator">*</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>pafsizey<span class="token number">-1</span><span class="token punctuation">)</span> <span class="token operator">*</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>pafsizex<span class="token number">-1</span><span class="token punctuation">)</span> <span class="token operator">*</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>pafsizey<span class="token number">-1</span><span class="token punctuation">)</span>  <span class="token operator">*</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"像元尺寸大小矢量PixelSize=(%.6f,%.6f)\n\n"</span><span class="token punctuation">,</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> adfGeoTransform_block<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            poDataset_Output_block<span class="token operator">-></span><span class="token function">SetGeoTransform</span><span class="token punctuation">(</span>adfGeoTransform_block<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置输出影像的仿射参数</span>
+            poDataset_Output_block<span class="token operator">-></span><span class="token function">SetProjection</span><span class="token punctuation">(</span>poDataset_Input<span class="token operator">-></span><span class="token function">GetProjectionRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//设置投影</span>
+            <span class="token comment" spellcheck="true">//float* ppafScan_Output_block = new float[(size_t)pafsizex * pafsizey * BandCount];//开辟内存</span>
+            <span class="token comment" spellcheck="true">//memset(ppafScan_Output_block, 0, sizeof(float) * pafsizex * pafsizey * BandCount);//清零</span>
+            <span class="token comment" spellcheck="true">//读取当前块数据 </span>
+            poDataset_Input<span class="token operator">-></span><span class="token function">RasterIO</span><span class="token punctuation">(</span>GF_Read<span class="token punctuation">,</span> nXI <span class="token operator">*</span> BlockWidth<span class="token punctuation">,</span> nYI <span class="token operator">*</span> BlockHeight<span class="token punctuation">,</span> pafsizex<span class="token punctuation">,</span> pafsizey<span class="token punctuation">,</span> ppafScan_Input<span class="token punctuation">,</span> pafsizex<span class="token punctuation">,</span> pafsizey<span class="token punctuation">,</span> datatype<span class="token punctuation">,</span> BandCount<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> BandCount <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pafsizex <span class="token operator">*</span> BandCount <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//对当前块进行处理</span>
+            <span class="token comment" spellcheck="true">//顺序 波段 行 列</span>
+            <span class="token comment" spellcheck="true">/*
+            for (int nnum = 0; nnum &lt; BandCount; nnum++)//波段
+            {
+                for (int i = 0; i &lt; pafsizey; i++)//行
+                {
+                    for (int j = 0; j &lt; pafsizex; j++)//列
+                    {
+                        lp = ppafScan_Input + nnum * pafsizex * pafsizey + i * pafsizex + j;
+                        *(ppafScan_Output + nnum * pafsizex * pafsizey + i * pafsizex + j) = *lp;
+                    }
+                }
+            }
+            */</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> pafsizey<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//行</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> pafsizex<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//列</span>
+                <span class="token punctuation">{</span>
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> nnum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> nnum <span class="token operator">&lt;</span> BandCount<span class="token punctuation">;</span> nnum<span class="token operator">++</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//波段</span>
+                    <span class="token punctuation">{</span>
+                        lp <span class="token operator">=</span> ppafScan_Input <span class="token operator">+</span> i <span class="token operator">*</span> pafsizex <span class="token operator">*</span> BandCount <span class="token operator">+</span> j <span class="token operator">*</span> BandCount <span class="token operator">+</span> nnum<span class="token punctuation">;</span>
+                        <span class="token operator">*</span><span class="token punctuation">(</span>ppafScan_Output <span class="token operator">+</span> i <span class="token operator">*</span> pafsizex <span class="token operator">*</span> BandCount <span class="token operator">+</span> j <span class="token operator">*</span> BandCount <span class="token operator">+</span> nnum<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token operator">*</span>lp<span class="token punctuation">;</span>
+                        <span class="token comment" spellcheck="true">//*(ppafScan_Output_block + i * pafsizex * BandCount + j * BandCount + nnum) = *lp;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">//将当前块数据写入新图像相应位置 </span>
+            poDataset_Output<span class="token operator">-></span><span class="token function">RasterIO</span><span class="token punctuation">(</span>GF_Write<span class="token punctuation">,</span> nXI <span class="token operator">*</span> BlockWidth<span class="token punctuation">,</span> nYI <span class="token operator">*</span> BlockHeight<span class="token punctuation">,</span> pafsizex<span class="token punctuation">,</span> pafsizey<span class="token punctuation">,</span> ppafScan_Output<span class="token punctuation">,</span> pafsizex<span class="token punctuation">,</span> pafsizey<span class="token punctuation">,</span> datatype<span class="token punctuation">,</span> BandCount<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> BandCount <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pafsizex <span class="token operator">*</span> BandCount <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//poDataset_Output->RasterIO(GF_Write, nXI * BlockWidth, nYI * BlockHeight, pafsizex, pafsizey, ppafScan_Output, pafsizex, pafsizey, datatype, BandCount, 0, 0, 0, 0);</span>
+            <span class="token comment" spellcheck="true">//输出保存当前分块影像ppafScan_Output_block</span>
+            poDataset_Output_block<span class="token operator">-></span><span class="token function">RasterIO</span><span class="token punctuation">(</span>GF_Write<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> pafsizex<span class="token punctuation">,</span> pafsizey<span class="token punctuation">,</span>ppafScan_Output <span class="token punctuation">,</span> pafsizex<span class="token punctuation">,</span> pafsizey<span class="token punctuation">,</span> datatype<span class="token punctuation">,</span> BandCount<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> BandCount <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pafsizex <span class="token operator">*</span> BandCount <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//delete[] ppafScan_Output_block;</span>
+            <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span>poDataset_Output_block<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    delete<span class="token punctuation">[</span><span class="token punctuation">]</span> ppafScan_Input<span class="token punctuation">;</span>
+    delete<span class="token punctuation">[</span><span class="token punctuation">]</span> ppafScan_Output<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//写操作完成后必须释放，不然写入操作不成功 </span>
+    <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span>poDataset_Input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span>poDataset_Output<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    cout <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> <span class="token string">"影像"</span> <span class="token operator">&lt;&lt;</span> OutputImgPath <span class="token operator">&lt;&lt;</span> <span class="token string">"创建成功！"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>函数调用示例：</strong></p>
+<pre class="line-numbers language-c"><code class="language-c">    <span class="token comment" spellcheck="true">//该部分用于分块读写遥感影像</span>
+    CPLString InputImgPath <span class="token operator">=</span> <span class="token string">"D:/test.tiff"</span><span class="token punctuation">;</span>
+    CPLString OutputImgPath <span class="token operator">=</span> <span class="token string">"D:/test_new.tiff"</span><span class="token punctuation">;</span>
+    <span class="token function">BlockImageProcessing</span><span class="token punctuation">(</span>InputImgPath<span class="token punctuation">,</span> OutputImgPath<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="7-其他"><a href="#7-其他" class="headerlink" title="7.其他"></a>7.其他</h3><ol>
+<li><p>用GDAL存储图像时的顺序为BGR（一般彩色图像都是以BGR存储），但读取图像的顺序为RGB。</p>
+</li>
+<li><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">enum</span> CPLErr
+<span class="token punctuation">{</span>
+    CE_None <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//表示运行成功</span>
+    CE_Debug <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    CE_Warning <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    CE_Failure <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    CE_Fatal <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="https://book.douban.com/subject/25858209/" target="_blank" rel="noopener">《GDAL源码剖析与开发指南》</a></li>
+<li><a href="https://blog.csdn.net/liminlu0314/article/details/8599945" target="_blank" rel="noopener">GDAL对空间数据的管理</a></li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">unlasting</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://YewLasting.github.io/posts/b53e.html">http://YewLasting.github.io/posts/b53e.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">unlasting</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/8e1.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="力扣每日1题no.97 - 303. 区域和检索 - 数组不可变">
+                        
+                        <span class="card-title">力扣每日1题no.97 - 303. 区域和检索 - 数组不可变</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            303. 区域和检索 - 数组不可变难度：简单
+题干给定一个整数数组  nums，求出数组从索引 i 到 j（i ≤ j）范围内元素的总和，包含 i、j两点。
+实现 NumArray 类：
+
+NumArray(int[] nums) 使用数
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
+                        <span class="chip bg-color">力扣每日1题</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/6662.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="力扣每日1题no.96 - 896. 单调数列">
+                        
+                        <span class="card-title">力扣每日1题no.96 - 896. 单调数列</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            896. 单调数列难度：简单
+题干如果数组是单调递增或单调递减的，那么它是单调的。
+如果对于所有 i &lt;= j，A[i] &lt;= A[j]，那么数组 A 是单调递增的。 如果对于所有 i &lt;= j，A[i]&gt; = A[
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
+                        <span class="chip bg-color">力扣每日1题</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('200')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: unlasting<br />'
+            + '文章作者: unlasting<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5147501615"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">unlasting</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">54.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "7";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/YewLasting" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:unlasting0@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <!--动态线条背景-->
+    <script type="text/javascript"
+    color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+
+
+</body>
+
+</html>
