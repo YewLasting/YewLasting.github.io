@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-03-06T06:26:57.580Z</updated>
+  <updated>2021-03-20T04:05:24.677Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MSVC版本号对应关系</title>
+    <link href="http://yewlasting.github.io/posts/85ad.html"/>
+    <id>http://yewlasting.github.io/posts/85ad.html</id>
+    <published>2021-03-20T03:58:13.000Z</published>
+    <updated>2021-03-20T04:05:24.677Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;MSVC版本号对应关系&quot;&gt;&lt;a href=&quot;#MSVC版本号对应关系&quot; class=&quot;headerlink&quot; title=&quot;MSVC版本号对应关系&quot;&gt;&lt;/a&gt;MSVC版本号对应关系&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件安装" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="Visual Studio 2019" scheme="http://YewLasting.github.io/tags/Visual-Studio-2019/"/>
+    
+      <category term="MSVC" scheme="http://YewLasting.github.io/tags/MSVC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VS2019配置GDAL-3.2.2</title>
+    <link href="http://yewlasting.github.io/posts/656.html"/>
+    <id>http://yewlasting.github.io/posts/656.html</id>
+    <published>2021-03-19T04:09:09.000Z</published>
+    <updated>2021-03-22T02:34:41.611Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;VS2019配置GDAL-3-2-2&quot;&gt;&lt;a href=&quot;#VS2019配置GDAL-3-2-2&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件安装" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="C++" scheme="http://YewLasting.github.io/tags/C/"/>
+    
+      <category term="GDAL" scheme="http://YewLasting.github.io/tags/GDAL/"/>
+    
+      <category term="Visual Studio 2019" scheme="http://YewLasting.github.io/tags/Visual-Studio-2019/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣每日1题no.102 - 503.下一个更大元素 II</title>
@@ -505,62 +565,6 @@
     
     
       <category term="Visual Studio 2019" scheme="http://YewLasting.github.io/tags/Visual-Studio-2019/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.88 - 697.数组的度</title>
-    <link href="http://yewlasting.github.io/posts/d26b.html"/>
-    <id>http://yewlasting.github.io/posts/d26b.html</id>
-    <published>2021-02-20T15:04:29.000Z</published>
-    <updated>2021-03-06T06:26:57.595Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;697-数组的度&quot;&gt;&lt;a href=&quot;#697-数组的度&quot; class=&quot;headerlink&quot; title=&quot;697. 数组的度&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++ STL概述</title>
-    <link href="http://yewlasting.github.io/posts/c6b6.html"/>
-    <id>http://yewlasting.github.io/posts/c6b6.html</id>
-    <published>2021-02-20T06:51:20.000Z</published>
-    <updated>2021-02-20T08:16:01.948Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;C-STL概述&quot;&gt;&lt;a href=&quot;#C-STL概述&quot; class=&quot;headerlink&quot; title=&quot;C++ STL概述&quot;&gt;&lt;/a&gt;C++ STL概述&lt;/h1&gt;&lt;h2 id=&quot;STL基础&quot;&gt;&lt;a href=&quot;#STL基础&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="C++" scheme="http://YewLasting.github.io/categories/C/"/>
-    
-    
-      <category term="C++" scheme="http://YewLasting.github.io/tags/C/"/>
-    
-      <category term="STL" scheme="http://YewLasting.github.io/tags/STL/"/>
     
   </entry>
   
