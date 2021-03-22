@@ -650,7 +650,7 @@ SQLITE3_LIBRARY:    E:/GDAL/SQLite/lib/SQLite3.lib</code></pre><p><img src="http
 </li>
 <li><p>修改GDAL源码中的nmake.opt文件（需要修改5处）</p>
 <ul>
-<li><p>42行左右的MSVC_VER=设置为1928，具体数字根据自己的MSVC版本设置，参考<a href="https://dev.to/yumetodo/list-of-mscver-and-mscfullver-8nd" target="_blank" rel="noopener">这个</a>；</p>
+<li><p>42行左右的MSVC_VER=设置为1928，具体数字根据自己的MSVC版本设置，参考<a href="https://yewlasting.gitee.io/posts/85ad.html" target="_blank" rel="noopener">这个</a>；</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210320142621.png" alt="image-20210320142621459"></p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210320142718.png" alt="image-20210320142718441"></p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210320142758.png" alt="image-20210320142758082"></p>
@@ -704,7 +704,7 @@ nmake /f makefile.vc devinstall</code></pre><p><img src="https://gitee.com/YewLa
 </li>
 <li><p>56行的WIN64=设置成YES；</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210320163430.png" alt="image-20210320163430654"></p>
-<p>166和167行的GEOS_MSVC和GEOS_MSC 分别按照自己的MSVC版本修改，参考这个；</p>
+<p>166和167行的GEOS_MSVC和GEOS_MSC 分别按照自己的MSVC版本修改，参考<a href="https://yewlasting.gitee.io/posts/85ad.html" target="_blank" rel="noopener">这个</a>；</p>
 <p><img src="https://gitee.com/YewLasting/blogimage/raw/master/img/20210320164158.png" alt="image-20210320164158171"></p>
 <p>管理员运行x64 Native Tools Command Prompt for VS 2019（在开始菜单中），cd进入GEOS文件夹下，输入以下命令：</p>
 <pre><code>autogen.bat
