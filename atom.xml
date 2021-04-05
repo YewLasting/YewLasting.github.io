@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-04-04T08:28:42.580Z</updated>
+  <updated>2021-04-05T05:14:16.987Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -15,6 +15,118 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode快捷键</title>
+    <link href="http://yewlasting.github.io/posts/2a96.html"/>
+    <id>http://yewlasting.github.io/posts/2a96.html</id>
+    <published>2021-04-05T05:13:15.000Z</published>
+    <updated>2021-04-05T05:14:16.987Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;VSCode-快捷键&quot;&gt;&lt;a href=&quot;#VSCode-快捷键&quot; class=&quot;headerlink&quot; title=&quot;VSCode 快捷键&quot;&gt;&lt;/a&gt;VSCode 快捷键&lt;/h1&gt;&lt;h2 id=&quot;格式化代码：&quot;&gt;&lt;a href=&quot;#格式化代码：&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件使用" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="Visual Studio Code" scheme="http://YewLasting.github.io/tags/Visual-Studio-Code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome常用快捷键</title>
+    <link href="http://yewlasting.github.io/posts/30ec.html"/>
+    <id>http://yewlasting.github.io/posts/30ec.html</id>
+    <published>2021-04-05T05:10:46.000Z</published>
+    <updated>2021-04-05T05:11:52.488Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Chrome常用快捷键&quot;&gt;&lt;a href=&quot;#Chrome常用快捷键&quot; class=&quot;headerlink&quot; title=&quot;Chrome常用快捷键&quot;&gt;&lt;/a&gt;Chrome常用快捷键&lt;/h1&gt;&lt;h2 id=&quot;1-依次切换每个标签页&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="软件使用" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    
+    
+      <category term="Chrome" scheme="http://YewLasting.github.io/tags/Chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenCV矩阵基础</title>
+    <link href="http://yewlasting.github.io/posts/77c1.html"/>
+    <id>http://yewlasting.github.io/posts/77c1.html</id>
+    <published>2021-04-05T04:42:05.000Z</published>
+    <updated>2021-04-05T05:09:17.597Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;OpenCV矩阵基础&quot;&gt;&lt;a href=&quot;#OpenCV矩阵基础&quot; class=&quot;headerlink&quot; title=&quot;OpenCV矩阵基础&quot;&gt;&lt;/a&gt;OpenCV矩阵基础&lt;/h1&gt;&lt;h2 id=&quot;一-矩阵元素的数据类型&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="OpenCV" scheme="http://YewLasting.github.io/categories/OpenCV/"/>
+    
+    
+      <category term="C++" scheme="http://YewLasting.github.io/tags/C/"/>
+    
+      <category term="OpenCV" scheme="http://YewLasting.github.io/tags/OpenCV/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.132 - 88.合并两个有序数组</title>
+    <link href="http://yewlasting.github.io/posts/8bf0.html"/>
+    <id>http://yewlasting.github.io/posts/8bf0.html</id>
+    <published>2021-04-05T04:33:13.000Z</published>
+    <updated>2021-04-05T04:39:28.285Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;88-合并两个有序数组&quot;&gt;&lt;a href=&quot;#88-合并两个有序数组&quot; class=&quot;headerlink&quot; title=&quot;88. 合并两个有序数组&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="双指针" scheme="http://YewLasting.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣每日1题no.131 - 781.森林中的兔子</title>
@@ -79,7 +191,7 @@
     <link href="http://yewlasting.github.io/posts/93c8.html"/>
     <id>http://yewlasting.github.io/posts/93c8.html</id>
     <published>2021-04-02T14:39:47.000Z</published>
-    <updated>2021-04-04T14:46:03.680Z</updated>
+    <updated>2021-04-04T14:47:21.061Z</updated>
     
     <summary type="html">
     
@@ -471,116 +583,6 @@
     
     
       <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.95 - 395. 至少有 K 个重复字符的最长子串</title>
-    <link href="http://yewlasting.github.io/posts/d76d.html"/>
-    <id>http://yewlasting.github.io/posts/d76d.html</id>
-    <published>2021-02-27T13:49:28.000Z</published>
-    <updated>2021-03-06T06:26:57.622Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;395-至少有-K-个重复字符的最长子串&quot;&gt;&lt;a href=&quot;#395-至少有-K-个重复字符的最长子串&quot; class=&quot;headerlink&quot; title=&quot;395. 至少有 K 个重复字符的最长子串&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.94 - 1178. 猜字谜</title>
-    <link href="http://yewlasting.github.io/posts/9dd1.html"/>
-    <id>http://yewlasting.github.io/posts/9dd1.html</id>
-    <published>2021-02-26T13:41:19.000Z</published>
-    <updated>2021-03-06T06:26:57.612Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1178-猜字谜&quot;&gt;&lt;a href=&quot;#1178-猜字谜&quot; class=&quot;headerlink&quot; title=&quot;1178. 猜字谜&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.93 - 867.转置矩阵</title>
-    <link href="http://yewlasting.github.io/posts/2eeb.html"/>
-    <id>http://yewlasting.github.io/posts/2eeb.html</id>
-    <published>2021-02-25T12:15:36.000Z</published>
-    <updated>2021-03-06T06:26:57.627Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;867-转置矩阵&quot;&gt;&lt;a href=&quot;#867-转置矩阵&quot; class=&quot;headerlink&quot; title=&quot;867. 转置矩阵&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/transpose-matrix/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Anaconda常用命令</title>
-    <link href="http://yewlasting.github.io/posts/7273.html"/>
-    <id>http://yewlasting.github.io/posts/7273.html</id>
-    <published>2021-02-25T07:05:42.000Z</published>
-    <updated>2021-03-06T06:26:57.556Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Anaconda常用命令&quot;&gt;&lt;a href=&quot;#Anaconda常用命令&quot; class=&quot;headerlink&quot; title=&quot;Anaconda常用命令&quot;&gt;&lt;/a&gt;Anaconda常用命令&lt;/h1&gt;&lt;h2 id=&quot;1-添加国内镜像源&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="软件使用" scheme="http://YewLasting.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
-    
-    
-      <category term="Anaconda" scheme="http://YewLasting.github.io/tags/Anaconda/"/>
-    
-      <category term="python" scheme="http://YewLasting.github.io/tags/python/"/>
     
   </entry>
   

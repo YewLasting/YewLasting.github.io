@@ -1,0 +1,1605 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="OpenCV矩阵基础, image processing,Machine learning,Deep learning等">
+    <meta name="description" content="专注于基于深度学习的遥感影像处理">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>OpenCV矩阵基础 | unlasting</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="unlasting" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">unlasting</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">unlasting</div>
+        <div class="logo-desc">
+            
+            专注于基于深度学习的遥感影像处理
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">OpenCV矩阵基础</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C++</span>
+                            </a>
+                        
+                            <a href="/tags/OpenCV/">
+                                <span class="chip bg-color">OpenCV</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/OpenCV/" class="post-category">
+                                OpenCV
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-05
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-05
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    695
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="OpenCV矩阵基础"><a href="#OpenCV矩阵基础" class="headerlink" title="OpenCV矩阵基础"></a>OpenCV矩阵基础</h1><h2 id="一-矩阵元素的数据类型"><a href="#一-矩阵元素的数据类型" class="headerlink" title="一.矩阵元素的数据类型"></a>一.矩阵元素的数据类型</h2><h3 id="1-获取矩阵元素数据类型编号："><a href="#1-获取矩阵元素数据类型编号：" class="headerlink" title="1.获取矩阵元素数据类型编号："></a><strong>1.获取矩阵元素数据类型编号：</strong></h3><pre class="line-numbers language-C"><code class="language-C">cv::Mat A = cv::Mat::zeros(3,3,CV_64F);
+int AType = A.type();//获取数据类型编号
+std::cout<<"Type = "<<AType<<std::endl;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-矩阵元素数据类型及通道个数对应的编号："><a href="#2-矩阵元素数据类型及通道个数对应的编号：" class="headerlink" title="2.矩阵元素数据类型及通道个数对应的编号："></a><strong>2.矩阵元素数据类型及通道个数对应的编号：</strong></h3><table>
+<thead>
+<tr>
+<th align="center">数据类型\通道个数</th>
+<th align="center">C1</th>
+<th align="center">C2</th>
+<th align="center">C3</th>
+<th align="center">C4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CV_8U</td>
+<td align="center">0</td>
+<td align="center">8</td>
+<td align="center">16</td>
+<td align="center">24</td>
+</tr>
+<tr>
+<td align="center">CV_8S</td>
+<td align="center">1</td>
+<td align="center">9</td>
+<td align="center">17</td>
+<td align="center">25</td>
+</tr>
+<tr>
+<td align="center">CV_16U</td>
+<td align="center">2</td>
+<td align="center">10</td>
+<td align="center">18</td>
+<td align="center">26</td>
+</tr>
+<tr>
+<td align="center">CV_16S</td>
+<td align="center">3</td>
+<td align="center">11</td>
+<td align="center">19</td>
+<td align="center">27</td>
+</tr>
+<tr>
+<td align="center">CV_32S</td>
+<td align="center">4</td>
+<td align="center">12</td>
+<td align="center">20</td>
+<td align="center">28</td>
+</tr>
+<tr>
+<td align="center">CV_32F</td>
+<td align="center">5</td>
+<td align="center">13</td>
+<td align="center">21</td>
+<td align="center">29</td>
+</tr>
+<tr>
+<td align="center">CV_64F</td>
+<td align="center">6</td>
+<td align="center">14</td>
+<td align="center">22</td>
+<td align="center">30</td>
+</tr>
+</tbody></table>
+<h3 id="3-openCV数据类型介绍："><a href="#3-openCV数据类型介绍：" class="headerlink" title="3.openCV数据类型介绍："></a><strong>3.openCV数据类型介绍：</strong></h3><table>
+<thead>
+<tr>
+<th align="center">openCV数据类型</th>
+<th align="center">具体介绍</th>
+<th align="center">取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CV_8U</td>
+<td align="center">8 位无符号整数</td>
+<td align="center">（0…..255）</td>
+</tr>
+<tr>
+<td align="center">CV_8S</td>
+<td align="center">8 位符号整数</td>
+<td align="center">（-128…..127）</td>
+</tr>
+<tr>
+<td align="center">CV_16U</td>
+<td align="center">16 位无符号整数</td>
+<td align="center">（0……65535）</td>
+</tr>
+<tr>
+<td align="center">CV_16S</td>
+<td align="center">16 位符号整数</td>
+<td align="center">（-32768…..32767）</td>
+</tr>
+<tr>
+<td align="center">CV_32S</td>
+<td align="center">32 位符号整数</td>
+<td align="center">（-2147483648……2147483647）</td>
+</tr>
+<tr>
+<td align="center">CV_32F</td>
+<td align="center">32 位浮点数</td>
+<td align="center">（-FLT_MAX ………FLT_MAX，INF，NAN)</td>
+</tr>
+<tr>
+<td align="center">CV_64F</td>
+<td align="center">64 位浮点数</td>
+<td align="center">（-DBL_MAX ……….DBL_MAX，INF，NAN)</td>
+</tr>
+</tbody></table>
+<h3 id="4-通过at方法访问矩阵元素："><a href="#4-通过at方法访问矩阵元素：" class="headerlink" title="4.通过at方法访问矩阵元素："></a><strong>4.通过at方法访问矩阵元素：</strong></h3><table>
+<thead>
+<tr>
+<th align="center">数据类型\通道个数</th>
+<th align="center">C1</th>
+<th align="center">C2</th>
+<th align="center">C3</th>
+<th align="center">C4</th>
+<th align="center">C6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">uchar</td>
+<td align="center"><code>uchar</code></td>
+<td align="center"><code>cv::Vec2b</code></td>
+<td align="center"><code>cv::Vec3b</code></td>
+<td align="center"><code>cv::Vec4b</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">short</td>
+<td align="center"><code>short</code></td>
+<td align="center"><code>cv::Vec2s</code></td>
+<td align="center"><code>cv::Vec3s</code></td>
+<td align="center"><code>cv::Vec4s</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center"><code>int</code></td>
+<td align="center"><code>cv::Vec2i</code></td>
+<td align="center"><code>cv::Vec3i</code></td>
+<td align="center"><code>cv::Vec4i</code></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center"><code>float</code></td>
+<td align="center"><code>cv::Vec2f</code></td>
+<td align="center"><code>cv::Vec3f</code></td>
+<td align="center"><code>cv::Vec4f</code></td>
+<td align="center"><code>cv::Vec6f</code></td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center"><code>double</code></td>
+<td align="center"><code>cv::Vec2d</code></td>
+<td align="center"><code>cv::Vec3d</code></td>
+<td align="center"><code>cv::Vec4d</code></td>
+<td align="center"><code>cv::Vec6d</code></td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//访问单通道矩阵的元素</span>
+uchar a<span class="token operator">=</span>img<span class="token punctuation">.</span>at<span class="token operator">&lt;</span>cv<span class="token punctuation">:</span><span class="token punctuation">:</span>uchar<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout<span class="token operator">&lt;&lt;</span><span class="token string">"a = "</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>a<span class="token operator">&lt;&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//访问3通道矩阵的元素</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Vec3b vec3b <span class="token operator">=</span> img<span class="token punctuation">.</span>at<span class="token operator">&lt;</span>cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Vec3b<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//访问（0，0）处三个通道的值</span>
+
+uchar vec3b0 <span class="token operator">=</span> img<span class="token punctuation">.</span>at<span class="token operator">&lt;</span>cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Vec3b<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//访问（0，0）处第一通道的值</span>
+uchar vec3b1 <span class="token operator">=</span> img<span class="token punctuation">.</span>at<span class="token operator">&lt;</span>cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Vec3b<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//访问（0，0）处第二通道的值</span>
+uchar vec3b2 <span class="token operator">=</span> img<span class="token punctuation">.</span>at<span class="token operator">&lt;</span>cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Vec3b<span class="token operator">></span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//访问（0，0）处第三通道的值</span>
+
+std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout<span class="token operator">&lt;&lt;</span><span class="token string">"vec3b = "</span><span class="token operator">&lt;&lt;</span>vec3b<span class="token operator">&lt;&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
+std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout<span class="token operator">&lt;&lt;</span><span class="token string">"vec3b0 = "</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>vec3b0<span class="token operator">&lt;&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
+std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout<span class="token operator">&lt;&lt;</span><span class="token string">"vec3b1 = "</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>vec3b1<span class="token operator">&lt;&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span>
+std<span class="token punctuation">:</span><span class="token punctuation">:</span>cout<span class="token operator">&lt;&lt;</span><span class="token string">"vec3b2 = "</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>vec3b2<span class="token operator">&lt;&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>endl<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-访问矩阵行-列"><a href="#5-访问矩阵行-列" class="headerlink" title="5.访问矩阵行/列"></a>5.访问矩阵行/列</h3><pre class="line-numbers language-c"><code class="language-c">Mat a <span class="token operator">=</span> <span class="token function">imread</span><span class="token punctuation">(</span><span class="token string">"1.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span><span class="token function">col</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//把a的第十列全置0</span>
+a<span class="token punctuation">.</span><span class="token function">row</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//把a的第一行全置0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="二-创建Mat矩阵"><a href="#二-创建Mat矩阵" class="headerlink" title="二.创建Mat矩阵"></a>二.创建Mat矩阵</h2><h3 id="1-直接创建"><a href="#1-直接创建" class="headerlink" title="1. 直接创建"></a>1. 直接创建</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//创建高为2，宽为4，数据类型为8位无符号整型，B通道=0，G通道=0，R通道=255的矩阵</span>
+Mat <span class="token function">img</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> CV_8UC3<span class="token punctuation">,</span> <span class="token function">Scalar</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//注意此处先高后宽</span>
+ <span class="token comment" spellcheck="true">/*
+ 参数1：图像的高
+ 参数2：图像的宽
+ 参数3：CV_32F表示每个元素的值的类型为32位浮点数；
+         格式：CV_比特数S|U|F
+         比特数：代表8bite,16bites,32bites,64bites
+             S--代表---signed int---有符号整形
+             U--代表--unsigned int--无符号整形
+             F--代表--float---------单精度浮点型
+         C3表示通道数
+         1--灰度图片------------是单通道图像
+         3--RGB彩色图像---------是3通道图像
+         4--带Alph通道的RGB图像--是4通道图像
+ 参数4：Scalar设置每个通道的值。B通道=0，G通道=0，R通道=255
+ */</span>
+
+<span class="token comment" spellcheck="true">//创建高为2，宽为4，数据类型为8位无符号整型，通道=0的矩阵</span>
+Mat <span class="token function">img</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> CV_8UC1<span class="token punctuation">,</span> <span class="token function">Scalar</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-通过cvCreatMat-函数创建"><a href="#2-通过cvCreatMat-函数创建" class="headerlink" title="2.通过cvCreatMat()函数创建"></a>2.通过cvCreatMat()函数创建</h3><pre class="line-numbers language-c"><code class="language-c">Mat img<span class="token operator">=</span><span class="token function">cvCreatMat</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> CV_8UC3<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//需要注意的是这种创建方式在用完的时候需要释放。</span>
+img<span class="token punctuation">.</span><span class="token function">release</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//释放矩阵</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="3-生成对角矩阵"><a href="#3-生成对角矩阵" class="headerlink" title="3.生成对角矩阵"></a>3.生成对角矩阵</h3><p>注意<code>Size(a,b)</code>中<code>a</code>为宽，<code>b</code>为高</p>
+<pre class="line-numbers language-c"><code class="language-c">cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat a<span class="token operator">=</span> Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">eye</span><span class="token punctuation">(</span><span class="token function">Size</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CV_32F<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// [1 0 0</span>
+<span class="token comment" spellcheck="true">//  0 1 0] </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-生成单位矩阵"><a href="#4-生成单位矩阵" class="headerlink" title="4.生成单位矩阵"></a>4.生成单位矩阵</h3><pre class="line-numbers language-c"><code class="language-c">cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat b<span class="token operator">=</span> Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">ones</span><span class="token punctuation">(</span><span class="token function">Size</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CV_32F<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// [1 1 1</span>
+<span class="token comment" spellcheck="true">//  1 1 1] </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="三-矩阵运算"><a href="#三-矩阵运算" class="headerlink" title="三.矩阵运算"></a>三.矩阵运算</h2><h3 id="1-矩阵加减法"><a href="#1-矩阵加减法" class="headerlink" title="1.矩阵加减法"></a>1.矩阵加减法</h3><pre class="line-numbers language-c"><code class="language-c">cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat a<span class="token operator">=</span> Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">eye</span><span class="token punctuation">(</span><span class="token function">Size</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CV_32F<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//对角矩阵</span>
+<span class="token comment" spellcheck="true">//[1, 0, 0;</span>
+<span class="token comment" spellcheck="true">// 0, 1, 0]</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat b<span class="token operator">=</span> Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">ones</span><span class="token punctuation">(</span><span class="token function">Size</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CV_32F<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//单位矩阵</span>
+<span class="token comment" spellcheck="true">//[1, 1, 1;</span>
+<span class="token comment" spellcheck="true">// 1, 1, 1]</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat c<span class="token operator">=</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵加法</span>
+<span class="token comment" spellcheck="true">//[2, 1, 1;</span>
+<span class="token comment" spellcheck="true">// 1, 2, 1]</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat d<span class="token operator">=</span> a<span class="token operator">-</span>b<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵减法</span>
+<span class="token comment" spellcheck="true">//[0, -1, -1;</span>
+<span class="token comment" spellcheck="true">// -1, 0, -1]</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat e<span class="token operator">=</span> a<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵与标量相加</span>
+<span class="token comment" spellcheck="true">//[2, 1, 1;</span>
+<span class="token comment" spellcheck="true">// 1, 2, 1]</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat f<span class="token operator">=</span> a<span class="token number">-1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵与标量相减</span>
+<span class="token comment" spellcheck="true">//[0, -1, -1;</span>
+<span class="token comment" spellcheck="true">// -1, 0, -1]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-矩阵点乘"><a href="#2-矩阵点乘" class="headerlink" title="2.矩阵点乘"></a>2.矩阵点乘</h3><pre class="line-numbers language-c"><code class="language-c">cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat g<span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">mul</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵点乘</span>
+<span class="token comment" spellcheck="true">// [1, 0, 0;</span>
+ <span class="token comment" spellcheck="true">// 0, 1, 0]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-矩阵点除"><a href="#3-矩阵点除" class="headerlink" title="3.矩阵点除"></a>3.矩阵点除</h3><pre class="line-numbers language-c"><code class="language-c">cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat g2<span class="token operator">=</span> a<span class="token operator">/</span>b<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵点除</span>
+<span class="token comment" spellcheck="true">// [1, 0, 0;</span>
+<span class="token comment" spellcheck="true">// 0, 1, 0]</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat g3<span class="token operator">=</span> a<span class="token operator">/</span><span class="token number">2.0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵除以标量</span>
+<span class="token comment" spellcheck="true">//[0.5, 0, 0;</span>
+<span class="token comment" spellcheck="true">// 0, 0.5, 0]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4-矩阵乘法"><a href="#4-矩阵乘法" class="headerlink" title="4.矩阵乘法"></a>4.矩阵乘法</h3><pre class="line-numbers language-c"><code class="language-c">cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat h<span class="token operator">=</span> Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">ones</span><span class="token punctuation">(</span><span class="token function">Size</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CV_32F<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//单位矩阵</span>
+<span class="token comment" spellcheck="true">//[1, 1;</span>
+<span class="token comment" spellcheck="true">// 1, 1;</span>
+<span class="token comment" spellcheck="true">// 1, 1]</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat i<span class="token operator">=</span> h<span class="token operator">*</span>a<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵乘法 前者列数要等于后者行数 (3*2) * (2*3) =(3*3)</span>
+<span class="token comment" spellcheck="true">//[1, 1, 0;</span>
+<span class="token comment" spellcheck="true">// 1, 1, 0;</span>
+<span class="token comment" spellcheck="true">// 1, 1, 0]</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat j<span class="token operator">=</span> h<span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵与标量相乘</span>
+<span class="token comment" spellcheck="true">//[2, 2;</span>
+<span class="token comment" spellcheck="true">// 2, 2;</span>
+<span class="token comment" spellcheck="true">// 2, 2]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-矩阵转置"><a href="#5-矩阵转置" class="headerlink" title="5.矩阵转置"></a>5.矩阵转置</h3><pre class="line-numbers language-c"><code class="language-c">cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat k<span class="token operator">=</span> h<span class="token punctuation">.</span><span class="token function">t</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵转置</span>
+<span class="token comment" spellcheck="true">//[1, 1, 1;</span>
+<span class="token comment" spellcheck="true">// 1, 1, 1]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="6-矩阵求逆"><a href="#6-矩阵求逆" class="headerlink" title="6.矩阵求逆"></a>6.矩阵求逆</h3><pre class="line-numbers language-c"><code class="language-c">cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat k<span class="token operator">=</span> i<span class="token punctuation">.</span><span class="token function">inv</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//矩阵求逆，其中i为n*n的方阵</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="7-计算非零元素个数"><a href="#7-计算非零元素个数" class="headerlink" title="7.计算非零元素个数"></a>7.计算非零元素个数</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> nonZerosNum <span class="token operator">=</span> <span class="token function">countNonZero</span><span class="token punctuation">(</span>mat_A<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 非零元素个数</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="8-计算均值和标准差"><a href="#8-计算均值和标准差" class="headerlink" title="8.计算均值和标准差"></a>8.计算均值和标准差</h3><pre class="line-numbers language-c"><code class="language-c">cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Mat m <span class="token operator">=</span> Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">eye</span><span class="token punctuation">(</span><span class="token function">Size</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CV_32F<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//[1, 0, 0, 0, 0;</span>
+<span class="token comment" spellcheck="true">//0, 1, 0, 0, 0;</span>
+<span class="token comment" spellcheck="true">//0, 0, 1, 0, 0;</span>
+<span class="token comment" spellcheck="true">//0, 0, 0, 1, 0;</span>
+<span class="token comment" spellcheck="true">//0, 0, 0, 0, 1]</span>
+Mat mean<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//存储均值</span>
+Mat stddev<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//存储标准差</span>
+<span class="token function">meanStdDev</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> mean<span class="token punctuation">,</span> stddev<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//m为5×5对角阵</span>
+cout <span class="token operator">&lt;&lt;</span> mean <span class="token operator">&lt;&lt;</span><span class="token string">" ,"</span><span class="token operator">&lt;&lt;</span> stddev<span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//[0.2] ,[0.4]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果矩阵是多通道的，则返回向量的长度与通道数相等</p>
+<pre class="line-numbers language-c"><code class="language-c">Mat <span class="token function">m3</span><span class="token punctuation">(</span>cv<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">Size</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> CV_8UC3<span class="token punctuation">,</span> <span class="token function">Scalar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cout <span class="token operator">&lt;&lt;</span> <span class="token string">"m3 = "</span> <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> m3 <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//[255, 200, 100, 255, 200, 100, 255, 200, 100, 255, 200, 100;</span>
+<span class="token comment" spellcheck="true">//255, 200, 100, 255, 200, 100, 255, 200, 100, 255, 200, 100;</span>
+<span class="token comment" spellcheck="true">//255, 200, 100, 255, 200, 100, 255, 200, 100, 255, 200, 100;</span>
+<span class="token comment" spellcheck="true">//255, 200, 100, 255, 200, 100, 255, 200, 100, 255, 200, 100]</span>
+<span class="token function">meanStdDev</span><span class="token punctuation">(</span>m3<span class="token punctuation">,</span> mean3<span class="token punctuation">,</span> stddev3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+cout <span class="token operator">&lt;&lt;</span> <span class="token string">"mean3 = "</span> <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> mean3 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//mean3 =</span>
+<span class="token comment" spellcheck="true">//[255;</span>
+<span class="token comment" spellcheck="true">//200;</span>
+<span class="token comment" spellcheck="true">//100]</span>
+cout <span class="token operator">&lt;&lt;</span> <span class="token string">"stddev3 = "</span> <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> stddev3 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//stddev3 =</span>
+<span class="token comment" spellcheck="true">//[0;</span>
+<span class="token comment" spellcheck="true">//0;</span>
+<span class="token comment" spellcheck="true">//0]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="9-求矩阵最大值与最小值及其位置"><a href="#9-求矩阵最大值与最小值及其位置" class="headerlink" title="9.求矩阵最大值与最小值及其位置"></a>9.求矩阵最大值与最小值及其位置</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">minMaxLoc</span><span class="token punctuation">(</span>InputArray src<span class="token punctuation">,</span> CV_OUT <span class="token keyword">double</span><span class="token operator">*</span> minVal<span class="token punctuation">,</span>CV_OUT <span class="token keyword">double</span><span class="token operator">*</span> maxVal<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> CV_OUT Point<span class="token operator">*</span> minLoc<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>CV_OUT Point<span class="token operator">*</span> maxLoc<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> InputArray mask<span class="token operator">=</span><span class="token function">noArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/*
+参数：
+src – 输入单通道矩阵（图像）.
+minVal – 指向最小值的指针， 如果未指定则使用NULL
+maxVal – 指向最大值的指针， 如果未指定则使用NULL
+minLoc – 指向最小值位置（2维情况）的指针， 如果未指定则使用NULL
+maxLoc – 指向最大值位置（2维情况）的指针， 如果未指定则使用NULL
+mask – 可选的蒙版，用于选择待处理子区域
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>示例：</strong></p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">// 求极值 最大、最小值及其位置</span>
+Mat img <span class="token operator">=</span> <span class="token function">imread</span><span class="token punctuation">(</span><span class="token string">"Lena.jpg"</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">imshow</span><span class="token punctuation">(</span><span class="token string">"original image"</span><span class="token punctuation">,</span>img<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">double</span> minVal<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>maxVal<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//最大值、最小值</span>
+
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Point minPt<span class="token punctuation">,</span> maxPt<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//对应位置</span>
+
+<span class="token function">minMaxLoc</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span><span class="token operator">&amp;</span>minVal<span class="token punctuation">,</span><span class="token operator">&amp;</span>maxVal<span class="token punctuation">,</span><span class="token operator">&amp;</span>minPt<span class="token punctuation">,</span><span class="token operator">&amp;</span>maxPt<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//进行计算</span>
+<span class="token comment" spellcheck="true">//输出结果</span>
+cout<span class="token operator">&lt;&lt;</span><span class="token string">"min value = "</span><span class="token operator">&lt;&lt;</span>minVal<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+
+cout<span class="token operator">&lt;&lt;</span><span class="token string">"max value = "</span><span class="token operator">&lt;&lt;</span>maxVal<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+
+cout<span class="token operator">&lt;&lt;</span><span class="token string">"minPt = ("</span><span class="token operator">&lt;&lt;</span>minPt<span class="token punctuation">.</span>x<span class="token operator">&lt;&lt;</span><span class="token string">","</span><span class="token operator">&lt;&lt;</span>minPt<span class="token punctuation">.</span>y<span class="token operator">&lt;&lt;</span><span class="token string">")"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+
+cout<span class="token operator">&lt;&lt;</span><span class="token string">"maxPt = ("</span><span class="token operator">&lt;&lt;</span>maxPt<span class="token punctuation">.</span>x<span class="token operator">&lt;&lt;</span><span class="token string">","</span><span class="token operator">&lt;&lt;</span>maxPt<span class="token punctuation">.</span>y<span class="token operator">&lt;&lt;</span><span class="token string">")"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+
+cout<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//显示在图像上</span>
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Rect <span class="token function">rectMin</span><span class="token punctuation">(</span>minPt<span class="token punctuation">.</span>x<span class="token number">-10</span><span class="token punctuation">,</span>minPt<span class="token punctuation">.</span>y<span class="token number">-10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span>Rect <span class="token function">rectMax</span><span class="token punctuation">(</span>maxPt<span class="token punctuation">.</span>x<span class="token number">-10</span><span class="token punctuation">,</span>maxPt<span class="token punctuation">.</span>y<span class="token number">-10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">rectangle</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span>rectMin<span class="token punctuation">,</span>cv<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">Scalar</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">rectangle</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span>rectMax<span class="token punctuation">,</span>cv<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">Scalar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">imshow</span><span class="token punctuation">(</span><span class="token string">"image with min max location"</span><span class="token punctuation">,</span>img<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+cv<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">waitKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="10-通过Rect来访问处理矩阵Mat"><a href="#10-通过Rect来访问处理矩阵Mat" class="headerlink" title="10.通过Rect来访问处理矩阵Mat"></a>10.通过<code>Rect</code>来访问处理矩阵<code>Mat</code></h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//建立一个矩阵A</span>
+Rect <span class="token function">Rect_A</span><span class="token punctuation">(</span>col<span class="token punctuation">,</span> row<span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//左上角列坐标  行坐标   宽  高</span>
+<span class="token comment" spellcheck="true">//根据矩阵从原始图像img中提取出对应元素</span>
+Mat tmpMat <span class="token operator">=</span> <span class="token function">img</span><span class="token punctuation">(</span>Rect_A<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//新建立一个全是0的矩阵B</span>
+Mat <span class="token function">Rect_B</span><span class="token punctuation">(</span>Rect_A<span class="token punctuation">.</span>height<span class="token punctuation">,</span> Rect_A<span class="token punctuation">.</span>width<span class="token punctuation">,</span> CV_8UC1<span class="token punctuation">,</span> <span class="token function">Scalar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//把B的值拷贝到img对应的区域，将该区域原来的值覆盖掉</span>
+Rect_B<span class="token punctuation">.</span><span class="token function">copyTo</span><span class="token punctuation">(</span>tmpMat<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="11-改变矩阵形状"><a href="#11-改变矩阵形状" class="headerlink" title="11.改变矩阵形状"></a>11.改变矩阵形状</h3><p><strong>(1)<code>reshape()</code>函数</strong></p>
+<p><code>reshape()</code>函数只是在<strong>逻辑上</strong>改变矩阵的行列数或者通道数，没有任何的数据的复制，也不会增减任何数据，因此这是一个O(1)的操作，它要求矩阵是连续的。</p>
+<pre class="line-numbers language-c"><code class="language-c">Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">reshape</span><span class="token punctuation">(</span><span class="token keyword">int</span> cn<span class="token punctuation">,</span> <span class="token keyword">int</span> rows<span class="token operator">=</span><span class="token number">0</span> <span class="token keyword">const</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//cn：目标通道数，如果是0则保持和原通道数一致；</span>
+<span class="token comment" spellcheck="true">//rows：目标行数，同上是0则保持不变；</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>改变后的矩阵要满足 <code>rows X cols X channels</code>  跟原数组元数数量相等，所以如果原来矩阵是单通道<code>3 X 3</code>的，调用Reshape(0,2)是会报错的，因为<code>3 X 3</code>不能被<code>2 X 1</code>整除。</p>
+<p><strong>(2)<code>resize()</code>函数</strong></p>
+<p>会实际改变矩阵的行数，会引起矩阵元素在内存中的重新分配。</p>
+<pre class="line-numbers language-c"><code class="language-c">Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">resize</span><span class="token punctuation">(</span>size_t sz<span class="token punctuation">)</span>
+Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">resize</span><span class="token punctuation">(</span>size_t sz<span class="token punctuation">,</span> <span class="token keyword">const</span> Scalar<span class="token operator">&amp;</span> s<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//参数1：新形状的行数 参数2：如果sz大于原来的行数，可以设置默认填充的数值</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="12-改变矩阵元素数据类型"><a href="#12-改变矩阵元素数据类型" class="headerlink" title="12.改变矩阵元素数据类型"></a>12.改变矩阵元素数据类型</h3><pre class="line-numbers language-c"><code class="language-c">Mat Bnew<span class="token punctuation">;</span>
+B<span class="token punctuation">.</span><span class="token function">convertTo</span><span class="token punctuation">(</span>Bnew<span class="token punctuation">,</span> CV_64FC1<span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//参数1:新矩阵的存放位置 参数2：要转换的数据类型  参数3：每个元素要乘的标量  参数4：每个元素乘过标量3后再加上标量参数4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="13-求矩阵所有元素值之和"><a href="#13-求矩阵所有元素值之和" class="headerlink" title="13.求矩阵所有元素值之和"></a>13.求矩阵所有元素值之和</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">double</span> s <span class="token operator">=</span> cv<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">sum</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//因为矩阵可能有多个维度，所以sum函数返回值是一个向量。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="四-矩阵变换"><a href="#四-矩阵变换" class="headerlink" title="四.矩阵变换"></a>四.矩阵变换</h2><h3 id="1-分离矩阵各通道"><a href="#1-分离矩阵各通道" class="headerlink" title="1.分离矩阵各通道"></a>1.分离矩阵各通道</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//split函数的功能是通道分离</span>
+<span class="token keyword">void</span> <span class="token function">split</span><span class="token punctuation">(</span><span class="token keyword">const</span> Mat<span class="token operator">&amp;</span> src<span class="token punctuation">,</span>Mat <span class="token operator">*</span>mvBegin<span class="token punctuation">)</span>
+<span class="token keyword">void</span> <span class="token function">split</span><span class="token punctuation">(</span>InputArray m<span class="token punctuation">,</span> OutputArrayOfArrays mv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//参数1为待分离矩阵，参数2为分离要存储进向量的向量名称或者数组名称</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>示例：</strong></p>
+<pre class="line-numbers language-c"><code class="language-c">std<span class="token punctuation">:</span><span class="token punctuation">:</span>vector<span class="token operator">&lt;</span>Mat<span class="token operator">></span> Mat_vector<span class="token punctuation">;</span>
+Mat Mat_array<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//src为要分离的Mat对象</span>
+<span class="token function">split</span><span class="token punctuation">(</span>src<span class="token punctuation">,</span> Mat_array<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//利用数组分离</span>
+<span class="token function">split</span><span class="token punctuation">(</span>src<span class="token punctuation">,</span> Mat_vector<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//利用vector对象分离</span>
+
+<span class="token function">imshow</span><span class="token punctuation">(</span><span class="token string">"B"</span><span class="token punctuation">,</span>Mat_vector<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">imshow</span><span class="token punctuation">(</span><span class="token string">"G"</span><span class="token punctuation">,</span>Mat_vector<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">imshow</span><span class="token punctuation">(</span><span class="token string">"R"</span><span class="token punctuation">,</span>Mat_vector<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//注意openCV读取和存储图像的顺序是B,G,R。但是imshow显示时会自动换为RGB来进行显示</span>
+<span class="token comment" spellcheck="true">//换言之只有通道顺序是BGR的三通道矩阵，在使用imshow时才会正常显示RGB的色彩</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-合并矩阵各通道"><a href="#2-合并矩阵各通道" class="headerlink" title="2.合并矩阵各通道"></a>2.合并矩阵各通道</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//split函数的功能是通道合并</span>
+<span class="token keyword">void</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token keyword">const</span> Mat<span class="token operator">*</span> mv<span class="token punctuation">,</span> size_t count<span class="token punctuation">,</span> OutputArray dst<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//参数1：要合并的矩阵数组 参数2：要合并的通道个数 参数3：合并结果存储位置</span>
+<span class="token keyword">void</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token keyword">const</span> vector<span class="token operator">&amp;</span> mv<span class="token punctuation">,</span> OutputArray dst <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//参数1：要合并的矩阵向量，参数2：合并结果存储位置</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>示例：</strong></p>
+<pre class="line-numbers language-c"><code class="language-c">Mat mergeImg<span class="token punctuation">;</span>
+
+<span class="token function">merge</span><span class="token punctuation">(</span>Mat_array<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> mergeImg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">merge</span><span class="token punctuation">(</span>Mat_vector<span class="token punctuation">,</span> mergeImg<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="五-矩阵拷贝"><a href="#五-矩阵拷贝" class="headerlink" title="五.矩阵拷贝"></a>五.矩阵拷贝</h2><h3 id="1-“-”-是浅拷贝"><a href="#1-“-”-是浅拷贝" class="headerlink" title="1.“=”  是浅拷贝"></a><strong>1.“=”  是浅拷贝</strong></h3><p>不复制数据只创建矩阵头，数据共享，指向同一块内存（更改a,b,c的任意一个都会对另外2个产生同样的作用）</p>
+<pre class="line-numbers language-c"><code class="language-c">Mat a <span class="token operator">=</span> <span class="token function">imread</span><span class="token punctuation">(</span><span class="token string">"1.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Mat b <span class="token operator">=</span> a<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//a "copy" to b</span>
+
+Mat <span class="token function">c</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//a "copy" to c</span>
+
+a<span class="token punctuation">.</span><span class="token function">col</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//把a的第十列全置0，b和c也相应发生变化</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-“clone”是深拷贝"><a href="#2-“clone”是深拷贝" class="headerlink" title="2.“clone”是深拷贝"></a><strong>2.“clone”是深拷贝</strong></h3><p><code>clone</code> 是完全的深拷贝，在内存中申请新的空间</p>
+<pre class="line-numbers language-c"><code class="language-c">Mat A  <span class="token operator">=</span> Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">ones</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span>CV_32F<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//4行5列</span>
+
+Mat B <span class="token operator">=</span> A<span class="token punctuation">.</span><span class="token function">clone</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">//clone 是完全的深拷贝，在内存中申请新的空间，与A独立</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-”copyTo-”-是深拷贝"><a href="#3-”copyTo-”-是深拷贝" class="headerlink" title="3.”copyTo()” 是深拷贝"></a><strong>3.”copyTo()” 是深拷贝</strong></h3><p>copyTo 也是深拷贝，但是否申请新的内存空间，取决于目标矩阵头中的大小信息是否与原矩阵一致。</p>
+<p>若一致则只深拷贝并不申请新的空间，否则先申请空间后再进行拷贝．</p>
+<pre class="line-numbers language-c"><code class="language-c">Mat A  <span class="token operator">=</span> Mat<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">ones</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span>CV_32F<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//4行5列</span>
+
+Mat C<span class="token punctuation">;</span>
+
+A<span class="token punctuation">.</span><span class="token function">copyTo</span><span class="token punctuation">(</span>C<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//此处的C矩阵大小与Ａ大小不一致，则申请新的内存空间，并完成拷贝，等同于clone()</span>
+
+Mat D <span class="token operator">=</span> A<span class="token punctuation">.</span><span class="token function">col</span><span class="token punctuation">(</span>１<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+A<span class="token punctuation">.</span><span class="token function">col</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">copyTo</span><span class="token punctuation">(</span>D<span class="token punctuation">)</span>　<span class="token comment" spellcheck="true">//此处D矩阵大小与A.col(0)大小一致，因此不会申请空间，而是直接进行拷贝，相当于把A的第一列赋值给第二列</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://www.jianshu.com/p/204f292937bb" target="_blank" rel="noopener">确定 OpenCV 矩阵元素的数据类型</a></li>
+<li><a href="https://blog.csdn.net/qq_33740700/article/details/82117564" target="_blank" rel="noopener">OpenCV中Mat矩阵用法详解（包括多通道矩阵创建、矩阵运算等）</a></li>
+<li><a href="https://blog.csdn.net/my_angle2016/article/details/113991586" target="_blank" rel="noopener">OpenCV中Mat操作“ =“ 、clone() 与copyto()的区别</a></li>
+<li><a href="https://blog.csdn.net/loveliuzz/article/details/73613856" target="_blank" rel="noopener">OpenCV中的Resize函数和Reshape函数</a></li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">unlasting</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://YewLasting.github.io/posts/77c1.html">http://YewLasting.github.io/posts/77c1.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">unlasting</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C++</span>
+                                </a>
+                            
+                                <a href="/tags/OpenCV/">
+                                    <span class="chip bg-color">OpenCV</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/30ec.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Chrome常用快捷键">
+                        
+                        <span class="card-title">Chrome常用快捷键</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Chrome常用快捷键1.依次切换每个标签页ctrl+Tab
+2.打开新的标签页在当前浏览器中打开新的标签页：ctrl+t
+新打开一个浏览器：ctrl+n
+3.在上一个标签页和当前标签页中来回切换首先安装CLUT: Cycle Last U
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/" class="post-category">
+                                    软件使用
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Chrome/">
+                        <span class="chip bg-color">Chrome</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/8bf0.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="力扣每日1题no.132 - 88.合并两个有序数组">
+                        
+                        <span class="card-title">力扣每日1题no.132 - 88.合并两个有序数组</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            88. 合并两个有序数组难度：简单
+题干给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。
+初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。你
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
+                        <span class="chip bg-color">力扣每日1题</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                        <span class="chip bg-color">双指针</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('200')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: unlasting<br />'
+            + '文章作者: unlasting<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="5147501615"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.3'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">unlasting</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">62.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "7";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/YewLasting" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:unlasting0@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <!--动态线条背景-->
+    <script type="text/javascript"
+    color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+
+
+</body>
+
+</html>
