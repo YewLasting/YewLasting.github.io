@@ -405,21 +405,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-05
+                    2021-04-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    695
+                    857
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -610,7 +610,26 @@ std<span class="token punctuation">:</span><span class="token punctuation">:</sp
 <h3 id="5-访问矩阵行-列"><a href="#5-访问矩阵行-列" class="headerlink" title="5.访问矩阵行/列"></a>5.访问矩阵行/列</h3><pre class="line-numbers language-c"><code class="language-c">Mat a <span class="token operator">=</span> <span class="token function">imread</span><span class="token punctuation">(</span><span class="token string">"1.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 a<span class="token punctuation">.</span><span class="token function">col</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//把a的第十列全置0</span>
 a<span class="token punctuation">.</span><span class="token function">row</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//把a的第一行全置0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="二-创建Mat矩阵"><a href="#二-创建Mat矩阵" class="headerlink" title="二.创建Mat矩阵"></a>二.创建Mat矩阵</h2><h3 id="1-直接创建"><a href="#1-直接创建" class="headerlink" title="1. 直接创建"></a>1. 直接创建</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//创建高为2，宽为4，数据类型为8位无符号整型，B通道=0，G通道=0，R通道=255的矩阵</span>
+<h3 id="6-获取图像宽高维度"><a href="#6-获取图像宽高维度" class="headerlink" title="6.获取图像宽高维度"></a>6.获取图像宽高维度</h3><pre class="line-numbers language-c"><code class="language-c">    image <span class="token operator">=</span> <span class="token function">Mat</span><span class="token punctuation">(</span><span class="token number">240</span><span class="token punctuation">,</span><span class="token number">320</span><span class="token punctuation">,</span>CV_8UC3<span class="token punctuation">,</span><span class="token function">Scalar</span><span class="token punctuation">(</span><span class="token number">135</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">135</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"---- 打印图像参数 ----"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//标志位</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"flags:"</span> <span class="token operator">&lt;&lt;</span> image<span class="token punctuation">.</span>flags <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//图像尺寸</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"size:"</span> <span class="token operator">&lt;&lt;</span> image<span class="token punctuation">.</span>size <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//列宽</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"clos:"</span> <span class="token operator">&lt;&lt;</span> image<span class="token punctuation">.</span>cols<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//行高</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"rows:"</span> <span class="token operator">&lt;&lt;</span> image<span class="token punctuation">.</span>rows <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//维度</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"dims:"</span> <span class="token operator">&lt;&lt;</span> image<span class="token punctuation">.</span>dims <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>输出：</p>
+<pre><code>---- 打印图像参数 ----
+flags:1124024336
+size:240 x 320
+clos:320
+rows:240
+dims:2</code></pre><h2 id="二-创建Mat矩阵"><a href="#二-创建Mat矩阵" class="headerlink" title="二.创建Mat矩阵"></a>二.创建Mat矩阵</h2><h3 id="1-直接创建"><a href="#1-直接创建" class="headerlink" title="1. 直接创建"></a>1. 直接创建</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//创建高为2，宽为4，数据类型为8位无符号整型，B通道=0，G通道=0，R通道=255的矩阵</span>
 Mat <span class="token function">img</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> CV_8UC3<span class="token punctuation">,</span> <span class="token function">Scalar</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//注意此处先高后宽</span>
  <span class="token comment" spellcheck="true">/*
  参数1：图像的高
@@ -776,6 +795,33 @@ Mat<span class="token punctuation">:</span><span class="token punctuation">:</sp
 <h3 id="12-改变矩阵元素数据类型"><a href="#12-改变矩阵元素数据类型" class="headerlink" title="12.改变矩阵元素数据类型"></a>12.改变矩阵元素数据类型</h3><pre class="line-numbers language-c"><code class="language-c">Mat Bnew<span class="token punctuation">;</span>
 B<span class="token punctuation">.</span><span class="token function">convertTo</span><span class="token punctuation">(</span>Bnew<span class="token punctuation">,</span> CV_64FC1<span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//参数1:新矩阵的存放位置 参数2：要转换的数据类型  参数3：每个元素要乘的标量  参数4：每个元素乘过标量3后再加上标量参数4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="13-求矩阵所有元素值之和"><a href="#13-求矩阵所有元素值之和" class="headerlink" title="13.求矩阵所有元素值之和"></a>13.求矩阵所有元素值之和</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">double</span> s <span class="token operator">=</span> cv<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">sum</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//因为矩阵可能有多个维度，所以sum函数返回值是一个向量。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="14-对矩阵进行反转"><a href="#14-对矩阵进行反转" class="headerlink" title="14.对矩阵进行反转"></a>14.对矩阵进行反转</h3><p>对图像进行翻转或旋转可以使用cv::flip()函数，可以实现将一个二维矩阵沿X轴、Y轴或者同时沿XY轴翻转。函数原型如下:</p>
+<pre><code>C++: void flip(InputArray src, OutputArray dst, int ﬂipCode)</code></pre><p>参数介绍：</p>
+<p><strong>src</strong>: 即输入矩阵</p>
+<p><strong>dst</strong>: 即输出矩阵</p>
+<p><strong>flipCode</strong>: 旋转码，即控制函数对矩阵进行怎样的旋转。</p>
+<p>当参数flipCode=0时，将对矩阵沿X轴（垂直）方向翻转；</p>
+<p>当flipCode=1时，将对矩阵沿Y轴（水平）方向翻转；</p>
+<p>当flipCode=-1时，将对矩阵沿XY轴（水平、垂直）方向翻转。</p>
+<p>下面，我们给出一段测试代码，代码中实现了将矩阵沿X轴方向旋转。</p>
+<pre class="line-numbers language-c"><code class="language-c"> <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+ <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;opencv2/opencv.hpp></span></span>
+
+ using namespace std<span class="token punctuation">;</span>
+ using namespace cv<span class="token punctuation">;</span>
+
+ <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ <span class="token punctuation">{</span>
+     Mat img <span class="token operator">=</span> <span class="token function">imread</span><span class="token punctuation">(</span><span class="token string">"D:/Media/Image/lena.jpg"</span><span class="token punctuation">,</span> CV_LOAD_IMAGE_ANYCOLOR<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">imshow</span><span class="token punctuation">(</span><span class="token string">"Input"</span><span class="token punctuation">,</span> img<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     cv<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">flip</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span> img<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">imshow</span><span class="token punctuation">(</span><span class="token string">"Flip"</span><span class="token punctuation">,</span> img<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">waitKey</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>当然，我们也可以将flipCode分别改为1（沿Y轴旋转）和-1（沿XY轴旋转）。</p>
 <h2 id="四-矩阵变换"><a href="#四-矩阵变换" class="headerlink" title="四.矩阵变换"></a>四.矩阵变换</h2><h3 id="1-分离矩阵各通道"><a href="#1-分离矩阵各通道" class="headerlink" title="1.分离矩阵各通道"></a>1.分离矩阵各通道</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//split函数的功能是通道分离</span>
 <span class="token keyword">void</span> <span class="token function">split</span><span class="token punctuation">(</span><span class="token keyword">const</span> Mat<span class="token operator">&amp;</span> src<span class="token punctuation">,</span>Mat <span class="token operator">*</span>mvBegin<span class="token punctuation">)</span>
 <span class="token keyword">void</span> <span class="token function">split</span><span class="token punctuation">(</span>InputArray m<span class="token punctuation">,</span> OutputArrayOfArrays mv<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -832,6 +878,8 @@ A<span class="token punctuation">.</span><span class="token function">col</span>
 <li><a href="https://blog.csdn.net/qq_33740700/article/details/82117564" target="_blank" rel="noopener">OpenCV中Mat矩阵用法详解（包括多通道矩阵创建、矩阵运算等）</a></li>
 <li><a href="https://blog.csdn.net/my_angle2016/article/details/113991586" target="_blank" rel="noopener">OpenCV中Mat操作“ =“ 、clone() 与copyto()的区别</a></li>
 <li><a href="https://blog.csdn.net/loveliuzz/article/details/73613856" target="_blank" rel="noopener">OpenCV中的Resize函数和Reshape函数</a></li>
+<li><a href="https://blog.csdn.net/mars_xiaolei/article/details/88637099" target="_blank" rel="noopener">OpenCV获取图像属性（行高、列宽、通道数等）</a></li>
+<li><a href="https://www.cnblogs.com/xiaomanon/p/4162639.html" target="_blank" rel="noopener">OpenCV2学习笔记05：矩阵翻转</a></li>
 </ol>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1424,7 +1472,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">64.8k</span>&nbsp;字
+                class="white-color">64.9k</span>&nbsp;字
             
             
             
