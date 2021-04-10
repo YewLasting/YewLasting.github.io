@@ -405,21 +405,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-09
+                    2021-04-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    857
+                    969
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -822,6 +822,9 @@ B<span class="token punctuation">.</span><span class="token function">convertTo<
      <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
  <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>当然，我们也可以将flipCode分别改为1（沿Y轴旋转）和-1（沿XY轴旋转）。</p>
+<h3 id="15-对矩阵进行拼接"><a href="#15-对矩阵进行拼接" class="headerlink" title="15.对矩阵进行拼接"></a>15.对矩阵进行拼接</h3><p>在Matlab中将两个矩阵合并非常方便，按行合并，如A=[B C]。按列合并如A=[B ;C]<br>OpenCV中有vconcat和hconcat函数，用于矩阵的合并与图像的拼接。</p>
+<pre class="line-numbers language-c"><code class="language-c">vconcat（B<span class="token punctuation">,</span> C<span class="token punctuation">,</span> A）<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 等同于A=[B; C] C接到B的下面</span>
+hconcat（B<span class="token punctuation">,</span> C<span class="token punctuation">,</span> A）<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 等同于A=[B C]     C接到B的后面</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="四-矩阵变换"><a href="#四-矩阵变换" class="headerlink" title="四.矩阵变换"></a>四.矩阵变换</h2><h3 id="1-分离矩阵各通道"><a href="#1-分离矩阵各通道" class="headerlink" title="1.分离矩阵各通道"></a>1.分离矩阵各通道</h3><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//split函数的功能是通道分离</span>
 <span class="token keyword">void</span> <span class="token function">split</span><span class="token punctuation">(</span><span class="token keyword">const</span> Mat<span class="token operator">&amp;</span> src<span class="token punctuation">,</span>Mat <span class="token operator">*</span>mvBegin<span class="token punctuation">)</span>
 <span class="token keyword">void</span> <span class="token function">split</span><span class="token punctuation">(</span>InputArray m<span class="token punctuation">,</span> OutputArrayOfArrays mv<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -880,6 +883,7 @@ A<span class="token punctuation">.</span><span class="token function">col</span>
 <li><a href="https://blog.csdn.net/loveliuzz/article/details/73613856" target="_blank" rel="noopener">OpenCV中的Resize函数和Reshape函数</a></li>
 <li><a href="https://blog.csdn.net/mars_xiaolei/article/details/88637099" target="_blank" rel="noopener">OpenCV获取图像属性（行高、列宽、通道数等）</a></li>
 <li><a href="https://www.cnblogs.com/xiaomanon/p/4162639.html" target="_blank" rel="noopener">OpenCV2学习笔记05：矩阵翻转</a></li>
+<li><a href="https://blog.csdn.net/mikedadong/article/details/51305640" target="_blank" rel="noopener">opencv图像拼接，即把两个矩阵合并为一个(vconcat和hconcat)、Mat成员函数size（）</a></li>
 </ol>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -1472,7 +1476,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">65.2k</span>&nbsp;字
+                class="white-color">65.4k</span>&nbsp;字
             
             
             
