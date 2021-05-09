@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-04-27T03:19:12.193Z</updated>
+  <updated>2021-05-09T14:27:52.821Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,224 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.166 - 1482.制作 m 束花所需的最少天数</title>
+    <link href="http://yewlasting.github.io/posts/6c01.html"/>
+    <id>http://yewlasting.github.io/posts/6c01.html</id>
+    <published>2021-05-09T14:19:38.000Z</published>
+    <updated>2021-05-09T14:27:52.821Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1482-制作-m-束花所需的最少天数&quot;&gt;&lt;a href=&quot;#1482-制作-m-束花所需的最少天数&quot; class=&quot;headerlink&quot; title=&quot;1482. 制作 m 束花所需的最少天数&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="二分查找" scheme="http://YewLasting.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    
+      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.165 - 1723.完成所有工作的最短时间</title>
+    <link href="http://yewlasting.github.io/posts/2b48.html"/>
+    <id>http://yewlasting.github.io/posts/2b48.html</id>
+    <published>2021-05-08T14:29:14.000Z</published>
+    <updated>2021-05-09T14:35:25.419Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1723-完成所有工作的最短时间&quot;&gt;&lt;a href=&quot;#1723-完成所有工作的最短时间&quot; class=&quot;headerlink&quot; title=&quot;1723. 完成所有工作的最短时间&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="二分查找" scheme="http://YewLasting.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    
+      <category term="回溯算法" scheme="http://YewLasting.github.io/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.164 - 1486.数组异或操作</title>
+    <link href="http://yewlasting.github.io/posts/c694.html"/>
+    <id>http://yewlasting.github.io/posts/c694.html</id>
+    <published>2021-05-07T14:37:34.000Z</published>
+    <updated>2021-05-09T14:44:08.508Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1486-数组异或操作&quot;&gt;&lt;a href=&quot;#1486-数组异或操作&quot; class=&quot;headerlink&quot; title=&quot;1486. 数组异或操作&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="位运算" scheme="http://YewLasting.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.163 - 1720.解码异或后的数组</title>
+    <link href="http://yewlasting.github.io/posts/6d60.html"/>
+    <id>http://yewlasting.github.io/posts/6d60.html</id>
+    <published>2021-05-06T14:45:15.000Z</published>
+    <updated>2021-05-09T14:50:40.649Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1720-解码异或后的数组&quot;&gt;&lt;a href=&quot;#1720-解码异或后的数组&quot; class=&quot;headerlink&quot; title=&quot;1720. 解码异或后的数组&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="位运算" scheme="http://YewLasting.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.162 - 740.删除并获得点数</title>
+    <link href="http://yewlasting.github.io/posts/144a.html"/>
+    <id>http://yewlasting.github.io/posts/144a.html</id>
+    <published>2021-05-05T14:53:22.000Z</published>
+    <updated>2021-05-09T14:59:20.690Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;740-删除并获得点数&quot;&gt;&lt;a href=&quot;#740-删除并获得点数&quot; class=&quot;headerlink&quot; title=&quot;740. 删除并获得点数&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="位运算" scheme="http://YewLasting.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.160 - 7.整数反转</title>
+    <link href="http://yewlasting.github.io/posts/742c.html"/>
+    <id>http://yewlasting.github.io/posts/742c.html</id>
+    <published>2021-05-03T07:17:47.000Z</published>
+    <updated>2021-05-03T07:51:38.720Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;7-整数反转&quot;&gt;&lt;a href=&quot;#7-整数反转&quot; class=&quot;headerlink&quot; title=&quot;7. 整数反转&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/reverse-integer/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="数学" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.155 - 633.平方数之和</title>
+    <link href="http://yewlasting.github.io/posts/b976.html"/>
+    <id>http://yewlasting.github.io/posts/b976.html</id>
+    <published>2021-04-28T15:01:56.000Z</published>
+    <updated>2021-05-09T15:10:26.503Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;633-平方数之和&quot;&gt;&lt;a href=&quot;#633-平方数之和&quot; class=&quot;headerlink&quot; title=&quot;633. 平方数之和&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="数学" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.154 - 938.二叉搜索树的范围和</title>
     <link href="http://yewlasting.github.io/posts/91f5.html"/>
     <id>http://yewlasting.github.io/posts/91f5.html</id>
     <published>2021-04-27T03:04:34.000Z</published>
-    <updated>2021-04-27T03:19:12.193Z</updated>
+    <updated>2021-04-27T03:19:50.593Z</updated>
     
     <summary type="html">
     
@@ -52,7 +265,7 @@
     <link href="http://yewlasting.github.io/posts/ea71.html"/>
     <id>http://yewlasting.github.io/posts/ea71.html</id>
     <published>2021-04-26T02:23:34.000Z</published>
-    <updated>2021-04-27T02:50:24.125Z</updated>
+    <updated>2021-04-27T03:19:50.592Z</updated>
     
     <summary type="html">
     
@@ -83,7 +296,7 @@
     <link href="http://yewlasting.github.io/posts/b379.html"/>
     <id>http://yewlasting.github.io/posts/b379.html</id>
     <published>2021-04-25T00:59:16.000Z</published>
-    <updated>2021-04-27T02:26:33.899Z</updated>
+    <updated>2021-04-27T03:19:50.589Z</updated>
     
     <summary type="html">
     
@@ -414,207 +627,6 @@
       <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
     
       <category term="动态规划" scheme="http://YewLasting.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.141 - 208.实现 Trie (前缀树)</title>
-    <link href="http://yewlasting.github.io/posts/216b.html"/>
-    <id>http://yewlasting.github.io/posts/216b.html</id>
-    <published>2021-04-14T12:10:50.000Z</published>
-    <updated>2021-04-14T12:25:32.891Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;208-实现-Trie-前缀树&quot;&gt;&lt;a href=&quot;#208-实现-Trie-前缀树&quot; class=&quot;headerlink&quot; title=&quot;208. 实现 Trie (前缀树)&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="前缀树" scheme="http://YewLasting.github.io/tags/%E5%89%8D%E7%BC%80%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.140 - 783.二叉搜索树节点最小距离</title>
-    <link href="http://yewlasting.github.io/posts/c6fe.html"/>
-    <id>http://yewlasting.github.io/posts/c6fe.html</id>
-    <published>2021-04-13T02:14:09.000Z</published>
-    <updated>2021-04-13T02:31:26.627Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;783-二叉搜索树节点最小距离&quot;&gt;&lt;a href=&quot;#783-二叉搜索树节点最小距离&quot; class=&quot;headerlink&quot; title=&quot;783. 二叉搜索树节点最小距离&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="二叉搜索树" scheme="http://YewLasting.github.io/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.139 - 179.最大数</title>
-    <link href="http://yewlasting.github.io/posts/696f.html"/>
-    <id>http://yewlasting.github.io/posts/696f.html</id>
-    <published>2021-04-12T06:41:51.000Z</published>
-    <updated>2021-04-12T06:50:44.624Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;179-最大数&quot;&gt;&lt;a href=&quot;#179-最大数&quot; class=&quot;headerlink&quot; title=&quot;179. 最大数&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/largest-number/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="排序" scheme="http://YewLasting.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.138 - 264.丑数II</title>
-    <link href="http://yewlasting.github.io/posts/f61c.html"/>
-    <id>http://yewlasting.github.io/posts/f61c.html</id>
-    <published>2021-04-11T07:33:19.000Z</published>
-    <updated>2021-04-12T03:22:38.338Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;264-丑数-II&quot;&gt;&lt;a href=&quot;#264-丑数-II&quot; class=&quot;headerlink&quot; title=&quot;264. 丑数 II&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="动态规划" scheme="http://YewLasting.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.137 - 263.丑数</title>
-    <link href="http://yewlasting.github.io/posts/e82b.html"/>
-    <id>http://yewlasting.github.io/posts/e82b.html</id>
-    <published>2021-04-10T10:24:23.000Z</published>
-    <updated>2021-04-10T10:34:35.295Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;263-丑数&quot;&gt;&lt;a href=&quot;#263-丑数&quot; class=&quot;headerlink&quot; title=&quot;263. 丑数&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/ugly-number/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.136 - 154.寻找旋转排序数组中的最小值II</title>
-    <link href="http://yewlasting.github.io/posts/db66.html"/>
-    <id>http://yewlasting.github.io/posts/db66.html</id>
-    <published>2021-04-09T12:53:28.000Z</published>
-    <updated>2021-04-09T12:57:51.316Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;154-寻找旋转排序数组中的最小值-II&quot;&gt;&lt;a href=&quot;#154-寻找旋转排序数组中的最小值-II&quot; class=&quot;headerlink&quot; title=&quot;154. 寻找旋转排序数组中的最小值 II&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="二分查找" scheme="http://YewLasting.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.135 - 153.寻找旋转排序数组中的最小值</title>
-    <link href="http://yewlasting.github.io/posts/aa67.html"/>
-    <id>http://yewlasting.github.io/posts/aa67.html</id>
-    <published>2021-04-08T06:46:31.000Z</published>
-    <updated>2021-04-08T06:54:13.271Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;153-寻找旋转排序数组中的最小值&quot;&gt;&lt;a href=&quot;#153-寻找旋转排序数组中的最小值&quot; class=&quot;headerlink&quot; title=&quot;153. 寻找旋转排序数组中的最小值&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="二分查找" scheme="http://YewLasting.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
     
   </entry>
   
