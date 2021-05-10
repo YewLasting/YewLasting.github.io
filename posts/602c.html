@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.143 - 87.扰乱字符串, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.167 - 872.叶子相似的树, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.143 - 87.扰乱字符串 | unlasting</title>
+    <title>力扣每日1题no.167 - 872.叶子相似的树 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.143 - 87.扰乱字符串</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.167 - 872.叶子相似的树</h1>
                 </div>
             </div>
         </div>
@@ -373,12 +373,12 @@
                                 <span class="chip bg-color">力扣每日1题</span>
                             </a>
                         
-                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                <span class="chip bg-color">动态规划</span>
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/">
+                                <span class="chip bg-color">深度优先遍历</span>
                             </a>
                         
-                            <a href="/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/">
-                                <span class="chip bg-color">记忆化搜索</span>
+                            <a href="/tags/%E6%A0%91/">
+                                <span class="chip bg-color">树</span>
                             </a>
                         
                     </div>
@@ -402,28 +402,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-16
+                    2021-05-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-16
+                    2021-05-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    986
+                    660
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -438,42 +438,30 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="87-扰乱字符串"><a href="#87-扰乱字符串" class="headerlink" title="87. 扰乱字符串"></a><a href="https://leetcode-cn.com/problems/scramble-string/" target="_blank" rel="noopener">87. 扰乱字符串</a></h1><p><strong>难度</strong>：困难</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>使用下面描述的算法可以扰乱字符串 <code>s</code> 得到字符串 <code>t</code> ：</p>
-<ol>
-<li>如果字符串的长度为 1 ，算法停止</li>
-<li>如果字符串的长度 &gt; 1 ，执行下述步骤：<ul>
-<li>在一个随机下标处将字符串分割成两个非空的子字符串。即，如果已知字符串 <code>s</code> ，则可以将其分成两个子字符串 <code>x</code> 和 <code>y</code> ，且满足 <code>s = x + y</code> 。</li>
-<li><strong>随机</strong> 决定是要「交换两个子字符串」还是要「保持这两个子字符串的顺序不变」。即，在执行这一步骤之后，<code>s</code> 可能是 <code>s = x + y</code> 或者 <code>s = y + x</code> 。</li>
-<li>在 <code>x</code> 和 <code>y</code> 这两个子字符串上继续从步骤 1 开始递归执行此算法。</li>
-</ul>
-</li>
-</ol>
-<p>给你两个 <strong>长度相等</strong> 的字符串 <code>s1</code> 和 <code>s2</code>，判断 <code>s2</code> 是否是 <code>s1</code> 的扰乱字符串。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
-<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：s1 = "great", s2 = "rgeat"
-输出：true
-解释：s1 上可能发生的一种情形是：
-"great" --&gt; "gr/eat" // 在一个随机下标处分割得到两个子字符串
-"gr/eat" --&gt; "gr/eat" // 随机决定：「保持这两个子字符串的顺序不变」
-"gr/eat" --&gt; "g/r / e/at" // 在子字符串上递归执行此算法。两个子字符串分别在随机下标处进行一轮分割
-"g/r / e/at" --&gt; "r/g / e/at" // 随机决定：第一组「交换两个子字符串」，第二组「保持这两个子字符串的顺序不变」
-"r/g / e/at" --&gt; "r/g / e/ a/t" // 继续递归执行此算法，将 "at" 分割得到 "a/t"
-"r/g / e/ a/t" --&gt; "r/g / e/ a/t" // 随机决定：「保持这两个子字符串的顺序不变」
-算法终止，结果字符串和 s2 相同，都是 "rgeat"
-这是一种能够扰乱 s1 得到 s2 的情形，可以认为 s2 是 s1 的扰乱字符串，返回 true</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：s1 = "abcde", s2 = "caebd"
-输出：false</code></pre><h3 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a><strong>示例 3：</strong></h3><pre><code>输入：s1 = "a", s2 = "a"
-输出：true</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
-<li><code>s1.length == s2.length</code></li>
-<li><code>1 &lt;= s1.length &lt;= 30</code></li>
-<li><code>s1</code> 和 <code>s2</code> 由小写英文字母组成</li>
+                <h1 id="872-叶子相似的树"><a href="#872-叶子相似的树" class="headerlink" title="872. 叶子相似的树"></a><a href="https://leetcode-cn.com/problems/leaf-similar-trees/" target="_blank" rel="noopener">872. 叶子相似的树</a></h1><p><strong>难度</strong>：简单</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 <em>叶值序列</em> 。</p>
+<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/16/tree.png" alt="img"></p>
+<p>举个例子，如上图所示，给定一棵叶值序列为 <code>(6, 7, 4, 9, 8)</code> 的树。</p>
+<p>如果有两棵二叉树的叶值序列是相同，那么我们就认为它们是 <em>叶相似</em> 的。</p>
+<p>如果给定的两个根结点分别为 <code>root1</code> 和 <code>root2</code> 的树是叶相似的，则返回 <code>true</code>；否则返回 <code>false</code> 。</p>
+<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><p><img src="https://assets.leetcode.com/uploads/2020/09/03/leaf-similar-1.jpg" alt="img"></p>
+<pre><code>输入：root1 = [3,5,1,6,2,9,8,null,null,7,4], root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
+输出：true</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：root1 = [1], root2 = [1]
+输出：true</code></pre><h3 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a><strong>示例 3：</strong></h3><pre><code>输入：root1 = [1], root2 = [2]
+输出：false</code></pre><h3 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a><strong>示例 4：</strong></h3><pre><code>输入：root1 = [1,2], root2 = [2,2]
+输出：true</code></pre><h3 id="示例-5："><a href="#示例-5：" class="headerlink" title="示例 5："></a><strong>示例 5：</strong></h3><p><img src="https://assets.leetcode.com/uploads/2020/09/03/leaf-similar-2.jpg" alt="img"></p>
+<pre><code>输入：root1 = [1,2,3], root2 = [1,3,2]
+输出：false</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
+<li>给定的两棵树可能会有 <code>1</code> 到 <code>200</code> 个结点。</li>
+<li>给定的两棵树上的值介于 <code>0</code> 到 <code>200</code> 之间。</li>
 </ul>
 <p>来源：力扣（LeetCode） </p>
-<p>链接：<a href="https://leetcode-cn.com/problems/scramble-string/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/scramble-string/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/leaf-similar-trees/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/leaf-similar-trees/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2021.4.16</span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
@@ -481,82 +469,94 @@
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span>
 using namespace std<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/**
+Definition for a binary tree node.
+
+ */</span>
+<span class="token keyword">struct</span> TreeNode
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> val<span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>left<span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>right<span class="token punctuation">;</span>
+    <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">left</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">right</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">left</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">right</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> TreeNode <span class="token operator">*</span>left<span class="token punctuation">,</span> TreeNode <span class="token operator">*</span>right<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">left</span><span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">right</span><span class="token punctuation">(</span>right<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */</span>
 class Solution <span class="token punctuation">{</span>
 private<span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">// 记忆化搜索存储状态的数组</span>
-    <span class="token comment" spellcheck="true">// -1 表示 false，1 表示 true，0 表示未计算</span>
-    <span class="token keyword">int</span> memo<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">31</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    string s1<span class="token punctuation">,</span> s2<span class="token punctuation">;</span>
-
+    <span class="token keyword">void</span> <span class="token function">inorder</span><span class="token punctuation">(</span>TreeNode<span class="token operator">*</span> node<span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> leaf<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>node<span class="token operator">==</span>nullptr<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>node<span class="token operator">-></span>left<span class="token operator">==</span>nullptr<span class="token operator">&amp;&amp;</span>node<span class="token operator">-></span>right<span class="token operator">==</span>nullptr<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            leaf<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>node<span class="token operator">-></span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">inorder</span><span class="token punctuation">(</span>node<span class="token operator">-></span>left<span class="token punctuation">,</span>leaf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//leaf.push_back(node-val);</span>
+            <span class="token function">inorder</span><span class="token punctuation">(</span>node<span class="token operator">-></span>right<span class="token punctuation">,</span>leaf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 public<span class="token punctuation">:</span>
-    bool <span class="token function">checkIfSimilar</span><span class="token punctuation">(</span><span class="token keyword">int</span> i1<span class="token punctuation">,</span> <span class="token keyword">int</span> i2<span class="token punctuation">,</span> <span class="token keyword">int</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        unordered_map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span> freq<span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> i1<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> i1 <span class="token operator">+</span> length<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token operator">++</span>freq<span class="token punctuation">[</span>s1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    bool <span class="token function">leafSimilar</span><span class="token punctuation">(</span>TreeNode<span class="token operator">*</span> root1<span class="token punctuation">,</span> TreeNode<span class="token operator">*</span> root2<span class="token punctuation">)</span> 
+    <span class="token punctuation">{</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> leaf1<span class="token punctuation">,</span>leaf2<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>root1<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>        
+            <span class="token function">inorder</span><span class="token punctuation">(</span>root1<span class="token punctuation">,</span>leaf1<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> i2<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> i2 <span class="token operator">+</span> length<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token operator">--</span>freq<span class="token punctuation">[</span>s2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">any_of</span><span class="token punctuation">(</span>freq<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> freq<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">auto</span><span class="token operator">&amp;</span> entry<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> entry<span class="token punctuation">.</span>second <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">// 第一个字符串从 i1 开始，第二个字符串从 i2 开始，子串的长度为 length，是否和谐</span>
-    bool <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token keyword">int</span> i1<span class="token punctuation">,</span> <span class="token keyword">int</span> i2<span class="token punctuation">,</span> <span class="token keyword">int</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>memo<span class="token punctuation">[</span>i1<span class="token punctuation">]</span><span class="token punctuation">[</span>i2<span class="token punctuation">]</span><span class="token punctuation">[</span>length<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> memo<span class="token punctuation">[</span>i1<span class="token punctuation">]</span><span class="token punctuation">[</span>i2<span class="token punctuation">]</span><span class="token punctuation">[</span>length<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token comment" spellcheck="true">// 判断两个子串是否相等</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>s1<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>i1<span class="token punctuation">,</span> length<span class="token punctuation">)</span> <span class="token operator">==</span> s2<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>i2<span class="token punctuation">,</span> length<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            memo<span class="token punctuation">[</span>i1<span class="token punctuation">]</span><span class="token punctuation">[</span>i2<span class="token punctuation">]</span><span class="token punctuation">[</span>length<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token comment" spellcheck="true">// 判断是否存在字符 c 在两个子串中出现的次数不同</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">checkIfSimilar</span><span class="token punctuation">(</span>i1<span class="token punctuation">,</span> i2<span class="token punctuation">,</span> length<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            memo<span class="token punctuation">[</span>i1<span class="token punctuation">]</span><span class="token punctuation">[</span>i2<span class="token punctuation">]</span><span class="token punctuation">[</span>length<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token comment" spellcheck="true">// 枚举分割位置</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> length<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">// 不交换的情况</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">dfs</span><span class="token punctuation">(</span>i1<span class="token punctuation">,</span> i2<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">dfs</span><span class="token punctuation">(</span>i1 <span class="token operator">+</span> i<span class="token punctuation">,</span> i2 <span class="token operator">+</span> i<span class="token punctuation">,</span> length <span class="token operator">-</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                memo<span class="token punctuation">[</span>i1<span class="token punctuation">]</span><span class="token punctuation">[</span>i2<span class="token punctuation">]</span><span class="token punctuation">[</span>length<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-                <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token comment" spellcheck="true">// 交换的情况</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">dfs</span><span class="token punctuation">(</span>i1<span class="token punctuation">,</span> i2 <span class="token operator">+</span> length <span class="token operator">-</span> i<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">dfs</span><span class="token punctuation">(</span>i1 <span class="token operator">+</span> i<span class="token punctuation">,</span> i2<span class="token punctuation">,</span> length <span class="token operator">-</span> i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                memo<span class="token punctuation">[</span>i1<span class="token punctuation">]</span><span class="token punctuation">[</span>i2<span class="token punctuation">]</span><span class="token punctuation">[</span>length<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-                <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-
-        memo<span class="token punctuation">[</span>i1<span class="token punctuation">]</span><span class="token punctuation">[</span>i2<span class="token punctuation">]</span><span class="token punctuation">[</span>length<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    bool <span class="token function">isScramble</span><span class="token punctuation">(</span>string s1<span class="token punctuation">,</span> string s2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">memset</span><span class="token punctuation">(</span>memo<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>memo<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        this<span class="token operator">-></span>s1 <span class="token operator">=</span> s1<span class="token punctuation">;</span>
-        this<span class="token operator">-></span>s2 <span class="token operator">=</span> s2<span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>root2<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">inorder</span><span class="token punctuation">(</span>root2<span class="token punctuation">,</span>leaf2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>       
+        <span class="token keyword">return</span> leaf1<span class="token operator">==</span>leaf2<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     Solution test<span class="token punctuation">;</span>
-    string s1 <span class="token operator">=</span> <span class="token string">"great"</span><span class="token punctuation">;</span>
-    string s2 <span class="token operator">=</span> <span class="token string">"rgeat"</span><span class="token punctuation">;</span>
-    bool res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">isScramble</span><span class="token punctuation">(</span>s1<span class="token punctuation">,</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span>boolalpha<span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>node9 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>node8 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>node7 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>node6 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>node5 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span>node8<span class="token punctuation">,</span>node9<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>node4 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>node3 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> node6<span class="token punctuation">,</span> node7<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>node2 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> node4<span class="token punctuation">,</span> node5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>root1 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> node2<span class="token punctuation">,</span> node3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    TreeNode <span class="token operator">*</span>nodee9 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>nodee8 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>nodee7 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span>nodee8<span class="token punctuation">,</span>nodee9<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>nodee6 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>nodee5 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>nodee4 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>nodee3 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>nodee6<span class="token punctuation">,</span> nodee7<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>nodee2 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> nodee4<span class="token punctuation">,</span> nodee5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    TreeNode <span class="token operator">*</span>root2 <span class="token operator">=</span> new <span class="token function">TreeNode</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> nodee2<span class="token punctuation">,</span> nodee3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    bool res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">leafSimilar</span><span class="token punctuation">(</span>root1<span class="token punctuation">,</span> root2<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span>boolalpha<span class="token operator">&lt;&lt;</span>res<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -600,7 +600,7 @@ public<span class="token punctuation">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/47cd.html">http://YewLasting.github.io/posts/47cd.html</a>
+                    <a href="http://YewLasting.github.io/posts/602c.html">http://YewLasting.github.io/posts/602c.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -642,12 +642,12 @@ public<span class="token punctuation">:</span>
                                     <span class="chip bg-color">力扣每日1题</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                    <span class="chip bg-color">动态规划</span>
+                                <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/">
+                                    <span class="chip bg-color">深度优先遍历</span>
                                 </a>
                             
-                                <a href="/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/">
-                                    <span class="chip bg-color">记忆化搜索</span>
+                                <a href="/tags/%E6%A0%91/">
+                                    <span class="chip bg-color">树</span>
                                 </a>
                             
                         </div>
@@ -815,30 +815,34 @@ public<span class="token punctuation">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/4a6f.html">
+                <a href="/posts/602c.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="力扣每日1题no.144 - 220.存在重复元素III">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="力扣每日1题no.167 - 872.叶子相似的树">
                         
-                        <span class="card-title">力扣每日1题no.144 - 220.存在重复元素III</span>
+                        <span class="card-title">力扣每日1题no.167 - 872.叶子相似的树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            220. 存在重复元素 III难度：中等
-题干给你一个整数数组 nums 和两个整数 k 和 t 。请你判断是否存在 两个不同下标 i 和 j，使得 abs(nums[i] - nums[j]) &lt;= t ，同时又满足 abs(i -
+                            872. 叶子相似的树难度：简单
+题干请考虑一棵二叉树上所有的叶子，这些叶子的值按从左到右的顺序排列形成一个 叶值序列 。
+
+举个例子，如上图所示，给定一棵叶值序列为 (6, 7, 4, 9, 8) 的树。
+如果有两棵二叉树的叶值序列是相同
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -851,6 +855,7 @@ public<span class="token punctuation">:</span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -858,12 +863,12 @@ public<span class="token punctuation">:</span>
                         <span class="chip bg-color">力扣每日1题</span>
                     </a>
                     
-                    <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
-                        <span class="chip bg-color">滑动窗口</span>
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/">
+                        <span class="chip bg-color">深度优先遍历</span>
                     </a>
                     
-                    <a href="/tags/%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88/">
-                        <span class="chip bg-color">有序集合</span>
+                    <a href="/tags/%E6%A0%91/">
+                        <span class="chip bg-color">树</span>
                     </a>
                     
                 </div>
@@ -877,25 +882,27 @@ public<span class="token punctuation">:</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/14f9.html">
+                <a href="/posts/6c01.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣每日1题no.142 - 213.打家劫舍 II">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="力扣每日1题no.166 - 1482.制作 m 束花所需的最少天数">
                         
-                        <span class="card-title">力扣每日1题no.142 - 213.打家劫舍 II</span>
+                        <span class="card-title">力扣每日1题no.166 - 1482.制作 m 束花所需的最少天数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            213. 打家劫舍 II难度：中等
-题干你是一个专业的小偷，计划偷窃沿街的房屋，每间房内都藏有一定的现金。这个地方所有的房屋都 围成一圈 ，这意味着第一个房屋和最后一个房屋是紧挨着的。同时，相邻的房屋装有相互连通的防盗系统，如果两间相邻的房
+                            1482. 制作 m 束花所需的最少天数难度：中等
+题干给你一个整数数组 bloomDay，以及两个整数 m 和 k 。
+现需要制作 m 束花。制作花束时，需要使用花园中 相邻的 k 朵花 。
+花园中有 n 朵花，第 i 朵花会在 bloo
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-09
                             </span>
                         <span class="publish-author">
                             
@@ -916,8 +923,12 @@ public<span class="token punctuation">:</span>
                         <span class="chip bg-color">力扣每日1题</span>
                     </a>
                     
-                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                        <span class="chip bg-color">动态规划</span>
+                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                        <span class="chip bg-color">二分查找</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
