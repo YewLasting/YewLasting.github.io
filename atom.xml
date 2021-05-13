@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-05-13T01:37:03.759Z</updated>
+  <updated>2021-05-13T03:40:48.488Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.170 - 1269.停在原地的方案数</title>
+    <link href="http://yewlasting.github.io/posts/cbf2.html"/>
+    <id>http://yewlasting.github.io/posts/cbf2.html</id>
+    <published>2021-05-13T02:42:48.000Z</published>
+    <updated>2021-05-13T03:40:48.488Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1269-停在原地的方案数&quot;&gt;&lt;a href=&quot;#1269-停在原地的方案数&quot; class=&quot;headerlink&quot; title=&quot;1269. 停在原地的方案数&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="动态规划" scheme="http://YewLasting.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.169 - 1310.子数组异或查询</title>
     <link href="http://yewlasting.github.io/posts/82c6.html"/>
     <id>http://yewlasting.github.io/posts/82c6.html</id>
     <published>2021-05-12T01:27:46.000Z</published>
-    <updated>2021-05-13T01:37:03.759Z</updated>
+    <updated>2021-05-13T02:45:46.162Z</updated>
     
     <summary type="html">
     
@@ -36,6 +65,12 @@
     </summary>
     
     
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="位运算" scheme="http://YewLasting.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
   </entry>
   
@@ -574,37 +609,6 @@
         
         
           &lt;h1 id=&quot;27-移除元素&quot;&gt;&lt;a href=&quot;#27-移除元素&quot; class=&quot;headerlink&quot; title=&quot;27. 移除元素&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/remove-element/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="双指针" scheme="http://YewLasting.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    
-      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.145 - 26.删除有序数组中的重复项</title>
-    <link href="http://yewlasting.github.io/posts/c0b7.html"/>
-    <id>http://yewlasting.github.io/posts/c0b7.html</id>
-    <published>2021-04-18T02:12:22.000Z</published>
-    <updated>2021-04-20T06:48:39.992Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;26-删除有序数组中的重复项&quot;&gt;&lt;a href=&quot;#26-删除有序数组中的重复项&quot; class=&quot;headerlink&quot; title=&quot;26. 删除有序数组中的重复项&quot;&gt;&lt;/a&gt;&lt;a
         
       
     
