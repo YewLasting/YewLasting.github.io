@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-05-18T01:49:22.575Z</updated>
+  <updated>2021-05-18T07:10:42.397Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.175 - 1442.形成两个异或相等数组的三元组数目</title>
+    <link href="http://yewlasting.github.io/posts/bbff.html"/>
+    <id>http://yewlasting.github.io/posts/bbff.html</id>
+    <published>2021-05-18T07:03:14.000Z</published>
+    <updated>2021-05-18T07:10:42.397Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1442-形成两个异或相等数组的三元组数目&quot;&gt;&lt;a href=&quot;#1442-形成两个异或相等数组的三元组数目&quot; class=&quot;headerlink&quot; title=&quot;1442. 形成两个异或相等数组的三元组数目&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="位运算" scheme="http://YewLasting.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.174 - 993.二叉树的堂兄弟节点</title>
     <link href="http://yewlasting.github.io/posts/c949.html"/>
     <id>http://yewlasting.github.io/posts/c949.html</id>
     <published>2021-05-17T01:28:15.000Z</published>
-    <updated>2021-05-18T01:49:22.575Z</updated>
+    <updated>2021-05-18T01:49:52.531Z</updated>
     
     <summary type="html">
     
@@ -590,37 +621,6 @@
       <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
     
       <category term="动态规划" scheme="http://YewLasting.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-      <category term="字符串" scheme="http://YewLasting.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.147 - 28.实现 strStr()</title>
-    <link href="http://yewlasting.github.io/posts/893f.html"/>
-    <id>http://yewlasting.github.io/posts/893f.html</id>
-    <published>2021-04-20T06:41:54.000Z</published>
-    <updated>2021-04-22T12:52:40.576Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;28-实现-strStr&quot;&gt;&lt;a href=&quot;#28-实现-strStr&quot; class=&quot;headerlink&quot; title=&quot;28. 实现 strStr()&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="双指针" scheme="http://YewLasting.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
     
       <category term="字符串" scheme="http://YewLasting.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
