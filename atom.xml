@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-05-22T03:08:34.216Z</updated>
+  <updated>2021-05-24T14:52:19.941Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣每日1题no.173 - 421.数组中两个数的最大异或值</title>
+    <link href="http://yewlasting.github.io/posts/e293.html"/>
+    <id>http://yewlasting.github.io/posts/e293.html</id>
+    <published>2021-05-24T14:45:30.000Z</published>
+    <updated>2021-05-24T14:52:19.941Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;421-数组中两个数的最大异或值&quot;&gt;&lt;a href=&quot;#421-数组中两个数的最大异或值&quot; class=&quot;headerlink&quot; title=&quot;421. 数组中两个数的最大异或值&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="位运算" scheme="http://YewLasting.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+      <category term="字典树" scheme="http://YewLasting.github.io/tags/%E5%AD%97%E5%85%B8%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.181 - 664.奇怪的打印机</title>
+    <link href="http://yewlasting.github.io/posts/304.html"/>
+    <id>http://yewlasting.github.io/posts/304.html</id>
+    <published>2021-05-24T14:26:07.000Z</published>
+    <updated>2021-05-24T14:43:14.242Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;664-奇怪的打印机&quot;&gt;&lt;a href=&quot;#664-奇怪的打印机&quot; class=&quot;headerlink&quot; title=&quot;664. 奇怪的打印机&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="动态规划" scheme="http://YewLasting.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣每日1题no.179 - 810.黑板异或游戏</title>
@@ -101,9 +161,9 @@
     
       <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
     
-      <category term="堆" scheme="http://YewLasting.github.io/tags/%E5%A0%86/"/>
-    
       <category term="字典树" scheme="http://YewLasting.github.io/tags/%E5%AD%97%E5%85%B8%E6%A0%91/"/>
+    
+      <category term="堆" scheme="http://YewLasting.github.io/tags/%E5%A0%86/"/>
     
       <category term="哈希表" scheme="http://YewLasting.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
@@ -561,68 +621,6 @@
       <category term="二分查找" scheme="http://YewLasting.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
     
       <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.153 - 1011.在D天内送达包裹的能力</title>
-    <link href="http://yewlasting.github.io/posts/ea71.html"/>
-    <id>http://yewlasting.github.io/posts/ea71.html</id>
-    <published>2021-04-26T02:23:34.000Z</published>
-    <updated>2021-04-27T03:19:50.592Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1011-在-D-天内送达包裹的能力&quot;&gt;&lt;a href=&quot;#1011-在-D-天内送达包裹的能力&quot; class=&quot;headerlink&quot; title=&quot;1011. 在 D 天内送达包裹的能力&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="二分查找" scheme="http://YewLasting.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
-    
-      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.152 - 897.递增顺序搜索树</title>
-    <link href="http://yewlasting.github.io/posts/b379.html"/>
-    <id>http://yewlasting.github.io/posts/b379.html</id>
-    <published>2021-04-25T00:59:16.000Z</published>
-    <updated>2021-04-27T03:19:50.589Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;897-递增顺序搜索树&quot;&gt;&lt;a href=&quot;#897-递增顺序搜索树&quot; class=&quot;headerlink&quot; title=&quot;897. 递增顺序搜索树&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="二叉搜索树" scheme="http://YewLasting.github.io/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"/>
-    
-      <category term="深度优先遍历" scheme="http://YewLasting.github.io/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/"/>
     
   </entry>
   
