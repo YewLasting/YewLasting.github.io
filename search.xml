@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>力扣每日1题no.188 - 342.4的幂</title>
+      <link href="/posts/7be8.html"/>
+      <url>/posts/7be8.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="342-4的幂"><a href="#342-4的幂" class="headerlink" title="342. 4的幂"></a><a href="https://leetcode-cn.com/problems/power-of-four/" target="_blank" rel="noopener">342. 4的幂</a></h1><p><strong>难度</strong>：简答</p><h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>给定一个整数，写一个函数来判断它是否是 4 的幂次方。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p><p>整数 <code>n</code> 是 4 的幂次方需满足：存在整数 <code>x</code> 使得 <code>n == 4x</code></p><h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：n = 16输出：true</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：n = 5输出：false</code></pre><h3 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a><strong>示例 3：</strong></h3><pre><code>输入：n = 1输出：true</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul><li><code>-231 &lt;= n &lt;= 231 - 1</code></li></ul><h3 id="进阶："><a href="#进阶：" class="headerlink" title="进阶："></a><strong>进阶：</strong></h3><ul><li>你能不使用循环或者递归来完成本题吗？</li></ul><p>来源：力扣（LeetCode） </p><p>链接：<a href="https://leetcode-cn.com/problems/power-of-four/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/power-of-four/</a></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span>using namespace std<span class="token punctuation">;</span>class Solution<span class="token punctuation">{</span>public<span class="token punctuation">:</span>    bool <span class="token function">isPowerOfFour</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>    <span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">//循环法超时</span>        <span class="token comment" spellcheck="true">// while(n%4==0)</span>        <span class="token comment" spellcheck="true">// {</span>        <span class="token comment" spellcheck="true">//     n/=4;</span>        <span class="token comment" spellcheck="true">// }</span>        <span class="token comment" spellcheck="true">// if(n==1)</span>        <span class="token comment" spellcheck="true">// {</span>        <span class="token comment" spellcheck="true">//     return true;</span>        <span class="token comment" spellcheck="true">// }</span>        <span class="token comment" spellcheck="true">// else</span>        <span class="token comment" spellcheck="true">// {</span>        <span class="token comment" spellcheck="true">//     return false;</span>        <span class="token comment" spellcheck="true">// }</span>        <span class="token keyword">return</span> n <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>n <span class="token operator">&amp;</span> <span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>n <span class="token operator">&amp;</span> <span class="token number">0xaaaaaaaa</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//  return n > 0 &amp;&amp; (n &amp; (n - 1)) == 0 &amp;&amp; (n &amp; 0xaaaaaaaa) == 0;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//进行测试，输出测试结果</span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    Solution test<span class="token punctuation">;</span>    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>    bool res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">isPowerOfFour</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>    cout <span class="token operator">&lt;&lt;</span> boolalpha <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 力扣每日1题 </tag>
+            
+            <tag> 位运算 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣每日1题no.187 - 231.2的幂</title>
+      <link href="/posts/a960.html"/>
+      <url>/posts/a960.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="231-2-的幂"><a href="#231-2-的幂" class="headerlink" title="231. 2 的幂"></a><a href="https://leetcode-cn.com/problems/power-of-two/" target="_blank" rel="noopener">231. 2 的幂</a></h1><p><strong>难度</strong>：简答</p><h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>给你一个整数 <code>n</code>，请你判断该整数是否是 2 的幂次方。如果是，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p><p>如果存在一个整数 <code>x</code> 使得 <code>n == 2x</code> ，则认为 <code>n</code> 是 2 的幂次方。</p><h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：n = 1输出：true解释：20 = 1</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：n = 16输出：true解释：24 = 16</code></pre><h3 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a><strong>示例 3：</strong></h3><pre><code>输入：n = 3输出：false</code></pre><h3 id="示例-4："><a href="#示例-4：" class="headerlink" title="示例 4："></a><strong>示例 4：</strong></h3><pre><code>输入：n = 4输出：true</code></pre><h3 id="示例-5："><a href="#示例-5：" class="headerlink" title="示例 5："></a><strong>示例 5：</strong></h3><pre><code>输入：n = 5输出：false</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul><li><code>-231 &lt;= n &lt;= 231 - 1</code></li></ul><h3 id="进阶："><a href="#进阶：" class="headerlink" title="进阶："></a><strong>进阶：</strong></h3><p>你能够不使用循环/递归解决此问题吗？</p><p>来源：力扣（LeetCode） </p><p>链接：<a href="https://leetcode-cn.com/problems/power-of-four/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/power-of-four/</a></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span>using namespace std<span class="token punctuation">;</span>class Solution<span class="token punctuation">{</span>public<span class="token punctuation">:</span>    bool <span class="token function">isPowerOfTwo</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>    <span class="token punctuation">{</span>        <span class="token keyword">return</span> n <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>n <span class="token operator">&amp;</span> <span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//进行测试，输出测试结果</span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    Solution test<span class="token punctuation">;</span>    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>    bool res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">isPowerOfTwo</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>    cout <span class="token operator">&lt;&lt;</span> boolalpha <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 力扣每日1题 </tag>
+            
+            <tag> 位运算 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣每日1题no.173 - 421.数组中两个数的最大异或值</title>
       <link href="/posts/e293.html"/>
       <url>/posts/e293.html</url>
@@ -1474,9 +1528,9 @@
             
             <tag> C++ </tag>
             
-            <tag> Visual Studio 2019 </tag>
-            
             <tag> GDAL </tag>
+            
+            <tag> Visual Studio 2019 </tag>
             
         </tags>
       
@@ -1653,9 +1707,9 @@
             
             <tag> C++ </tag>
             
-            <tag> Visual Studio 2019 </tag>
-            
             <tag> GDAL </tag>
+            
+            <tag> Visual Studio 2019 </tag>
             
         </tags>
       

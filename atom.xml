@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-05-24T14:52:19.941Z</updated>
+  <updated>2021-05-31T06:20:43.108Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,69 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.188 - 342.4的幂</title>
+    <link href="http://yewlasting.github.io/posts/7be8.html"/>
+    <id>http://yewlasting.github.io/posts/7be8.html</id>
+    <published>2021-05-31T06:15:49.000Z</published>
+    <updated>2021-05-31T06:20:43.108Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;342-4的幂&quot;&gt;&lt;a href=&quot;#342-4的幂&quot; class=&quot;headerlink&quot; title=&quot;342. 4的幂&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/power-of-four/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="位运算" scheme="http://YewLasting.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣每日1题no.187 - 231.2的幂</title>
+    <link href="http://yewlasting.github.io/posts/a960.html"/>
+    <id>http://yewlasting.github.io/posts/a960.html</id>
+    <published>2021-05-30T06:21:40.000Z</published>
+    <updated>2021-05-31T06:24:47.951Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;231-2-的幂&quot;&gt;&lt;a href=&quot;#231-2-的幂&quot; class=&quot;headerlink&quot; title=&quot;231. 2 的幂&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/power-of-two/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="位运算" scheme="http://YewLasting.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.173 - 421.数组中两个数的最大异或值</title>
     <link href="http://yewlasting.github.io/posts/e293.html"/>
     <id>http://yewlasting.github.io/posts/e293.html</id>
     <published>2021-05-24T14:45:30.000Z</published>
-    <updated>2021-05-24T14:52:19.941Z</updated>
+    <updated>2021-05-24T14:52:56.393Z</updated>
     
     <summary type="html">
     
@@ -52,7 +110,7 @@
     <link href="http://yewlasting.github.io/posts/304.html"/>
     <id>http://yewlasting.github.io/posts/304.html</id>
     <published>2021-05-24T14:26:07.000Z</published>
-    <updated>2021-05-24T14:43:14.242Z</updated>
+    <updated>2021-05-24T14:52:56.397Z</updated>
     
     <summary type="html">
     
@@ -561,66 +619,6 @@
       <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
     
       <category term="数学" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.155 - 633.平方数之和</title>
-    <link href="http://yewlasting.github.io/posts/b976.html"/>
-    <id>http://yewlasting.github.io/posts/b976.html</id>
-    <published>2021-04-28T15:01:56.000Z</published>
-    <updated>2021-05-09T15:13:23.294Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;633-平方数之和&quot;&gt;&lt;a href=&quot;#633-平方数之和&quot; class=&quot;headerlink&quot; title=&quot;633. 平方数之和&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="数学" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.154 - 938.二叉搜索树的范围和</title>
-    <link href="http://yewlasting.github.io/posts/91f5.html"/>
-    <id>http://yewlasting.github.io/posts/91f5.html</id>
-    <published>2021-04-27T03:04:34.000Z</published>
-    <updated>2021-04-27T03:19:50.593Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;938-二叉搜索树的范围和&quot;&gt;&lt;a href=&quot;#938-二叉搜索树的范围和&quot; class=&quot;headerlink&quot; title=&quot;938. 二叉搜索树的范围和&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="二分查找" scheme="http://YewLasting.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
-    
-      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
