@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.59 - 328.奇偶链表, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.195 - 494.目标和, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.59 - 328.奇偶链表 | unlasting</title>
+    <title>力扣每日1题no.195 - 494.目标和 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.59 - 328.奇偶链表</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.195 - 494.目标和</h1>
                 </div>
             </div>
         </div>
@@ -373,6 +373,14 @@
                                 <span class="chip bg-color">力扣每日1题</span>
                             </a>
                         
+                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                <span class="chip bg-color">动态规划</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">
+                                <span class="chip bg-color">深度优先搜索</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -394,28 +402,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-13
+                    2021-06-07
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-13
+                    2021-06-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    546
+                    599
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -430,81 +438,119 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="328-奇偶链表"><a href="#328-奇偶链表" class="headerlink" title="328. 奇偶链表"></a><a href="https://leetcode-cn.com/problems/odd-even-linked-list/" target="_blank" rel="noopener">328. 奇偶链表</a></h1><p><strong>难度：</strong>中等</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个单链表，把所有的奇数节点和偶数节点分别排在一起。请注意，这里的奇数节点和偶数节点指的是节点编号的奇偶性，而不是节点的值的奇偶性。</p>
-<p>请尝试使用原地算法完成。你的算法的空间复杂度应为 O(1)，时间复杂度应为 O(nodes)，nodes 为节点总数。</p>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
-输出: 1-&gt;3-&gt;5-&gt;2-&gt;4-&gt;NULL</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>输入: 2-&gt;1-&gt;3-&gt;5-&gt;6-&gt;4-&gt;7-&gt;NULL 
-输出: 2-&gt;3-&gt;6-&gt;7-&gt;1-&gt;5-&gt;4-&gt;NULL</code></pre><h3 id="说明"><a href="#说明" class="headerlink" title="说明:"></a><strong>说明:</strong></h3><ul>
-<li>应当保持奇数节点和偶数节点的相对顺序。</li>
-<li>链表的第一个节点视为奇数节点，第二个节点视为偶数节点，以此类推。</li>
+                <h1 id="494-目标和"><a href="#494-目标和" class="headerlink" title="494. 目标和"></a><a href="https://leetcode-cn.com/problems/target-sum/" target="_blank" rel="noopener">494. 目标和</a></h1><p><strong>难度</strong>：中等</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>给你一个整数数组 <code>nums</code> 和一个整数 <code>target</code> 。</p>
+<p>向数组中的每个整数前添加 <code>'+'</code> 或 <code>'-'</code> ，然后串联起所有整数，可以构造一个 <strong>表达式</strong> ：</p>
+<ul>
+<li>例如，<code>nums = [2, 1]</code> ，可以在 <code>2</code> 之前添加 <code>'+'</code> ，在 <code>1</code> 之前添加 <code>'-'</code> ，然后串联起来得到表达式 <code>"+2-1"</code> 。</li>
+</ul>
+<p>返回可以通过上述方法构造的、运算结果等于 <code>target</code> 的不同 <strong>表达式</strong> 的数目。</p>
+<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：nums = [1,1,1,1,1], target = 3
+输出：5
+解释：一共有 5 种方法让最终目标和为 3 。
+-1 + 1 + 1 + 1 + 1 = 3
++1 - 1 + 1 + 1 + 1 = 3
++1 + 1 - 1 + 1 + 1 = 3
++1 + 1 + 1 - 1 + 1 = 3
++1 + 1 + 1 + 1 - 1 = 3</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：nums = [1], target = 1
+输出：1</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
+<li><code>1 &lt;= nums.length &lt;= 20</code></li>
+<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
+<li><code>0 &lt;= sum(nums[i]) &lt;= 1000</code></li>
+<li><code>-1000 &lt;= target &lt;= 100</code></li>
 </ul>
 <p>来源：力扣（LeetCode） </p>
-<p>链接：<a href="https://leetcode-cn.com/problems/odd-even-linked-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/odd-even-linked-list/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/target-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/target-sum/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">// 2020.11.13</span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span>
 using namespace std<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">// Definition for singly-linked list.</span>
-<span class="token keyword">struct</span> ListNode
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> val<span class="token punctuation">;</span>
-    ListNode <span class="token operator">*</span>next<span class="token punctuation">;</span>
-    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> ListNode <span class="token operator">*</span>next<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token function">val</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">next</span><span class="token punctuation">(</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-class Solution
-<span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">// class Solution {</span>
+<span class="token comment" spellcheck="true">// private:</span>
+<span class="token comment" spellcheck="true">//     void DFS(vector&lt;int>&amp; nums,int i,int&amp; res, int target, int target_now)</span>
+<span class="token comment" spellcheck="true">//     {</span>
+<span class="token comment" spellcheck="true">//         if(i==nums.size())</span>
+<span class="token comment" spellcheck="true">//         {</span>
+<span class="token comment" spellcheck="true">//             if(target_now==target)</span>
+<span class="token comment" spellcheck="true">//             {</span>
+<span class="token comment" spellcheck="true">//                 ++res;</span>
+<span class="token comment" spellcheck="true">//             }</span>
+<span class="token comment" spellcheck="true">//             return;</span>
+<span class="token comment" spellcheck="true">//         }</span>
+<span class="token comment" spellcheck="true">//         else</span>
+<span class="token comment" spellcheck="true">//         {</span>
+<span class="token comment" spellcheck="true">//             DFS(nums,i+1,res,target,target_now+nums[i]);</span>
+<span class="token comment" spellcheck="true">//             DFS(nums,i+1,res,target,target_now-nums[i]);</span>
+<span class="token comment" spellcheck="true">//         }</span>
+<span class="token comment" spellcheck="true">//     }</span>
+<span class="token comment" spellcheck="true">// public:</span>
+<span class="token comment" spellcheck="true">//     int findTargetSumWays(vector&lt;int>&amp; nums, int target) </span>
+<span class="token comment" spellcheck="true">//     {</span>
+<span class="token comment" spellcheck="true">//         //第一步遍历数组的每个元素</span>
+<span class="token comment" spellcheck="true">//         //      对于每个元素分情况讨论正负号</span>
+<span class="token comment" spellcheck="true">//         //      如果满足target 则++</span>
+<span class="token comment" spellcheck="true">//         int res=0;</span>
+<span class="token comment" spellcheck="true">//         DFS(nums,0,res,target,0);</span>
+<span class="token comment" spellcheck="true">//         return res;</span>
+<span class="token comment" spellcheck="true">//     }</span>
+<span class="token comment" spellcheck="true">// };</span>
+class Solution <span class="token punctuation">{</span>
 public<span class="token punctuation">:</span>
-    ListNode <span class="token operator">*</span><span class="token function">oddEvenList</span><span class="token punctuation">(</span>ListNode <span class="token operator">*</span>head<span class="token punctuation">)</span>
+    <span class="token keyword">int</span> <span class="token function">findTargetSumWays</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">&amp;</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> 
     <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> nullptr<span class="token punctuation">)</span>
+        <span class="token keyword">int</span> sum<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">&amp;</span> i<span class="token punctuation">:</span>nums<span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+            sum<span class="token operator">+</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        ListNode <span class="token operator">*</span>evenHead <span class="token operator">=</span> head<span class="token operator">-></span>next<span class="token punctuation">;</span>
-        ListNode <span class="token operator">*</span>odd <span class="token operator">=</span> head<span class="token punctuation">;</span>
-        ListNode <span class="token operator">*</span>even <span class="token operator">=</span> evenHead<span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>even <span class="token operator">!=</span> nullptr <span class="token operator">&amp;&amp;</span> even<span class="token operator">-></span>next <span class="token operator">!=</span> nullptr<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//代表even->next不空，链表至少有三个节点时，带上末尾的空节点就是四个节点足够完成一轮交换</span>
+        <span class="token keyword">int</span> dif<span class="token operator">=</span>sum<span class="token operator">-</span>target<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>dif<span class="token operator">&lt;</span><span class="token number">0</span><span class="token operator">||</span>dif<span class="token operator">%</span><span class="token number">2</span><span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            odd<span class="token operator">-></span>next <span class="token operator">=</span> even<span class="token operator">-></span>next<span class="token punctuation">;</span>
-            odd <span class="token operator">=</span> odd<span class="token operator">-></span>next<span class="token punctuation">;</span>
-            even<span class="token operator">-></span>next <span class="token operator">=</span> odd<span class="token operator">-></span>next<span class="token punctuation">;</span>
-            even <span class="token operator">=</span> even<span class="token operator">-></span>next<span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        odd<span class="token operator">-></span>next <span class="token operator">=</span> evenHead<span class="token punctuation">;</span>
-        <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> neg<span class="token operator">=</span><span class="token punctuation">(</span>sum<span class="token operator">-</span>target<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> n<span class="token operator">=</span>nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//dp[i][j]代表前i个数字中满足和为j得方案数</span>
+        <span class="token comment" spellcheck="true">//1&lt;=i&lt;=n</span>
+        <span class="token comment" spellcheck="true">//0&lt;=j&lt;=neg</span>
+        vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">dp</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">(</span>neg<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> num<span class="token operator">=</span>nums<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>neg<span class="token punctuation">;</span><span class="token operator">++</span>j<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>dp<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>num<span class="token operator">&lt;=</span>j<span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">+</span><span class="token operator">=</span>dp<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span>num<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> dp<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>neg<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    ListNode <span class="token operator">*</span>node5 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> nullptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    ListNode <span class="token operator">*</span>node4 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> node5<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    ListNode <span class="token operator">*</span>node3 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> node4<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    ListNode <span class="token operator">*</span>node2 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> node3<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    ListNode <span class="token operator">*</span>node1 <span class="token operator">=</span> new <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> node2<span class="token punctuation">)</span><span class="token punctuation">;</span>
     Solution test<span class="token punctuation">;</span>
-    ListNode <span class="token operator">*</span>head <span class="token operator">=</span> node1<span class="token punctuation">;</span>
-    ListNode <span class="token operator">*</span>res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">oddEvenList</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> res<span class="token operator">-></span>val <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
-        res <span class="token operator">=</span> res<span class="token operator">-></span>next<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> nums<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> target<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> res<span class="token operator">=</span>test<span class="token punctuation">.</span><span class="token function">findTargetSumWays</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -548,7 +594,7 @@ public<span class="token punctuation">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/ac05.html">http://YewLasting.github.io/posts/ac05.html</a>
+                    <a href="http://YewLasting.github.io/posts/a8dd.html">http://YewLasting.github.io/posts/a8dd.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -588,6 +634,14 @@ public<span class="token punctuation">:</span>
                             
                                 <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
                                     <span class="chip bg-color">力扣每日1题</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                    <span class="chip bg-color">动态规划</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">
+                                    <span class="chip bg-color">深度优先搜索</span>
                                 </a>
                             
                         </div>
@@ -755,35 +809,93 @@ public<span class="token punctuation">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/6ff9.html">
+                <a href="/posts/a8dd.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="力扣每日1题no.60 - 1122.数组的相对排序">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="力扣每日1题no.195 - 494.目标和">
                         
-                        <span class="card-title">力扣每日1题no.60 - 1122.数组的相对排序</span>
+                        <span class="card-title">力扣每日1题no.195 - 494.目标和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1122. 数组的相对排序难度：简单
-题干给你两个数组，arr1 和 arr2，
+                            494. 目标和难度：中等
+题干给你一个整数数组 nums 和一个整数 target 。
+向数组中的每个整数前添加 '+' 或 '-' ，然后串联起所有整数，可以构造一个 表达式 ：
 
-arr2 中的元素各不相同
-arr2 中的每个元素都出现在 arr1 中
-
-对 arr1 中的元素进行排序，使 arr1 中项的相对顺序和 arr2 中的相
+例如，nums = [2, 1] ，可以在 2 之前添
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-14
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
+                        <span class="chip bg-color">力扣每日1题</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">
+                        <span class="chip bg-color">深度优先搜索</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/1005.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="力扣每日1题no.189 - 1744.你能在你最喜欢的那天吃到你最喜欢的糖果吗?">
+                        
+                        <span class="card-title">力扣每日1题no.189 - 1744.你能在你最喜欢的那天吃到你最喜欢的糖果吗?</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1744. 你能在你最喜欢的那天吃到你最喜欢的糖果吗？难度：中等
+题干给你一个下标从 0 开始的正整数数组 candiesCount ，其中 candiesCount[i] 表示你拥有的第 i 类糖果的数目。同时给你一个二维数组 queri
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -803,56 +915,8 @@ arr2 中的每个元素都出现在 arr1 中
                         <span class="chip bg-color">力扣每日1题</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/5d68.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="力扣每日1题no.58 - 922.按奇偶排序数组II">
-                        
-                        <span class="card-title">力扣每日1题no.58 - 922.按奇偶排序数组II</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            922. 按奇偶排序数组 II难度：简单
-题干给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。
-对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。
-你可以返回任何满足上述条件
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/leetcode/" class="post-category">
-                                    leetcode
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
-                        <span class="chip bg-color">力扣每日1题</span>
+                    <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
+                        <span class="chip bg-color">位运算</span>
                     </a>
                     
                 </div>
