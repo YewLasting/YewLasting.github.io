@@ -1656,9 +1656,9 @@
       
         <tags>
             
-            <tag> MSVC </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> MSVC </tag>
             
         </tags>
       
@@ -1685,9 +1685,9 @@
             
             <tag> C++ </tag>
             
-            <tag> Visual Studio 2019 </tag>
-            
             <tag> GDAL </tag>
+            
+            <tag> Visual Studio 2019 </tag>
             
         </tags>
       
@@ -2166,9 +2166,9 @@
             
             <tag> C++ </tag>
             
-            <tag> Visual Studio 2019 </tag>
-            
             <tag> GDAL </tag>
+            
+            <tag> Visual Studio 2019 </tag>
             
         </tags>
       
