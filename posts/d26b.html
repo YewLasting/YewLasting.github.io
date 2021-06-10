@@ -244,6 +244,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -861,12 +874,12 @@ public<span class="token punctuation">:</span>
                         <span class="chip bg-color">C++</span>
                     </a>
                     
-                    <a href="/tags/GDAL/">
-                        <span class="chip bg-color">GDAL</span>
-                    </a>
-                    
                     <a href="/tags/Visual-Studio-2019/">
                         <span class="chip bg-color">Visual Studio 2019</span>
+                    </a>
+                    
+                    <a href="/tags/GDAL/">
+                        <span class="chip bg-color">GDAL</span>
                     </a>
                     
                 </div>
