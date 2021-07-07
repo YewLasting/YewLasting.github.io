@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>TeXLive 环境的安装与配置</title>
+      <link href="/posts/7e0b.html"/>
+      <url>/posts/7e0b.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="TeXLive-环境的安装与配置"><a href="#TeXLive-环境的安装与配置" class="headerlink" title="TeXLive 环境的安装与配置"></a>TeXLive 环境的安装与配置</h1><h2 id="1-TeX-Live-2021下载"><a href="#1-TeX-Live-2021下载" class="headerlink" title="1.TeX Live 2021下载"></a>1.TeX Live 2021下载</h2><p><a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/" target="_blank" rel="noopener">下载地址</a></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706155431.png" alt="1"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706165234.png" alt="2"></p><h2 id="2-TeX-Live-2021安装"><a href="#2-TeX-Live-2021安装" class="headerlink" title="2.TeX Live 2021安装"></a>2.TeX Live 2021安装</h2><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706165624.png" alt="3"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706165845.png" alt="4"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706170054.png" alt="5"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706170120.png" alt="6"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706170301.png" alt="7"></p><p>为了减小TeX Live占用的内存，在Customize这里取消安装Texworks(比较老的编辑器)以及部分我们日常不会使用的语言包，例如阿拉伯语、斯洛伐克语等，设置如下：</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706170658.png" alt="8"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706170715.png" alt="9"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706170808.png" alt="10"></p><p>开始安装</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210706170833.png" alt="11"></p><p>安装完毕</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707102645.png" alt="12"></p><p>安装版本确认</p><pre><code>tex -vlatex -vxelatex -vpdflatex -v</code></pre><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707103617.png" alt="13"></p><h2 id="3-Tex-studio-3-1-2下载"><a href="#3-Tex-studio-3-1-2下载" class="headerlink" title="3.Tex studio 3.1.2下载"></a>3.Tex studio 3.1.2下载</h2><p>Tex live是Tex的一个发行版，给Tex的使用提供了工作环境，Tex studio是编辑器，但是比Tex live自带的Texwork editor编辑器好用。</p><p><a href="https://mirrors.tuna.tsinghua.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/" target="_blank" rel="noopener">下载地址</a></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707105126.png" alt="14"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707143335.png" alt="15"></p><h2 id="4-Tex-studio-3-1-2安装"><a href="#4-Tex-studio-3-1-2安装" class="headerlink" title="4.Tex studio 3.1.2安装"></a>4.Tex studio 3.1.2安装</h2><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707143412.png" alt="16"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707143439.png" alt="17"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707143515.png" alt="18"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707143530.png" alt="19"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707143602.png" alt="20"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707143738.png" alt="21"></p><p>打开软件后，接下来设置中文界面</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707143849.png" alt="22"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707144035.png" alt="23"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707144050.png" alt="24"></p><p>添加行号：</p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707144203.png" alt="25"></p><p><img src="https://gitee.com/YewLasting/blogimage/raw/master/20210707144448.png" alt="26"></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li><a href="https://zhuanlan.zhihu.com/p/41855480" target="_blank" rel="noopener">最新TeXLive 环境的安装与配置</a></li><li><a href="https://blog.csdn.net/zaishuiyifangxym/article/details/88170827" target="_blank" rel="noopener">LaTex 论文排版(1): Win10 下 LaTex所需软件安装 (Tex live 2018 + Tex studio)</a></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件安装 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LaTeX </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣每日1题no.224 - 1418.点菜展示表</title>
       <link href="/posts/aff.html"/>
       <url>/posts/aff.html</url>
@@ -24,9 +49,9 @@
             
             <tag> 排序 </tag>
             
-            <tag> 数组 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 数组 </tag>
             
             <tag> 哈希表 </tag>
             
@@ -1977,9 +2002,9 @@
       
         <tags>
             
-            <tag> MSVC </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> MSVC </tag>
             
         </tags>
       
