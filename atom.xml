@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-07-07T13:49:20.689Z</updated>
+  <updated>2021-07-08T09:18:24.597Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.226 - 930.和相同的二元子数组</title>
+    <link href="http://yewlasting.github.io/posts/f94.html"/>
+    <id>http://yewlasting.github.io/posts/f94.html</id>
+    <published>2021-07-08T09:01:24.000Z</published>
+    <updated>2021-07-08T09:18:24.597Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;930-和相同的二元子数组&quot;&gt;&lt;a href=&quot;#930-和相同的二元子数组&quot; class=&quot;headerlink&quot; title=&quot;930. 和相同的二元子数组&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="哈希表" scheme="http://YewLasting.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="前缀和" scheme="http://YewLasting.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    
+      <category term="滑动窗口" scheme="http://YewLasting.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.225 - 1711.大餐计数</title>
     <link href="http://yewlasting.github.io/posts/b1fd.html"/>
     <id>http://yewlasting.github.io/posts/b1fd.html</id>
     <published>2021-07-07T13:15:42.000Z</published>
-    <updated>2021-07-07T13:49:20.689Z</updated>
+    <updated>2021-07-08T09:03:34.878Z</updated>
     
     <summary type="html">
     
@@ -539,9 +574,9 @@
     
       <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
-      <category term="数学" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="前缀和" scheme="http://YewLasting.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    
+      <category term="数学" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="同余定理" scheme="http://YewLasting.github.io/tags/%E5%90%8C%E4%BD%99%E5%AE%9A%E7%90%86/"/>
     
@@ -576,9 +611,9 @@
     
       <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
-      <category term="数学" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="前缀和" scheme="http://YewLasting.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    
+      <category term="数学" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="同余定理" scheme="http://YewLasting.github.io/tags/%E5%90%8C%E4%BD%99%E5%AE%9A%E7%90%86/"/>
     
@@ -598,35 +633,6 @@
         
         
           &lt;h1 id=&quot;342-4的幂&quot;&gt;&lt;a href=&quot;#342-4的幂&quot; class=&quot;headerlink&quot; title=&quot;342. 4的幂&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/power-of-four/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="位运算" scheme="http://YewLasting.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.187 - 231.2的幂</title>
-    <link href="http://yewlasting.github.io/posts/a960.html"/>
-    <id>http://yewlasting.github.io/posts/a960.html</id>
-    <published>2021-05-30T06:21:40.000Z</published>
-    <updated>2021-05-31T06:25:22.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;231-2-的幂&quot;&gt;&lt;a href=&quot;#231-2-的幂&quot; class=&quot;headerlink&quot; title=&quot;231. 2 的幂&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode-cn.com/problems/power-of-two/&quot;
         
       
     
