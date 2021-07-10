@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>力扣每日1题no.228 - 981.基于时间的键值存储</title>
+      <link href="/posts/d747.html"/>
+      <url>/posts/d747.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="981-基于时间的键值存储"><a href="#981-基于时间的键值存储" class="headerlink" title="981. 基于时间的键值存储"></a><a href="https://leetcode-cn.com/problems/time-based-key-value-store/" target="_blank" rel="noopener">981. 基于时间的键值存储</a></h1><p><strong>难度</strong>：中等</p><h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>创建一个基于时间的键值存储类 <code>TimeMap</code>，它支持下面两个操作：</p><ol><li><code>set(string key, string value, int timestamp)</code></li></ol><ul><li>存储键 <code>key</code>、值 <code>value</code>，以及给定的时间戳 <code>timestamp</code>。</li></ul><ol start="2"><li><code>get(string key, int timestamp)</code></li></ol><ul><li>返回先前调用 <code>set(key, value, timestamp_prev)</code> 所存储的值，其中 <code>timestamp_prev &lt;= timestamp</code>。</li><li>如果有多个这样的值，则返回对应最大的 <code>timestamp_prev</code> 的那个值。</li><li>如果没有值，则返回空字符串（<code>""</code>）。</li></ul><h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：inputs = ["TimeMap","set","get","get","set","get","get"], inputs = [[],["foo","bar",1],["foo",1],["foo",3],["foo","bar2",4],["foo",4],["foo",5]]输出：[null,null,"bar","bar",null,"bar2","bar2"]解释：  TimeMap kv;   kv.set("foo", "bar", 1); // 存储键 "foo" 和值 "bar" 以及时间戳 timestamp = 1   kv.get("foo", 1);  // 输出 "bar"   kv.get("foo", 3); // 输出 "bar" 因为在时间戳 3 和时间戳 2 处没有对应 "foo" 的值，所以唯一的值位于时间戳 1 处（即 "bar"）   kv.set("foo", "bar2", 4);   kv.get("foo", 4); // 输出 "bar2"   kv.get("foo", 5); // 输出 "bar2"   </code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：inputs = ["TimeMap","set","set","get","get","get","get","get"], inputs = [[],["love","high",10],["love","low",20],["love",5],["love",10],["love",15],["love",20],["love",25]]输出：[null,null,null,"","high","high","low","low"]</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ol><li>所有的键/值字符串都是小写的。</li><li>所有的键/值字符串长度都在 <code>[1, 100]</code> 范围内。</li><li>所有 <code>TimeMap.set</code> 操作中的时间戳 <code>timestamps</code> 都是严格递增的。</li><li><code>1 &lt;= timestamp &lt;= 10^7</code></li><li><code>TimeMap.set</code> 和 <code>TimeMap.get</code> 函数在每个测试用例中将（组合）调用总计 <code>120000</code> 次。</li></ol><p>来源：力扣（LeetCode） </p><p>链接：<a href="https://leetcode-cn.com/problems/time-based-key-value-store/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/time-based-key-value-store/</a></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span></span>using namespace std<span class="token punctuation">;</span>class TimeMap<span class="token punctuation">{</span>private<span class="token punctuation">:</span>    unordered_map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> string<span class="token operator">>></span><span class="token operator">></span> m<span class="token punctuation">;</span>public<span class="token punctuation">:</span>    <span class="token comment" spellcheck="true">/** Initialize your data structure here. */</span>    <span class="token function">TimeMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token punctuation">{</span>    <span class="token punctuation">}</span>    <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span>string key<span class="token punctuation">,</span> string value<span class="token punctuation">,</span> <span class="token keyword">int</span> timestamp<span class="token punctuation">)</span>    <span class="token punctuation">{</span>        m<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>timestamp<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    string <span class="token function">get</span><span class="token punctuation">(</span>string key<span class="token punctuation">,</span> <span class="token keyword">int</span> timestamp<span class="token punctuation">)</span>    <span class="token punctuation">{</span>        <span class="token keyword">auto</span> <span class="token operator">&amp;</span>pairs <span class="token operator">=</span> m<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>        pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> string<span class="token operator">></span> p <span class="token operator">=</span> <span class="token punctuation">{</span>timestamp<span class="token punctuation">,</span> <span class="token function">string</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">127</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>        <span class="token keyword">auto</span> i <span class="token operator">=</span> <span class="token function">upper_bound</span><span class="token punctuation">(</span>pairs<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pairs<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> p<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> pairs<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>        <span class="token punctuation">{</span>            <span class="token keyword">return</span> <span class="token punctuation">(</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-></span>second<span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">/** * Your TimeMap object will be instantiated and called as such: * TimeMap* obj = new TimeMap(); * obj->set(key,value,timestamp); * string param_2 = obj->get(key,timestamp); */</span><span class="token comment" spellcheck="true">//进行测试，输出测试结果</span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    TimeMap <span class="token operator">*</span>obj <span class="token operator">=</span> new <span class="token function">TimeMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    obj<span class="token operator">-></span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"foo"</span><span class="token punctuation">,</span> <span class="token string">"bar"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    string param_2 <span class="token operator">=</span> obj<span class="token operator">-></span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"foo"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    cout <span class="token operator">&lt;&lt;</span> param_2 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//getchar();</span>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 力扣每日1题 </tag>
+            
+            <tag> 哈希表 </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 二分查找 </tag>
+            
+            <tag> 设计类 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣每日1题no.227 - 面试题17.10.主要元素</title>
       <link href="/posts/b0ee.html"/>
       <url>/posts/b0ee.html</url>
@@ -144,9 +177,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 排序 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -351,9 +384,9 @@
             
             <tag> C++ </tag>
             
-            <tag> GDAL </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> GDAL </tag>
             
         </tags>
       
@@ -1385,9 +1418,9 @@
             
             <tag> 力扣每日1题 </tag>
             
-            <tag> 动态规划 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 动态规划 </tag>
             
         </tags>
       
@@ -1414,9 +1447,9 @@
             
             <tag> 力扣每日1题 </tag>
             
-            <tag> 双指针 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 双指针 </tag>
             
         </tags>
       
@@ -1987,9 +2020,9 @@
             
             <tag> 动态规划 </tag>
             
-            <tag> 单调栈 </tag>
-            
             <tag> 双指针 </tag>
+            
+            <tag> 单调栈 </tag>
             
         </tags>
       
@@ -2095,9 +2128,9 @@
       
         <tags>
             
-            <tag> Visual Studio 2019 </tag>
-            
             <tag> MSVC </tag>
+            
+            <tag> Visual Studio 2019 </tag>
             
         </tags>
       
@@ -2124,9 +2157,9 @@
             
             <tag> C++ </tag>
             
-            <tag> GDAL </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> GDAL </tag>
             
         </tags>
       
