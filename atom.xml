@@ -458,9 +458,9 @@
     
       <category term="C++" scheme="http://YewLasting.github.io/tags/C/"/>
     
-      <category term="GDAL" scheme="http://YewLasting.github.io/tags/GDAL/"/>
-    
       <category term="Visual Studio 2019" scheme="http://YewLasting.github.io/tags/Visual-Studio-2019/"/>
+    
+      <category term="GDAL" scheme="http://YewLasting.github.io/tags/GDAL/"/>
     
   </entry>
   
