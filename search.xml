@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>力扣每日1题no.233 - 1846.减小和重新排列数组后的最大元素</title>
+      <link href="/posts/7822.html"/>
+      <url>/posts/7822.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1846-减小和重新排列数组后的最大元素"><a href="#1846-减小和重新排列数组后的最大元素" class="headerlink" title="1846. 减小和重新排列数组后的最大元素"></a><a href="https://leetcode-cn.com/problems/maximum-element-after-decreasing-and-rearranging/" target="_blank" rel="noopener">1846. 减小和重新排列数组后的最大元素</a></h1><p><strong>难度</strong>：中等</p><h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>给你一个正整数数组 <code>arr</code> 。请你对 <code>arr</code> 执行一些操作（也可以不进行任何操作），使得数组满足以下条件：</p><ul><li><code>arr</code> 中 <strong>第一个</strong> 元素必须为 <code>1</code> 。</li><li>任意相邻两个元素的差的绝对值 <strong>小于等于</strong> <code>1</code> ，也就是说，对于任意的 <code>1 &lt;= i &lt; arr.length</code> （<strong>数组下标从 0 开始</strong>），都满足 <code>abs(arr[i] - arr[i - 1]) &lt;= 1</code> 。<code>abs(x)</code> 为 <code>x</code> 的绝对值。</li></ul><p>你可以执行以下 2 种操作任意次：</p><ul><li><strong>减小</strong> <code>arr</code> 中任意元素的值，使其变为一个 <strong>更小的正整数</strong> 。</li><li><strong>重新排列</strong> <code>arr</code> 中的元素，你可以以任意顺序重新排列。</li></ul><p>请你返回执行以上操作后，在满足前文所述的条件下，<code>arr</code> 中可能的 <strong>最大值</strong> 。</p><h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：arr = [2,2,1,2,1]输出：2解释：我们可以重新排列 arr 得到 [1,2,2,2,1] ，该数组满足所有条件。arr 中最大元素为 2 。</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：arr = [100,1,1000]输出：3解释：一个可行的方案如下：1. 重新排列 arr 得到 [1,100,1000] 。2. 将第二个元素减小为 2 。3. 将第三个元素减小为 3 。现在 arr = [1,2,3] ，满足所有条件。arr 中最大元素为 3 。</code></pre><h3 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a><strong>示例 3：</strong></h3><pre><code>输入：arr = [1,2,3,4,5]输出：5解释：数组已经满足所有条件，最大元素为 5 。</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul><li><code>1 &lt;= arr.length &lt;= 105</code></li><li><code>1 &lt;= arr[i] &lt;= 109</code></li></ul><p>来源：力扣（LeetCode） </p><p>链接：<a href="https://leetcode-cn.com/problems/maximum-element-after-decreasing-and-rearranging/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/maximum-element-after-decreasing-and-rearranging/</a></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span></span>using namespace std<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// //法一</span><span class="token comment" spellcheck="true">// class Solution {</span><span class="token comment" spellcheck="true">// public:</span><span class="token comment" spellcheck="true">//     int maximumElementAfterDecrementingAndRearranging(vector&lt;int>&amp; arr)</span><span class="token comment" spellcheck="true">//     {</span><span class="token comment" spellcheck="true">//         sort(arr.begin(),arr.end());</span><span class="token comment" spellcheck="true">//         int n=arr.size();</span><span class="token comment" spellcheck="true">//         arr[0]=1;</span><span class="token comment" spellcheck="true">//         for(int i=1;i&lt;n;++i)</span><span class="token comment" spellcheck="true">//         {</span><span class="token comment" spellcheck="true">//             if(arr[i]>arr[i-1]+1)</span><span class="token comment" spellcheck="true">//             {</span><span class="token comment" spellcheck="true">//                 arr[i]=arr[i-1]+1;</span><span class="token comment" spellcheck="true">//             }</span><span class="token comment" spellcheck="true">//         }</span><span class="token comment" spellcheck="true">//         return arr.back();</span><span class="token comment" spellcheck="true">//     }</span><span class="token comment" spellcheck="true">// };</span><span class="token comment" spellcheck="true">// //法二</span>class Solution<span class="token punctuation">{</span>public<span class="token punctuation">:</span>    <span class="token keyword">int</span> <span class="token function">maximumElementAfterDecrementingAndRearranging</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token operator">&amp;</span>arr<span class="token punctuation">)</span>    <span class="token punctuation">{</span>        <span class="token keyword">int</span> n <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">cnt</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">&amp;</span>i <span class="token punctuation">:</span> arr<span class="token punctuation">)</span>        <span class="token punctuation">{</span>            <span class="token operator">++</span>cnt<span class="token punctuation">[</span><span class="token function">min</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">int</span> miss <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>        <span class="token punctuation">{</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>cnt<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>            <span class="token punctuation">{</span>                <span class="token operator">++</span>miss<span class="token punctuation">;</span>            <span class="token punctuation">}</span>            <span class="token keyword">else</span>            <span class="token punctuation">{</span>                miss <span class="token operator">-</span><span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>cnt<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> miss<span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> n <span class="token operator">-</span> miss<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//进行测试，输出测试结果</span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    Solution test<span class="token punctuation">;</span>    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>    <span class="token keyword">int</span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">maximumElementAfterDecrementingAndRearranging</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//getchar();</span>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 力扣每日1题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 计数排序 </tag>
+            
+            <tag> 贪心 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣每日1题no.229 - 274.H指数</title>
       <link href="/posts/fb18.html"/>
       <url>/posts/fb18.html</url>
@@ -206,9 +237,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 字符串 </tag>
-            
             <tag> 排序 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
@@ -413,9 +444,9 @@
             
             <tag> C++ </tag>
             
-            <tag> GDAL </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> GDAL </tag>
             
         </tags>
       
@@ -2186,9 +2217,9 @@
             
             <tag> C++ </tag>
             
-            <tag> GDAL </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> GDAL </tag>
             
         </tags>
       
