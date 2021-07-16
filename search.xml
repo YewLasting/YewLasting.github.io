@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>力扣每日1题no.234 - 剑指Offer53-I.在排序数组中查找数字I</title>
+      <link href="/posts/b6df.html"/>
+      <url>/posts/b6df.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="剑指-Offer-53-I-在排序数组中查找数字-I"><a href="#剑指-Offer-53-I-在排序数组中查找数字-I" class="headerlink" title="剑指 Offer 53 - I. 在排序数组中查找数字 I"></a><a href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/" target="_blank" rel="noopener">剑指 Offer 53 - I. 在排序数组中查找数字 I</a></h1><p><strong>难度：</strong></p><p>简单</p><h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>统计一个数字在排序数组中出现的次数。</p><h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>输入: nums = [5,7,7,8,8,10], target = 8输出: 2</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>输入: nums = [5,7,7,8,8,10], target = 6输出: 0</code></pre><h3 id="限制："><a href="#限制：" class="headerlink" title="限制："></a><strong>限制：</strong></h3><pre><code>0 &lt;= 数组长度 &lt;= 50000</code></pre><h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a><strong>注意：</strong></h3><p>本题与主站 <a href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/" target="_blank" rel="noopener">34 题</a>相同（仅返回值不同）</p><p>来源：力扣（LeetCode） </p><p>链接：<a href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/</a></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span></span>using namespace std<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// //遍历</span><span class="token comment" spellcheck="true">// class Solution {</span><span class="token comment" spellcheck="true">// public:</span><span class="token comment" spellcheck="true">//     int search(vector&lt;int>&amp; nums, int target)</span><span class="token comment" spellcheck="true">//     {</span><span class="token comment" spellcheck="true">//         int res=0;</span><span class="token comment" spellcheck="true">//         for(auto &amp;i:nums)</span><span class="token comment" spellcheck="true">//         {</span><span class="token comment" spellcheck="true">//             if(target==i)</span><span class="token comment" spellcheck="true">//             {</span><span class="token comment" spellcheck="true">//                 ++res;</span><span class="token comment" spellcheck="true">//             }</span><span class="token comment" spellcheck="true">//         }</span><span class="token comment" spellcheck="true">//         return res;</span><span class="token comment" spellcheck="true">//     }</span><span class="token comment" spellcheck="true">// };</span><span class="token comment" spellcheck="true">//二分</span>class Solution<span class="token punctuation">{</span>public<span class="token punctuation">:</span>    <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token operator">&amp;</span>nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span>    <span class="token punctuation">{</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span>        <span class="token punctuation">{</span>            <span class="token keyword">int</span> mid <span class="token operator">=</span> l <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>r <span class="token operator">-</span> l<span class="token punctuation">)</span> <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span>            <span class="token punctuation">{</span>                l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>            <span class="token keyword">else</span>            <span class="token punctuation">{</span>                r <span class="token operator">=</span> mid<span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">!=</span> target<span class="token punctuation">)</span>            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//cout&lt;&lt;l&lt;&lt;" "&lt;&lt;r&lt;&lt;endl;</span>        <span class="token keyword">int</span> i<span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> l<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>        <span class="token punctuation">{</span>            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> target<span class="token punctuation">)</span>            <span class="token punctuation">{</span>                <span class="token keyword">break</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> i <span class="token operator">-</span> l<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//进行测试，输出测试结果</span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    Solution test<span class="token punctuation">;</span>    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> nums <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">;</span>    <span class="token keyword">int</span> target <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>    <span class="token keyword">int</span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">;</span>    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//getchar();</span>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 力扣每日1题 </tag>
+            
+            <tag> 二分查找 </tag>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣每日1题no.233 - 1846.减小和重新排列数组后的最大元素</title>
       <link href="/posts/7822.html"/>
       <url>/posts/7822.html</url>
@@ -235,9 +264,9 @@
             
             <tag> 哈希表 </tag>
             
-            <tag> 数组 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 数组 </tag>
             
             <tag> 排序 </tag>
             
@@ -444,9 +473,9 @@
             
             <tag> C++ </tag>
             
-            <tag> GDAL </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> GDAL </tag>
             
         </tags>
       
@@ -821,9 +850,9 @@
             
             <tag> 力扣每日1题 </tag>
             
-            <tag> 数学 </tag>
-            
             <tag> 位运算 </tag>
+            
+            <tag> 数学 </tag>
             
         </tags>
       
@@ -1105,9 +1134,9 @@
             
             <tag> 力扣每日1题 </tag>
             
-            <tag> 数组 </tag>
-            
             <tag> 二分查找 </tag>
+            
+            <tag> 数组 </tag>
             
         </tags>
       
@@ -1304,9 +1333,9 @@
             
             <tag> 力扣每日1题 </tag>
             
-            <tag> 数组 </tag>
-            
             <tag> 二分查找 </tag>
+            
+            <tag> 数组 </tag>
             
         </tags>
       
@@ -1333,9 +1362,9 @@
             
             <tag> 力扣每日1题 </tag>
             
-            <tag> 数组 </tag>
-            
             <tag> 二分查找 </tag>
+            
+            <tag> 数组 </tag>
             
         </tags>
       
@@ -2217,9 +2246,9 @@
             
             <tag> C++ </tag>
             
-            <tag> GDAL </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> GDAL </tag>
             
         </tags>
       
@@ -3279,9 +3308,9 @@
       
         <tags>
             
-            <tag> Visual Studio 2019 </tag>
-            
             <tag> openCV </tag>
+            
+            <tag> Visual Studio 2019 </tag>
             
         </tags>
       

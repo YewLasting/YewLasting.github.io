@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.99 - 338.比特位计数, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.234 - 剑指Offer53-I.在排序数组中查找数字I, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.99 - 338.比特位计数 | unlasting</title>
+    <title>力扣每日1题no.234 - 剑指Offer53-I.在排序数组中查找数字I | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -260,12 +260,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.99 - 338.比特位计数</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.234 - 剑指Offer53-I.在排序数组中查找数字I</h1>
                 </div>
             </div>
         </div>
@@ -388,6 +388,18 @@
                                     </span>
                                 </a>
                                 
+                                <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                                    <span class="chip bg-color">
+                                        二分查找
+                                    </span>
+                                </a>
+                                
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">
+                                        数组
+                                    </span>
+                                </a>
+                                
                         </div>
                         
                 </div>
@@ -410,7 +422,7 @@
                     <div class="post-date info-break-policy">
                         <i class="far fa-calendar-minus fa-fw"></i>
                         发布日期:&nbsp;&nbsp;
-                            2021-03-03
+                            2021-07-16
                     </div>
                     
 
@@ -418,7 +430,7 @@
                             <div class="post-date info-break-policy">
                                 <i class="far fa-calendar-check fa-fw"></i>
                                 更新日期:&nbsp;&nbsp;
-                                    2021-03-06
+                                    2021-07-16
                             </div>
                             
 
@@ -426,7 +438,7 @@
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>
                                         文章字数:&nbsp;&nbsp;
-                                            363
+                                            374
                                     </div>
                                     
 
@@ -434,7 +446,7 @@
                                             <div class="info-break-policy">
                                                 <i class="far fa-clock fa-fw"></i>
                                                 阅读时长:&nbsp;&nbsp;
-                                                    1
+                                                    2
                                                         分
                                             </div>
                                             
@@ -451,57 +463,90 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="338-比特位计数"><a href="#338-比特位计数" class="headerlink" title="338. 比特位计数"></a><a href="https://leetcode-cn.com/problems/counting-bits/" target="_blank" rel="noopener">338. 比特位计数</a></h1><p><strong>难度</strong>：中等</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>给定一个非负整数 <strong>num</strong>。对于 <strong>0 ≤ i ≤ num</strong> 范围中的每个数字 <strong>i</strong> ，计算其二进制数中的 1 的数目并将它们作为数组返回。</p>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>输入: 2
-输出: [0,1,1]</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>输入: 5
-输出: [0,1,1,2,1,2]</code></pre><h3 id="进阶"><a href="#进阶" class="headerlink" title="进阶:"></a><strong>进阶:</strong></h3><ul>
-<li>给出时间复杂度为<strong>O(n*sizeof(integer))</strong>的解答非常容易。但你可以在线性时间<strong>O(n)</strong>内用一趟扫描做到吗？</li>
-<li>要求算法的空间复杂度为<strong>O(n)</strong>。</li>
-<li>你能进一步完善解法吗？要求在C++或任何其他语言中不使用任何内置函数（如 C++ 中的 <strong>__builtin_popcount</strong>）来执行此操作。</li>
-</ul>
+                <h1 id="剑指-Offer-53-I-在排序数组中查找数字-I"><a href="#剑指-Offer-53-I-在排序数组中查找数字-I" class="headerlink" title="剑指 Offer 53 - I. 在排序数组中查找数字 I"></a><a href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/" target="_blank" rel="noopener">剑指 Offer 53 - I. 在排序数组中查找数字 I</a></h1><p><strong>难度：</strong></p>
+<p>简单</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>统计一个数字在排序数组中出现的次数。</p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><pre><code>输入: nums = [5,7,7,8,8,10], target = 8
+输出: 2</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><pre><code>输入: nums = [5,7,7,8,8,10], target = 6
+输出: 0</code></pre><h3 id="限制："><a href="#限制：" class="headerlink" title="限制："></a><strong>限制：</strong></h3><pre><code>0 &lt;= 数组长度 &lt;= 50000</code></pre><h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a><strong>注意：</strong></h3><p>本题与主站 <a href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/" target="_blank" rel="noopener">34 题</a>相同（仅返回值不同）</p>
 <p>来源：力扣（LeetCode） </p>
-<p>链接：<a href="https://leetcode-cn.com/problems/counting-bits/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/counting-bits/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2021.3.3</span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span></span>
 using namespace std<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// //遍历</span>
+<span class="token comment" spellcheck="true">// class Solution {</span>
+<span class="token comment" spellcheck="true">// public:</span>
+<span class="token comment" spellcheck="true">//     int search(vector&lt;int>&amp; nums, int target)</span>
+<span class="token comment" spellcheck="true">//     {</span>
+<span class="token comment" spellcheck="true">//         int res=0;</span>
+<span class="token comment" spellcheck="true">//         for(auto &amp;i:nums)</span>
+<span class="token comment" spellcheck="true">//         {</span>
+<span class="token comment" spellcheck="true">//             if(target==i)</span>
+<span class="token comment" spellcheck="true">//             {</span>
+<span class="token comment" spellcheck="true">//                 ++res;</span>
+<span class="token comment" spellcheck="true">//             }</span>
+<span class="token comment" spellcheck="true">//         }</span>
+<span class="token comment" spellcheck="true">//         return res;</span>
+<span class="token comment" spellcheck="true">//     }</span>
+<span class="token comment" spellcheck="true">// };</span>
+<span class="token comment" spellcheck="true">//二分</span>
 class Solution
 <span class="token punctuation">{</span>
 public<span class="token punctuation">:</span>
-    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">countBits</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span>
+    <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token operator">&amp;</span>nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">bits</span><span class="token punctuation">(</span>num <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//初值默认为0</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> num<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            bits<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> bits<span class="token punctuation">[</span>i <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>i <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> mid <span class="token operator">=</span> l <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>r <span class="token operator">-</span> l<span class="token punctuation">)</span> <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                r <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> bits<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">!=</span> target<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//cout&lt;&lt;l&lt;&lt;" "&lt;&lt;r&lt;&lt;endl;</span>
+        <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> l<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> target<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> i <span class="token operator">-</span> l<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     Solution test<span class="token punctuation">;</span>
-    <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">countBits</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> i <span class="token punctuation">:</span> res<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> nums <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> target <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//getchar();</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -545,7 +590,7 @@ public<span class="token punctuation">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/8438.html">http://YewLasting.github.io/posts/8438.html</a>
+                    <a href="http://YewLasting.github.io/posts/b6df.html">http://YewLasting.github.io/posts/b6df.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -586,6 +631,18 @@ public<span class="token punctuation">:</span>
                                     <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
                                         <span class="chip bg-color">
                                             力扣每日1题
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                                        <span class="chip bg-color">
+                                            二分查找
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                        <span class="chip bg-color">
+                                            数组
                                         </span>
                                     </a>
                                     
@@ -755,31 +812,96 @@ public<span class="token punctuation">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/5817.html">
+                <a href="/posts/b6df.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="力扣每日1题no.100 - 354. 俄罗斯套娃信封问题">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="力扣每日1题no.234 - 剑指Offer53-I.在排序数组中查找数字I">
                         
-                        <span class="card-title">力扣每日1题no.100 - 354. 俄罗斯套娃信封问题</span>
+                        <span class="card-title">力扣每日1题no.234 - 剑指Offer53-I.在排序数组中查找数字I</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            354. 俄罗斯套娃信封问题难度：困难
-题干给你一个二维整数数组 envelopes ，其中 envelopes[i] = [wi, hi] ，表示第 i 个信封的宽度和高度。
-当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以放
+                            剑指 Offer 53 - I. 在排序数组中查找数字 I难度：
+简单
+题干统计一个数字在排序数组中出现的次数。
+示例 1:输入: nums = [5,7,7,8,8,10], target = 8
+输出: 2示例 2:输入: nums =
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
+                        <span class="chip bg-color">力扣每日1题</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                        <span class="chip bg-color">二分查找</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/7822.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣每日1题no.233 - 1846.减小和重新排列数组后的最大元素">
+                        
+                        <span class="card-title">力扣每日1题no.233 - 1846.减小和重新排列数组后的最大元素</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1846. 减小和重新排列数组后的最大元素难度：中等
+题干给你一个正整数数组 arr 。请你对 arr 执行一些操作（也可以不进行任何操作），使得数组满足以下条件：
+
+arr 中 第一个 元素必须为 1 。
+任意相邻两个元素的差的绝对值 小
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -799,55 +921,16 @@ public<span class="token punctuation">:</span>
                         <span class="chip bg-color">力扣每日1题</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/ee11.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣每日1题no.98 - 304.二维区域和检索-矩阵不可变">
-                        
-                        <span class="card-title">力扣每日1题no.98 - 304.二维区域和检索-矩阵不可变</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            304. 二维区域和检索 - 矩阵不可变难度：中等
-题干给定一个二维矩阵，计算其子矩形范围内元素的总和，该子矩阵的左上角为 (row1, col1) ，右下角为 (row2, col2) 。
-上图子矩阵左上角 (row1, col1) = 
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/leetcode/" class="post-category">
-                                    leetcode
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
                     
-                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
-                        <span class="chip bg-color">力扣每日1题</span>
+                    <a href="/tags/%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">计数排序</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                        <span class="chip bg-color">贪心</span>
                     </a>
                     
                 </div>
