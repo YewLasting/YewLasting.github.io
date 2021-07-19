@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>力扣每日1题no.237 - 1838.最高频元素的频数</title>
+      <link href="/posts/47ce.html"/>
+      <url>/posts/47ce.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="1838-最高频元素的频数"><a href="#1838-最高频元素的频数" class="headerlink" title="1838. 最高频元素的频数"></a><a href="https://leetcode-cn.com/problems/frequency-of-the-most-frequent-element/" target="_blank" rel="noopener">1838. 最高频元素的频数</a></h1><p><strong>难度</strong>：中等</p><h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>元素的 <strong>频数</strong> 是该元素在一个数组中出现的次数。</p><p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> 。在一步操作中，你可以选择 <code>nums</code> 的一个下标，并将该下标对应元素的值增加 <code>1</code> 。</p><p>执行最多 <code>k</code> 次操作后，返回数组中最高频元素的 <strong>最大可能频数</strong> <em>。</em></p><h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：nums = [1,2,4], k = 5输出：3解释：对第一个元素执行 3 次递增操作，对第二个元素执 2 次递增操作，此时 nums = [4,4,4] 。4 是数组中最高频元素，频数是 3 。</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：nums = [1,4,8,13], k = 5输出：2解释：存在多种最优解决方案：- 对第一个元素执行 3 次递增操作，此时 nums = [4,4,8,13] 。4 是数组中最高频元素，频数是 2 。- 对第二个元素执行 4 次递增操作，此时 nums = [1,8,8,13] 。8 是数组中最高频元素，频数是 2 。- 对第三个元素执行 5 次递增操作，此时 nums = [1,4,13,13] 。13 是数组中最高频元素，频数是 2 。</code></pre><h3 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a><strong>示例 3：</strong></h3><pre><code>输入：nums = [3,9,6], k = 2输出：1</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul><li><code>1 &lt;= nums.length &lt;= 105</code></li><li><code>1 &lt;= nums[i] &lt;= 105</code></li><li><code>1 &lt;= k &lt;= 105</code></li></ul><p>来源：力扣（LeetCode） </p><p>链接：<a href="https://leetcode-cn.com/problems/frequency-of-the-most-frequent-element/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/frequency-of-the-most-frequent-element/</a></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span></span>using namespace std<span class="token punctuation">;</span>class Solution<span class="token punctuation">{</span>public<span class="token punctuation">:</span>    <span class="token keyword">int</span> <span class="token function">maxFrequency</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token operator">&amp;</span>nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span>    <span class="token punctuation">{</span>        <span class="token function">sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nums<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">long</span> <span class="token keyword">long</span> total <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r<span class="token punctuation">;</span>        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> r <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> r <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>r<span class="token punctuation">)</span>        <span class="token punctuation">{</span>            total <span class="token operator">+</span><span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">)</span><span class="token punctuation">(</span>r <span class="token operator">-</span> l<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span>r <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//注意这里要强制转换为long long 再累加</span>            <span class="token keyword">while</span> <span class="token punctuation">(</span>total <span class="token operator">></span> k<span class="token punctuation">)</span>            <span class="token punctuation">{</span>                total <span class="token operator">-</span><span class="token operator">=</span> nums<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">;</span>                l<span class="token operator">++</span><span class="token punctuation">;</span>            <span class="token punctuation">}</span>            res <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> r <span class="token operator">-</span> l <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> res<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//进行测试，输出测试结果</span><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    Solution test<span class="token punctuation">;</span>    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> nums <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">}</span><span class="token punctuation">;</span>    <span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>    <span class="token keyword">int</span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">maxFrequency</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//getchar();</span>    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 力扣每日1题 </tag>
+            
+            <tag> 数组 </tag>
+            
+            <tag> 滑动窗口 </tag>
+            
+            <tag> 排序 </tag>
+            
+            <tag> 贪心 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>力扣每日1题no.236 - 面试题10.02.变位词组</title>
       <link href="/posts/9a21.html"/>
       <url>/posts/9a21.html</url>
@@ -24,9 +57,9 @@
             
             <tag> 哈希表 </tag>
             
-            <tag> 排序 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -144,9 +177,9 @@
             
             <tag> 哈希表 </tag>
             
-            <tag> 二分查找 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 二分查找 </tag>
             
             <tag> 设计类 </tag>
             
@@ -297,9 +330,9 @@
             
             <tag> 数组 </tag>
             
-            <tag> 排序 </tag>
-            
             <tag> 字符串 </tag>
+            
+            <tag> 排序 </tag>
             
         </tags>
       
@@ -504,9 +537,9 @@
             
             <tag> C++ </tag>
             
-            <tag> GDAL </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> GDAL </tag>
             
         </tags>
       
@@ -2248,9 +2281,9 @@
       
         <tags>
             
-            <tag> Visual Studio 2019 </tag>
-            
             <tag> MSVC </tag>
+            
+            <tag> Visual Studio 2019 </tag>
             
         </tags>
       
@@ -2277,9 +2310,9 @@
             
             <tag> C++ </tag>
             
-            <tag> GDAL </tag>
-            
             <tag> Visual Studio 2019 </tag>
+            
+            <tag> GDAL </tag>
             
         </tags>
       

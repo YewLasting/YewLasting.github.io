@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.92 - 832.翻转图像, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.237 - 1838.最高频元素的频数, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.92 - 832.翻转图像 | unlasting</title>
+    <title>力扣每日1题no.237 - 1838.最高频元素的频数 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -260,12 +260,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.92 - 832.翻转图像</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.237 - 1838.最高频元素的频数</h1>
                 </div>
             </div>
         </div>
@@ -388,6 +388,30 @@
                                     </span>
                                 </a>
                                 
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">
+                                        数组
+                                    </span>
+                                </a>
+                                
+                                <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+                                    <span class="chip bg-color">
+                                        滑动窗口
+                                    </span>
+                                </a>
+                                
+                                <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                    <span class="chip bg-color">
+                                        排序
+                                    </span>
+                                </a>
+                                
+                                <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                    <span class="chip bg-color">
+                                        贪心
+                                    </span>
+                                </a>
+                                
                         </div>
                         
                 </div>
@@ -410,7 +434,7 @@
                     <div class="post-date info-break-policy">
                         <i class="far fa-calendar-minus fa-fw"></i>
                         发布日期:&nbsp;&nbsp;
-                            2021-02-24
+                            2021-07-19
                     </div>
                     
 
@@ -418,7 +442,7 @@
                             <div class="post-date info-break-policy">
                                 <i class="far fa-calendar-check fa-fw"></i>
                                 更新日期:&nbsp;&nbsp;
-                                    2021-03-06
+                                    2021-07-19
                             </div>
                             
 
@@ -426,7 +450,7 @@
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>
                                         文章字数:&nbsp;&nbsp;
-                                            563
+                                            572
                                     </div>
                                     
 
@@ -451,76 +475,74 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="832-翻转图像"><a href="#832-翻转图像" class="headerlink" title="832. 翻转图像"></a><a href="https://leetcode-cn.com/problems/flipping-an-image/" target="_blank" rel="noopener">832. 翻转图像</a></h1><p><strong>难度：</strong>简单</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h2><p>给定一个二进制矩阵 <code>A</code>，我们想先水平翻转图像，然后反转图像并返回结果。</p>
-<p>水平翻转图片就是将图片的每一行都进行翻转，即逆序。例如，水平翻转 <code>[1, 1, 0]</code> 的结果是 <code>[0, 1, 1]</code>。</p>
-<p>反转图片的意思是图片中的 <code>0</code> 全部被 <code>1</code> 替换， <code>1</code> 全部被 <code>0</code> 替换。例如，反转 <code>[0, 1, 1]</code> 的结果是 <code>[1, 0, 0]</code>。</p>
-<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：[[1,1,0],[1,0,1],[0,0,0]]
-输出：[[1,0,0],[0,1,0],[1,1,1]]
-解释：首先翻转每一行: [[0,1,1],[1,0,1],[0,0,0]]；
-     然后反转图片: [[1,0,0],[0,1,0],[1,1,1]]</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：[[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]
-输出：[[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
-解释：首先翻转每一行: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]]；
-     然后反转图片: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
-<li><code>1 &lt;= A.length = A[0].length &lt;= 20</code></li>
-<li><code>0 &lt;= A[i][j] &lt;= 1</code></li>
+                <h1 id="1838-最高频元素的频数"><a href="#1838-最高频元素的频数" class="headerlink" title="1838. 最高频元素的频数"></a><a href="https://leetcode-cn.com/problems/frequency-of-the-most-frequent-element/" target="_blank" rel="noopener">1838. 最高频元素的频数</a></h1><p><strong>难度</strong>：中等</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>元素的 <strong>频数</strong> 是该元素在一个数组中出现的次数。</p>
+<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> 。在一步操作中，你可以选择 <code>nums</code> 的一个下标，并将该下标对应元素的值增加 <code>1</code> 。</p>
+<p>执行最多 <code>k</code> 次操作后，返回数组中最高频元素的 <strong>最大可能频数</strong> <em>。</em></p>
+<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：nums = [1,2,4], k = 5
+输出：3
+解释：对第一个元素执行 3 次递增操作，对第二个元素执 2 次递增操作，此时 nums = [4,4,4] 。
+4 是数组中最高频元素，频数是 3 。</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：nums = [1,4,8,13], k = 5
+输出：2
+解释：存在多种最优解决方案：
+- 对第一个元素执行 3 次递增操作，此时 nums = [4,4,8,13] 。4 是数组中最高频元素，频数是 2 。
+- 对第二个元素执行 4 次递增操作，此时 nums = [1,8,8,13] 。8 是数组中最高频元素，频数是 2 。
+- 对第三个元素执行 5 次递增操作，此时 nums = [1,4,13,13] 。13 是数组中最高频元素，频数是 2 。</code></pre><h3 id="示例-3："><a href="#示例-3：" class="headerlink" title="示例 3："></a><strong>示例 3：</strong></h3><pre><code>输入：nums = [3,9,6], k = 2
+输出：1</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
+<li><code>1 &lt;= nums.length &lt;= 105</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 105</code></li>
+<li><code>1 &lt;= k &lt;= 105</code></li>
 </ul>
 <p>来源：力扣（LeetCode） </p>
-<p>链接：<a href="https://leetcode-cn.com/problems/flipping-an-image/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/flipping-an-image/</a></p>
+<p>链接：<a href="https://leetcode-cn.com/problems/frequency-of-the-most-frequent-element/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/frequency-of-the-most-frequent-element/</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
-<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">//2021.2.24</span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span></span>
 using namespace std<span class="token punctuation">;</span>
 class Solution
 <span class="token punctuation">{</span>
 public<span class="token punctuation">:</span>
-    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">flipAndInvertImage</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token operator">&amp;</span>A<span class="token punctuation">)</span>
+    <span class="token keyword">int</span> <span class="token function">maxFrequency</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token operator">&amp;</span>nums<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> n <span class="token operator">=</span> A<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token function">sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nums<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> n <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">long</span> <span class="token keyword">long</span> total <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> r <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> r <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>r<span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> right<span class="token punctuation">)</span>
+            total <span class="token operator">+</span><span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">)</span><span class="token punctuation">(</span>r <span class="token operator">-</span> l<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span>r <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//注意这里要强制转换为long long 再累加</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>total <span class="token operator">></span> k<span class="token punctuation">)</span>
             <span class="token punctuation">{</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">==</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                <span class="token punctuation">{</span>
-                    A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">^</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//A[i][left]与1异或，相同为0，不同为1，可达到取反效果</span>
-                    A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">^</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-                left<span class="token operator">++</span><span class="token punctuation">;</span>
-                right<span class="token operator">--</span><span class="token punctuation">;</span>
+                total <span class="token operator">-</span><span class="token operator">=</span> nums<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                l<span class="token operator">++</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">==</span> right<span class="token punctuation">)</span>
-            <span class="token punctuation">{</span>
-                A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">^</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+            res <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> r <span class="token operator">-</span> l <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> A<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     Solution test<span class="token punctuation">;</span>
-    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> A <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> ans <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">flipAndInvertImage</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> i <span class="token punctuation">:</span> ans<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token punctuation">:</span> i<span class="token punctuation">)</span>
-            cout <span class="token operator">&lt;&lt;</span> j <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
-        cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取一个字符，按键盘任意键即可，可以使得输出结果暂停在屏幕上</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> nums <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">maxFrequency</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//getchar();</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -564,7 +586,7 @@ public<span class="token punctuation">:</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/5c64.html">http://YewLasting.github.io/posts/5c64.html</a>
+                    <a href="http://YewLasting.github.io/posts/47ce.html">http://YewLasting.github.io/posts/47ce.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -605,6 +627,30 @@ public<span class="token punctuation">:</span>
                                     <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
                                         <span class="chip bg-color">
                                             力扣每日1题
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                        <span class="chip bg-color">
+                                            数组
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+                                        <span class="chip bg-color">
+                                            滑动窗口
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                        <span class="chip bg-color">
+                                            排序
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                        <span class="chip bg-color">
+                                            贪心
                                         </span>
                                     </a>
                                     
@@ -774,51 +820,67 @@ public<span class="token punctuation">:</span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/7273.html">
+                <a href="/posts/47ce.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Anaconda常用命令">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="力扣每日1题no.237 - 1838.最高频元素的频数">
                         
-                        <span class="card-title">Anaconda常用命令</span>
+                        <span class="card-title">力扣每日1题no.237 - 1838.最高频元素的频数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Anaconda常用命令1. 添加国内镜像源打开Anaconda prompt，输入以下代码，添加清华镜像源
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/
+                            1838. 最高频元素的频数难度：中等
+题干元素的 频数 是该元素在一个数组中出现的次数。
+给你一个整数数组 nums 和一个整数 k 。在一步操作中，你可以选择 nums 的一个下标，并将该下标对应元素的值增加 1 。
+执行最多 k 次操
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/" class="post-category">
-                                    软件使用
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Anaconda/">
-                        <span class="chip bg-color">Anaconda</span>
+                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
+                        <span class="chip bg-color">力扣每日1题</span>
                     </a>
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+                        <span class="chip bg-color">滑动窗口</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                        <span class="chip bg-color">贪心</span>
                     </a>
                     
                 </div>
@@ -832,26 +894,27 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/5535.html">
+                <a href="/posts/9a21.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣每日1题no.91 - 1052. 爱生气的书店老板">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="力扣每日1题no.236 - 面试题10.02.变位词组">
                         
-                        <span class="card-title">力扣每日1题no.91 - 1052. 爱生气的书店老板</span>
+                        <span class="card-title">力扣每日1题no.236 - 面试题10.02.变位词组</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1052. 爱生气的书店老板难度：中等
-题干今天，书店老板有一家店打算试营业 customers.length 分钟。每分钟都有一些顾客（customers[i]）会进入书店，所有这些顾客都会在那一分钟结束后离开。
-在某些时候，书店老板会生
+                            面试题 10.02. 变位词组难度：中等
+题干编写一种方法，对字符串数组进行排序，将所有变位词组合在一起。变位词是指字母相同，但排列不同的字符串。
+注意：本题相对原题稍作修改
+示例:输入: ["eat", "tea", "tan", "at
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
                             </span>
                         <span class="publish-author">
                             
@@ -870,6 +933,18 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/
                     
                     <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
                         <span class="chip bg-color">力扣每日1题</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                        <span class="chip bg-color">哈希表</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                        <span class="chip bg-color">字符串</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
                     </a>
                     
                 </div>
