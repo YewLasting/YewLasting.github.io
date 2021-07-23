@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣每日1题no.1 - 40.组合总和 II, image processing,Machine learning,Deep learning等">
+    <meta name="keywords" content="力扣每日1题no.241 - 1893.检查是否区域内所有整数都被覆盖, image processing,Machine learning,Deep learning等">
     <meta name="description" content="专注于基于深度学习的遥感影像处理">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣每日1题no.1 - 40.组合总和 II | unlasting</title>
+    <title>力扣每日1题no.241 - 1893.检查是否区域内所有整数都被覆盖 | unlasting</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -260,12 +260,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣每日1题no.1 - 40.组合总和 II</h1>
+                    <h1 class="description center-align post-title">力扣每日1题no.241 - 1893.检查是否区域内所有整数都被覆盖</h1>
                 </div>
             </div>
         </div>
@@ -388,6 +388,30 @@
                                     </span>
                                 </a>
                                 
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">
+                                        数组
+                                    </span>
+                                </a>
+                                
+                                <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+                                    <span class="chip bg-color">
+                                        滑动窗口
+                                    </span>
+                                </a>
+                                
+                                <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                    <span class="chip bg-color">
+                                        排序
+                                    </span>
+                                </a>
+                                
+                                <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                    <span class="chip bg-color">
+                                        贪心
+                                    </span>
+                                </a>
+                                
                         </div>
                         
                 </div>
@@ -410,7 +434,7 @@
                     <div class="post-date info-break-policy">
                         <i class="far fa-calendar-minus fa-fw"></i>
                         发布日期:&nbsp;&nbsp;
-                            2020-09-11
+                            2021-07-23
                     </div>
                     
 
@@ -418,7 +442,7 @@
                             <div class="post-date info-break-policy">
                                 <i class="far fa-calendar-check fa-fw"></i>
                                 更新日期:&nbsp;&nbsp;
-                                    2021-02-28
+                                    2021-07-23
                             </div>
                             
 
@@ -426,7 +450,7 @@
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>
                                         文章字数:&nbsp;&nbsp;
-                                            286
+                                            534
                                     </div>
                                     
 
@@ -434,7 +458,7 @@
                                             <div class="info-break-policy">
                                                 <i class="far fa-clock fa-fw"></i>
                                                 阅读时长:&nbsp;&nbsp;
-                                                    1
+                                                    2
                                                         分
                                             </div>
                                             
@@ -451,41 +475,98 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="40-组合总和-II"><a href="#40-组合总和-II" class="headerlink" title="40. 组合总和 II"></a><a href="https://leetcode-cn.com/problems/combination-sum-ii/" target="_blank" rel="noopener">40. 组合总和 II</a></h1><p><strong>难度</strong>：中等</p>
-<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。</p>
-<p>candidates 中的每个数字在每个组合中只能使用一次。</p>
-<h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a><strong>说明：</strong></h3><p>所有数字（包括目标数）都是正整数。<br>解集不能包含重复的组合。 </p>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1:"></a><strong>示例 1:</strong></h3><p>输入: candidates = [10,1,2,7,6,1,5], target = 8,<br>所求解集为:</p>
-<pre><code>[
-  [1, 7],
-  [1, 2, 5],
-  [2, 6],
-  [1, 1, 6]
-]</code></pre><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2:"></a><strong>示例 2:</strong></h3><p>输入: candidates = [2,5,2,1,2], target = 5,<br>所求解集为:</p>
-<pre><code>[
-  [1,2,2],
-  [5]
-]</code></pre><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/combination-sum-ii" target="_blank" rel="noopener">https://leetcode-cn.com/problems/combination-sum-ii</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a><strong>题解</strong></h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a><strong>语言</strong>：</h3><p>python3</p>
-<pre class="line-numbers language-python"><code class="language-python">```
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">combinationSum2</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> candidates<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        ans <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        <span class="token keyword">def</span> <span class="token function">backtrace</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> curr_res<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> sum<span class="token punctuation">(</span>curr_res<span class="token punctuation">)</span> <span class="token operator">==</span> target <span class="token operator">and</span> curr_res <span class="token operator">not</span> <span class="token keyword">in</span> ans<span class="token punctuation">:</span>
-                ans<span class="token punctuation">.</span>append<span class="token punctuation">(</span>curr_res<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                <span class="token keyword">return</span>
-            <span class="token keyword">if</span> sum<span class="token punctuation">(</span>curr_res<span class="token punctuation">)</span> <span class="token operator">></span> target<span class="token punctuation">:</span>  <span class="token comment" spellcheck="true"># 弹出，后面无需执行</span>
-                <span class="token keyword">return</span>
-            <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>index<span class="token punctuation">,</span> len<span class="token punctuation">(</span>candidates<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                curr_res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>candidates<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                backtrace<span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> curr_res<span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 递归</span>
-                curr_res<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 移除末尾元素</span>
+                <h1 id="1893-检查是否区域内所有整数都被覆盖"><a href="#1893-检查是否区域内所有整数都被覆盖" class="headerlink" title="1893. 检查是否区域内所有整数都被覆盖"></a><a href="https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/" target="_blank" rel="noopener">1893. 检查是否区域内所有整数都被覆盖</a></h1><p><strong>难度</strong>：简单</p>
+<h2 id="题干"><a href="#题干" class="headerlink" title="题干"></a><strong>题干</strong></h2><p>给你一个二维整数数组 <code>ranges</code> 和两个整数 <code>left</code> 和 <code>right</code> 。每个 <code>ranges[i] = [starti, endi]</code> 表示一个从 <code>starti</code> 到 <code>endi</code> 的 <strong>闭区间</strong> 。</p>
+<p>如果闭区间 <code>[left, right]</code> 内每个整数都被 <code>ranges</code> 中 <strong>至少一个</strong> 区间覆盖，那么请你返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
+<p>已知区间 <code>ranges[i] = [starti, endi]</code> ，如果整数 <code>x</code> 满足 <code>starti &lt;= x &lt;= endi</code> ，那么我们称整数<code>x</code> 被覆盖了。</p>
+<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a><strong>示例 1：</strong></h3><pre><code>输入：ranges = [[1,2],[3,4],[5,6]], left = 2, right = 5
+输出：true
+解释：2 到 5 的每个整数都被覆盖了：
+- 2 被第一个区间覆盖。
+- 3 和 4 被第二个区间覆盖。
+- 5 被第三个区间覆盖。</code></pre><h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a><strong>示例 2：</strong></h3><pre><code>输入：ranges = [[1,10],[10,20]], left = 21, right = 21
+输出：false
+解释：21 没有被任何一个区间覆盖。</code></pre><h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a><strong>提示：</strong></h3><ul>
+<li><code>1 &lt;= ranges.length &lt;= 50</code></li>
+<li><code>1 &lt;= starti &lt;= endi &lt;= 50</code></li>
+<li><code>1 &lt;= left &lt;= right &lt;= 50</code></li>
+</ul>
+<p>来源：力扣（LeetCode） </p>
+<p>链接：<a href="https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered/</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="语言："><a href="#语言：" class="headerlink" title="语言："></a>语言：</h3><p>C++</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stack></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;numeric></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span></span>
+using namespace std<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// class Solution {</span>
+<span class="token comment" spellcheck="true">// public:</span>
+<span class="token comment" spellcheck="true">//     bool isCovered(vector&lt;vector&lt;int>>&amp; ranges, int left, int right)</span>
+<span class="token comment" spellcheck="true">//     {</span>
+<span class="token comment" spellcheck="true">//         for(int i=left;i&lt;right+1;++i)</span>
+<span class="token comment" spellcheck="true">//         {</span>
+<span class="token comment" spellcheck="true">//             int tag=0;</span>
+<span class="token comment" spellcheck="true">//             for(auto range:ranges)</span>
+<span class="token comment" spellcheck="true">//             {</span>
+<span class="token comment" spellcheck="true">//                 if(i>=range[0]&amp;&amp;i&lt;=range[1])</span>
+<span class="token comment" spellcheck="true">//                 {</span>
+<span class="token comment" spellcheck="true">//                     tag=1;</span>
+<span class="token comment" spellcheck="true">//                     break;</span>
+<span class="token comment" spellcheck="true">//                 }</span>
+<span class="token comment" spellcheck="true">//             }</span>
+<span class="token comment" spellcheck="true">//             if(tag==0)</span>
+<span class="token comment" spellcheck="true">//             {</span>
+<span class="token comment" spellcheck="true">//                 return false;</span>
+<span class="token comment" spellcheck="true">//             }</span>
+<span class="token comment" spellcheck="true">//         }</span>
+<span class="token comment" spellcheck="true">//         return true;</span>
 
-        candidates<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        backtrace<span class="token punctuation">(</span>candidates<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> ans
-```<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment" spellcheck="true">//     }</span>
+<span class="token comment" spellcheck="true">// };</span>
+class Solution
+<span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+    bool <span class="token function">isCovered</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token operator">&amp;</span>ranges<span class="token punctuation">,</span> <span class="token keyword">int</span> left<span class="token punctuation">,</span> <span class="token keyword">int</span> right<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">diff</span><span class="token punctuation">(</span><span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 差分数组</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;&amp;</span>range <span class="token punctuation">:</span> ranges<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token operator">++</span>diff<span class="token punctuation">[</span>range<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token operator">--</span>diff<span class="token punctuation">[</span>range<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 前缀和</span>
+        <span class="token keyword">int</span> curr <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">50</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            curr <span class="token operator">+</span><span class="token operator">=</span> diff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">>=</span> left <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;=</span> right <span class="token operator">&amp;&amp;</span> curr <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//进行测试，输出测试结果</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    Solution test<span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> ranges <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> res <span class="token operator">=</span> test<span class="token punctuation">.</span><span class="token function">isCovered</span><span class="token punctuation">(</span>ranges<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//getchar();</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -529,7 +610,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://YewLasting.github.io/posts/56d0.html">http://YewLasting.github.io/posts/56d0.html</a>
+                    <a href="http://YewLasting.github.io/posts/f1e0.html">http://YewLasting.github.io/posts/f1e0.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,6 +651,30 @@
                                     <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
                                         <span class="chip bg-color">
                                             力扣每日1题
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                        <span class="chip bg-color">
+                                            数组
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+                                        <span class="chip bg-color">
+                                            滑动窗口
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                        <span class="chip bg-color">
+                                            排序
+                                        </span>
+                                    </a>
+                                    
+                                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                        <span class="chip bg-color">
+                                            贪心
                                         </span>
                                     </a>
                                     
@@ -739,68 +844,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/3eeb.html">
+                <a href="/posts/f1e0.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="力扣每日1题no.241 - 1893.检查是否区域内所有整数都被覆盖">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">力扣每日1题no.241 - 1893.检查是否区域内所有整数都被覆盖</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-11
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            unlasting
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/56d0.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="力扣每日1题no.1 - 40.组合总和 II">
-                        
-                        <span class="card-title">力扣每日1题no.1 - 40.组合总和 II</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            40. 组合总和 II难度：中等
-题干给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
-candidates 中的每个数字在每个组合中只能使用一次。
-
+                            1893. 检查是否区域内所有整数都被覆盖难度：简单
+题干给你一个二维整数数组 ranges 和两个整数 left 和 right 。每个 ranges[i] = [starti, endi] 表示一个从 starti 到 endi 的 闭
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-23
                             </span>
                         <span class="publish-author">
                             
@@ -820,6 +887,86 @@ candidates 中的每个数字在每个组合中只能使用一次。
                     
                     <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
                         <span class="chip bg-color">力扣每日1题</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+                        <span class="chip bg-color">滑动窗口</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                        <span class="chip bg-color">贪心</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/5fd5.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="力扣每日1题no.238 - 1877.数组中最大数对和的最小值">
+                        
+                        <span class="card-title">力扣每日1题no.238 - 1877.数组中最大数对和的最小值</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1877. 数组中最大数对和的最小值难度：中等
+题干一个数对 (a,b) 的 数对和 等于 a + b 。最大数对和 是一个数对数组中最大的 数对和 。
+
+比方说，如果我们有数对 (1,5) ，(2,3) 和 (4,4)，最大数对和 为 m
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/">
+                        <span class="chip bg-color">力扣每日1题</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                        <span class="chip bg-color">贪心</span>
                     </a>
                     
                 </div>
