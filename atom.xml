@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yewlasting.github.io/"/>
-  <updated>2021-08-25T07:54:19.415Z</updated>
+  <updated>2021-08-26T02:27:39.219Z</updated>
   <id>http://yewlasting.github.io/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>力扣每日1题no.246 - 881.救生艇</title>
+    <link href="http://yewlasting.github.io/posts/2e29.html"/>
+    <id>http://yewlasting.github.io/posts/2e29.html</id>
+    <published>2021-08-26T02:21:04.000Z</published>
+    <updated>2021-08-26T02:27:39.219Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;881-救生艇&quot;&gt;&lt;a href=&quot;#881-救生艇&quot; class=&quot;headerlink&quot; title=&quot;881. 救生艇&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
+    
+    
+      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="排序" scheme="http://YewLasting.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="贪心" scheme="http://YewLasting.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+      <category term="双指针" scheme="http://YewLasting.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>力扣每日1题no.245 - 797.所有可能的路径</title>
     <link href="http://yewlasting.github.io/posts/1f3f.html"/>
     <id>http://yewlasting.github.io/posts/1f3f.html</id>
     <published>2021-08-25T07:39:51.000Z</published>
-    <updated>2021-08-25T07:54:19.415Z</updated>
+    <updated>2021-08-25T07:54:49.469Z</updated>
     
     <summary type="html">
     
@@ -52,7 +87,7 @@
     <link href="http://yewlasting.github.io/posts/c1b1.html"/>
     <id>http://yewlasting.github.io/posts/c1b1.html</id>
     <published>2021-07-26T02:52:35.000Z</published>
-    <updated>2021-08-25T07:35:58.079Z</updated>
+    <updated>2021-08-25T07:54:49.466Z</updated>
     
     <summary type="html">
     
@@ -204,9 +239,9 @@
     
       <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
-      <category term="贪心" scheme="http://YewLasting.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
       <category term="排序" scheme="http://YewLasting.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="贪心" scheme="http://YewLasting.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
@@ -239,9 +274,9 @@
     
       <category term="滑动窗口" scheme="http://YewLasting.github.io/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
     
-      <category term="贪心" scheme="http://YewLasting.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
       <category term="排序" scheme="http://YewLasting.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="贪心" scheme="http://YewLasting.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
@@ -634,35 +669,6 @@
       <category term="数组" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
       <category term="数学" scheme="http://YewLasting.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣每日1题no.220 - 1833.雪糕的最大数量</title>
-    <link href="http://yewlasting.github.io/posts/349e.html"/>
-    <id>http://yewlasting.github.io/posts/349e.html</id>
-    <published>2021-07-02T04:20:30.000Z</published>
-    <updated>2021-07-03T03:49:12.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1833-雪糕的最大数量&quot;&gt;&lt;a href=&quot;#1833-雪糕的最大数量&quot; class=&quot;headerlink&quot; title=&quot;1833. 雪糕的最大数量&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="http://YewLasting.github.io/categories/leetcode/"/>
-    
-    
-      <category term="力扣每日1题" scheme="http://YewLasting.github.io/tags/%E5%8A%9B%E6%89%A3%E6%AF%8F%E6%97%A51%E9%A2%98/"/>
-    
-      <category term="贪心算法" scheme="http://YewLasting.github.io/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
